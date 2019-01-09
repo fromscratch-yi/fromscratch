@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Custom
+/.vscode
+*.code-workspace
+*~
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
