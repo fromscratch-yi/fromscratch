@@ -18,3 +18,9 @@ dist
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
+
+.firebase/
+functions/nuxt/
+functions/node_modules/
+public/
+serviceAccountKey.json
