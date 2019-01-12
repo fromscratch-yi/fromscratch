@@ -5,9 +5,9 @@
       <!-- top-left -->
       <div class="typer_wrap" v-bind:class="{active: isActive}">
         <div class="inner">
-          <p class="glitch" data-text="Welcome">Welcome</p>
+          <p><span class="glitch" data-text="Welcome">Welcome</span></p>
           <p class="middle_txt">From Scratch</p>
-          <p class="small_txt">Yuichi Ishiyama</p>
+          <p class="small_txt">Yuichi Ishiyama's<br>Portfolio Site.</p>
         </div>
       </div>
       <!-- top-right -->
@@ -21,7 +21,7 @@
       <!-- bottom-right -->
       <div class="typer_wrap" v-bind:class="{active: isActive}" @click="click">
         <div class="inner">
-          <img class="logo" src="~assets/img/logo.png" alt="Yuichi Ishiyama's logo">
+          <img class="logo" src="~assets/img/logo.png" alt="FromScratch logo">
           <span class="tap_txt">
             <vue-typer :text='["Tap"]' :type-delay='200' :pre-type-delay='3000' :pre-erase-delay='3000'></vue-typer>
           </span>
@@ -31,16 +31,21 @@
     <!-- welcome back -->
     <div class="back_wrap" v-bind:class="{active: isActive}">
       <section class="back_ctn">
-        <h1 class="main_line"><img class="logo" src="~assets/img/logo.png" alt="Yuichi Ishiyama's Portfolio" @click="click"></h1>
-        <p class="desc_txt">Welcome to my site.<br>Life is all made <span class="emp">From Scratch</span></p>
-        <Nav/>
+        <h1 class="main_line"><img class="logo" src="~assets/img/logo.png" alt="FromScratch" @click="click"></h1>
+        <p class="desc_txt">Welcome to this site.<br>All will begin <span class="emp">From Scratch</span></p>
+          <nav>
+            <ul>
+              <li><nuxt-link to="/about">About</nuxt-link></li>
+              <li><nuxt-link to="/work">Work</nuxt-link></li>
+              <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+            </ul>
+          </nav>
       </section>
     </div>
   </section>
 </template>
 
 <script>
-import Nav from '~/components/Nav.vue'
 if (process.browser) {
   var VueTyper = require('vue-typer').VueTyper
 }
@@ -51,7 +56,6 @@ export default {
   },
   components: {
     VueTyper,
-    Nav
   },
   layout: "headerless",
   data() {
@@ -72,7 +76,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "This is Yuichi Ishiyama&apos;s Portfolio."
+          content: "Welcome to Yuichi Ishiyama&apos;s Portfolio. The name FromScratch."
         }
       ],
       bodyAttrs: {
@@ -88,12 +92,7 @@ export default {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
   background-color: rgb(43, 42, 42);
-}
-.welcom_page::-webkit-scrollbar {
-  display: none;
 }
 .welcom_page .contents {
   position: fixed;
@@ -184,12 +183,13 @@ export default {
 .welcom_page .typer_wrap .inner {
   line-height: 1.2;
 }
-.welcom_page .typer_wrap .small_txt {
-  margin: 10px 0;
-  font-size: 3vw;
-}
 .welcom_page .typer_wrap .middle_txt {
+  margin: 5px 0 10px;
   font-size: 4vw;
+}
+.welcom_page .typer_wrap .small_txt {
+  font-size: 3.5vw;
+  line-height: 1.7;
 }
 .welcom_page .typer_wrap .logo {
   display: block;
@@ -460,4 +460,3 @@ export default {
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
 </style>
-

@@ -4,11 +4,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'yufroms-fromscratch',
+    title: 'FromScratch',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Yuichi Ishiyama&apos;s portfolio' }
+      { hid: 'description', name: 'description', content: 'FromScratch Web Site.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -20,8 +20,16 @@ module.exports = {
   loading: { color: '#3B8070' },
   modules: [
     '@nuxtjs/bulma',
-    '@nuxtjs/font-awesome'
+    'nuxt-fontawesome'
   ],
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      }
+    ]
+  },
   /*
   ** Build configuration
   */
