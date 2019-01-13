@@ -1,8 +1,7 @@
 <template>
-  <section class="contets">
-    <h1 class="title">{{ title }}</h1>
-  </section>
+  <h1 class="title">{{ title }}</h1>
 </template>
+
 
 <script>
 export default {
