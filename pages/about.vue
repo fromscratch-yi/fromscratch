@@ -1,27 +1,27 @@
 <template>
-  <h1 class="title">{{ title }}</h1>
+  <div>
+    <TitleDescription :titleDescData="titleDescData"></TitleDescription>
+    <Terminal :typeTxt="typeTxt"></Terminal>
+  </div>
 </template>
 
 <script>
+import TitleDescription from "~/components/TitleDescription.vue";
+import Terminal from "~/components/Terminal.vue";
 export default {
-  data() {
-    return {
-      title: "About"
-    };
+  components: {
+    TitleDescription,
+    Terminal
   },
-  head() {
-    return {
-      titleTemplate: "%s | " + this.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: "This is Yuichi Ishiyama&apos;s ProfilePage."
-        }
-      ]
+  data(context){
+    var titleDescData = {
+      title: 'About',
+      description: 'This is Yuichi Ishiyama&apos;s profile.'
     };
+    var typeTxt = '$ cat ./about.html\n This is Yuichi Ishiyama\'s Portfolio.';
+    return { titleDescData, typeTxt }
   }
-};
+}
 </script>
 
 <style>

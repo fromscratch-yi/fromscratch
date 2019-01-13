@@ -1,29 +1,22 @@
 <template>
-  <h1 class="title">{{ title }}</h1>
+  <TitleDescription :titleDescData="titleDescData"></TitleDescription>
 </template>
 
 <script>
+import TitleDescription from "~/components/TitleDescription.vue";
 export default {
-  data() {
-    return {
-      title: "Blog"
-    };
+  components: {
+    TitleDescription
   },
-  head() {
-    return {
-      titleTemplate: "%s | " + this.title,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: "This is Yuichi Ishiyama&apos;s Blog Page."
-        }
-      ]
+  data(context){
+    var titleDescData = {
+      title: 'Blog',
+      description: 'This is Yuichi Ishiyama&apos;s Blog Page.'
     };
+    return { titleDescData }
   }
-};
+}
 </script>
 
 <style>
 </style>
-
