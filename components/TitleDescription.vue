@@ -15,7 +15,10 @@ export default {
     return {
       titleTemplate: "%s | " + this.title,
       meta: [
-        { hid: "description", name: "description", content: this.description }
+        { hid: "description", name: "description", content: this.description },
+        { hid: 'og:type', name: 'og:type', content: 'article' },
+        { hid: 'og:title', name: 'og:title', content: 'FromScratch | ' + this.title },
+        { hid: 'og:description', name: 'og:description', content: this.description }
       ]
     };
   }

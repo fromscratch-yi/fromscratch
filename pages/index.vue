@@ -73,9 +73,8 @@ export default {
     return {
       titleTemplate: "%s | " + this.title,
       meta: [
-        { hid: "description", name: "description", content: "Welcome to Yuichi Ishiyama&apos;s Portfolio. The name FromScratch." },
-      { hid: 'og:type', name: 'og:type', content: 'website' }
-      ],
+        { hid: "description", name: "description", content: "Welcome to Yuichi Ishiyama&apos;s Portfolio. The name FromScratch." }
+        ],
       bodyAttrs: {
         class: 'welcom_page'
       }
