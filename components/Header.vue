@@ -8,12 +8,13 @@
         <p class="level-item icon" @click="clickNavBtn"><font-awesome-icon icon="bars"/></p>
       </div>
     </div>
-    <nav class="nav_menu" v-bind:class="{'open': isOpen, 'close': isClose}">
-      <p class="close_btn" @click="clickCloseBtn"><font-awesome-icon icon="times"/></p>
+    <nav class="nav_menu" v-bind:class="{'open': isOpen}">
+      <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
       <ul>
-        <li><nuxt-link to="/about">About</nuxt-link></li>
-        <li><nuxt-link to="/work">Work</nuxt-link></li>
-        <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+        <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo"></li>
+        <li><nuxt-link to="/about"><span class="nav_txt">A</span>bout</nuxt-link></li>
+        <li><nuxt-link to="/work"><span class="nav_txt">W</span>ork</nuxt-link></li>
+        <li><nuxt-link to="/blog"><span class="nav_txt">B</span>log</nuxt-link></li>
       </ul>
     </nav>
   </header>
@@ -24,25 +25,25 @@ export default {
   data() {
     return {
       title: "Top",
-      isOpen: false,
-      isClose: false
+      isOpen: false
     }
   },
   methods: {
     clickNavBtn: function() {
       this.isOpen = !this.isOpen;
-      this.isClose = false;
-    },
-    clickCloseBtn: function() {
-      this.isClose = !this.isClose;
-      this.isOpen = false;
+      var navWrap = document.getElementsByClassName('nav_menu').item(0).classList;
+      if (!this.isOpen && !navWrap.contains('open')) {
+        navWrap.add('open');
+        this.isOpen = true;
+      }
+      console.log(this.isOpen);
     }
   }
 }
 </script>
 
 
-<style scoped>
+<style>
 header {
   width: 100%;
   height: 60px;
@@ -58,9 +59,7 @@ header {
   width: 100vw;
   padding: 10px 15px;
   margin: 0;
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0));
-  background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0));
+  background: rgba(255, 255, 255, 0.3);
 }
 .header_container .logo, .header_container .nav_btn {
   cursor: pointer;
@@ -70,29 +69,27 @@ header {
 }
 .header_container .nav_btn {
   font-size: 25px;
+  color: rgb(71, 160, 61);
 }
 header .nav_menu {
-  visibility: hidden;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 15px;
   overflow: hidden;
   z-index: 10;
   text-align: center;
   background-color: rgb(43, 42, 42);
-  transform: translateX(100%);
   transition: all  500ms ease;
+  transform: translateX(100%);
 }
 header .nav_menu.open {
-  visibility: visible;
   transform: translateX(0);
-}
-header .nav_menu.close {
-  visibility: visible;
-  transform: translateX(100%);
 }
 header .nav_menu .close_btn {
   position: absolute;
@@ -104,9 +101,47 @@ header .nav_menu .close_btn {
   cursor: pointer;
 }
 header .nav_menu ul {
+  position: relative;
+}
+header .nav_menu ul li {
+  margin: 20px 0;
+  font-size: 40px;
+  line-height: 1.3;
+}
+header .nav_menu ul li:last-child {
+  margin: 0;
+}
+header .nav_menu ul li.nv_logo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    margin: auto;
+}
+header .nav_menu ul li a {
+  display: block;
+  color: rgb(177, 177, 177);
+  line-height: 1.2;
+}
+header .nav_menu ul li a.nuxt-link-exact-active {
+  pointer-events: none;
+  border-bottom: 2px solid rgb(71, 160, 61);
+}
+header .nav_menu ul li a .nav_txt {
+  font-size: 1.2em;
+  color: rgb(71, 160, 61);
+}
+@media screen and (min-width: 768px){
+  header .nav_menu ul li {
+    font-size: 60px;
+  }
+  header .nav_menu ul li.nv_logo {
+    top: -70px;
+    width: 70px;
+    height: 70px;
+  }
 }
 </style>

@@ -30,6 +30,20 @@ module.exports = {
       }
     ]
   },
+  transition: {
+    name: 'page',
+    mode: 'out-in',
+    beforeEnter (el) {
+      console.log('Before enter...');
+      var navMenu = document.getElementsByClassName("nav_menu");
+      if(navMenu.length > 0) {
+        var classList = navMenu.item(0).classList;
+        if (classList.contains("open")) {
+          classList.remove("open");
+        }
+      }
+    }
+  },
   /*
   ** Build configuration
   */

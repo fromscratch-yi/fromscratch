@@ -92,7 +92,6 @@ export default {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: rgb(43, 42, 42);
 }
 .welcom_page .contents {
   position: fixed;
@@ -136,6 +135,7 @@ export default {
   font-size: 7vw;
   text-align: center;
   transition: all 250ms 300ms ease;
+  animation: fromLeft 1.2s ease;
 }
 .welcom_page .typer_wrap:nth-child(2) {
   top: 0;
@@ -144,6 +144,7 @@ export default {
   height: 80%;
   font-family: "Courier New", Consolas, monospace;
   transition: all 250ms 200ms ease;
+  animation: fromTop 1.2s ease;
 }
 .welcom_page .typer_wrap:nth-child(3) {
   bottom: 0;
@@ -152,6 +153,7 @@ export default {
   height: 50%;
   font-family: "Courier New", Consolas, monospace;
   transition: all 250ms 100ms ease;
+  animation: fromBottom 1.2s ease;
 }
 .welcom_page .typer_wrap:nth-child(4) {
   display: flex;
@@ -166,7 +168,24 @@ export default {
   line-height: 1.3;
   background: rgb(247, 169, 82);
   transition: all 250ms 400ms ease;
+  animation: fromRight 1.2s ease;
   cursor: pointer;
+}
+@keyframes fromLeft {
+  from {transform: translateX(-100%);}
+  to {transform: translateY(0);}
+}
+@keyframes fromTop {
+  from {transform: translateY(-100%);}
+  to {transform: translateY(0);}
+}
+@keyframes fromBottom {
+  from {transform: translateY(100%);}
+  to {transform: translateY(0);}
+}
+@keyframes fromRight {
+  from {transform: translateX(100%);}
+  to {transform: translateY(0);}
 }
 .welcom_page .typer_wrap:nth-child(1).active {
   transform: translateX(-110%);
@@ -459,4 +478,5 @@ export default {
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
+
 </style>
