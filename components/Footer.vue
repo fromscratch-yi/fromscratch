@@ -1,9 +1,50 @@
 <template>
   <footer>
-    <ul class="sns_wrap">
-      <li>Twiiter</li>
-      <li>Instagram</li>
-    </ul>
-    <p class="copy">Copyright</p>
+    <div class="contact_wrap">
+      <ul class="columns is-mobile">
+        <li class="column">
+          <p class="contanc_item">
+            <a href="mailto:yufroms@gmail.com?subject=[Contact]Contact from Portfolio."><img src="~assets/img/Mail.png" alt="Mail"></a>
+          </p>
+        </li>
+        <li class="column">
+          <p class="contanc_item">
+            <a href="https://twitter.com/IshiyamaYuichi" target="_blank"><img src="~assets/img/Twitter.png" alt="Twitter"></a>
+          </p>
+        </li>
+        <li class="column">
+          <p class="contanc_item">
+            <a href="https://www.pinterest.jp/yu123daa/" target="_blank"><img src="~assets/img/Pinterest.png" alt="Pinterest"></a>
+          </p>
+        </li>
+        <li class="column">
+          <p class="contanc_item">
+            <a href="https://www.facebook.com/yuichi.ishiyama.169" target="_blank"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
+          </p>
+        </li>
+      </ul>
+    </div>
+    <p class="copyright">&copy;2019 fromscratch All Rights Reserved</p>
   </footer>
 </template>
+
+<style scoped>
+footer .contact_wrap {
+  width: 250px;
+  margin: 0 auto 15px;
+}
+footer .contact_wrap .contanc_item {
+  text-align: center;
+}
+footer .contact_wrap .contanc_item img {
+  width: 35px;
+}
+footer .copyright {
+  padding: 15px 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgb(177, 177, 177);
+  background-color: rgb(43, 42, 42);
+}
+
+</style>

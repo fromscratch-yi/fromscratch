@@ -35,24 +35,6 @@ html::-webkit-scrollbar {
 .container {
   padding: 0 15px 15px;
 }
-.container h1.main_ttl {
-  position: relative;
-  padding: 0 0 5px;
-  font-size: 8vw;
-  text-align: center;
-  line-height: 1.3;
-}
-.container h1.main_ttl::before {
-  position: absolute;
-  content: '';
-  width: 10vw;
-  height: 3px;
-  background-color: rgb(71, 160, 61);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-}
 .layout-enter-active {
   animation: downFromTop 500ms ease;
 }

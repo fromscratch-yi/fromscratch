@@ -18,7 +18,7 @@ export default {
       title: 'About',
       description: 'This is Yuichi Ishiyama&apos;s profile.'
     };
-    var typeTxt = '$ cat ./about.html\n This is Yuichi Ishiyama\'s Portfolio.';
+    var typeTxt = '$ cat ./about.txt\n\> This is Yuichi Ishiyama\'s Profile.\n\> Who am I\?';
     return { titleDescData, typeTxt }
   }
 }

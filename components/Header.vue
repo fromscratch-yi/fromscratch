@@ -105,8 +105,9 @@ header .nav_menu ul {
 }
 header .nav_menu ul li {
   margin: 20px 0;
-  font-size: 40px;
+  font-size: 33px;
   line-height: 1.3;
+  letter-spacing: 4px;
 }
 header .nav_menu ul li:last-child {
   margin: 0;
@@ -122,13 +123,25 @@ header .nav_menu ul li.nv_logo {
     margin: auto;
 }
 header .nav_menu ul li a {
-  display: block;
+  position: relative;
+  display: inline-block;
   color: rgb(177, 177, 177);
   line-height: 1.2;
+  padding: 0 0 5px;
 }
 header .nav_menu ul li a.nuxt-link-exact-active {
   pointer-events: none;
-  border-bottom: 2px solid rgb(71, 160, 61);
+}
+header .nav_menu ul li a.nuxt-link-exact-active::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 3px;
+  background-color: rgb(71, 160, 61);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
 }
 header .nav_menu ul li a .nav_txt {
   font-size: 1.2em;
@@ -136,7 +149,7 @@ header .nav_menu ul li a .nav_txt {
 }
 @media screen and (min-width: 768px){
   header .nav_menu ul li {
-    font-size: 60px;
+    font-size: 50px;
   }
   header .nav_menu ul li.nv_logo {
     top: -70px;

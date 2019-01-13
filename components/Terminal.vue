@@ -26,15 +26,18 @@ export default {
 
 <style>
   .terminal_wrap {
-    margin: 15px 0;
+    max-width: 600px;
+    margin: 15px auto;
     border: 1px solid rgb(43, 42, 42);
     border-radius: 5px;
+    overflow: hidden;
   }
   .terminal_wrap .tool_bar {
     position: relative;
     background: rgb(217,217,217);
     color: rgb(43, 42, 42);
     text-align: center;
+    border-bottom: 1px solid rgb(43, 42, 42);
   }
   .terminal_wrap .tool_bar .btn {
     position: absolute;
@@ -58,12 +61,19 @@ export default {
     background: rgb(53,204,76);
   }
   .terminal_wrap .type_txt {
+    height: 85px;
     padding: 10px;
-    height: 68px;
     background: rgb(43, 42, 42);
     color: rgb(71, 160, 61);
+    font-size: 14px;
+    overflow: hidden;
   }
   .vue-typer .custom.char.typed {
     color: rgb(71, 160, 61);
+  }
+  .vue-typer .custom.caret {
+    display: inline-block;
+    background-color: rgb(71, 160, 61);
+    font-size: 13px;
   }
 </style>
