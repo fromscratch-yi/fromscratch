@@ -1,6 +1,7 @@
 <template>
   <footer>
-    <div class="contact_wrap">
+    <section class="contact_wrap">
+      <h2>Contact &amp; Follow</h2>
       <ul class="columns is-mobile">
         <li class="column">
           <p class="contanc_item">
@@ -23,15 +24,24 @@
           </p>
         </li>
       </ul>
-    </div>
+    </section>
     <p class="copyright">&copy;2019 FromScratch All Rights Reserved</p>
   </footer>
 </template>
 
 <style scoped>
+footer {
+  padding: 20px 0 0;
+}
 footer .contact_wrap {
   width: 250px;
   margin: 0 auto 15px;
+}
+footer .contact_wrap h2 {
+  margin: 0 0 15px;
+  font-size: 20px;
+  font-family: 'arial black';
+  text-align: center;
 }
 footer .contact_wrap .contanc_item {
   text-align: center;

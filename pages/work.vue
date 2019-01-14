@@ -1,8 +1,10 @@
 <template>
   <div class="contents_area">
     <div class="max_size_wrap">
-      <TitleDescription :titleDescData="titleDescData"></TitleDescription>
-      <Terminal :typeTxt="typeTxt"></Terminal>
+      <div class="inner_contents_wrap">
+        <TitleDescription :titleDescData="titleDescData"></TitleDescription>
+        <Terminal :typeTxt="typeTxt"></Terminal>
+      </div>
     </div>
   </div>
 </template>

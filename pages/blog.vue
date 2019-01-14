@@ -1,8 +1,11 @@
 <template>
   <div class="contents_area">
     <div class="max_size_wrap">
-      <TitleDescription :titleDescData="titleDescData"></TitleDescription>
-      <Terminal :typeTxt="typeTxt"></Terminal>
+      <div class="inner_contents_wrap">
+        <TitleDescription :titleDescData="titleDescData"></TitleDescription>
+        <Terminal :typeTxt="typeTxt"></Terminal>
+        <p class="no_posts">No blog posts yet...</p>
+      </div>
     </div>
   </div>
 </template>
@@ -27,5 +30,10 @@ export default {
 </script>
 
 <style>
+.no_posts {
+  padding: 15px 0;
+  font-weight: bold;
+  text-align: center;
+}
 </style>
 

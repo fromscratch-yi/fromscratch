@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <Header/>
-    <section class="container">
+    <section class="page_contents">
       <nuxt/>
     </section>
     <Footer/>
@@ -36,12 +36,8 @@ html::-webkit-scrollbar {
   max-width: 750px;
   margin: 0 auto;
 }
-.em_color {
-  color: rgb(83, 187, 72);
-  font-weight: bold;
-}
 @media screen and (max-width: 769px) {
-  .max_size_wrap {
+  .inner_contents_wrap {
     padding: 0 15px;
   }
 }

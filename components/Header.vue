@@ -59,7 +59,7 @@ header {
   width: 100vw;
   padding: 10px 15px;
   margin: 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   z-index: 1;
 }
 .header_container .logo, .header_container .nav_btn {
