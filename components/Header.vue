@@ -60,6 +60,7 @@ header {
   padding: 10px 15px;
   margin: 0;
   background: rgba(255, 255, 255, 0.3);
+  z-index: 1;
 }
 .header_container .logo, .header_container .nav_btn {
   cursor: pointer;

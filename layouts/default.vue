@@ -32,8 +32,18 @@ html::-webkit-scrollbar {
 .wrap {
   background-color: #fff;
 }
-.container {
-  padding: 0 15px 15px;
+.max_size_wrap {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.em_color {
+  color: rgb(83, 187, 72);
+  font-weight: bold;
+}
+@media screen and (max-width: 769px) {
+  .max_size_wrap {
+    padding: 0 15px;
+  }
 }
 .layout-enter-active {
   animation: downFromTop 500ms ease;
@@ -46,7 +56,7 @@ html::-webkit-scrollbar {
 }
 @keyframes downFromTop {
   from {
-    transform: translateY(-100%);
+    transform: translateY(100%);
   }
   to {
     transform: translateY(0);

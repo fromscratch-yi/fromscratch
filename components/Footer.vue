@@ -24,7 +24,7 @@
         </li>
       </ul>
     </div>
-    <p class="copyright">&copy;2019 fromscratch All Rights Reserved</p>
+    <p class="copyright">&copy;2019 FromScratch All Rights Reserved</p>
   </footer>
 </template>
 

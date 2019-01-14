@@ -26,7 +26,6 @@ export default {
 
 <style>
   .terminal_wrap {
-    max-width: 600px;
     margin: 15px auto;
     border: 1px solid rgb(43, 42, 42);
     border-radius: 5px;

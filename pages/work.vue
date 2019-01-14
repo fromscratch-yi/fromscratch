@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <TitleDescription :titleDescData="titleDescData"></TitleDescription>
-    <Terminal :typeTxt="typeTxt"></Terminal>
+  <div class="contents_area">
+    <div class="max_size_wrap">
+      <TitleDescription :titleDescData="titleDescData"></TitleDescription>
+      <Terminal :typeTxt="typeTxt"></Terminal>
+    </div>
   </div>
 </template>
 
