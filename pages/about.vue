@@ -223,7 +223,6 @@ export default {
 .columns.inner .name_space h2 {
   margin: 0 0 5px;
   font-size: 30px;
-  font-family: 'Georgia';
   line-height: 1.5;
 }
 .columns.inner .name_space h2 .name_jp {
@@ -259,7 +258,6 @@ export default {
 .sub_contents h2 {
   font-size: 25px;
   text-align: center;
-  font-family: 'arial black';
 }
 .sub_contents .category {
   padding: 20px 15px;

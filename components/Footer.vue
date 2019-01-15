@@ -40,7 +40,6 @@ footer .contact_wrap {
 footer .contact_wrap h2 {
   margin: 0 0 15px;
   font-size: 20px;
-  font-family: 'arial black';
   text-align: center;
 }
 footer .contact_wrap .contanc_item {
