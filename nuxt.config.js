@@ -9,9 +9,9 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'FromScratch Web Site.' },
-      { name: 'og:url', content: 'https://yufroms-fromscratch123.firebaseapp.com/' },
+      { name: 'og:url', content: 'https://fromscratch-y.firebaseapp.com/' },
       { name: 'og:site_name', content: 'FromScratch - Yuichi Ishiyama\'s Portfolio' },
-      { name: 'og:image', content: 'https://yufroms-fromscratch123.firebaseapp.com/ogp.gif' },
+      { name: 'og:image', content: 'https://fromscratch-y.firebaseapp.com/ogp.gif' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:title', name: 'og:title', content: 'FromScratch | Yuichi Ishiyama' },
       { hid: 'og:description', name: 'og:description', content: 'This is Yuichi Ishiyama\'s Portfolio and Blog site.' }

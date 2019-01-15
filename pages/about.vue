@@ -190,6 +190,13 @@
         </div>
       </section>
     </div>
+
+    <!-- FootNav -->
+    <div class="max_size_wrap link_wrap">
+      <div class="inner_contents_wrap">
+        <p class="right"><nuxt-link to="/work">Work &rarr;</nuxt-link></p>
+      </div>
+    </div>
   </div>
 </template>
 

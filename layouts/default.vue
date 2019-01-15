@@ -36,6 +36,15 @@ html::-webkit-scrollbar {
   max-width: 750px;
   margin: 0 auto;
 }
+.link_wrap {
+  margin-top: 20px;
+}
+.link_wrap .left {
+  text-align: left;
+}
+.link_wrap .right {
+  text-align: right;
+}
 @media screen and (max-width: 769px) {
   .inner_contents_wrap {
     padding: 0 15px;
