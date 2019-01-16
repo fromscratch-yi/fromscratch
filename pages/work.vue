@@ -9,8 +9,8 @@
     <p class="page_description">This is my private works.<br>Please have a look at it.</p>
     <div class="tabs is-centered">
       <ul>
-        <li v-bind:class="{ 'is-active': tabsel == 'service' }" @click="tabsel = 'service'"><a>Services</a></li>
-        <li v-bind:class="{ 'is-active': tabsel == 'web' }" @click="tabsel = 'web'"><a>Web Pages</a></li>
+        <li v-bind:class="{ 'is-active': tabsel == 'service' }" @click="tabsel = 'service'"><a>Service</a></li>
+        <li v-bind:class="{ 'is-active': tabsel == 'web' }" @click="tabsel = 'web'"><a>Web Site</a></li>
         <li v-bind:class="{ 'is-active': tabsel == 'card' }" @click="tabsel = 'card'"><a>Busines Card</a></li>
       </ul>
     </div>
@@ -18,21 +18,25 @@
     <!-- Tab panes -->
     <div class="max_size_wrap">
       <div class="inner_contents_wrap tab_contents">
+        <!-- Service -->
         <transition>
-          <div class="tab_item" v-if="tabsel == 'service'">
+          <div class="tab_item" v-show="tabsel == 'service'">
             <p>No data.</p>
           </div>
         </transition>
+
+        <!-- Web site -->
         <transition>
-          <div class="tab_item" v-if="tabsel == 'web'">
+          <div class="tab_item" v-show="tabsel == 'web'">
             <p>No data.</p>
           </div>
         </transition>
+
+        <!-- Busines Cards -->
         <transition>
-          <!-- Busines Cards -->
-          <div class="tab_item" v-if="tabsel == 'card'">
+          <div class="tab_item" v-show="tabsel == 'card'">
             <section class="work_wrap">
-              <h2>FromScratch</h2>
+              <h2 class="item_ttl">FromScratch</h2>
               <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                 <slide>
                   <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="fromscratch 名刺"></div>
@@ -41,15 +45,15 @@
                   <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch2.png" alt="fromscratch 名刺 裏"></div>
                 </slide>
               </carousel>
-              <p>Busines Cards Design. Use Photoshop.</p>
+              <p class="item_desc">Busines Card and Logo's Design that used photoshop.</p>
             </section>
             <section class="work_wrap">
-              <h2>ch.create</h2>
+              <h2 class="item_ttl">ch.create</h2>
               <div class="img_wrap"><img src="~assets/img/works/bc/chcreate.png" alt="ch.create 名刺"></div>
-              <p>Busines Cards Design. Use Photoshop.</p>
+              <p class="item_desc">Busines Card and Logo's Design that used photoshop.</p>
             </section>
             <section class="work_wrap">
-              <h2>T'z Auto</h2>
+              <h2 class="item_ttl">T'z Auto</h2>
               <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                 <slide>
                   <div class="img_wrap"><img src="~assets/img/works/bc/tzauto1.png" alt="Tz Auto 名刺"></div>
@@ -58,10 +62,11 @@
                   <div class="img_wrap"><img src="~assets/img/works/bc/tzauto2.png" alt="Tz Auto 名刺 裏"></div>
                 </slide>
               </carousel>
-              <p>Busines Cards Design. Use Photoshop.</p>
+              <p class="item_desc">Busines Card and Logo's Design that used photoshop.</p>
             </section>
           </div>
         </transition>
+        <p class="note">Note: For the sake of personal information and confidentiality obligation, I'm changing or hidden some display. </p>
       </div>
     </div>
 
@@ -121,10 +126,11 @@ export default {
 }
 .page_contents .tabs li a {
   font-weight: bold;
-  border-bottom-width: 2px;
+
 }
 .page_contents .tabs li.is-active a {
   border-bottom-color: rgb(36, 189, 18);
+  border-bottom-width: 2px;
   color: rgb(36, 189, 18);
 }
 .page_contents .VueCarousel-pagination {
@@ -139,6 +145,32 @@ export default {
   padding: 10px;
   width: 100%;
   transition: all 0.8s ease;
+}
+.tab_item .work_wrap {
+  margin: 20px 0 0;
+}
+.tab_item .work_wrap .item_ttl {
+  position: relative;
+  padding: 5px 0 5px 15px;
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+.tab_item .work_wrap .item_ttl::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  background: rgb(86, 193, 85);
+}
+.tab_item .work_wrap .item_desc {
+  padding: 15px 0 20px;
+  text-align: center;
+  font-size: 13px;
+  border-bottom: 1px #7b7b7b dashed;
 }
 .tab_item .img_wrap {
   text-align: center;

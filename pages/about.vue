@@ -7,7 +7,7 @@
         <section class="columns is-tablet inner">
           <div class="column is-three-fifths name_space">
             <h2>Yuichi Ishiyama</h2>
-            <p>Web Design, Business Card Design, <span class="em_color">Front-end</span> Development, <span class="em_color">Back-end</span> Development, Mobile-app Development etc.</p>
+            <p>Web Design, Business Card Design, <span class="em_color">Front-End</span> Development, <span class="em_color">Back-End</span> Development, Mobile-app Development, etc.</p>
           </div>
           <div class="column profile_area">
             <div class="image_area">
@@ -17,15 +17,19 @@
             </div>
           </div>
         </section>
-        <p class="profile_txt">I was born on January 23, 1993 in Osaka, Japan.<br>After working as a bartender for 4 years, I have been working as a software engineer since 2014.<br></p>
+        <div class="profile_txt">
+          <p>I was born on January 23, <span class="em_color">1993</span> in Osaka, Japan. After working as a bartender for four years, I have been working as a software engineer since 2014.</p>
+          <p>I like soccer, and programming. Recently, I want to communicate <span class="em_color">software developer around the world</span> ha-ha. And I want to grow up with <span class="em_color">English</span> and <span class="em_color">programming skill</span> as a software developer.</p>
+          <p>That's about it. Thank u.</p>
+        </div>
       </div>
     </div>
     <div class="sub_contents_wrap">
       <section class="sub_contents">
-        <h2>SKILL</h2>
+        <h2>Skills &amp; Tools</h2>
         <div class="max_size_wrap columns is-tablet">
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name">Front-end</span><img src="~assets/img/icon_front.png" alt="Front-end Development"></h3>
+            <h3 class="category_ttl_wrap"><span class="category_name">Front-End</span><img src="~assets/img/icon_front.png" alt="Front-end Development"></h3>
             <ul class="skill_list">
               <li>HTML</li>
               <li>CSS</li>
@@ -38,7 +42,7 @@
             </ul>
           </section>
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name">Back-end</span><img src="~assets/img/icon_back.png" alt="Back-end Development"></h3>
+            <h3 class="category_ttl_wrap"><span class="category_name">Back-End</span><img src="~assets/img/icon_back.png" alt="Back-end Development"></h3>
             <ul class="skill_list">
               <li>PHP</li>
               <li>Laravel</li>
@@ -63,36 +67,25 @@
               <li>Mac</li>
               <li>VSCode</li>
               <li>Vim</li>
+              <li>Chrome</li>
+              <li>Firefox</li>
             </ul>
           </section>
         </div>
       </section>
       <section class="sub_contents">
-        <h2>CARRIER</h2>
+        <h2>Career</h2>
         <div class="max_size_wrap">
           <table class="table is-fullwidth">
             <thead>
               <tr>
-                <th>About Project</th>
-                <th>Skill</th>
+                <th>About Projects</th>
+                <th>Skills &amp; Tools</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Employee Management System.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>PHP</li>
-                    <li>Laravel</li>
-                    <li>PostgreSQL</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>js</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>Some site's front-end &amp; back-end.</td>
+                <td>Some web site's Front-End &amp; Back-End.</td>
                 <td>
                   <ul class="skill_list">
                     <li>PHP</li>
@@ -107,23 +100,40 @@
                 </td>
               </tr>
               <tr>
-                <td>Sales management system.</td>
+                <td>Employee management system's Front-End &amp; Back-End.</td>
                 <td>
                   <ul class="skill_list">
                     <li>PHP</li>
                     <li>Laravel</li>
-                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>js</li>
+                    <li>AWS(ElasticBeansTalk, RDB)</li>
                   </ul>
                 </td>
               </tr>
               <tr>
-                <td>My Management app.</td>
+                <td>Sales management system's Front-End &amp; Back-End.</td>
                 <td>
                   <ul class="skill_list">
-                    <li>Android java</li>
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>js</li>
+                    <li>CentOS</li>
+                    <li>Nginx</li>
+                    <li>MySQL</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>My android application (UseD).</td>
+                <td>
+                  <ul class="skill_list">
+                    <li>Android Java</li>
+                    <li>AndroidStudio</li>
                   </ul>
                 </td>
               </tr>
@@ -136,7 +146,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Multimedia broadcasting app's API.</td>
+                <td>API of Multimedia broadcasting App.</td>
                 <td>
                   <ul class="skill_list">
                     <li>PHP</li>
@@ -146,30 +156,33 @@
                 </td>
               </tr>
               <tr>
-                <td>Traffic data management screen.<br>And Server construction for the system. </td>
+                <td>Traffic data management screen. And server construction.</td>
                 <td>
                   <ul class="skill_list">
                     <li>PHP</li>
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>js</li>
-                    <li>ShellScript</li>
+                    <li>Debian</li>
+                    <li>Nginx</li>
                   </ul>
                 </td>
               </tr>
               <tr>
-                <td>Research and development of power servers.</td>
+                <td>Research and development of power servers as developer and infrastructure engineer.</td>
                 <td>
                   <ul class="skill_list">
                     <li>Groovy</li>
                     <li>Java</li>
                     <li>HAProxy</li>
                     <li>Pacemaker + Corosync</li>
+                    <li>apache + tomcat</li>
+                    <li>AWS(EC2)</li>
                   </ul>
                 </td>
               </tr>
               <tr>
-                <td>Car navigation data formatting batch.</td>
+                <td>Tool for format of car navigation data.</td>
                 <td>
                   <ul class="skill_list">
                     <li>PHP</li>
@@ -187,6 +200,7 @@
               </tr>
             </tbody>
           </table>
+          <p class="note">Note: To keep confidential, concrete expression is omitted.</p>
         </div>
       </section>
     </div>
@@ -245,11 +259,21 @@ export default {
   color: rgb(134, 204, 127);
   font-weight: bold;
 }
+.profile_txt p .em_color {
+  color: rgb(64, 161, 63);
+  font-weight: bold;
+}
 .profile_txt {
   padding: 0.75rem 8px;
   font-size: 14px;
   line-height: 1.6;
   text-align: center;
+}
+.profile_txt p {
+  margin-bottom: 10px;
+}
+.profile_txt p:last-child {
+  margin-bottom: 0;
 }
 .sub_contents {
   padding: 30px 15px 20px;
@@ -303,7 +327,7 @@ export default {
   margin: 0;
 }
 .sub_contents .table {
-  margin-top: 20px;
+  margin: 20px 0;
   font-size: 14px;
 }
 .sub_contents .table .skill_list li {

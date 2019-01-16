@@ -36,6 +36,11 @@ html::-webkit-scrollbar {
   max-width: 750px;
   margin: 0 auto;
 }
+.note {
+  padding: 5px 10px;
+  font-size: 12px;
+  color: rgb(155, 155, 155);
+}
 .link_wrap {
   margin-top: 20px;
 }
