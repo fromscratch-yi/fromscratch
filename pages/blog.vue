@@ -10,7 +10,7 @@
     <!-- FootNav -->
     <div class="max_size_wrap link_wrap">
       <div class="inner_contents_wrap">
-        <p class="left"><nuxt-link to="/work">&larr; Work</nuxt-link></p>
+        <p class="left"><nuxt-link to="/work">Work</nuxt-link></p>
       </div>
     </div>
   </div>

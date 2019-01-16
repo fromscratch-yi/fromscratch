@@ -28,7 +28,69 @@
         <!-- Web site -->
         <transition>
           <div class="tab_item" v-show="tabsel == 'web'">
-            <p>No data.</p>
+            <section class="work_wrap">
+              <h2 class="item_ttl">FromScratch</h2>
+              <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/fromscratch2.png" alt="FromScratch Web 2"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/fromscratch3.png" alt="FromScratch Web 3"></div>
+                </slide>
+              </carousel>
+              <ul class="skill_list">
+                <li class="tag">Nuxt.js</li>
+                <li class="tag">Vue.js</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">Bluma</li>
+                <li class="tag">Firebase</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <p class="item_desc">This is my portfolio site. The Name is <span class="em_txt">FromScratch</span>.<br>I want to keep to try that I create products of high quality. So I want to develop <span class="em_txt">FromScratch</span>. No template and no format.</p>
+            </section>
+            <section class="work_wrap">
+              <h2 class="item_ttl">The relation, Inc.</h2>
+              <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/relation2.png" alt="relation Web 2"></div>
+                </slide>
+              </carousel>
+              <ul class="skill_list">
+                <li class="tag">PHP</li>
+                <li class="tag">jQuery</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">Bootstrap</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <p class="item_desc">The relation, Inc. is a system development company.<br>I was in charge of all planning, designing and implementation as Renewal project.</p>
+            </section>
+            <section class="work_wrap">
+              <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
+              <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/unaman2.png" alt="unaman Web 2"></div>
+                </slide>
+              </carousel>
+              <ul class="skill_list">
+                <li class="tag">jQuery</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">Bootstrap</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <p class="item_desc">The Unaman is specialty store of eel.<br>This is my first work in my life. I was in charge of all planning, designing and implementation as New Project.</p>
+            </section>
           </div>
         </transition>
 
@@ -39,18 +101,24 @@
               <h2 class="item_ttl">FromScratch</h2>
               <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                 <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="fromscratch 名刺"></div>
+                  <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="FromScratch 名刺"></div>
                 </slide>
                 <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch2.png" alt="fromscratch 名刺 裏"></div>
+                  <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch2.png" alt="FromScratch 名刺 裏"></div>
                 </slide>
               </carousel>
-              <p class="item_desc">Busines Card and Logo's Design that used photoshop.</p>
+              <ul class="skill_list">
+                <li class="tag">Photoshop</li>
+              </ul>
+              <p class="item_desc">This is a my Business Card.<br>I designed all including Logo.</p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">ch.create</h2>
               <div class="img_wrap"><img src="~assets/img/works/bc/chcreate.png" alt="ch.create 名刺"></div>
-              <p class="item_desc">Busines Card and Logo's Design that used photoshop.</p>
+              <ul class="skill_list">
+                <li class="tag">Photoshop</li>
+              </ul>
+              <p class="item_desc">The ch.create is construction company.<br>I designed all including Logo.</p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">T'z Auto</h2>
@@ -62,7 +130,10 @@
                   <div class="img_wrap"><img src="~assets/img/works/bc/tzauto2.png" alt="Tz Auto 名刺 裏"></div>
                 </slide>
               </carousel>
-              <p class="item_desc">Busines Card and Logo's Design that used photoshop.</p>
+              <ul class="skill_list">
+                <li class="tag">Photoshop</li>
+              </ul>
+              <p class="item_desc">The T'z Auto is car repairer company.<br>I designed all including Logo.</p>
             </section>
           </div>
         </transition>
@@ -73,8 +144,8 @@
     <!-- FootNav -->
     <div class="max_size_wrap link_wrap">
       <div class="inner_contents_wrap center_p">
-        <p class="left"><nuxt-link to="/about">&larr; About</nuxt-link></p>
-        <p class="right"><nuxt-link to="/blog">Blog &rarr;</nuxt-link></p>
+        <p class="left"><nuxt-link to="/about">About</nuxt-link></p>
+        <p class="right"><nuxt-link to="/blog">Blog</nuxt-link></p>
       </div>
     </div>
   </div>
@@ -126,7 +197,9 @@ export default {
 }
 .page_contents .tabs li a {
   font-weight: bold;
-
+}
+.page_contents .tabs li a:hover {
+  border-bottom-width: 2px;
 }
 .page_contents .tabs li.is-active a {
   border-bottom-color: rgb(36, 189, 18);
@@ -147,7 +220,8 @@ export default {
   transition: all 0.8s ease;
 }
 .tab_item .work_wrap {
-  margin: 20px 0 0;
+  padding: 10px 0 20px;
+  border-bottom: 1px #7b7b7b dashed;
 }
 .tab_item .work_wrap .item_ttl {
   position: relative;
@@ -166,11 +240,24 @@ export default {
   -webkit-transform: translateY(-50%);
   background: rgb(86, 193, 85);
 }
+.skill_list {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+}
+.skill_list li.tag {
+  font-size: 12px;
+  color: rgb(255, 142, 26);
+  margin-bottom: 5px;
+}
 .tab_item .work_wrap .item_desc {
-  padding: 15px 0 20px;
+  margin: 5px 0 0;
   text-align: center;
   font-size: 13px;
-  border-bottom: 1px #7b7b7b dashed;
+}
+.em_txt {
+  font-weight: bold;
+  color: rgb(71, 160, 61);
 }
 .tab_item .img_wrap {
   text-align: center;
@@ -183,10 +270,10 @@ export default {
   position: absolute;
 }
 .v-enter {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }
 .v-leave-to {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 </style>
 
