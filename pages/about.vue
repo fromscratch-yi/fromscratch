@@ -110,6 +110,7 @@
                     <li>CSS</li>
                     <li>js</li>
                     <li>AWS(ElasticBeansTalk, RDB)</li>
+                    <li>Docker</li>
                   </ul>
                 </td>
               </tr>
@@ -125,6 +126,7 @@
                     <li>CentOS</li>
                     <li>Nginx</li>
                     <li>MySQL</li>
+                    <li>Vagrant</li>
                   </ul>
                 </td>
               </tr>
@@ -175,8 +177,10 @@
                     <li>Groovy</li>
                     <li>Java</li>
                     <li>HAProxy</li>
-                    <li>Pacemaker + Corosync</li>
-                    <li>apache + tomcat</li>
+                    <li>Pacemaker</li>
+                    <li>Corosync</li>
+                    <li>apache</li>
+                    <li>tomcat</li>
                     <li>AWS(EC2)</li>
                   </ul>
                 </td>

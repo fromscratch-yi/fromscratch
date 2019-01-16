@@ -20,17 +20,83 @@
       <div class="inner_contents_wrap tab_contents">
         <!-- Service -->
         <transition>
-          <div class="tab_item" v-show="tabsel == 'service'">
-            <p>No data.</p>
+          <div class="tab_item" v-if="tabsel == 'service'">
+            <section class="work_wrap">
+              <h2 class="item_ttl">UseD</h2>
+              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/used1.png" alt="used"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/used2.png" alt="used"></div>
+                </slide>
+              </carousel>
+              <ul class="skill_list">
+                <li class="tag">Android Java</li>
+                <li class="tag">SQLite</li>
+                <li class="tag">AndroidStudio</li>
+              </ul>
+              <p class="item_desc">This is Android Native App. The Name is UseD.<br>It is an application I made to recognize my own waste.<br>You can classify expenses into three types of spend, waste, investment, and you can see the proportion of expenditure.<br>And you will notice how we are wasting money</p>
+            </section>
+            <section class="work_wrap">
+              <h2 class="item_ttl">Employee Management System</h2>
+              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/ems1.png" alt="ems"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/ems2.png" alt="ems"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/ems3.png" alt="ems"></div>
+                </slide>
+              </carousel>
+              <ul class="skill_list">
+                <li class="tag">PHP</li>
+                <li class="tag">Laravel</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">jQuery</li>
+                <li class="tag">AWS</li>
+                <li class="tag">Docker</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <p class="item_desc">This web application solves the problem that employee's face and name do not match.<br>And it make communication easier by profile page.<br>I was in charge of all planning, designing and implementation as New Project.<br><br>Note: Administrator screen is omitted.</p>
+            </section>
+            <section class="work_wrap">
+              <h2 class="item_ttl">Sales Management System</h2>
+              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/sms1.png" alt="Sales Management System"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/sms2.png" alt="Sales Management System"></div>
+                </slide>
+                <slide>
+                  <div class="img_wrap"><img src="~assets/img/works/web/sms3.png" alt="Sales Management System"></div>
+                </slide>
+              </carousel>
+              <ul class="skill_list">
+                <li class="tag">PHP</li>
+                <li class="tag">Laravel</li>
+                <li class="tag">MySQL</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">jQuery</li>
+                <li class="tag">Vagrant</li>
+              </ul>
+              <p class="item_desc">They managed sales by peper. So I developed salse management app of web application. <br>It's can manage salses on PC. And they made sales comparison easier.</p>
+            </section>
           </div>
         </transition>
 
         <!-- Web site -->
         <transition>
-          <div class="tab_item" v-show="tabsel == 'web'">
+          <div class="tab_item" v-if="tabsel == 'web'">
             <section class="work_wrap">
               <h2 class="item_ttl">FromScratch</h2>
-              <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                 <slide>
                   <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web"></div>
                 </slide>
@@ -54,7 +120,7 @@
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">The relation, Inc.</h2>
-              <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                 <slide>
                   <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web"></div>
                 </slide>
@@ -74,7 +140,7 @@
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
-              <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                 <slide>
                   <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web"></div>
                 </slide>
@@ -96,10 +162,10 @@
 
         <!-- Busines Cards -->
         <transition>
-          <div class="tab_item" v-show="tabsel == 'card'">
+          <div class="tab_item" v-if="tabsel == 'card'">
             <section class="work_wrap">
               <h2 class="item_ttl">FromScratch</h2>
-              <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                 <slide>
                   <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="FromScratch 名刺"></div>
                 </slide>
@@ -122,7 +188,7 @@
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">T'z Auto</h2>
-              <carousel :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                 <slide>
                   <div class="img_wrap"><img src="~assets/img/works/bc/tzauto1.png" alt="Tz Auto 名刺"></div>
                 </slide>
@@ -202,9 +268,9 @@ export default {
   border-bottom-width: 2px;
 }
 .page_contents .tabs li.is-active a {
-  border-bottom-color: rgb(36, 189, 18);
+  border-bottom-color: rgb(64, 161, 63);
   border-bottom-width: 2px;
-  color: rgb(36, 189, 18);
+  color: rgb(64, 161, 63);
 }
 .page_contents .VueCarousel-pagination {
   margin-top: -30px;
@@ -238,7 +304,7 @@ export default {
   left: 0;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  background: rgb(86, 193, 85);
+  background: rgb(64, 161, 63);
 }
 .skill_list {
   margin-top: 15px;
