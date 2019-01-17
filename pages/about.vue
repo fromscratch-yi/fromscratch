@@ -19,7 +19,7 @@
         </section>
         <div class="profile_txt">
           <p>I was born on January 23, <span class="em_color">1993</span> in Osaka, Japan. After working as a bartender for four years, I have been working as a software engineer since 2014.</p>
-          <p>I like soccer, and programming. Recently, I want to communicate <span class="em_color">software developer around the world</span> ha-ha. And I want to grow up with <span class="em_color">English</span> and <span class="em_color">programming skill</span> as a software developer.</p>
+          <p>I like soccer, and programming. Recently, I want to communicate <span class="em_color">software engineer around the world</span> ha-ha. And I want to grow up with <span class="em_color">English</span> and <span class="em_color">programming skill</span> as a software engineer.</p>
           <p>That's about it. Thank u.</p>
         </div>
       </div>

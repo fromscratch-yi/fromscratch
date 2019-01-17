@@ -306,12 +306,12 @@ export default {
   -webkit-transform: translateY(-50%);
   background: rgb(64, 161, 63);
 }
-.skill_list {
+.tab_item .work_wrap .skill_list {
   margin-top: 15px;
   font-size: 12px;
   text-align: center;
 }
-.skill_list li.tag {
+.tab_item .work_wrap .skill_list li.tag {
   font-size: 12px;
   color: rgb(255, 142, 26);
   margin-bottom: 5px;
