@@ -12,9 +12,9 @@
       <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
       <ul>
         <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo"></li>
-        <li><nuxt-link to="/about"><span class="nav_txt">A</span>bout</nuxt-link></li>
-        <li><nuxt-link to="/work"><span class="nav_txt">W</span>ork</nuxt-link></li>
-        <li><nuxt-link to="/blog"><span class="nav_txt">B</span>log</nuxt-link></li>
+        <li><nuxt-link to="about"><span class="nav_txt">A</span>bout</nuxt-link></li>
+        <li><nuxt-link to="work"><span class="nav_txt">W</span>ork</nuxt-link></li>
+        <li><nuxt-link to="blog"><span class="nav_txt">B</span>log</nuxt-link></li>
       </ul>
     </nav>
   </header>
@@ -25,7 +25,11 @@ export default {
   data() {
     return {
       title: "Top",
-      isOpen: false
+      isOpen: false,
+      languages: [
+        { title: 'English', to: this.$route.fullPath.replace(/^\/[^/]+/, '') },
+        { title: 'Japanese', to: '/ja' + this.$route.fullPath.replace(/^\/[^/]+/, '') }
+      ]
     }
   },
   methods: {
