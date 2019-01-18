@@ -54,14 +54,11 @@ module.exports = {
   plugins: [
     '~/plugins/i18n.js'
   ],
-  vendor: [
-    'vue-i18n'
-  ],
   router: {
     middleware: 'i18n'
   },
   generate: {
-    routes: ['/', '/ja']
+    routes: ['/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog']
   },
   /*
   ** Build configuration

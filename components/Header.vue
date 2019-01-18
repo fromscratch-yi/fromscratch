@@ -2,7 +2,7 @@
   <header>
     <div class="header_container level is-mobile">
       <div class="logo level-left">
-        <nuxt-link to="/"><img src="~assets/img/logo.png" alt="FromScratch logo"></nuxt-link>
+        <nuxt-link :to="$i18n.path('')"><img src="~assets/img/logo.png" alt="FromScratch logo"></nuxt-link>
       </div>
       <div class="nav_btn level-right">
         <p class="level-item icon" @click="clickNavBtn"><font-awesome-icon icon="bars"/></p>
@@ -10,11 +10,21 @@
     </div>
     <nav class="nav_menu" v-bind:class="{'open': isOpen}">
       <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
-      <ul>
+      <ul class="page_nav">
         <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo"></li>
-        <li><nuxt-link to="about"><span class="nav_txt">A</span>bout</nuxt-link></li>
-        <li><nuxt-link to="work"><span class="nav_txt">W</span>ork</nuxt-link></li>
-        <li><nuxt-link to="blog"><span class="nav_txt">B</span>log</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('about')"><span class="nav_txt">A</span>bout</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('work')"><span class="nav_txt">W</span>ork</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('blog')"><span class="nav_txt">B</span>log</nuxt-link></li>
+        <li class="lang_wrap">
+          <p class="attention">Language</p>
+          <div class="lang_wrap_inner">
+            <!-- setting for english -->
+            <nuxt-link :to="$route.fullPath.replace(/^\/[^\/]+/, '')">en</nuxt-link>
+            <!-- setting for japanese -->
+            <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath">ja</nuxt-link>
+            <nuxt-link v-else :to="$route.fullPath">ja</nuxt-link>
+          </div>
+        </li>
       </ul>
     </nav>
   </header>
@@ -105,19 +115,19 @@ header .nav_menu .close_btn {
   font-size: 30px;
   cursor: pointer;
 }
-header .nav_menu ul {
+header .nav_menu .page_nav {
   position: relative;
 }
-header .nav_menu ul li {
-  margin: 20px 0;
-  font-size: 33px;
-  line-height: 1.3;
+header .nav_menu .page_nav li {
+  margin: 18px 0;
+  font-size: 30px;
+  line-height: 1;
   letter-spacing: 4px;
 }
-header .nav_menu ul li:last-child {
+header .nav_menu .page_nav li:last-child {
   margin: 0;
 }
-header .nav_menu ul li.nv_logo {
+header .nav_menu .page_nav li.nv_logo {
   position: absolute;
     width: 50px;
     height: 50px;
@@ -127,17 +137,62 @@ header .nav_menu ul li.nv_logo {
     -webkit-transform: translateX(-50%);
     margin: auto;
 }
-header .nav_menu ul li a {
+header .nav_menu .page_nav li.lang_wrap .attention {
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+}
+header .nav_menu .page_nav li.lang_wrap .lang_wrap_inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+header .nav_menu .page_nav li.lang_wrap a {
+  align-items: center;
+  border: 1px solid #47a03d;
+  color: #4a4a4a;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 12px 0;
+  vertical-align: top;
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+  font-size: 18px;
+  width: 80px;
+  text-align: center;
+}
+header .nav_menu .page_nav li.lang_wrap a:first-child {
+  border-bottom-left-radius: 290486px;
+  border-top-left-radius: 290486px;
+  padding-left: 10px;
+}
+header .nav_menu .page_nav li.lang_wrap a:last-child {
+  border-bottom-right-radius: 290486px;
+  border-top-right-radius: 290486px;
+  padding-right: 10px;
+}
+header .nav_menu .page_nav li.lang_wrap a.nuxt-link-exact-active {
+  pointer-events: none;
+  background-color: rgb(120, 199, 111);
+  z-index: 1;
+}
+
+
+header .nav_menu .page_nav li.page_link a {
   position: relative;
   display: inline-block;
   color: rgb(177, 177, 177);
   line-height: 1.2;
   padding: 0 0 5px;
 }
-header .nav_menu ul li a.nuxt-link-exact-active {
+header .nav_menu .page_nav li.page_link a.nuxt-link-exact-active {
   pointer-events: none;
 }
-header .nav_menu ul li a.nuxt-link-exact-active::before {
+header .nav_menu .page_nav li.page_link a.nuxt-link-exact-active::before {
   position: absolute;
   content: '';
   width: 40px;
@@ -148,15 +203,15 @@ header .nav_menu ul li a.nuxt-link-exact-active::before {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
 }
-header .nav_menu ul li a .nav_txt {
+header .nav_menu .page_nav li.page_link a .nav_txt {
   font-size: 1.2em;
   color: rgb(71, 160, 61);
 }
 @media screen and (min-width: 768px){
-  header .nav_menu ul li {
+  header .nav_menu .page_nav li.page_link {
     font-size: 50px;
   }
-  header .nav_menu ul li.nv_logo {
+  header .nav_menu .page_nav li.nv_logo {
     top: -70px;
     width: 70px;
     height: 70px;

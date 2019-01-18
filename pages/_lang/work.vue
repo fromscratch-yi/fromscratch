@@ -6,7 +6,7 @@
         <Terminal :typeTxt="typeTxt"></Terminal>
       </div>
     </div>
-    <p class="page_description">This is my private works.<br>Please have a look at it.</p>
+    <p class="page_description" v-html="$t('work.introduction')"></p>
     <div class="tabs is-centered">
       <ul>
         <li v-bind:class="{ 'is-active': tabsel == 'service' }" @click="tabsel = 'service'"><a>Service</a></li>
@@ -36,7 +36,7 @@
                 <li class="tag">SQLite</li>
                 <li class="tag">AndroidStudio</li>
               </ul>
-              <p class="item_desc">This is Android Native App. The Name is UseD.<br>It is an application I made to recognize my own waste.<br>You can classify expenses into three types of spend, waste, investment, and you can see the proportion of expenditure.<br>And you will notice how we are wasting money</p>
+              <p class="item_desc" v-html="$t('work.description.used')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">Employee Management System</h2>
@@ -62,7 +62,7 @@
                 <li class="tag">Docker</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc">This web application solves the problem that employee's face and name do not match.<br>And it make communication easier by profile page.<br>I was in charge of all planning, designing and implementation as New Project.<br><br>Note: Administrator screen is omitted.</p>
+              <p class="item_desc" v-html="$t('work.description.ems')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">Sales Management System</h2>
@@ -86,7 +86,7 @@
                 <li class="tag">jQuery</li>
                 <li class="tag">Vagrant</li>
               </ul>
-              <p class="item_desc">They managed sales by peper. So I developed salse management app of web application. <br>It's can manage salses on PC. And they made sales comparison easier.</p>
+              <p class="item_desc" v-html="$t('work.description.sms')"></p>
             </section>
           </div>
         </transition>
@@ -116,7 +116,7 @@
                 <li class="tag">Firebase</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc">This is my portfolio site. The Name is <span class="em_txt">FromScratch</span>.<br>I want to keep to try that I create products of high quality. So I want to develop <span class="em_txt">FromScratch</span>. No template and no format.</p>
+              <p class="item_desc" v-html="$t('work.description.portfolio')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">The relation, Inc.</h2>
@@ -136,7 +136,7 @@
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc">The relation, Inc. is a system development company.<br>I was in charge of all planning, designing and implementation as Renewal project.</p>
+              <p class="item_desc" v-html="$t('work.description.relation')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
@@ -155,7 +155,7 @@
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc">The Unaman is specialty store of eel.<br>This is my first work in my life. I was in charge of all planning, designing and implementation as New Project.</p>
+              <p class="item_desc" v-html="$t('work.description.unaman')"></p>
             </section>
           </div>
         </transition>
@@ -176,7 +176,7 @@
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc">This is a my Business Card.<br>I designed all including Logo.</p>
+              <p class="item_desc" v-html="$t('work.description.fromscratch')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">ch.create</h2>
@@ -184,7 +184,7 @@
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc">The ch.create is construction company.<br>I designed all including Logo.</p>
+              <p class="item_desc" v-html="$t('work.description.chcreate')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">T'z Auto</h2>
@@ -199,11 +199,11 @@
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc">The T'z Auto is car repairer company.<br>I designed all including Logo.</p>
+              <p class="item_desc" v-html="$t('work.description.tzauto')"></p>
             </section>
           </div>
         </transition>
-        <p class="note">Note: For the sake of personal information and confidentiality obligation, I'm changing or hidden some display. </p>
+        <p class="note" v-html="$t('work.note')"></p>
       </div>
     </div>
 

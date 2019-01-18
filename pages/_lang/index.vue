@@ -23,7 +23,7 @@
         <div class="inner">
           <img class="logo" src="~assets/img/logo.png" alt="FromScratch logo">
           <span class="tap_txt">
-            <vue-typer :text='["Tap"]' :type-delay='200' :pre-type-delay='3000' :pre-erase-delay='3000'></vue-typer>
+            <vue-typer :text='["Tap"]' :repeat='0' :type-delay='200'></vue-typer>
           </span>
         </div>
       </div>
@@ -35,14 +35,11 @@
         <p class="desc_txt">Welcome to this site.<br>All will begin <span class="emp">From Scratch</span></p>
         <nav>
           <ul>
-            <li><nuxt-link to="about">About</nuxt-link></li>
-            <li><nuxt-link to="work">Work</nuxt-link></li>
-            <li><nuxt-link to="blog">Blog</nuxt-link></li>
+            <li><nuxt-link :to="$i18n.path('about')">About</nuxt-link></li>
+            <li><nuxt-link :to="$i18n.path('work')">Work</nuxt-link></li>
+            <li><nuxt-link :to="$i18n.path('blog')">Blog</nuxt-link></li>
           </ul>
         </nav>
-        <ul>
-          <li v-for="(language, i) in languages" :key="i"><nuxt-link :to="language.to">{{ language.title }}</nuxt-link></li>
-        </ul>
       </section>
     </div>
   </section>
@@ -64,11 +61,7 @@ export default {
   data() {
     return {
       title: "Top",
-      isActive: false,
-      languages: [
-        { title: 'English', to: this.$route.fullPath.replace(/^\/[^/]+/, '') },
-        { title: 'Japanese', to: '/ja' + this.$route.fullPath.replace(/^\/[^/]+/, '') }
-      ]
+      isActive: false
     }
   },
   methods: {

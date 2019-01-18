@@ -6,8 +6,8 @@
         <Terminal :typeTxt="typeTxt"></Terminal>
         <section class="columns is-tablet inner">
           <div class="column is-three-fifths name_space">
-            <h2>Yuichi Ishiyama</h2>
-            <p>Web Design, Business Card Design, <span class="em_color">Front-End</span> Development, <span class="em_color">Back-End</span> Development, Mobile-app Development, etc.</p>
+            <h2 v-html="$t('about.name')"></h2>
+            <p v-html="$t('about.kind')"></p>
           </div>
           <div class="column profile_area">
             <div class="image_area">
@@ -17,11 +17,7 @@
             </div>
           </div>
         </section>
-        <div class="profile_txt">
-          <p>I was born on January 23, <span class="em_color">1993</span> in Osaka, Japan. After working as a bartender for four years, I have been working as a software engineer since 2014.</p>
-          <p>I like soccer, and programming. Recently, I want to communicate <span class="em_color">software engineer around the world</span> ha-ha. And I want to grow up with <span class="em_color">English</span> and <span class="em_color">programming skill</span> as a software engineer.</p>
-          <p>That's about it. Thank u.</p>
-        </div>
+        <div class="profile_txt" v-html="$t('about.introduction')"></div>
       </div>
     </div>
     <div class="sub_contents_wrap">
@@ -29,7 +25,7 @@
         <h2>Skills &amp; Tools</h2>
         <div class="max_size_wrap columns is-tablet">
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name">Front-End</span><img src="~assets/img/icon_front.png" alt="Front-end Development"></h3>
+            <h3 class="category_ttl_wrap"><span class="category_name" v-html="$t('word.frontend')"></span><img src="~assets/img/icon_front.png" alt="Front-end Development"></h3>
             <ul class="skill_list">
               <li>HTML</li>
               <li>CSS</li>
@@ -42,7 +38,7 @@
             </ul>
           </section>
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name">Back-End</span><img src="~assets/img/icon_back.png" alt="Back-end Development"></h3>
+            <h3 class="category_ttl_wrap"><span class="category_name" v-html="$t('word.backend')"></span><img src="~assets/img/icon_back.png" alt="Back-end Development"></h3>
             <ul class="skill_list">
               <li>PHP</li>
               <li>Laravel</li>
@@ -52,14 +48,14 @@
             </ul>
           </section>
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name">Mobile</span><img src="~assets/img/icon_mobile.png" alt="Mobile App Development"></h3>
+            <h3 class="category_ttl_wrap"><span class="category_name" v-html="$t('word.mobile')"></span><img src="~assets/img/icon_mobile.png" alt="Mobile App Development"></h3>
             <ul class="skill_list">
               <li>Android Java</li>
               <li>Swift</li>
             </ul>
           </section>
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name">Other</span><img src="~assets/img/icon_other.png" alt="other"></h3>
+            <h3 class="category_ttl_wrap"><span class="category_name" v-html="$t('word.other')"></span><img src="~assets/img/icon_other.png" alt="other"></h3>
             <ul class="skill_list">
               <li>Docker</li>
               <li>Vagrant</li>
@@ -84,127 +80,17 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Some web site's Front-End &amp; Back-End.</td>
+              <tr v-for="project in projects" :key="project.id">
+                <td v-html="project.title"></td>
                 <td>
                   <ul class="skill_list">
-                    <li>PHP</li>
-                    <li>Yii</li>
-                    <li>Laravel</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>js</li>
-                    <li>Vue.js</li>
-                    <li>Nuxt.js</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>Employee management system's Front-End &amp; Back-End.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>PHP</li>
-                    <li>Laravel</li>
-                    <li>PostgreSQL</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>js</li>
-                    <li>AWS(ElasticBeansTalk, RDB)</li>
-                    <li>Docker</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>Sales management system's Front-End &amp; Back-End.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>PHP</li>
-                    <li>Laravel</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>js</li>
-                    <li>CentOS</li>
-                    <li>Nginx</li>
-                    <li>MySQL</li>
-                    <li>Vagrant</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>My android application (UseD).</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>Android Java</li>
-                    <li>AndroidStudio</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>Slack Bot.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>Python</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>API of Multimedia broadcasting App.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>PHP</li>
-                    <li>PostgreSQL</li>
-                    <li>CentOS</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>Traffic data management screen. And server construction.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>PHP</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>js</li>
-                    <li>Debian</li>
-                    <li>Nginx</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>Research and development of power servers as developer and infrastructure engineer.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>Groovy</li>
-                    <li>Java</li>
-                    <li>HAProxy</li>
-                    <li>Pacemaker</li>
-                    <li>Corosync</li>
-                    <li>apache</li>
-                    <li>tomcat</li>
-                    <li>AWS(EC2)</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>Tool for format of car navigation data.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>PHP</li>
-                    <li>MySQL</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>Map data conversion tool.</td>
-                <td>
-                  <ul class="skill_list">
-                    <li>C</li>
+                    <li v-for="skill in project.skills" :key="skill.id" v-html="skill"></li>
                   </ul>
                 </td>
               </tr>
             </tbody>
           </table>
-          <p class="note">Note: To keep confidential, concrete expression is omitted.</p>
+          <p class="note" v-html="$t('about.note')"></p>
         </div>
       </section>
     </div>
@@ -232,7 +118,7 @@ export default {
       description: 'This is Yuichi Ishiyama&apos;s profile.'
     };
     var typeTxt = '$ cat ./about.txt\n\> This is Yuichi Ishiyama\'s Profile.\n\> Who am I\? Can I do\?';
-    return { titleDescData, typeTxt }
+    return { titleDescData, typeTxt, projects: this.$t('about.project') }
   }
 }
 </script>
@@ -335,7 +221,7 @@ export default {
   font-size: 14px;
 }
 .sub_contents .table .skill_list li {
-  display: inline;
+  float: left;
   font-size: 13px;
 }
 .sub_contents .table .skill_list li::after {
