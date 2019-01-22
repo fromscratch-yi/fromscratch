@@ -4,15 +4,20 @@
       <div class="inner_contents_wrap">
         <TitleDescription :titleDescData="titleDescData"></TitleDescription>
         <Terminal :typeTxt="typeTxt"></Terminal>
-        <p class="no_posts">No blog posts yet...</p>
-        <section class="index">
-          <card v-for="post in posts"
-            v-bind:key="post.fields.slug"
-            :title="post.fields.title"
-            :slug="post.fields.slug"
-            :headerImage="post.fields.headerImage"
-            :publishedAt="post.fields.publishedAt"/>
-        </section>
+        <p v-if="$i18n.locale === 'en'" class="no_posts">Note: English is not supported. Please open the side menu in the upper right and change the language.</p>
+        <div v-else class="posts_area">
+          <p class="page_description">学んだことのアウトプットとして、プログラミングに関する記事を中心に書いています。</p>
+          <p v-if="posts.length <= 0" class="no_posts">記事がありません。</p>
+          <section v-else class="columns is-mobile is-multiline">
+            <card v-for="post in posts"
+              v-bind:key="post.fields.slug"
+              :title="post.fields.title"
+              :slug="post.fields.slug"
+              :headerImage="post.fields.headerImage"
+              :publishedAt="post.fields.publishedAt"
+              :tags="post.fields.tags"/>
+          </section>
+        </div>
       </div>
     </div>
     <!-- FootNav -->
@@ -31,23 +36,23 @@ import Card from '~/components/Card.vue';
 import {createClient} from '~/plugins/contentful.js';
 const client = createClient()
 export default {
-  transition: 'slide-left',
   components: {
     TitleDescription,
     Terminal,
     Card
   },
-  async asyncData ({ env, params }) {
+  async asyncData ({ app, env, params }) {
+    var content_type = env.CTF_BLOG_POST_TYPE_ID;
     return await client.getEntries({
-      'content_type': env.CTF_BLOG_POST_TYPE_ID,
+      'content_type': content_type,
       order: '-fields.publishedAt',
     }).then(entries => {
-      console.log(entries.items);
+      console.log(entries);
       return {
         posts: entries.items
       }
     })
-    .catch(console.error)
+    .catch()
   },
   data(context){
     var titleDescData = {
@@ -55,7 +60,8 @@ export default {
       description: 'This is Yuichi Ishiyama&apos;s Blog Page.'
     };
     var typeTxt = '$ cat ./blog.txt\n\> Welcome to my Blog page.\n\> To output that the study was.';
-    return { titleDescData, typeTxt }
+    var posts = [];
+    return { titleDescData, typeTxt, posts }
   }
 }
 </script>
@@ -66,9 +72,10 @@ export default {
   font-weight: bold;
   text-align: center;
 }
-.index {
-  display: flex;
-  flex-wrap: wrap;
+.page_description {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
 }
 </style>
 

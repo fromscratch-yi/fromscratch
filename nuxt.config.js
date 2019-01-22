@@ -79,13 +79,14 @@ module.exports = {
     middleware: 'i18n'
   },
   generate: {
-    routes: ['/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog'],
     routes() {
       return cdaClient.getEntries({
         'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
       }).then(entries => {
         return [
-          ...entries.items.map(entry => `/post/${entry.fields.slug}`)
+          '/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog',
+          ...entries.items.map(entry => `/post/${entry.fields.slug}`),
+          ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
         ]
       })
     }

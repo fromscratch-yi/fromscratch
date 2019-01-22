@@ -1,23 +1,27 @@
 <template>
   <div class="wrap">
-    <Header/>
+    <PostHeader/>
     <section class="page_contents">
       <nuxt/>
     </section>
+    <PostFooter/>
     <Footer/>
   </div>
 </template>
 
 <script>
-import Header from "~/components/Header.vue";
+import PostHeader from "~/components/PostHeader.vue";
+import PostFooter from "~/components/PostFooter.vue";
 import Footer from "~/components/Footer.vue";
 
 export default {
   scrollToTop: true,
   components: {
-    Header,
+    PostHeader,
+    PostFooter,
     Footer
-  }
+  },
+
 };
 </script>
 <style>
@@ -106,36 +110,5 @@ html::-webkit-scrollbar {
   .inner_contents_wrap {
     padding: 0 15px;
   }
-}
-.layout-enter-active {
-  animation: downFromTop 500ms ease;
-}
-/* 離れるとき */
-.layout-leave-active {
-  /* opacity: 0 */
-  transition: all  500ms ease;
-  transform: translateY(100vh);
-}
-@keyframes downFromTop {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.slide-left-enter {
-  transform: translateX(100vw);
-  opacity: 0;
-}
-.slide-left-enter-active {
-  transition: all .5s linear;
-}
-.slide-left-leave-to {
-  transform: translateX(-100vw);
-  opacity: 0;
-}
-.slide-left-leave-active {
-  transition: all .5s linear;
 }
 </style>

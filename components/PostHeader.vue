@@ -15,17 +15,6 @@
         <li class="page_link"><nuxt-link :to="$i18n.path('about')"><span class="nav_txt">A</span>bout</nuxt-link></li>
         <li class="page_link"><nuxt-link :to="$i18n.path('work')"><span class="nav_txt">W</span>ork</nuxt-link></li>
         <li class="page_link"><nuxt-link :to="$i18n.path('blog')"><span class="nav_txt">B</span>log</nuxt-link></li>
-        <li class="lang_wrap">
-          <p class="attention">Language</p>
-          <div class="lang_wrap_inner">
-            <!-- setting for english -->
-            <nuxt-link v-if="$i18n.locale === 'ja'" :to="$route.fullPath.replace('\/ja','')">en</nuxt-link>
-            <nuxt-link v-else :to="$route.fullPath">en</nuxt-link>
-            <!-- setting for japanese -->
-            <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath">ja</nuxt-link>
-            <nuxt-link v-else :to="$route.fullPath">ja</nuxt-link>
-          </div>
-        </li>
       </ul>
     </nav>
   </header>
@@ -133,51 +122,6 @@ header .nav_menu .page_nav li.nv_logo {
     -webkit-transform: translateX(-50%);
     margin: auto;
 }
-header .nav_menu .page_nav li.lang_wrap .attention {
-  font-size: 13px;
-  color: #fff;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 15px;
-}
-header .nav_menu .page_nav li.lang_wrap .lang_wrap_inner{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-header .nav_menu .page_nav li.lang_wrap a {
-  align-items: center;
-  border: 1px solid #47a03d;
-  color: #4a4a4a;
-  display: flex;
-  justify-content: center;
-  margin-bottom: -1px;
-  padding: 12px 0;
-  vertical-align: top;
-  background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
-  font-size: 18px;
-  width: 80px;
-  text-align: center;
-}
-header .nav_menu .page_nav li.lang_wrap a:first-child {
-  border-bottom-left-radius: 290486px;
-  border-top-left-radius: 290486px;
-  padding-left: 10px;
-}
-header .nav_menu .page_nav li.lang_wrap a:last-child {
-  border-bottom-right-radius: 290486px;
-  border-top-right-radius: 290486px;
-  padding-right: 10px;
-}
-header .nav_menu .page_nav li.lang_wrap a.nuxt-link-exact-active {
-  pointer-events: none;
-  background-color: rgb(120, 199, 111);
-  z-index: 1;
-}
-
-
 header .nav_menu .page_nav li.page_link a {
   position: relative;
   display: inline-block;
