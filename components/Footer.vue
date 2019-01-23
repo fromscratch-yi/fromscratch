@@ -20,7 +20,7 @@
         </li>
         <li class="column">
           <p class="contanc_item">
-            <a href="https://www.facebook.com/yuichi.ishiyama.169" target="_blank"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
+            <a href="https://www.facebook.com/y.fromscratch" target="_blank"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
           </p>
         </li>
       </ul>

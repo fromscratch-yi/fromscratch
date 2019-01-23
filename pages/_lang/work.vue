@@ -2,7 +2,7 @@
   <div class="contents_area">
     <div class="max_size_wrap">
       <div class="inner_contents_wrap">
-        <TitleDescription :titleDescData="titleDescData"></TitleDescription>
+        <TitleDescription :meta="meta"></TitleDescription>
         <Terminal :typeTxt="typeTxt"></Terminal>
       </div>
     </div>
@@ -23,34 +23,38 @@
           <div class="tab_item" v-if="tabsel == 'service'">
             <section class="work_wrap">
               <h2 class="item_ttl">UseD</h2>
-              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/used1.png" alt="used"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/used2.png" alt="used"></div>
-                </slide>
-              </carousel>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/used1.png" alt="used"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/used2.png" alt="used"></div>
+                  </slide>
+                </carousel>
+              </no-ssr>
               <ul class="skill_list">
                 <li class="tag">Android Java</li>
                 <li class="tag">SQLite</li>
                 <li class="tag">AndroidStudio</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.used')"></p>
+              <p class="item_desc" v-html="$t('work.overview.used')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">Employee Management System</h2>
-              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/ems1.png" alt="ems"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/ems2.png" alt="ems"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/ems3.png" alt="ems"></div>
-                </slide>
-              </carousel>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/ems1.png" alt="ems"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/ems2.png" alt="ems"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/ems3.png" alt="ems"></div>
+                  </slide>
+                </carousel>
+              </no-ssr>
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">Laravel</li>
@@ -62,21 +66,23 @@
                 <li class="tag">Docker</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.ems')"></p>
+              <p class="item_desc" v-html="$t('work.overview.ems')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">Sales Management System</h2>
-              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/sms1.png" alt="Sales Management System"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/sms2.png" alt="Sales Management System"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/sms3.png" alt="Sales Management System"></div>
-                </slide>
-              </carousel>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/sms1.png" alt="Sales Management System"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/sms2.png" alt="Sales Management System"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/sms3.png" alt="Sales Management System"></div>
+                  </slide>
+                </carousel>
+              </no-ssr>
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">Laravel</li>
@@ -86,7 +92,7 @@
                 <li class="tag">jQuery</li>
                 <li class="tag">Vagrant</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.sms')"></p>
+              <p class="item_desc" v-html="$t('work.overview.sms')"></p>
             </section>
           </div>
         </transition>
@@ -96,17 +102,19 @@
           <div class="tab_item" v-if="tabsel == 'web'">
             <section class="work_wrap">
               <h2 class="item_ttl">FromScratch</h2>
-              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/fromscratch2.png" alt="FromScratch Web 2"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/fromscratch3.png" alt="FromScratch Web 3"></div>
-                </slide>
-              </carousel>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch2.png" alt="FromScratch Web 2"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch3.png" alt="FromScratch Web 3"></div>
+                  </slide>
+                </carousel>
+              </no-ssr>
               <ul class="skill_list">
                 <li class="tag">Nuxt.js</li>
                 <li class="tag">Vue.js</li>
@@ -116,18 +124,20 @@
                 <li class="tag">Firebase</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.portfolio')"></p>
+              <p class="item_desc" v-html="$t('work.overview.portfolio')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">The relation, Inc.</h2>
-              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/relation2.png" alt="relation Web 2"></div>
-                </slide>
-              </carousel>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/relation2.png" alt="relation Web 2"></div>
+                  </slide>
+                </carousel>
+              </no-ssr>
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">jQuery</li>
@@ -136,18 +146,20 @@
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.relation')"></p>
+              <p class="item_desc" v-html="$t('work.overview.relation')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
-              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/web/unaman2.png" alt="unaman Web 2"></div>
-                </slide>
-              </carousel>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/unaman2.png" alt="unaman Web 2"></div>
+                  </slide>
+                </carousel>
+              </no-ssr>
               <ul class="skill_list">
                 <li class="tag">jQuery</li>
                 <li class="tag">HTML</li>
@@ -155,7 +167,7 @@
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.unaman')"></p>
+              <p class="item_desc" v-html="$t('work.overview.unaman')"></p>
             </section>
           </div>
         </transition>
@@ -165,18 +177,20 @@
           <div class="tab_item" v-if="tabsel == 'card'">
             <section class="work_wrap">
               <h2 class="item_ttl">FromScratch</h2>
-              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="FromScratch 名刺"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch2.png" alt="FromScratch 名刺 裏"></div>
-                </slide>
-              </carousel>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="FromScratch 名刺"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch2.png" alt="FromScratch 名刺 裏"></div>
+                  </slide>
+                </carousel>
+              </no-ssr>
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.fromscratch')"></p>
+              <p class="item_desc" v-html="$t('work.overview.fromscratch')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">ch.create</h2>
@@ -184,22 +198,24 @@
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.chcreate')"></p>
+              <p class="item_desc" v-html="$t('work.overview.chcreate')"></p>
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">T'z Auto</h2>
-              <carousel paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/bc/tzauto1.png" alt="Tz Auto 名刺"></div>
-                </slide>
-                <slide>
-                  <div class="img_wrap"><img src="~assets/img/works/bc/tzauto2.png" alt="Tz Auto 名刺 裏"></div>
-                </slide>
-              </carousel>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/bc/tzauto1.png" alt="Tz Auto 名刺"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/bc/tzauto2.png" alt="Tz Auto 名刺 裏"></div>
+                  </slide>
+                </carousel>
+              </no-ssr>
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.description.tzauto')"></p>
+              <p class="item_desc" v-html="$t('work.overview.tzauto')"></p>
             </section>
           </div>
         </transition>
@@ -210,8 +226,8 @@
     <!-- FootNav -->
     <div class="max_size_wrap link_wrap">
       <div class="inner_contents_wrap center_p">
-        <p class="left"><nuxt-link to="about">About</nuxt-link></p>
-        <p class="right"><nuxt-link to="blog">Blog</nuxt-link></p>
+        <p class="left"><nuxt-link :to="$i18n.path('about')">About</nuxt-link></p>
+        <p class="right"><nuxt-link :to="$i18n.path('blog')">Blog</nuxt-link></p>
       </div>
     </div>
   </div>
@@ -220,26 +236,34 @@
 <script>
 import TitleDescription from "~/components/TitleDescription.vue";
 import Terminal from "~/components/Terminal.vue";
-import SliderImg from "~/components/SliderImg.vue";
-import Carousel from 'vue-carousel/src/Carousel.vue';
-import Slide from 'vue-carousel/src/Slide.vue';
 export default {
   components: {
     TitleDescription,
     Terminal,
-    SliderImg,
-    Carousel,
-    Slide
+    Carousel: () =>
+      import('vue-carousel')
+        .then(m => m.Carousel)
+        .catch(),
+    Slide: () =>
+      import('vue-carousel')
+        .then(m => m.Slide)
+        .catch()
   },
-  data(context){
-    var titleDescData = {
+  data(){
+    var meta = {
       title: 'Work',
-      description: 'This is Yuichi Ishiyama&apos;s Works Page.'
+      description: this.$t('work.description'),
+      type: 'article',
+      url: this.$route.fullPath,
+      image: 'https://fromscratch-y.firebaseapp.com/ogp.gif',
+      lang: this.$i18n.locale
     };
     var typeTxt = '$ cat ./work.txt\n\> I\'ll show my private works.\n\> I\'m going to create more.';
-
-    return { titleDescData, typeTxt, tabsel: "service"}
-  }
+    return { meta, typeTxt, tabsel: "service", showCarousel: false }
+  },
+  mounted() {
+    this.showCarousel = true
+  },
 }
 </script>
 

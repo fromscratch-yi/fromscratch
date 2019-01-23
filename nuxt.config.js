@@ -8,7 +8,6 @@ const {createClient} = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
 
 module.exports = {
-  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -17,13 +16,16 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'FromScratch Web Site.' },
-      { name: 'og:url', content: 'https://fromscratch-y.firebaseapp.com/' },
-      { name: 'og:site_name', content: 'FromScratch - Yuichi Ishiyama\'s Portfolio' },
-      { name: 'og:image', content: 'https://fromscratch-y.firebaseapp.com/ogp.gif' },
-      { hid: 'og:type', name: 'og:type', content: 'website' },
-      { hid: 'og:title', name: 'og:title', content: 'FromScratch | Yuichi Ishiyama' },
-      { hid: 'og:description', name: 'og:description', content: 'This is Yuichi Ishiyama\'s Portfolio and Blog site.' }
+
+      { hid: 'description', name: 'description', content: 'Yuichi Ishiyama\'s Portfolio & Blog site.' },
+      { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', property: 'twitter:site', content: '@IshiyamaYuichi' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'FromScratch | Yuichi Ishiyama' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://fromscratch-y.firebaseapp.com/' },
+      { hid: 'og:title', property: 'og:title', content: 'FromScratch | Yuichi Ishiyama' },
+      { hid: 'og:description', property: 'og:description', content: 'This is Yuichi Ishiyama\'s Portfolio and Blog site.' },
+      { hid: 'og:image', property: 'og:image', content: 'https://fromscratch-y.firebaseapp.com/ogp.gif' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -73,7 +75,7 @@ module.exports = {
   },
   plugins: [
     '~/plugins/i18n.js',
-    { src: '~plugins/contentful' }
+    { src: '~plugins/contentful' },
   ],
   router: {
     middleware: 'i18n'

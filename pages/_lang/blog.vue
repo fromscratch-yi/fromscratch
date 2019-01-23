@@ -2,7 +2,7 @@
   <div class="contents_area">
     <div class="max_size_wrap">
       <div class="inner_contents_wrap">
-        <TitleDescription :titleDescData="titleDescData"></TitleDescription>
+        <TitleDescription :meta="meta"></TitleDescription>
         <Terminal :typeTxt="typeTxt"></Terminal>
         <p v-if="$i18n.locale === 'en'" class="no_posts">Note: English is not supported. Please open the side menu in the upper right and change the language.</p>
         <div v-else class="posts_area">
@@ -23,7 +23,7 @@
     <!-- FootNav -->
     <div class="max_size_wrap link_wrap">
       <div class="inner_contents_wrap">
-        <p class="left"><nuxt-link to="work">Work</nuxt-link></p>
+        <p class="left"><nuxt-link :to="$i18n.path('work')">Work</nuxt-link></p>
       </div>
     </div>
   </div>
@@ -54,14 +54,18 @@ export default {
     })
     .catch()
   },
-  data(context){
-    var titleDescData = {
+  data () {
+    var meta = {
       title: 'Blog',
-      description: 'This is Yuichi Ishiyama&apos;s Blog Page.'
+      description: this.$t('blog.description'),
+      type: 'article',
+      url: this.$route.fullPath,
+      image: 'https://fromscratch-y.firebaseapp.com/ogp.gif',
+      lang: this.$i18n.locale
     };
     var typeTxt = '$ cat ./blog.txt\n\> Welcome to my Blog page.\n\> To output that the study was.';
     var posts = [];
-    return { titleDescData, typeTxt, posts }
+    return { meta, typeTxt, posts }
   }
 }
 </script>

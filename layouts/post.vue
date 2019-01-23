@@ -1,11 +1,12 @@
 <template>
-  <div class="wrap">
+  <div id="page_top" class="wrap">
     <PostHeader/>
     <section class="page_contents">
       <nuxt/>
     </section>
     <PostFooter/>
     <Footer/>
+    <a href="#" class="h_top_btn" v-scroll-to="'#page_top'">Top</a>
   </div>
 </template>
 
@@ -13,7 +14,9 @@
 import PostHeader from "~/components/PostHeader.vue";
 import PostFooter from "~/components/PostFooter.vue";
 import Footer from "~/components/Footer.vue";
-
+import Vue from "vue";
+import vueScrollTo from "vue-scrollto";
+Vue.use(vueScrollTo);
 export default {
   scrollToTop: true,
   components: {
@@ -105,6 +108,29 @@ html::-webkit-scrollbar {
 .link_wrap .right a::after {
   right: 1px;
   border-left: 3px solid #fff;
+}
+a:hover {
+    color: #363636;
+}
+
+.h_top_btn:hover {
+  color: #56b54b;
+}
+.h_top_btn {
+  position: fixed;
+  bottom: 50px;
+  right: 5px;
+  width: 45px;
+  height: 45px;
+  color: #56b54b;
+  outline: 0;
+  text-align: center;
+  border: 1px solid #56b54b;
+  border-radius: 50%;
+  background-color: #8686862b;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 43px;
 }
 @media screen and (max-width: 769px) {
   .inner_contents_wrap {

@@ -2,7 +2,7 @@
   <div class="contents_area">
     <div class="max_size_wrap">
       <div class="inner_contents_wrap">
-        <TitleDescription :titleDescData="titleDescData"></TitleDescription>
+        <TitleDescription :meta="meta"></TitleDescription>
         <Terminal :typeTxt="typeTxt"></Terminal>
         <section class="columns is-tablet inner">
           <div class="column is-three-fifths name_space">
@@ -98,7 +98,7 @@
     <!-- FootNav -->
     <div class="max_size_wrap link_wrap">
       <div class="inner_contents_wrap">
-        <p class="right"><nuxt-link to="work">Work</nuxt-link></p>
+        <p class="right"><nuxt-link :to="$i18n.path('work')">Work</nuxt-link></p>
       </div>
     </div>
   </div>
@@ -112,13 +112,19 @@ export default {
     TitleDescription,
     Terminal
   },
-  data(context){
-    var titleDescData = {
+  data () {
+    var meta = {
       title: 'About',
-      description: 'This is Yuichi Ishiyama&apos;s profile.'
+      description: this.$t('about.description'),
+      type: 'article',
+      url: this.$route.fullPath,
+      image: 'https://fromscratch-y.firebaseapp.com/ogp.gif',
+      lang: this.$i18n.locale
     };
+    console.log(meta.locale)
     var typeTxt = '$ cat ./about.txt\n\> This is Yuichi Ishiyama\'s Profile.\n\> Who am I\? Can I do\?';
-    return { titleDescData, typeTxt, projects: this.$t('about.project') }
+    var projects = this.$t('about.project');
+    return { meta, typeTxt, projects }
   }
 }
 </script>

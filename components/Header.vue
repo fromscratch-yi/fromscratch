@@ -35,7 +35,6 @@
 export default {
   data() {
     return {
-      title: "Top",
       isOpen: false
     }
   },

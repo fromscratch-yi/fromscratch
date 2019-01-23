@@ -3,16 +3,20 @@
     <div class="max_size_wrap">
       <div class="inner_contents_wrap">
         <section class="slug">
-          <p class="head_img"><img class="slug_image" v-bind:src="post.fields.headerImage.fields.file.url"/></p>
+          <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url"/></p>
           <div class="content_inner">
             <div class="tags">
-              <span v-for="tag in post.fields.tags" :key="tag.id" class="tag">#{{tag}}</span>
+              <span v-for="tag in currentPost.fields.tags" :key="tag.id" class="tag">#{{tag}}</span>
             </div>
-            <p class="slug_date">{{ post.fields.publishedAt }}</p>
-            <h1 class="slug_title">{{ post.fields.title }}</h1>
-            <div class="slug_content" v-html="$md.render(post.fields.body)"></div>
+            <p class="slug_date">{{ currentPost.fields.publishedAt }}</p>
+            <h1 class="slug_title">{{ currentPost.fields.title }}</h1>
+            <div class="slug_content" v-html="$md.render(currentPost.fields.body)"></div>
           </div>
         </section>
+        <nav class="post_detail_nav pagination is-centered" role="navigation" aria-label="pagination">
+          <nuxt-link v-if="prevPost" class="pagination-previous" :to="$i18n.path('post/' + prevPost.fields.slug)">&laquo; Prev</nuxt-link>
+          <nuxt-link v-if="nextPost" class="pagination-next" :to="$i18n.path('post/' + nextPost.fields.slug)">Next &raquo;</nuxt-link>
+        </nav>
       </div>
     </div>
   </div>
@@ -20,21 +24,71 @@
 
 <script>
 import {createClient} from '~/plugins/contentful.js'
-
+import Meta from '~/assets/mixins/meta'
+const Domain = 'https://fromscratch-y.firebaseapp.com';
 const client = createClient()
 export default {
   layout: 'post',
-  async asyncData ({ env, params }) {
-    return await client.getEntries({
+  head () {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+      title: "FromScratch | " + this.currentPost.fields.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.currentPost.fields.description },
+        { hid: 'og:type', property: 'og:type', content: 'article' },
+        { hid: 'og:title', property: 'og:title', content: 'FromScratch | ' + this.currentPost.fields.title },
+        { hid: 'og:description', property: 'og:description', content: this.currentPost.fields.description },
+        { hid: 'og:url', property: 'og:url', content: 'https://fromscratch-y.firebaseapp.com/ogp.gif' },
+        { hid: 'og:image', property: 'og:image', content: this.currentPost.fields.headerImage.fields.file.url },
+      ],
+    }
+  },
+  data () {
+    return {
+      allPosts: [],
+      currentPost: [],
+    }
+  },
+  asyncData ({ env, params }) {
+    return client.getEntries({
       'content_type': env.CTF_BLOG_POST_TYPE_ID,
-      'fields.slug': params.slug,
-      order: '-sys.createdAt'
+      order: '-fields.publishedAt',
     }).then(entries => {
+      const posts = entries.items
+      const current = posts.filter(function (item) {
+        return item.fields.slug === params.slug
+      })
       return {
-        post: entries.items[0],
+        allPosts: posts,
+        currentPost: current[0]
       }
     })
     .catch(console.error)
+  },
+  computed: {
+    dateOrder: function () {
+      for (let i = 0; i < this.allPosts.length; i++) {
+        if (this.allPosts[i].fields.publishDate === this.currentPost.fields.publishDate) {
+          return i;
+        }
+      }
+    },
+    nextPost: function () {
+      if (this.dateOrder === 0) {
+        return false;
+      } else {
+        return this.allPosts[this.dateOrder - 1];
+      }
+    },
+    prevPost: function () {
+      if (this.dateOrder === this.allPosts.length - 1) {
+        return false;
+      } else {
+        return this.allPosts[this.dateOrder + 1];
+      }
+    }
   }
 }
 </script>
@@ -87,4 +141,13 @@ export default {
   padding: 0.5em 0;
   list-style: disc;
 }
+.post_detail_nav .pagination-previous, .post_detail_nav .pagination-next {
+  margin-top: 20px;
+}
+.post_detail_nav .pagination-previous,
+.post_detail_nav .pagination-next,
+.post_detail_nav .pagination-link {
+  border-color: rgb(86, 181, 75);
+}
+
 </style>

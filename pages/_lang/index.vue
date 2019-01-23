@@ -60,7 +60,6 @@ export default {
   layout: "headerless",
   data() {
     return {
-      title: "Top",
       isActive: false
     }
   },
@@ -71,10 +70,6 @@ export default {
   },
   head() {
     return {
-      titleTemplate: "%s | " + this.title,
-      meta: [
-        { hid: "description", name: "description", content: "Welcome to Yuichi Ishiyama&apos;s Portfolio. The name FromScratch." }
-        ],
       bodyAttrs: {
         class: 'welcom_page'
       }

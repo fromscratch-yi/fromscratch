@@ -1,27 +1,12 @@
 <template>
-  <h1 class="main_ttl">{{ title }}</h1>
+  <h1 class="main_ttl">{{ this.meta.title }}</h1>
 </template>
 
 <script>
+import Meta from '~/assets/mixins/meta'
 export default {
-  props: ['titleDescData'],
-  data(context){
-    return {
-      title: this.titleDescData.title,
-      description: this.titleDescData.description
-    }
-  },
-  head() {
-    return {
-      titleTemplate: "%s | " + this.title,
-      meta: [
-        { hid: "description", name: "description", content: this.description },
-        { hid: 'og:type', name: 'og:type', content: 'article' },
-        { hid: 'og:title', name: 'og:title', content: 'FromScratch | ' + this.title },
-        { hid: 'og:description', name: 'og:description', content: this.description }
-      ]
-    };
-  }
+  props: ['meta'],
+  mixins: [Meta],
 };
 </script>
 

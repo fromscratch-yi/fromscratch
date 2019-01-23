@@ -1,7 +1,7 @@
 <template>
   <div class="column is-12-mobile is-4-tablet">
     <div class="post card" ontouchstart="">
-      <nuxt-link v-bind:to="$i18n.path('post/' + slug)" v-bind:slug="slug" class="wrapper">
+      <nuxt-link :to="$i18n.path('post/' + slug)" class="wrapper">
         <div class="card-image">
           <figure class="image is-5by3">
             <img v-bind:src="headerImage.fields.file.url" v-bind:alt="headerImage.fields.description">
