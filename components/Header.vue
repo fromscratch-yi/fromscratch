@@ -69,7 +69,7 @@ header {
   padding: 10px 15px;
   margin: 0;
   background: rgba(255, 255, 255, 0.5);
-  z-index: 1;
+  z-index: 50;
 }
 .header_container .logo, .header_container .nav_btn {
   cursor: pointer;
@@ -92,7 +92,7 @@ header .nav_menu {
   justify-content: center;
   padding: 10px 15px;
   overflow: hidden;
-  z-index: 10;
+  z-index: 100;
   text-align: center;
   background-color: rgb(43, 42, 42);
   transition: all  500ms ease;

@@ -6,7 +6,7 @@
     </section>
     <PostFooter/>
     <Footer/>
-    <a href="#" class="h_top_btn" v-scroll-to="'#page_top'">Top</a>
+    <a href="#" class="h_top_btn" v-scroll-to="'#page_top'"></a>
   </div>
 </template>
 
@@ -129,8 +129,22 @@ a:hover {
   border-radius: 50%;
   background-color: #8686862b;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 43px;
+  z-index: 3;
+  animation: bounding 1s ease infinite alternate;
+  transform: rotate( 90deg );
+}
+.h_top_btn::after {
+  position: absolute;
+  content: '▲';
+  top: calc(50% - 1px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes bounding{
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(-10px);}
 }
 @media screen and (max-width: 769px) {
   .inner_contents_wrap {

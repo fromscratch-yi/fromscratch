@@ -121,7 +121,6 @@ export default {
       image: 'https://fromscratch-y.firebaseapp.com/ogp.gif',
       lang: this.$i18n.locale
     };
-    console.log(meta.locale)
     var typeTxt = '$ cat ./about.txt\n\> This is Yuichi Ishiyama\'s Profile.\n\> Who am I\? Can I do\?';
     var projects = this.$t('about.project');
     return { meta, typeTxt, projects }

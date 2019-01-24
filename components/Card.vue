@@ -73,9 +73,6 @@ export default {
 .post.card a:hover::after {
   transform: scale(1, 1);
 }
-.post.card .card-image {
-  border-bottom: 2px dashed rgba(10,10,10,0.1);
-}
 .card_date {
   font-size: 12px;
   margin-bottom: 5px;

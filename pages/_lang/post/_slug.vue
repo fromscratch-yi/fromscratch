@@ -1,18 +1,18 @@
 <template>
   <div class="contents_area">
     <div class="max_size_wrap">
-      <div class="inner_contents_wrap">
-        <section class="slug">
-          <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url"/></p>
-          <div class="content_inner">
-            <div class="tags">
-              <span v-for="tag in currentPost.fields.tags" :key="tag.id" class="tag">#{{tag}}</span>
-            </div>
-            <p class="slug_date">{{ currentPost.fields.publishedAt }}</p>
-            <h1 class="slug_title">{{ currentPost.fields.title }}</h1>
-            <div class="slug_content" v-html="$md.render(currentPost.fields.body)"></div>
+      <section class="slug">
+        <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url"/></p>
+        <div class="content_inner">
+          <div class="tags">
+            <span v-for="tag in currentPost.fields.tags" :key="tag.id" class="tag">#{{tag}}</span>
           </div>
-        </section>
+          <p class="slug_date">{{ currentPost.fields.publishedAt }}</p>
+          <h1 class="slug_title">{{ currentPost.fields.title }}</h1>
+          <div class="slug_content" v-html="$md.render(currentPost.fields.body)"></div>
+        </div>
+      </section>
+      <div class="inner_contents_wrap">
         <nav class="post_detail_nav pagination is-centered" role="navigation" aria-label="pagination">
           <nuxt-link v-if="prevPost" class="pagination-previous" :to="$i18n.path('post/' + prevPost.fields.slug)">&laquo; Prev</nuxt-link>
           <nuxt-link v-if="nextPost" class="pagination-next" :to="$i18n.path('post/' + nextPost.fields.slug)">Next &raquo;</nuxt-link>
@@ -95,9 +95,14 @@ export default {
 
 <style>
 .slug .content_inner {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px dashed #333;
+  position: relative;
+  width: 94%;
+  margin: -13% auto 0;
+  padding: 15px 20px;
+  box-shadow: 0 0 10px #ccc;
+  background: #fff;
+  z-index: 1;
+  font-size: 14px;
 }
 .slug .content_inner .slug_title {
   margin-bottom: 15px;
@@ -116,7 +121,7 @@ export default {
   color: rgb(255, 142, 26);
 }
 .slug .content_inner .slug_content {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.7;
 }
 .slug .content_inner .slug_content h2 {

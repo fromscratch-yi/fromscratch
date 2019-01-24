@@ -47,7 +47,6 @@ export default {
       'content_type': content_type,
       order: '-fields.publishedAt',
     }).then(entries => {
-      console.log(entries);
       return {
         posts: entries.items
       }
