@@ -4,16 +4,16 @@
       <section class="slug">
         <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url"/></p>
         <div class="content_inner">
-          <div class="tags">
-            <span v-for="tag in currentPost.fields.tags" :key="tag.id" class="tag">#{{tag}}</span>
-          </div>
           <p class="slug_date">{{ currentPost.fields.publishedAt }}</p>
           <h1 class="slug_title">{{ currentPost.fields.title }}</h1>
+          <ul class="tag_wrap">
+            <li v-for="tag in currentPost.fields.tags" :key="tag.id" class="tag">#{{tag}}</li>
+          </ul>
           <div class="slug_content" v-html="$md.render(currentPost.fields.body)"></div>
         </div>
       </section>
       <div class="inner_contents_wrap">
-        <nav class="post_detail_nav pagination is-centered" role="navigation" aria-label="pagination">
+        <nav class="post_nav">
           <nuxt-link v-if="prevPost" class="pagination-previous" :to="$i18n.path('post/' + prevPost.fields.slug)">&laquo; Prev</nuxt-link>
           <nuxt-link v-if="nextPost" class="pagination-next" :to="$i18n.path('post/' + nextPost.fields.slug)">Next &raquo;</nuxt-link>
         </nav>
@@ -70,7 +70,7 @@ export default {
   computed: {
     dateOrder: function () {
       for (let i = 0; i < this.allPosts.length; i++) {
-        if (this.allPosts[i].fields.publishDate === this.currentPost.fields.publishDate) {
+        if (this.allPosts[i].fields.publishedAt === this.currentPost.fields.publishedAt) {
           return i;
         }
       }
@@ -98,36 +98,52 @@ export default {
   position: relative;
   width: 94%;
   margin: -13% auto 0;
-  padding: 15px 20px;
-  box-shadow: 0 0 10px #ccc;
+  padding: 20px;
+  box-shadow: 0 0 25px -6px #636363;
   background: #fff;
   z-index: 1;
   font-size: 14px;
 }
-.slug .content_inner .slug_title {
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-weight: bold;
-}
 .slug .content_inner .slug_date {
-  font-size: 14px;
+  font-size: 13px;
+  text-align: center;
   color: rgb(57, 72, 85);
 }
-.slug .content_inner .tags {
-  margin: 0;
+.slug .content_inner .slug_title {
+  position: relative;
+  padding: 5px 10px 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
 }
-.slug .content_inner .tags .tag {
+.slug .content_inner .slug_title::before {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: rgb(71, 160, 61);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.slug .content_inner .tag_wrap {
+  margin: 20px 0 15px;
+  text-align: center;
+}
+.slug .content_inner .tag_wrap .tag {
+  margin-bottom: 5px;
   font-size: 12px;
   color: rgb(255, 142, 26);
 }
 .slug .content_inner .slug_content {
   font-size: 13px;
-  line-height: 1.7;
+  line-height: 1.9;
 }
 .slug .content_inner .slug_content h2 {
   font-size: 16px;
   margin: 18px 0;
-  border-color: rgb(86, 181, 75);
+  border-color: rgb(71, 160, 61);
   border-left-width: 4px;
   border-left-style: solid;
   padding: 3px 3px 3px 10px;
@@ -135,6 +151,7 @@ export default {
 }
 .slug .content_inner .slug_content p {
   margin: 10px 0;
+  line-height: 1.9;
 }
 .slug .content_inner .slug_content ul {
   color: #1e366a;
@@ -146,13 +163,21 @@ export default {
   padding: 0.5em 0;
   list-style: disc;
 }
-.post_detail_nav .pagination-previous, .post_detail_nav .pagination-next {
-  margin-top: 20px;
+.post_nav {
+  position: relative;
+  margin: 20px 0 0;
+  width: 100%;
+  overflow: auto;
 }
-.post_detail_nav .pagination-previous,
-.post_detail_nav .pagination-next,
-.post_detail_nav .pagination-link {
-  border-color: rgb(86, 181, 75);
+.post_nav::after {
+  content: '';
+  display: block;
+  width: 100%;
 }
-
+.post_nav .pagination-previous {
+  float: left;
+}
+.post_nav .pagination-next {
+  float: right;
+}
 </style>
