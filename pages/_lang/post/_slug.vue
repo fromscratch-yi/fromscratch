@@ -142,26 +142,90 @@ export default {
   line-height: 1.9;
 }
 .slug .content_inner .slug_content h2 {
-  font-size: 16px;
+  font-size: 17px;
   margin: 18px 0;
+  position: relative;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-bottom: 4px solid #DDD;
+}
+.slug .content_inner .slug_content h2::after {
+  position: absolute;
+  content: " ";
+  border-bottom: solid 4px rgb(71, 160, 61);
+  bottom: -4px;
+  left: 0;
+  width: 15%;
+  display: block;
+}
+.slug .content_inner .slug_content h3 {
+  font-size: 15px;
+  margin: 18px 0 0;
   border-color: rgb(71, 160, 61);
   border-left-width: 4px;
   border-left-style: solid;
-  padding: 3px 3px 3px 10px;
+  padding: 2px 3px 2px 10px;
   line-height: 1.4;
 }
 .slug .content_inner .slug_content p {
   margin: 10px 0;
   line-height: 1.9;
 }
+.slug .content_inner .slug_content p.img_wrap {
+  margin: 0;
+  text-align: center;
+}
+.slug .content_inner .slug_content .memo {
+  position: relative;
+  padding: 10px 15px;
+  margin: 15px 0 20px;
+  background: rgb(241, 241, 241);
+  border-radius: 5px;
+}
+.slug .content_inner .slug_content .memo::after {
+  position: absolute;
+  display: inline-block;
+  top: -15px;
+  right: -5px;
+  content: "Memo";
+  padding: 4px 10px;
+  border-radius: 16px;
+  background: rgb(195, 195, 195);
+  color: rgb(71, 160, 61);
+  border: 1px solid rgb(71, 160, 61);
+}
+.slug .content_inner .slug_content .memo p.memo_ttl,
+.slug .content_inner .slug_content .memo p.memo_desc {
+  margin: 0;
+}
+.slug .content_inner .slug_content .memo p.memo_ttl {
+  font-weight: bold;
+}
+.slug .content_inner .slug_content a.refer {
+  position: relative;
+  padding-right: 15px;
+  color: #4a4a4a;
+  text-decoration: none;
+}
+.slug .content_inner .slug_content a.refer.decoration {
+  text-decoration: underline;
+}
+.slug .content_inner .slug_content a.refer::after {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url('~assets/img/out-link.png');
+  background-size: contain;
+}
 .slug .content_inner .slug_content ul {
-  color: #1e366a;
-  border: dotted #1e366a 1px;/*ドット 色 太さ*/
   padding: 0.5em 0.5em 0.5em 2em;
 }
 .slug .content_inner .slug_content ul li {
   line-height: 1.5;
-  padding: 0.5em 0;
+  padding: 5px 0;
   list-style: disc;
 }
 .post_nav {
