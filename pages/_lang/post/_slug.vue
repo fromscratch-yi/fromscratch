@@ -190,7 +190,7 @@ export default {
   content: "Memo";
   padding: 4px 10px;
   border-radius: 16px;
-  background: rgb(195, 195, 195);
+  background: #fff;
   color: rgb(71, 160, 61);
   border: 1px solid rgb(71, 160, 61);
 }
