@@ -132,6 +132,7 @@ export default {
   text-align: center;
 }
 .slug .content_inner .tag_wrap .tag {
+  margin-right: 5px;
   margin-bottom: 5px;
   font-size: 12px;
   color: rgb(255, 142, 26);

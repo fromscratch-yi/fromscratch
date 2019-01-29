@@ -87,8 +87,8 @@ module.exports = {
       }).then(entries => {
         return [
           '/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog',
-          // ...entries.items.map(entry => `/post/${entry.fields.slug}`),
-          // ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/post/${entry.fields.slug}`),
+          ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
         ]
       })
     }

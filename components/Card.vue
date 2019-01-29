@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style scoped>
+.post.card {
+  height: 100%;
+}
 .post.card .card-content {
   padding: 12px 10px 5px;
 }
