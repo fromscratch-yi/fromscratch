@@ -38,10 +38,14 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   modules: [
+    '@nuxtjs/pwa',
     '@nuxtjs/bulma',
     'nuxt-fontawesome',
     '@nuxtjs/markdownit'
   ],
+  manifest: {
+    name: "Yuichi Ishiyama's Portfolio & Blog",
+  },
   markdownit: {
     injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
     breaks: true, // 改行コードを<br>に変換する
