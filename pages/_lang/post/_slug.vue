@@ -51,21 +51,30 @@ export default {
       currentPost: [],
     }
   },
-  asyncData ({ env, params }) {
+  asyncData ({ env, params, error }) {
+    var content_type = env.CTF_BLOG_POST_TYPE_ID_EN;
+    if (params.lang == 'ja') {
+      content_type = env.CTF_BLOG_POST_TYPE_ID;
+    }
     return client.getEntries({
-      'content_type': env.CTF_BLOG_POST_TYPE_ID,
+      'content_type': content_type,
       order: '-fields.publishedAt',
     }).then(entries => {
       const posts = entries.items
       const current = posts.filter(function (item) {
         return item.fields.slug === params.slug
       })
+      if (posts.length == 0 || current.length == 0) {
+        throw({ statusCode: 404, message: 'Post not found' })
+      }
       return {
         allPosts: posts,
         currentPost: current[0]
       }
     })
-    .catch(console.error)
+    .catch(e => {
+      error(e);
+    })
   },
   computed: {
     dateOrder: function () {
@@ -211,9 +220,8 @@ export default {
   text-decoration: underline;
 }
 .slug .content_inner .slug_content a.refer::after {
-  position: absolute;
-  top: 0;
-  right: 2px;
+  vertical-align: super;
+  display: inline-block;
   content: "";
   width: 10px;
   height: 10px;

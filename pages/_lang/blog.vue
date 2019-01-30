@@ -4,10 +4,10 @@
       <div class="inner_contents_wrap">
         <TitleDescription :meta="meta"></TitleDescription>
         <Terminal :typeTxt="typeTxt"></Terminal>
-        <p v-if="$i18n.locale === 'en'" class="no_posts">Note: English is not supported. Please open the side menu in the upper right and change the language.</p>
-        <div v-else class="posts_area">
-          <p class="page_description">学んだことのアウトプットとして、プログラミングに関する記事を中心に書いています。</p>
-          <p v-if="posts.length <= 0" class="no_posts">記事がありません。</p>
+        
+        <div class="posts_area">
+          <p class="page_description" v-html="$t('blog.introduction')"></p>
+          <p v-if="posts.length <= 0" class="no_posts" v-html="$t('blog.no-posts')"></p>
           <section v-else class="columns is-mobile is-multiline">
             <card v-for="post in posts"
               v-bind:key="post.fields.slug"
@@ -42,7 +42,10 @@ export default {
     Card
   },
   async asyncData ({ app, env, params }) {
-    var content_type = env.CTF_BLOG_POST_TYPE_ID;
+    var content_type = env.CTF_BLOG_POST_TYPE_ID_EN;
+    if (params.lang == 'ja') {
+      content_type = env.CTF_BLOG_POST_TYPE_ID;
+    }
     return await client.getEntries({
       'content_type': content_type,
       order: '-fields.publishedAt',

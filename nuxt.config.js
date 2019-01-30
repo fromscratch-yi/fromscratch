@@ -1,6 +1,7 @@
 const {getConfigForKeys} = require('./lib/config.js')
 const ctfConfig = getConfigForKeys([
   'CTF_BLOG_POST_TYPE_ID',
+  'CTF_BLOG_POST_TYPE_ID_EN',
   'CTF_SPACE_ID',
   'CTF_CDA_ACCESS_TOKEN'
 ])
@@ -63,7 +64,6 @@ module.exports = {
     name: 'page',
     mode: 'out-in',
     beforeEnter (el) {
-      console.log('Before enter...');
       var navMenu = document.getElementsByClassName("nav_menu");
       if(navMenu.length > 0) {
         var classList = navMenu.item(0).classList;
@@ -81,22 +81,30 @@ module.exports = {
     middleware: 'i18n'
   },
   generate: {
-    routes() {
-      return cdaClient.getEntries({
+    routes: async function() {
+      var routeList = ['/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog'];
+      await cdaClient.getEntries({
         'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
       }).then(entries => {
-        return [
-          '/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog',
-          ...entries.items.map(entry => `/post/${entry.fields.slug}`),
+        routeList.push(
           ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
-        ]
-      })
+        )
+      });
+      await cdaClient.getEntries({
+        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID_EN
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/post/${entry.fields.slug}`)
+        )
+      });
+      return routeList;
     }
   },
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
-    CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID
+    CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID,
+    CTF_BLOG_POST_TYPE_ID_EN: ctfConfig.CTF_BLOG_POST_TYPE_ID_EN
   },
   /*
   ** Build configuration

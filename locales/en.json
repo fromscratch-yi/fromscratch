@@ -71,6 +71,8 @@
     "note": "Note: For the sake of personal information and confidentiality obligation, I'm changing or hidden some display."
   },
   "blog": {
-    "description": "This is Yuichi Ishiyama's Blog Page."
+    "description": "This is Yuichi Ishiyama's Blog Page.",
+    "introduction": "As an output of what I learned, I write about articles about programming.",
+    "no-posts": "No Posts exists."
   }
 }
