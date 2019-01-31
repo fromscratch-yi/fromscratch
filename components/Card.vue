@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-12-mobile is-4-tablet">
+  <div class="card_wrap">
     <div class="post card" ontouchstart="">
       <nuxt-link :to="$i18n.path('post/' + slug)" class="wrapper">
         <div class="card-image">

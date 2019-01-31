@@ -8,13 +8,15 @@
           <p class="page_description" v-html="$t('blog.introduction')"></p>
           <p v-if="posts.length <= 0" class="no_posts" v-html="$t('blog.no-posts')"></p>
           <section v-else class="columns is-mobile is-multiline">
-            <Card v-for="post in posts"
-              v-bind:key="post.fields.slug"
-              :title="post.fields.title"
-              :slug="post.fields.slug"
-              :headerImage="post.fields.headerImage"
-              :publishedAt="post.fields.publishedAt"
-              :tags="post.fields.tags"></Card>
+            <div class="column is-12-mobile is-4-tablet" v-for="post in posts" :key="post.id">
+              <Card
+                v-bind:key="post.fields.slug"
+                :title="post.fields.title"
+                :slug="post.fields.slug"
+                :headerImage="post.fields.headerImage"
+                :publishedAt="post.fields.publishedAt"
+                :tags="post.fields.tags"></Card>
+            </div>
           </section>
         </div>
       </div>
