@@ -25,7 +25,6 @@
 <script>
 import {createClient} from '~/plugins/contentful.js'
 import Meta from '~/assets/mixins/meta'
-const Domain = 'https://fromscratch-y.firebaseapp.com';
 const client = createClient()
 export default {
   layout: 'post',
@@ -40,7 +39,7 @@ export default {
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:title', property: 'og:title', content: 'FromScratch | ' + this.currentPost.fields.title },
         { hid: 'og:description', property: 'og:description', content: this.currentPost.fields.description },
-        { hid: 'og:url', property: 'og:url', content: 'https://fromscratch-y.firebaseapp.com/ogp.gif' },
+        { hid: 'og:url', property: 'og:url', content: 'https://fromscratch-y.work/ogp.gif' },
         { hid: 'og:image', property: 'og:image', content: this.currentPost.fields.headerImage.fields.file.url },
       ],
     }

@@ -63,7 +63,7 @@ export default {
       description: this.$t('blog.description'),
       type: 'article',
       url: this.$route.fullPath,
-      image: 'https://fromscratch-y.firebaseapp.com/ogp.gif',
+      image: 'https://fromscratch-y.work/ogp.gif',
       lang: this.$i18n.locale
     };
     var typeTxt = '$ cat ./blog.txt\n\> Welcome to my Blog page.\n\> To output that the study was.';

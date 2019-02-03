@@ -1,4 +1,4 @@
-const Domain = 'https://fromscratch-y.firebaseapp.com';
+const Domain = 'https://fromscratch-y.work';
 export default {
   head () {
     return {

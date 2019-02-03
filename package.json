@@ -20,6 +20,7 @@
     "@nuxtjs/font-awesome": "^1.0.3",
     "@nuxtjs/markdownit": "^1.2.3",
     "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/sitemap": "^0.2.0",
     "contentful": "^7.1.0",
     "dotenv": "^6.2.0",
     "markdown-it-toc": "^1.1.0",

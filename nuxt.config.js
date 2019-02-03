@@ -23,10 +23,10 @@ module.exports = {
       { hid: 'twitter:site', property: 'twitter:site', content: '@IshiyamaYuichi' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'FromScratch | Yuichi Ishiyama' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'https://fromscratch-y.firebaseapp.com/' },
+      { hid: 'og:url', property: 'og:url', content: 'https://fromscratch-y.work/' },
       { hid: 'og:title', property: 'og:title', content: 'FromScratch | Yuichi Ishiyama' },
       { hid: 'og:description', property: 'og:description', content: 'This is Yuichi Ishiyama\'s Portfolio and Blog site.' },
-      { hid: 'og:image', property: 'og:image', content: 'https://fromscratch-y.firebaseapp.com/ogp.gif' },
+      { hid: 'og:image', property: 'og:image', content: 'https://fromscratch-y.work/ogp.gif' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -38,11 +38,43 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   modules: [
+    '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
     '@nuxtjs/bulma',
     'nuxt-fontawesome',
     '@nuxtjs/markdownit'
   ],
+  sitemap: {
+    path: '/sitemap.xml', // 出力パス
+    hostname: process.env.BASE_URL,
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    exclude: [ // 除外項目
+      '/404*',
+      '/500*'
+   ],
+    generate: true,
+    async routes () {
+      var urlList = [];
+      const ja = await cdaClient.getEntries({
+        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID,
+      });
+      const en = await cdaClient.getEntries({
+        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID_EN,
+      });
+      let urls = [];
+      let idx = 0;
+      ja.items.forEach((val, arr) => {
+        urls[idx] = 'ja/post/' + val.fields.slug;
+        idx ++;
+      });
+      en.items.forEach((val, arr) => {
+        urls[idx] = 'post/' + val.fields.slug;
+        idx ++;
+      });
+      return urls;
+    }
+  },
   manifest: {
     name: "Yuichi Ishiyama's Portfolio & Blog",
   },

@@ -12,7 +12,7 @@
       </div>
       <!-- top-right -->
       <p class="typer_wrap" v-bind:class="{active: isActive}">
-        <vue-typer :text='["[Java]\npublic class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World.\");\n  }\n}\n$ javac HelloWorld.java\n$ java HelloWorld\nHello World.\n\n[PHP]\n$ echo \`<?php echo \"Hello World.\"; ?>\` > HelloWorld.php\n$ php HelloWorld.php\nHello World.\n\n[Python]\n$ echo \`print(\"Hello World.\")\` > HelloWorld.py\n$ python HelloWorld.py\nHello World.\n$########################"]' :type-delay='70' :repeat='5' :pre-erase-delay='5000'></vue-typer>
+        <vue-typer :text='["[Java]\npublic class HelloWorld {\n  public static void main(String[] args) {\n    System.out.println(\"Hello World.\");\n  }\n}\n$ javac HelloWorld.java\n$ java HelloWorld\nHello World.\n\n[PHP]\n$ echo \`<?php echo \"Hello World.\"; ?>\` > HelloWorld.php\n$ php HelloWorld.php\nHello World.\n\n[Python]\n$ echo \`print(\"Hello World.\")\` > HelloWorld.py\n$ python HelloWorld.py\nHello World.\n$"]' :type-delay='70' :repeat='5' :pre-erase-delay='5000'></vue-typer>
       </p>
       <!-- bottom-left -->
       <p class="typer_wrap" v-bind:class="{active: isActive}">

@@ -255,7 +255,7 @@ export default {
       description: this.$t('work.description'),
       type: 'article',
       url: this.$route.fullPath,
-      image: 'https://fromscratch-y.firebaseapp.com/ogp.gif',
+      image: 'https://fromscratch-y.work/ogp.gif',
       lang: this.$i18n.locale
     };
     var typeTxt = '$ cat ./work.txt\n\> I\'ll show my private works.\n\> I\'m going to create more.';
