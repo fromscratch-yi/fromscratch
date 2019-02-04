@@ -7,6 +7,7 @@ export default {
       },
       title: "FromScratch | " + this.meta.title,
       meta: [
+        { hid: 'canonical', name: 'canonical', content: Domain + this.meta.url },
         { hid: 'description', name: 'description', content: this.meta.description },
         { hid: 'og:type', property: 'og:type', content: this.meta.type },
         { hid: 'og:title', property: 'og:title', content: 'FromScratch | ' + this.meta.title },

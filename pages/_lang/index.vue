@@ -49,6 +49,7 @@
 if (process.browser) {
   var VueTyper = require('vue-typer').VueTyper
 }
+const Domain = 'https://fromscratch-y.work';
 export default {
   transition (to, from) {
     if (!from) return 'slide-left'
@@ -70,6 +71,10 @@ export default {
   },
   head() {
     return {
+      meta: [
+        { hid: 'canonical', name: 'canonical', content: Domain + this.$route.fullPath },
+        { hid: 'og:url', property: 'og:url', content: Domain + this.$route.fullPath }
+      ],
       bodyAttrs: {
         class: 'welcom_page'
       }

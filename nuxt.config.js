@@ -17,8 +17,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-
       { hid: 'description', name: 'description', content: 'Yuichi Ishiyama\'s Portfolio & Blog site.' },
+      { hid: 'canonical', name: 'canonical', content: 'https://fromscratch-y.work/' },
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', property: 'twitter:site', content: '@IshiyamaYuichi' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'FromScratch | Yuichi Ishiyama' },
@@ -52,27 +52,25 @@ module.exports = {
     exclude: [ // 除外項目
       '/404*',
       '/500*'
-   ],
+    ],
     generate: true,
     async routes () {
-      var urlList = [];
-      const ja = await cdaClient.getEntries({
-        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID,
+      var routeList = ['/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog'];
+      await cdaClient.getEntries({
+        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
+        )
       });
-      const en = await cdaClient.getEntries({
-        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID_EN,
+      await cdaClient.getEntries({
+        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID_EN
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/post/${entry.fields.slug}`)
+        )
       });
-      let urls = [];
-      let idx = 0;
-      ja.items.forEach((val, arr) => {
-        urls[idx] = 'ja/post/' + val.fields.slug;
-        idx ++;
-      });
-      en.items.forEach((val, arr) => {
-        urls[idx] = 'post/' + val.fields.slug;
-        idx ++;
-      });
-      return urls;
+      return routeList;
     }
   },
   manifest: {

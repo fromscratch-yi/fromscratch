@@ -23,13 +23,42 @@
 </template>
 
 <script>
-import {createClient} from '~/plugins/contentful.js'
-import Meta from '~/assets/mixins/meta'
-const client = createClient()
+import {createClient} from '~/plugins/contentful.js';
+const client = createClient();
+const Domain = 'https://fromscratch-y.work/';
 export default {
   layout: 'post',
   head () {
     return {
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [{
+        innerHTML: `{
+          "@context": "http://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "${Domain}"
+          },
+          "headline": "${this.currentPost.fields.title}",
+          "image": "https:${this.currentPost.fields.headerImage.fields.file.url}",
+          "datePublished": "${this.currentPost.fields.publishedAt}",
+          "dateModified": "${this.currentPost.fields.publishedAt}",
+          "author": {
+            "@type": "Person",
+            "name": "Yuichi Ishiyama"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Yuichi Ishiyama",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "${Domain}icon.png"
+            }
+          },
+          "description": "${this.currentPost.fields.description}"
+        }`,
+        type: 'application/ld+json'
+      }],
       htmlAttrs: {
         lang: this.$i18n.locale,
       },
@@ -39,7 +68,7 @@ export default {
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:title', property: 'og:title', content: 'FromScratch | ' + this.currentPost.fields.title },
         { hid: 'og:description', property: 'og:description', content: this.currentPost.fields.description },
-        { hid: 'og:url', property: 'og:url', content: 'https://fromscratch-y.work/ogp.gif' },
+        { hid: 'og:url', property: 'og:url', content: Domain + 'ogp.gif' },
         { hid: 'og:image', property: 'og:image', content: this.currentPost.fields.headerImage.fields.file.url },
       ],
     }
