@@ -15,9 +15,10 @@ export default {
   position: relative;
   padding: 0 0 5px;
   margin: 0 0 20px;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
   line-height: 1.3;
+  font-family: 'Roboto',arial,sans-serif;
 }
 .main_ttl::before {
   position: absolute;

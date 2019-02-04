@@ -310,7 +310,7 @@ export default {
   transition: all 0.8s ease;
 }
 .tab_item .work_wrap {
-  padding: 10px 0 20px;
+  padding: 25px 0 35px;
   border-bottom: 1px #7b7b7b dashed;
 }
 .tab_item .work_wrap .item_ttl {
@@ -331,7 +331,7 @@ export default {
   background: rgb(64, 161, 63);
 }
 .tab_item .work_wrap .skill_list {
-  margin-top: 15px;
+  margin: 15px 0 10px;
   font-size: 12px;
   text-align: center;
 }
@@ -344,6 +344,7 @@ export default {
   margin: 5px 0 0;
   text-align: center;
   font-size: 13px;
+  line-height: 1.8;
 }
 .em_txt {
   font-weight: bold;

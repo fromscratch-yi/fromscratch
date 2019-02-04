@@ -41,7 +41,7 @@ html::-webkit-scrollbar {
   background-color: #fff;
 }
 .max_size_wrap {
-  max-width: 750px;
+  max-width: 770px;
   margin: 0 auto;
 }
 .note {
