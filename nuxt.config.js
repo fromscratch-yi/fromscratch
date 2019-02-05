@@ -3,7 +3,8 @@ const ctfConfig = getConfigForKeys([
   'CTF_BLOG_POST_TYPE_ID',
   'CTF_BLOG_POST_TYPE_ID_EN',
   'CTF_SPACE_ID',
-  'CTF_CDA_ACCESS_TOKEN'
+  'CTF_CDA_ACCESS_TOKEN',
+  'GOOGLE_ANALYTICS_ID'
 ])
 const {createClient} = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
@@ -38,6 +39,9 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   modules: [
+    ['@nuxtjs/google-analytics', {
+      id: ctfConfig.GOOGLE_ANALYTICS_ID
+    }],
     '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
     '@nuxtjs/bulma',
