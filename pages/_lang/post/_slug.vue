@@ -1,6 +1,6 @@
 <template>
   <div class="contents_area">
-    <div class="max_size_wrap">
+    <div class="blog_slug_wrap">
       <section class="slug">
         <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url"/></p>
         <div class="content_inner">
@@ -131,11 +131,15 @@ export default {
 </script>
 
 <style>
+.blog_slug_wrap {
+  max-width: 820px;
+  margin: 0 auto;
+}
 .slug .content_inner {
   position: relative;
   width: 94%;
   margin: -13% auto 0;
-  padding: 20px;
+  padding: 20px 15px;
   box-shadow: 0 0 25px -6px #636363;
   background: #fff;
   z-index: 1;
@@ -178,8 +182,34 @@ export default {
   font-size: 13px;
   line-height: 1.9;
 }
+.slug .content_inner .slug_content .mokuji {
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 2px dotted #458c61;
+}
+.slug .content_inner .slug_content .mokuji p {
+  text-align: center;
+}
+.slug .content_inner .slug_content .mokuji ul li a {
+  color: #464646;
+}
+.slug .content_inner .slug_content .mokuji ul li ul {
+  padding-top: 3px;
+}
+.slug .content_inner .slug_content .mokuji ul li ul li:last-child {
+  padding-bottom: 0;
+}
+.slug .content_inner .slug_content .asp-tbl1 thead tr th {
+  white-space: nowrap;
+  text-align: center;
+}
+.slug .content_inner .slug_content .asp-tbl1 tbody tr td {
+  text-align: center;
+}
 .slug .content_inner .slug_content h2 {
   font-size: 17px;
+  font-weight:bold;
   margin: 18px 0;
   position: relative;
   padding-bottom: 5px;
@@ -195,17 +225,44 @@ export default {
   width: 15%;
   display: block;
 }
+
 .slug .content_inner .slug_content h3 {
+  position:relative;
+  border-bottom: 1px dashed rgb(71, 160, 61);;
+  font-weight:bold;
+  margin: 18px 0 15px;
+  padding: 0 0 3px 27px;
   font-size: 15px;
-  margin: 18px 0 0;
-  border-color: rgb(71, 160, 61);
-  border-left-width: 4px;
-  border-left-style: solid;
-  padding: 2px 3px 2px 10px;
-  line-height: 1.4;
+  clear:right;
+}
+.slug .content_inner .slug_content h3::before,
+.slug .content_inner .slug_content h3::after{
+  content: "";
+  position: absolute;
+}
+.slug .content_inner .slug_content h3::before {
+  background-color: rgb(71, 160, 61);;
+  top: 5px;
+  left: 7px;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.slug .content_inner .slug_content h3::after {
+  background-color: rgb(71, 160, 61);;
+  top: 15px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  -transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.slug .content_inner .slug_content .section_inner {
+  padding: 0 5px;
 }
 .slug .content_inner .slug_content p {
-  margin: 10px 0;
+  margin: 5px 0;
   line-height: 1.9;
 }
 .slug .content_inner .slug_content p.img_wrap {
@@ -253,11 +310,12 @@ export default {
   content: "";
   width: 10px;
   height: 10px;
+  margin-left: 5px;
   background: url('~assets/img/out-link.png');
   background-size: contain;
 }
 .slug .content_inner .slug_content ul {
-  padding: 0.5em 0.5em 0.5em 2em;
+  padding: 0 0.5em 0 2em;
 }
 .slug .content_inner .slug_content ul li {
   line-height: 1.5;

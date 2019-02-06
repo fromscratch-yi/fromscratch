@@ -86,9 +86,6 @@ module.exports = {
     html: true, // HTML タグを有効にする
     linkify: true, // URLに似たテキストをリンクに自動変換する
     typography: true,  // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
-    use: [
-      'markdown-it-toc' // 目次を作るためのライブラリ。別途インストールが必要
-    ]
   },
   fontawesome: {
     imports: [
