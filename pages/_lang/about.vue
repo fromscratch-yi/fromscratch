@@ -148,14 +148,14 @@ export default {
 }
 .columns.inner .name_space p {
   font-size: 13px;
-  color: rgb(177, 177, 177);
+  color: #595959;
 }
 .columns.inner .name_space p .em_color {
-  color: rgb(134, 204, 127);
+  color: #036600;
   font-weight: bold;
 }
 .profile_txt p .em_color {
-  color: rgb(64, 161, 63);
+  color: #036600;
   font-weight: bold;
 }
 .profile_txt {
@@ -175,7 +175,7 @@ export default {
 }
 .sub_contents:nth-child(odd) {
   margin: 20px 0 0;
-  background-color: rgb(43, 42, 42);
+  background-color: #1F1F1F;
   color: rgb(177, 177, 177);
 }
 .sub_contents:last-child {
@@ -203,7 +203,7 @@ export default {
   display: inline-block;
   padding: 5px;
   font-size: 12px;
-  color: rgb(64, 161, 63);
+  color: #62BE56;
   font-weight: bold;
 }
 .sub_contents .category .skill_list {

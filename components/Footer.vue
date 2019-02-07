@@ -10,17 +10,17 @@
         </li>
         <li class="column">
           <p class="contanc_item">
-            <a href="https://twitter.com/IshiyamaYuichi" target="_blank"><img src="~assets/img/Twitter.png" alt="Twitter"></a>
+            <a href="https://twitter.com/IshiyamaYuichi" target="_blank" rel="noopener"><img src="~assets/img/Twitter.png" alt="Twitter"></a>
           </p>
         </li>
         <li class="column">
           <p class="contanc_item">
-            <a href="https://www.pinterest.jp/yu123daa/" target="_blank"><img src="~assets/img/Pinterest.png" alt="Pinterest"></a>
+            <a href="https://www.pinterest.jp/yu123daa/" target="_blank" rel="noopener"><img src="~assets/img/Pinterest.png" alt="Pinterest"></a>
           </p>
         </li>
         <li class="column">
           <p class="contanc_item">
-            <a href="https://www.facebook.com/y.fromscratch" target="_blank"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
+            <a href="https://www.facebook.com/y.fromscratch" target="_blank" rel="noopener"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
           </p>
         </li>
       </ul>

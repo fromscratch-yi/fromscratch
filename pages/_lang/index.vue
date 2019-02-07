@@ -71,6 +71,24 @@ export default {
   },
   head() {
     return {
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [{
+        innerHTML: `{
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Yuichi Ishiyama",
+          "url": "${Domain + this.$route.fullPath}",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "${Domain}"
+          },
+          "description": "This is my Portfolio and Blog site."
+        }`,
+        type: 'application/ld+json'
+      }],
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
       meta: [
         { hid: 'canonical', name: 'canonical', content: Domain + this.$route.fullPath },
         { hid: 'og:url', property: 'og:url', content: Domain + this.$route.fullPath }

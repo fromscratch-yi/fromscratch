@@ -2,7 +2,7 @@
   <div class="contents_area">
     <div class="blog_slug_wrap">
       <section class="slug">
-        <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url"/></p>
+        <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url" :alt="currentPost.fields.title"></p>
         <div class="content_inner">
           <p class="slug_date">{{ currentPost.fields.publishedAt }}</p>
           <h1 class="slug_title">{{ currentPost.fields.title }}</h1>
@@ -25,7 +25,7 @@
 <script>
 import {createClient} from '~/plugins/contentful.js';
 const client = createClient();
-const Domain = 'https://fromscratch-y.work/';
+const Domain = 'https://fromscratch-y.work';
 export default {
   layout: 'post',
   head () {
@@ -52,7 +52,7 @@ export default {
             "name": "Yuichi Ishiyama",
             "logo": {
               "@type": "ImageObject",
-              "url": "${Domain}icon.png"
+              "url": "${Domain}/icon.png"
             }
           },
           "description": "${this.currentPost.fields.description}"
@@ -68,8 +68,9 @@ export default {
         { hid: 'og:type', property: 'og:type', content: 'article' },
         { hid: 'og:title', property: 'og:title', content: 'FromScratch | ' + this.currentPost.fields.title },
         { hid: 'og:description', property: 'og:description', content: this.currentPost.fields.description },
-        { hid: 'og:url', property: 'og:url', content: Domain + 'ogp.gif' },
-        { hid: 'og:image', property: 'og:image', content: this.currentPost.fields.headerImage.fields.file.url },
+        { hid: 'og:url', property: 'og:url', content: Domain + this.$route.fullPath },
+        { hid: 'og:image', property: 'og:image', content: 'https:' + this.currentPost.fields.headerImage.fields.file.url },
+        { hid: 'canonical', name: 'canonical', content: Domain + this.$route.fullPath }
       ],
     }
   },
@@ -176,7 +177,8 @@ export default {
   margin-right: 5px;
   margin-bottom: 5px;
   font-size: 12px;
-  color: rgb(255, 142, 26);
+  border:1px solid rgb(255, 142, 26);
+  color: #464646;
 }
 .slug .content_inner .slug_content {
   font-size: 13px;
@@ -206,6 +208,10 @@ export default {
 }
 .slug .content_inner .slug_content .asp-tbl1 tbody tr td {
   text-align: center;
+}
+.slug .content_inner .slug_content .h_link {
+   margin-top: -75px;
+   padding-top: 75px;
 }
 .slug .content_inner .slug_content h2 {
   font-size: 17px;
@@ -264,6 +270,9 @@ export default {
 .slug .content_inner .slug_content p {
   margin: 5px 0;
   line-height: 1.9;
+}
+.slug .content_inner .slug_content code {
+  color: #E0002C;
 }
 .slug .content_inner .slug_content p.img_wrap {
   margin: 0;

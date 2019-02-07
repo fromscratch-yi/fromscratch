@@ -292,9 +292,9 @@ export default {
   border-bottom-width: 2px;
 }
 .page_contents .tabs li.is-active a {
-  border-bottom-color: rgb(64, 161, 63);
+  border-bottom-color: rgb(54, 134, 54);
   border-bottom-width: 2px;
-  color: rgb(64, 161, 63);
+  color: rgb(54, 134, 54);
 }
 .page_contents .VueCarousel-pagination {
   margin-top: -30px;
@@ -337,7 +337,8 @@ export default {
 }
 .tab_item .work_wrap .skill_list li.tag {
   font-size: 12px;
-  color: rgb(255, 142, 26);
+  border:1px solid rgb(255, 142, 26);
+  color: #464646;
   margin-bottom: 5px;
 }
 .tab_item .work_wrap .item_desc {
@@ -348,7 +349,7 @@ export default {
 }
 .em_txt {
   font-weight: bold;
-  color: rgb(71, 160, 61);
+  color: rgb(57, 128, 50);
 }
 .tab_item .img_wrap {
   text-align: center;

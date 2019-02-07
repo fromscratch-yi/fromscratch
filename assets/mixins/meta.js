@@ -2,6 +2,21 @@ const Domain = 'https://fromscratch-y.work';
 export default {
   head () {
     return {
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [{
+        innerHTML: `{
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Yuichi Ishiyama",
+          "url": "${Domain + this.meta.url}",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "${Domain}"
+          },
+          "description": "${this.meta.description}"
+        }`,
+        type: 'application/ld+json'
+      }],
       htmlAttrs: {
         lang: this.meta.lang,
       },

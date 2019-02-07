@@ -80,7 +80,7 @@ export default {
 .card_date {
   font-size: 12px;
   margin-bottom: 5px;
-  color: rgb(71, 160, 61);
+  color: rgb(41, 99, 39);
   font-weight: bold;
 }
 .post.card .card_title {
@@ -92,6 +92,7 @@ export default {
 }
 .post.card .tags .tag {
   font-size: 12px;
-  color: rgb(255, 142, 26);
+  border:1px solid rgb(255, 142, 26);
+  color: #464646;
 }
 </style>

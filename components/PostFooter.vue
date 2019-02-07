@@ -59,9 +59,9 @@
   display: block;
   max-width: 240px;
   margin: 10px auto 20px;
-  background-color: #f8f8f8;
-  border: 1px solid rgb(86, 181, 75);
-  color: rgb(86, 181, 75);
+  background-color: #fff;
+  border: 1px solid #2A5E26;
+  color: #2A5E26;
   padding: 16px 26px 16px 30px;
   font-size: 18px;
   font-weight: 700;
@@ -73,8 +73,5 @@
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all  0.5s ease;
-}
-.post_foot_wrap a.blog_top_btn:hover {
-  background-color: #353535;
 }
 </style>

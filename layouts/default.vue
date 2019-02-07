@@ -25,7 +25,7 @@ html {
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   background-color: rgb(43, 42, 42);
-  color:  rgb(43, 42, 42);
+  color:  #333;
 }
 html::-webkit-scrollbar {
   display: none;
@@ -40,7 +40,7 @@ html::-webkit-scrollbar {
 .note {
   padding: 5px 10px;
   font-size: 12px;
-  color: rgb(155, 155, 155);
+  color: #595959;
 }
 .link_wrap {
   margin-top: 20px;

@@ -6,7 +6,7 @@
     </section>
     <PostFooter/>
     <Footer/>
-    <a href="#" class="h_top_btn" v-scroll-to="'#page_top'"></a>
+    <a href="#page_top" class="h_top_btn" v-scroll-to="'#page_top'">▲</a>
   </div>
 </template>
 
@@ -47,7 +47,7 @@ html::-webkit-scrollbar {
 .note {
   padding: 5px 10px;
   font-size: 12px;
-  color: rgb(155, 155, 155);
+  color: #595959;
 }
 .link_wrap {
   margin-top: 20px;
@@ -122,6 +122,7 @@ a:hover {
   right: 5px;
   width: 45px;
   height: 45px;
+  line-height: 45px;
   color: #56b54b;
   outline: 0;
   text-align: center;
@@ -133,15 +134,6 @@ a:hover {
   animation: bounding 1s ease infinite alternate;
   transform: rotate( 90deg );
 }
-.h_top_btn::after {
-  position: absolute;
-  content: '▲';
-  top: calc(50% - 1px);
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-}
-
 @keyframes bounding{
   0% {transform: translateY(0px);}
   100% {transform: translateY(-10px);}
