@@ -5,8 +5,14 @@
     "mobile": "Mobile",
     "other": "Other"
   },
+  "top": {
+    "pageTitle": "Yuichi Ishiyama | Portfolio and Blog site",
+    "description": "This is Yuichi Ishiyama's Portfolio and Blog site. The blog post will be the contents of IT related technology.",
+    "name": "Portfolio site."
+  },
   "about": {
-    "description": "This is Yuichi Ishiyama's profile. This is me.",
+    "pageTitle": "About | Yuichi Ishiyama's Profile | Programming Skill | Carrier",
+    "description": "This is Yuichi Ishiyama's profile page. I will introduce my history, carrier, and skill.",
     "name": "Yuichi Ishiyama",
     "kind": "Web Design, Business Card Design, <span class=\"em_color\">Front-End</span> Development, <span class=\"em_color\">Back-End</span> Development, Mobile-app Development, etc.",
     "introduction" : "<p>I was born on January 23, <span class=\"em_color\">1993</span> in Osaka, Japan. After working as a bartender for four years, I have been working as a software engineer since 2014.</p><p>I like soccer, and programming. Recently, I want to communicate with <span class=\"em_color\">software engineers around the world</span> ha-ha. And I want to improve my <span class=\"em_color\">English</span> and <span class=\"em_color\">programming skill</span> as a software engineer.</p><p>That's about it. Thank u.</p>",
@@ -55,7 +61,8 @@
     "note": "Note: To keep confidential, concrete expression is omitted."
   },
   "work": {
-    "description": "This is Yuichi Ishiyama's Works Page.",
+    "pageTitle": "Work | Yuichi Ishiyama's Portfolio | Web Application, Web Site, Business Card Design",
+    "description": "This is Yuichi Ishiyama's Portfolio Page. I will introduce Application, Web site, Business Card that I made.",
     "introduction" : "These are stuff I made.<br>Please have a look at it.",
     "overview": {
       "used": "This is Android Native App. The Name is UseD.<br>It is an application I made to recognize my own waste.<br>You can classify expenses into three types of spent, waste, investment, and you can see the proportion of expenditure.<br>And you can notice how much money we waste.",
@@ -71,7 +78,8 @@
     "note": "Note: For the sake of personal information and confidentiality obligation, I'm changing or hidden some display."
   },
   "blog": {
-    "description": "This is Yuichi Ishiyama's Blog Page.",
+    "pageTitle": "Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
+    "description": "This is Yuichi Ishiyama's Blog Page. The blog post will be the contents of IT related technology.",
     "introduction": "As an output of what I learned, I write about articles about programming.",
     "no-posts": "No Posts exists."
   }

@@ -62,7 +62,7 @@ export default {
       htmlAttrs: {
         lang: this.$i18n.locale,
       },
-      title: "FromScratch | " + this.currentPost.fields.title,
+      title: this.currentPost.fields.title + " - FromScratch",
       meta: [
         { hid: 'description', name: 'description', content: this.currentPost.fields.description },
         { hid: 'og:type', property: 'og:type', content: 'article' },
@@ -202,6 +202,11 @@ export default {
 .slug .content_inner .slug_content .mokuji ul li ul li:last-child {
   padding-bottom: 0;
 }
+.slug .content_inner .slug_content table {
+  table-layout: fixed;
+  width: auto;
+  min-width: 100%;
+}
 .slug .content_inner .slug_content .asp-tbl1 thead tr th {
   white-space: nowrap;
   text-align: center;
@@ -266,6 +271,32 @@ export default {
 }
 .slug .content_inner .slug_content .section_inner {
   padding: 0 5px;
+}
+.slug .content_inner .slug_content dl {
+  margin-bottom: 15px;
+}
+.slug .content_inner .slug_content dl dt {
+  position: relative;
+  margin: 10px 0 5px;
+  padding: 0 0 0 18px;
+  font-weight: bold;
+}
+.slug .content_inner .slug_content dl dt::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #47a03d;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 3px;
+  margin-top: -5px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+.slug .content_inner .slug_content dl dd {
+  padding: 0 10px;
 }
 .slug .content_inner .slug_content p {
   margin: 5px 0;
@@ -347,5 +378,104 @@ export default {
 }
 .post_nav .pagination-next {
   float: right;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin-bottom: 20px;
+}
+pre:not(.hljs) {
+  padding: 23px;
+  line-height: 19px;
+}
+blockquote {
+  background: rgba(127, 127, 127, 0.1);
+  border-color: rgba(0, 122, 204, 0.5);
+}
+.emoji {
+  height: 1.4em;
+}
+/* for inline code */
+:not(pre):not(.hljs) > code {
+  color: #C9AE75; /* Change the old color so it seems less like an error */
+  font-size: inherit;
+}
+code {
+  font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+  font-size: 14px;
+  line-height: 19px;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #8959a8;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  color: #4d4d4c;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }
 </style>

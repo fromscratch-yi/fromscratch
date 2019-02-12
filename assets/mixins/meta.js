@@ -20,7 +20,7 @@ export default {
       htmlAttrs: {
         lang: this.meta.lang,
       },
-      title: "FromScratch | " + this.meta.title,
+      title: this.meta.title + " - FromScratch",
       meta: [
         { hid: 'canonical', name: 'canonical', content: Domain + this.meta.url },
         { hid: 'description', name: 'description', content: this.meta.description },
@@ -30,6 +30,9 @@ export default {
         { hid: 'og:url', property: 'og:url', content: Domain + this.meta.url },
         { hid: 'og:image', property: 'og:image', content: this.meta.image },
       ],
+      bodyAttrs: {
+        class: (this.meta.bodyClass ? this.meta.bodyClass : 'base')
+      }
     }
   }
 }

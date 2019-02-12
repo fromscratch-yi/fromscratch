@@ -7,7 +7,7 @@
         <div class="inner">
           <p><span class="glitch" data-text="Welcome">Welcome</span></p>
           <p class="middle_txt">From Scratch</p>
-          <p class="small_txt">Yuichi Ishiyama's<br>Portfolio Site.</p>
+          <p class="small_txt">Yuichi Ishiyama's<br>{{ $t('top.name') }}</p>
         </div>
       </div>
       <!-- top-right -->
@@ -49,53 +49,35 @@
 if (process.browser) {
   var VueTyper = require('vue-typer').VueTyper
 }
-const Domain = 'https://fromscratch-y.work';
+import Meta from '~/assets/mixins/meta'
 export default {
   transition (to, from) {
     if (!from) return 'slide-left'
     return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
   },
+  mixins: [Meta],
   components: {
     VueTyper,
   },
   layout: "headerless",
   data() {
+    var meta = {
+      title: this.$t('top.pageTitle'),
+      description: this.$t('top.description'),
+      type: 'article',
+      url: this.$route.fullPath,
+      image: 'https://fromscratch-y.work/ogp.gif',
+      lang: this.$i18n.locale,
+      bodyClass: 'welcom_page'
+    };
     return {
+      meta,
       isActive: false
     }
   },
   methods: {
     click: function() {
       this.isActive = !this.isActive;
-    }
-  },
-  head() {
-    return {
-      __dangerouslyDisableSanitizers: ['script'],
-      script: [{
-        innerHTML: `{
-          "@context": "http://schema.org",
-          "@type": "Person",
-          "name": "Yuichi Ishiyama",
-          "url": "${Domain + this.$route.fullPath}",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "${Domain}"
-          },
-          "description": "This is my Portfolio and Blog site."
-        }`,
-        type: 'application/ld+json'
-      }],
-      htmlAttrs: {
-        lang: this.$i18n.locale,
-      },
-      meta: [
-        { hid: 'canonical', name: 'canonical', content: Domain + this.$route.fullPath },
-        { hid: 'og:url', property: 'og:url', content: Domain + this.$route.fullPath }
-      ],
-      bodyAttrs: {
-        class: 'welcom_page'
-      }
     }
   }
 }

@@ -251,7 +251,8 @@ export default {
   },
   data(){
     var meta = {
-      title: 'Work',
+      headline: 'Work',
+      title: this.$t('work.pageTitle'),
       description: this.$t('work.description'),
       type: 'article',
       url: this.$route.fullPath,
