@@ -14,8 +14,8 @@
       </section>
       <div class="inner_contents_wrap">
         <nav class="post_nav">
-          <nuxt-link v-if="prevPost" class="pagination-previous" :to="$i18n.path('post/' + prevPost.fields.slug)">&laquo; Prev</nuxt-link>
-          <nuxt-link v-if="nextPost" class="pagination-next" :to="$i18n.path('post/' + nextPost.fields.slug)">Next &raquo;</nuxt-link>
+          <nuxt-link v-if="prevPost" class="pagination-previous" :to="$i18n.path('post/' + prevPost.fields.slug + '/')">&laquo; Prev</nuxt-link>
+          <nuxt-link v-if="nextPost" class="pagination-next" :to="$i18n.path('post/' + nextPost.fields.slug + '/')">Next &raquo;</nuxt-link>
         </nav>
       </div>
     </div>

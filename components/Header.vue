@@ -12,18 +12,18 @@
       <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
       <ul class="page_nav">
         <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo"></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('about')"><span class="nav_txt">A</span>bout</nuxt-link></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('work')"><span class="nav_txt">W</span>ork</nuxt-link></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('blog')"><span class="nav_txt">B</span>log</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('work/')"><span class="nav_txt">W</span>ork</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
         <li class="lang_wrap">
           <p class="attention">Language</p>
           <div class="lang_wrap_inner">
             <!-- setting for english -->
-            <nuxt-link v-if="$i18n.locale === 'ja'" :to="$route.fullPath.replace('\/ja','')">en</nuxt-link>
-            <nuxt-link v-else :to="$route.fullPath">en</nuxt-link>
+            <nuxt-link v-if="$i18n.locale === 'ja'" :to="$route.fullPath.replace('\/ja','').replace(/\/$/, '') + `/`">en</nuxt-link>
+            <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">en</nuxt-link>
             <!-- setting for japanese -->
-            <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath">ja</nuxt-link>
-            <nuxt-link v-else :to="$route.fullPath">ja</nuxt-link>
+            <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
+            <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
           </div>
         </li>
       </ul>

@@ -12,9 +12,9 @@
       <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
       <ul class="page_nav">
         <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo"></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('about')"><span class="nav_txt">A</span>bout</nuxt-link></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('work')"><span class="nav_txt">W</span>ork</nuxt-link></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('blog')"><span class="nav_txt">B</span>log</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('work/')"><span class="nav_txt">W</span>ork</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
       </ul>
     </nav>
   </header>

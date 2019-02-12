@@ -22,12 +22,12 @@ export default {
       },
       title: this.meta.title + " - FromScratch",
       meta: [
-        { hid: 'canonical', name: 'canonical', content: Domain + this.meta.url },
+        { hid: 'canonical', name: 'canonical', content: Domain + this.meta.url.replace(/\/$/, '') + '/' },
         { hid: 'description', name: 'description', content: this.meta.description },
         { hid: 'og:type', property: 'og:type', content: this.meta.type },
         { hid: 'og:title', property: 'og:title', content: 'FromScratch | ' + this.meta.title },
         { hid: 'og:description', property: 'og:description', content: this.meta.description },
-        { hid: 'og:url', property: 'og:url', content: Domain + this.meta.url },
+        { hid: 'og:url', property: 'og:url', content: Domain + this.meta.url.replace(/\/$/, '') + '/' },
         { hid: 'og:image', property: 'og:image', content: this.meta.image },
       ],
       bodyAttrs: {

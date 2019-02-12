@@ -1,31 +1,6 @@
 <template>
   <div class="post_foot_wrap">
-    <nuxt-link :to="$i18n.path('blog')" class="blog_top_btn">Blog Top</nuxt-link>
-    <!-- <section class="share_wrap">
-      <h2>Share</h2>
-      <ul class="columns is-mobile">
-        <li class="column">
-          <p class="contanc_item">
-            <a href="mailto:yufroms@gmail.com?subject=[Contact]Contact from Portfolio."><img src="~assets/img/Mail.png" alt="Mail"></a>
-          </p>
-        </li>
-        <li class="column">
-          <p class="contanc_item">
-            <a href="https://twitter.com/IshiyamaYuichi" target="_blank"><img src="~assets/img/Twitter.png" alt="Twitter"></a>
-          </p>
-        </li>
-        <li class="column">
-          <p class="contanc_item">
-            <a href="https://www.pinterest.jp/yu123daa/" target="_blank"><img src="~assets/img/Pinterest.png" alt="Pinterest"></a>
-          </p>
-        </li>
-        <li class="column">
-          <p class="contanc_item">
-            <a href="https://www.facebook.com/yuichi.ishiyama.169" target="_blank"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
-          </p>
-        </li>
-      </ul>
-    </section> -->
+    <nuxt-link :to="$i18n.path('blog/')" class="blog_top_btn">Blog Top</nuxt-link>
   </div>
 </template>
 

@@ -226,8 +226,8 @@
     <!-- FootNav -->
     <div class="max_size_wrap link_wrap">
       <div class="inner_contents_wrap center_p">
-        <p class="left"><nuxt-link :to="$i18n.path('about')">About</nuxt-link></p>
-        <p class="right"><nuxt-link :to="$i18n.path('blog')">Blog</nuxt-link></p>
+        <p class="left"><nuxt-link :to="$i18n.path('about/')">About</nuxt-link></p>
+        <p class="right"><nuxt-link :to="$i18n.path('blog/')">Blog</nuxt-link></p>
       </div>
     </div>
   </div>

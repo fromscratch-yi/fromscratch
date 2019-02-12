@@ -35,9 +35,9 @@
         <p class="desc_txt">Welcome to this site.<br>All will begin <span class="emp">From Scratch</span></p>
         <nav>
           <ul>
-            <li><nuxt-link :to="$i18n.path('about')">About</nuxt-link></li>
-            <li><nuxt-link :to="$i18n.path('work')">Work</nuxt-link></li>
-            <li><nuxt-link :to="$i18n.path('blog')">Blog</nuxt-link></li>
+            <li><nuxt-link :to="$i18n.path('about/')">About</nuxt-link></li>
+            <li><nuxt-link :to="$i18n.path('work/')">Work</nuxt-link></li>
+            <li><nuxt-link :to="$i18n.path('blog/')">Blog</nuxt-link></li>
           </ul>
         </nav>
       </section>
