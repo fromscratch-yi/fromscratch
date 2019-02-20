@@ -70,7 +70,7 @@ export default {
         { hid: 'og:description', property: 'og:description', content: this.currentPost.fields.description },
         { hid: 'og:url', property: 'og:url', content: Domain + this.$route.fullPath },
         { hid: 'og:image', property: 'og:image', content: 'https:' + this.currentPost.fields.headerImage.fields.file.url },
-        { hid: 'canonical', name: 'canonical', content: Domain + this.$route.fullPath }
+        { hid: 'canonical', name: 'canonical', content: Domain + this.$route.fullPath.replace(/\/$/, '') + '/' }
       ],
     }
   },
@@ -133,7 +133,7 @@ export default {
 
 <style>
 .blog_slug_wrap {
-  max-width: 820px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .slug .content_inner {
