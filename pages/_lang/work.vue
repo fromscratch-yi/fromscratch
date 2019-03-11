@@ -26,10 +26,20 @@
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/used1.png" alt="used"></div>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/used1.webp" />
+                        <img src="~assets/img/works/web/used1.png" alt="used 画面1" width="325" height="364">
+                      </picture>
+                    </div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/used2.png" alt="used"></div>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/used2.webp" />
+                        <img src="~assets/img/works/web/used2.png" alt="used 画面2" width="325" height="364">
+                      </picture>
+                    </div>
                   </slide>
                 </carousel>
               </no-ssr>
@@ -45,13 +55,28 @@
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/ems1.png" alt="ems"></div>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/ems1.webp" />
+                        <img src="~assets/img/works/web/ems1.png" alt="ems 画面1" width="325" height="364">
+                      </picture>
+                    </div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/ems2.png" alt="ems"></div>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/ems2.webp" />
+                        <img src="~assets/img/works/web/ems2.png" alt="ems 画面2" width="325" height="364">
+                      </picture>
+                    </div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/ems3.png" alt="ems"></div>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/ems3.webp" />
+                        <img src="~assets/img/works/web/ems3.png" alt="ems 画面3" width="325" height="364">
+                      </picture>
+                    </div>
                   </slide>
                 </carousel>
               </no-ssr>
@@ -73,13 +98,28 @@
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/sms1.png" alt="Sales Management System"></div>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/sms1.webp" />
+                        <img src="~assets/img/works/web/sms1.png" alt="Sales Management System 画面1" width="325" height="364">
+                      </picture>
+                    </div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/sms2.png" alt="Sales Management System"></div>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/sms2.webp" />
+                        <img src="~assets/img/works/web/sms2.png" alt="Sales Management System 画面2" width="325" height="364">
+                      </picture>
+                    </div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/sms3.png" alt="Sales Management System"></div>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/sms3.webp" />
+                        <img src="~assets/img/works/web/sms3.png" alt="Sales Management System 画面3" width="325" height="364">
+                      </picture>
+                    </div>
                   </slide>
                 </carousel>
               </no-ssr>
@@ -105,7 +145,7 @@
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web 1"></div>
                   </slide>
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/fromscratch2.png" alt="FromScratch Web 2"></div>
@@ -131,7 +171,7 @@
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web 1"></div>
                   </slide>
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/relation2.png" alt="relation Web 2"></div>
@@ -153,7 +193,7 @@
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web 1"></div>
                   </slide>
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/unaman2.png" alt="unaman Web 2"></div>
@@ -344,9 +384,10 @@ export default {
 }
 .tab_item .work_wrap .item_desc {
   margin: 5px 0 0;
-  text-align: center;
+  text-align: left;
   font-size: 13px;
-  line-height: 1.8;
+  line-height: 1.9;
+  padding: 10px 5px 0;
 }
 .em_txt {
   font-weight: bold;

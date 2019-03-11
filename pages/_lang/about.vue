@@ -12,7 +12,10 @@
           <div class="column profile_area">
             <div class="image_area">
               <figure class="image is-square">
-                <img class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" alt="Yuichi Ishiyama">
+                <picture>
+                  <source type="image/webp" srcset="~assets/img/YuichiIshiyama.webp"/>
+                  <img class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
+                </picture>
               </figure>
             </div>
           </div>
@@ -25,7 +28,13 @@
         <h2>Skills &amp; Tools</h2>
         <div class="max_size_wrap columns is-tablet">
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name" v-html="$t('word.frontend')"></span><img src="~assets/img/icon_front.png" alt="Front-end Development"></h3>
+            <h3 class="category_ttl_wrap">
+              <span class="category_name" v-html="$t('word.frontend')"></span>
+              <picture>
+                <source type="image/webp" srcset="~assets/img/icon_front.webp" />
+                <img src="~assets/img/icon_front.png" :alt="$t('word.frontend')" width="100" height="100">
+              </picture>
+            </h3>
             <ul class="skill_list">
               <li>HTML</li>
               <li>CSS</li>
@@ -38,7 +47,13 @@
             </ul>
           </section>
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name" v-html="$t('word.backend')"></span><img src="~assets/img/icon_back.png" alt="Back-end Development"></h3>
+            <h3 class="category_ttl_wrap">
+              <span class="category_name" v-html="$t('word.backend')"></span>
+              <picture>
+                <source type="image/webp" srcset="~assets/img/icon_back.webp" />
+                <img src="~assets/img/icon_back.png" :alt="$t('word.backend')" width="100" height="100">
+              </picture>
+            </h3>
             <ul class="skill_list">
               <li>PHP</li>
               <li>Laravel</li>
@@ -48,14 +63,26 @@
             </ul>
           </section>
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name" v-html="$t('word.mobile')"></span><img src="~assets/img/icon_mobile.png" alt="Mobile App Development"></h3>
+            <h3 class="category_ttl_wrap">
+              <span class="category_name" v-html="$t('word.mobile')"></span>
+              <picture>
+                <source type="image/webp" srcset="~assets/img/icon_mobile.webp" />
+                <img src="~assets/img/icon_mobile.png" :alt="$t('word.mobile')" width="100" height="100">
+              </picture>
+            </h3>
             <ul class="skill_list">
               <li>Android Java</li>
               <li>Swift</li>
             </ul>
           </section>
           <section class="column category">
-            <h3 class="category_ttl_wrap"><span class="category_name" v-html="$t('word.other')"></span><img src="~assets/img/icon_other.png" alt="other"></h3>
+            <h3 class="category_ttl_wrap">
+              <span class="category_name" v-html="$t('word.other')"></span>
+              <picture>
+                <source type="image/webp" srcset="~assets/img/icon_other.webp" />
+                <img src="~assets/img/icon_other.png" :alt="$t('word.other')" width="100" height="100">
+              </picture>
+            </h3>
             <ul class="skill_list">
               <li>Docker</li>
               <li>Vagrant</li>
@@ -162,8 +189,8 @@ export default {
 .profile_txt {
   padding: 0.75rem 8px;
   font-size: 14px;
-  line-height: 1.6;
-  text-align: center;
+  line-height: 1.9;
+  text-align: left;
 }
 .profile_txt p {
   margin-bottom: 10px;
@@ -172,7 +199,7 @@ export default {
   margin-bottom: 0;
 }
 .sub_contents {
-  padding: 30px 15px 20px;
+  padding: 35px 15px 40px;
 }
 .sub_contents:nth-child(odd) {
   margin: 20px 0 0;
@@ -198,7 +225,7 @@ export default {
 .sub_contents .category .category_ttl_wrap img {
   display: block;
   width: 100px;
-  margin: 0 auto 15px;
+  margin: 10px auto 15px;
 }
 .sub_contents .category .category_ttl_wrap .category_name {
   display: inline-block;
@@ -252,11 +279,15 @@ export default {
     width: 70%;
   }
   .profile_txt {
-    padding: 0.75rem calc(0.75rem + 8px);
+    padding: 1rem calc(1rem + 8px);
   }
 }
 footer {
   padding: 0;
+}
+.table td, .table th {
+  padding: 15px;
+  font-size: 12px;
 }
 </style>
 

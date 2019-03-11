@@ -30,6 +30,9 @@ export default {
         { hid: 'og:url', property: 'og:url', content: Domain + this.meta.url.replace(/\/$/, '') + '/' },
         { hid: 'og:image', property: 'og:image', content: this.meta.image },
       ],
+      link: [
+        { rel: 'alternate', hreflang: this.meta.lang, href: Domain + this.meta.url.replace(/\/$/, '') + '/' }
+      ],
       bodyAttrs: {
         class: (this.meta.bodyClass ? this.meta.bodyClass : 'base')
       }
