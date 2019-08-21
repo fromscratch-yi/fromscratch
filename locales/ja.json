@@ -22,6 +22,18 @@
         "skills": ["PHP", "Yii", "Laravel", "HTML", "CSS", "js", "Vue.js", "Nuxt.js"]
       },
       {
+        "title": "プログラミングスクールのオンライン講師",
+        "skills": ["PHP", "Laravel", "HTML", "CSS", "js"]
+      },
+      {
+        "title": "請求書PDFの自動生成・自動送信処理の開発(リモート案件)",
+        "skills": ["PHP", "Laravel", "HTML", "CSS", "js"]
+      },
+      {
+        "title": "GMO APIを使用した決算APIの開発(リモート案件)",
+        "skills": ["PHP", "Laravel", "GMO API"]
+      },
+      {
         "title": "社員管理システムのフロントエンド・バックエンド開発",
         "skills": ["PHP", "Laravel", "PostgreSQL", "HTML", "CSS", "js", "AWS(ElasticBeansTalk, RDB)", "Docker"]
       },
