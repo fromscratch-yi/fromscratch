@@ -134,6 +134,47 @@
               </ul>
               <p class="item_desc" v-html="$t('work.overview.sms')"></p>
             </section>
+            <section class="work_wrap">
+              <h2 class="item_ttl">TimeRecorder System</h2>
+              <no-ssr>
+                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/timerecorder1.webp" />
+                        <img src="~assets/img/works/web/timerecorder1.png" alt="Sales Management System 画面1" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/timerecorder2.webp" />
+                        <img src="~assets/img/works/web/timerecorder2.png" alt="Sales Management System 画面2" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/timerecorder3.webp" />
+                        <img src="~assets/img/works/web/timerecorder3.png" alt="Sales Management System 画面3" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                </carousel>
+              </no-ssr>
+              <ul class="skill_list">
+                <li class="tag">PHP</li>
+                <li class="tag">Laravel</li>
+                <li class="tag">MySQL</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">jQuery</li>
+                <li class="tag">Docker</li>
+              </ul>
+              <p class="item_desc" v-html="$t('work.overview.timerecorder')"></p>
+            </section>
           </div>
         </transition>
 

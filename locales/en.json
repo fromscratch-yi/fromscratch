@@ -22,6 +22,10 @@
         "skills": ["PHP", "Yii", "Laravel", "HTML", "CSS", "js", "Vue.js", "Nuxt.js"]
       },
       {
+        "title": "Programming school instructor",
+        "skills": ["PHP", "Laravel", "HTML", "CSS", "js"]
+      },
+      {
         "title": "Employee management system's Front-End &amp; Back-End.",
         "skills": ["PHP", "Laravel", "PostgreSQL", "HTML", "CSS", "js", "AWS(ElasticBeansTalk + RDB)", "Docker"]
       },
@@ -68,6 +72,7 @@
       "used": "This is Android Native App. The Name is UseD.<br>It is an application I made to recognize my own waste.<br>You can classify expenses into three types of spent, waste, investment, and you can see the proportion of expenditure.<br>And you can notice how much money we waste.",
       "ems": "This web application solves the problem that employee's face and name do not match.<br>And it make communication easier by profile page.<br>I was in charge of all planning, designing and implementation as New Project.<br><br>Note: Administrator screen is omitted.",
       "sms": "Managers usually manage sales on paper, so I developed salse management web application.<br>It can manage salses on PC, and make sales comparison easier.",
+      "timerecorder": "This is the attendance system. They used to manage by paper.",
       "portfolio": "This is my portfolio site. The Name is <span class=\"em_txt\">FromScratch</span>.<br>I want to keep to try that I create products of high quality. So I want to develop <span class=\"em_txt\">FromScratch</span>. No template and no format.",
       "relation": "The relation, Inc. is a system development company.<br>I was in charge of all planning, designing and implementation as Renewal project.",
       "unaman": "The Unaman is specialty store of eel.<br>This is my first work in my life. I was in charge of all planning, designing and implementation as New Project.",
