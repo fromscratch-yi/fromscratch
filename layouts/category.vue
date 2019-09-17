@@ -104,20 +104,20 @@ export default {
   position: relative;
   background: #1F1F1F;
 }
-.sub_contents .category {
+.sub_contents .category_wrap .category {
   padding: 30px 15px;
   margin: 0 auto;
 }
-.sub_contents .category .category_ttl_wrap {
+.sub_contents .category_wrap .category .category_ttl_wrap {
   margin: 0 auto 10px;
   text-align: center;
 }
-.sub_contents .category .category_ttl_wrap img {
+.sub_contents .category_wrap .category .category_ttl_wrap img {
   display: block;
   width: 100px;
   margin: 10px auto 15px;
 }
-.sub_contents .category .category_ttl_wrap .category_name {
+.sub_contents .category_wrap .category .category_ttl_wrap .category_name {
   display: inline-block;
   padding: 5px;
   font-size: 15px;
@@ -133,7 +133,7 @@ export default {
     clear: both;
     display: block;
   }
-  .sub_contents .category {
+  .sub_contents .category_wrap .category {
     float: left;
     flex: none;
     width: 50%;
