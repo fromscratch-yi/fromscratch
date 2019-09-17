@@ -87,5 +87,29 @@
     "description": "This is Yuichi Ishiyama's Blog Page. The blog post will be the contents of IT related technology.",
     "introduction": "As an output of what I learned, I write about articles about programming.",
     "no-posts": "No Posts exists."
+  },
+  "frontend": {
+    "pageTitle": "FrontEnd Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
+    "description": "I write post about FrontEnd Development skills for web application. Html, CSS, Javascript, and various framework etc.",
+    "introduction": "I write post about FrontEnd Development skills for web application. Html, CSS, Javascript, and various framework etc.",
+    "no-posts": "No Posts exeists."
+  },
+  "backend": {
+    "pageTitle": "BackEnd Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
+    "description": "I write post about BackEnd Development skills. PHP, Python, Go, and various framework etc.",
+    "introduction": "I write post about BackEnd Development skills. PHP, Python, Go, and various framework etc.",
+    "no-posts": "No Posts exeists."
+  },
+  "mobile": {
+    "pageTitle": "Mobile Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
+    "description": "I write post about Mobile Application Development skills. Native Mobile Application (Kotolin, Swift) and Hybrid Mobile Application skill's post",
+    "introduction": "I write post about Mobile Application Development skills. Native Mobile Application (Kotolin, Swift) and Hybrid Mobile Application skill's post",
+    "no-posts": "No Posts exeists."
+  },
+  "other": {
+    "pageTitle": "Infrastructure and Other Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
+    "description": "I write post about Infrastructure and Other Development skills. Docker, VirtualBox, Network, Security, and Other programming skill etc.",
+    "introduction": "I write post about Infrastructure and Other Development skills. Docker, VirtualBox, Network, Security, and Other programming skill etc.",
+    "no-posts": "No Posts exeists."
   }
 }

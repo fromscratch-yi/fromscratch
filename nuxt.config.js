@@ -47,35 +47,35 @@ module.exports = {
     'nuxt-fontawesome',
     '@nuxtjs/markdownit'
   ],
-  // sitemap: {
-  //   path: '/sitemap.xml', // 出力パス
-  //   hostname: process.env.BASE_URL,
-  //   cacheTime: 1000 * 60 * 15,
-  //   gzip: true,
-  //   exclude: [ // 除外項目
-  //     '/404*',
-  //     '/500*'
-  //   ],
-  //   generate: true,
-  //   async routes () {
-  //     var routeList = ['/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog'];
-  //     await cdaClient.getEntries({
-  //       'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
-  //     }).then(entries => {
-  //       routeList.push(
-  //         ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
-  //       )
-  //     });
-  //     await cdaClient.getEntries({
-  //       'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID_EN
-  //     }).then(entries => {
-  //       routeList.push(
-  //         ...entries.items.map(entry => `/post/${entry.fields.slug}`)
-  //       )
-  //     });
-  //     return routeList;
-  //   }
-  // },
+  sitemap: {
+    path: '/sitemap.xml', // 出力パス
+    hostname: process.env.BASE_URL,
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    exclude: [ // 除外項目
+      '/404*',
+      '/500*'
+    ],
+    generate: true,
+    async routes () {
+      var routeList = ['/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog'];
+      await cdaClient.getEntries({
+        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
+        )
+      });
+      await cdaClient.getEntries({
+        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID_EN
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/post/${entry.fields.slug}`)
+        )
+      });
+      return routeList;
+    }
+  },
   manifest: {
     name: "Yuichi Ishiyama's Portfolio & Blog",
   },
@@ -116,7 +116,24 @@ module.exports = {
   },
   generate: {
     routes: async function() {
-      var routeList = ['/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog'];
+      var routeList = [
+        '/',
+        '/about',
+        '/work',
+        '/blog',
+        '/category/frontend',
+        '/category/backend',
+        '/category/mobile',
+        '/category/other',
+        '/ja',
+        '/ja/about',
+        '/ja/work',
+        '/ja/blog',
+        '/ja/category/frontend',
+        '/ja/category/backend',
+        '/ja/category/mobile',
+        '/ja/category/other'
+      ];
       await cdaClient.getEntries({
         'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
       }).then(entries => {

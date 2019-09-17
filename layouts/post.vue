@@ -50,7 +50,7 @@ html::-webkit-scrollbar {
   color: #595959;
 }
 .link_wrap {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .link_wrap .left {
   text-align: left;

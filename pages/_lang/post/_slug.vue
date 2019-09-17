@@ -181,7 +181,7 @@ export default {
   color: #464646;
 }
 .slug .content_inner .slug_content {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
 }
 .slug .content_inner .slug_content .mokuji {
@@ -208,7 +208,6 @@ export default {
   min-width: 100%;
 }
 .slug .content_inner .slug_content .asp-tbl1 thead tr th {
-  white-space: nowrap;
   text-align: center;
 }
 .slug .content_inner .slug_content .asp-tbl1 tbody tr td {
@@ -221,7 +220,7 @@ export default {
 .slug .content_inner .slug_content h2 {
   font-size: 17px;
   font-weight:bold;
-  margin: 18px 0;
+  margin: 30px 0;
   position: relative;
   padding-bottom: 5px;
   padding-left: 5px;
@@ -241,9 +240,9 @@ export default {
   position:relative;
   border-bottom: 1px dashed rgb(71, 160, 61);;
   font-weight:bold;
-  margin: 18px 0 15px;
+  margin: 25px 0;
   padding: 0 0 3px 27px;
-  font-size: 15px;
+  font-size: 16px;
   clear:right;
 }
 .slug .content_inner .slug_content h3::before,
@@ -277,7 +276,7 @@ export default {
 }
 .slug .content_inner .slug_content dl dt {
   position: relative;
-  margin: 10px 0 5px;
+  margin: 20px 0 10px;
   padding: 0 0 0 18px;
   font-weight: bold;
 }
@@ -299,7 +298,7 @@ export default {
   padding: 0 10px;
 }
 .slug .content_inner .slug_content p {
-  margin: 5px 0;
+  margin: 15px 0 20px;
   line-height: 1.9;
 }
 .slug .content_inner .slug_content code {
@@ -407,7 +406,6 @@ blockquote {
 }
 code {
   font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-  font-size: 14px;
   line-height: 19px;
 }
 .hljs-comment,

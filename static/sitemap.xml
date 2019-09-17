@@ -6,57 +6,97 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://fromscratch-y.work/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/about/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/work/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/blog/</loc>
-  <lastmod>2019-02-20T03:14:03+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fromscratch-y.work/category/frontend/</loc>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fromscratch-y.work/category/backend/</loc>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fromscratch-y.work/category/mobile/</loc>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fromscratch-y.work/category/other/</loc>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/ja/about/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/ja/work/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/ja/blog/</loc>
-  <lastmod>2019-02-20T03:14:03+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/ja/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
+  <loc>https://fromscratch-y.work/ja/category/frontend/</loc>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fromscratch-y.work/ja/category/backend/</loc>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fromscratch-y.work/ja/category/mobile/</loc>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fromscratch-y.work/ja/category/other/</loc>
+  <lastmod>2019-09-16T03:14:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://fromscratch-y.work/ja/post/blog-skill/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/ja/post/app-study-01/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/ja/post/app-study-02/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
@@ -71,16 +111,16 @@
 </url>
 <url>
   <loc>https://fromscratch-y.work/ja/post/about-blog/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/post/blog-skill/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://fromscratch-y.work/post/about-blog/</loc>
-  <lastmod>2019-02-20T03:14:02+00:00</lastmod>
+  <lastmod>2019-09-16T03:14:02+00:00</lastmod>
   <priority>1.00</priority>
 </url></urlset>

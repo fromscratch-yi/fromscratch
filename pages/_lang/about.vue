@@ -165,7 +165,7 @@ export default {
   margin: 20px 0 0;
 }
 .columns.inner .name_space h2 {
-  margin: 0 0 5px;
+  margin: 0 0 10px;
   font-size: 30px;
   line-height: 1.5;
 }
@@ -175,7 +175,8 @@ export default {
   font-size: 18px;
 }
 .columns.inner .name_space p {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.8;
   color: #595959;
 }
 .columns.inner .name_space p .em_color {
@@ -211,10 +212,11 @@ export default {
 }
 .sub_contents h2 {
   font-size: 25px;
+  margin: 0 0 20px;
   text-align: center;
 }
 .sub_contents .category {
-  padding: 20px 15px;
+  padding: 30px 15px;
   max-width: 255px;
   margin: 0 auto;
 }
@@ -230,12 +232,12 @@ export default {
 .sub_contents .category .category_ttl_wrap .category_name {
   display: inline-block;
   padding: 5px;
-  font-size: 12px;
+  font-size: 15px;
   color: #62BE56;
   font-weight: bold;
 }
 .sub_contents .category .skill_list {
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
 }
 .sub_contents .category .skill_list li {
@@ -269,6 +271,9 @@ export default {
   .columns.inner .column {
     padding: 0.75rem 8px;
   }
+  .columns.inner .column.profile_area {
+    padding: 20px 10px;
+  }
 }
 @media screen and (min-width: 769px) {
   .columns.inner {
@@ -288,6 +293,10 @@ footer {
 .table td, .table th {
   padding: 15px;
   font-size: 12px;
+}
+.table thead td, .table thead th {
+  padding: 15px;
+  font-size: 15px;
 }
 </style>
 

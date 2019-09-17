@@ -361,7 +361,7 @@ export default {
   clear: both;
 }
 .page_description {
-  margin: 20px 0;
+  margin: 35px 0;
   text-align: center;
 }
 .page_contents .tabs {
@@ -426,7 +426,7 @@ export default {
 .tab_item .work_wrap .item_desc {
   margin: 5px 0 0;
   text-align: left;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
   padding: 10px 5px 0;
 }

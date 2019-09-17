@@ -35,10 +35,10 @@ footer {
 }
 footer .contact_wrap {
   width: 250px;
-  margin: 0 auto 15px;
+      margin: 15px auto 30px;
 }
 footer .contact_wrap h2 {
-  margin: 0 0 15px;
+  margin: 0 0 20px;
   font-size: 20px;
   text-align: center;
 }

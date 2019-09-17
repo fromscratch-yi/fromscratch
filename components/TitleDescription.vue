@@ -14,7 +14,7 @@ export default {
 .main_ttl {
   position: relative;
   padding: 0 0 5px;
-  margin: 0 0 20px;
+  margin: 15px 0 35px;
   font-size: 35px;
   text-align: center;
   line-height: 1.3;
