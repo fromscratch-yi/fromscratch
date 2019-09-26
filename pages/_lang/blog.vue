@@ -5,9 +5,9 @@
         <TitleDescription :meta="meta"></TitleDescription>
         <Terminal :typeTxt="typeTxt"></Terminal>
         <div class="posts_area">
-          <div class="slide_wrap">
+          <div class="slide_wrap page_description">
             <div class="slide_box move">
-              <p class="slide_txt page_description" v-html="$t('blog.introduction')"></p>
+              <p class="slide_txt" v-html="$t('blog.introduction')"></p>
             </div>
           </div>
           <div class="blog_menu sub_contents fadein move">
@@ -133,7 +133,13 @@ export default {
   methods: {
     handleScroll: (evt, el) => {
       let top = el.getBoundingClientRect().top;
-      if (window.scrollY > top + window.pageYOffset - 600) {
+      var offcet = 0;
+      if (window.innerHeight > 900) {
+        offcet = 1200;
+      } else {
+        offcet = 600;
+      }
+      if (window.scrollY > top + window.pageYOffset - offcet) {
         el.classList.add('move');
         return true;
       }

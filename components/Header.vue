@@ -240,6 +240,7 @@ header .nav_menu .page_nav li.page_link a .nav_txt {
     font-size: 18px;
     line-height: 1.2;
     padding: 5px;
+    font-weight: bold;
   }
   .header_container .pc_nav li.page_link a.nuxt-link-exact-active {
     pointer-events: none;
@@ -278,6 +279,7 @@ header .nav_menu .page_nav li.page_link a .nav_txt {
     font-size: 16px;
     width: 50px;
     text-align: center;
+    font-weight: bold;
   }
   .header_container .pc_nav li.lang_wrap a:first-child {
     border-bottom-left-radius: 290486px;

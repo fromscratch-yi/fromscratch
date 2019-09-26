@@ -7,6 +7,11 @@
       <div class="nav_btn level-right">
         <p class="level-item icon" @click="clickNavBtn"><font-awesome-icon icon="bars"/></p>
       </div>
+      <ul class="pc_nav">
+        <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('work/')"><span class="nav_txt">W</span>ork</nuxt-link></li>
+        <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
+      </ul>
     </div>
     <nav class="nav_menu" v-bind:class="{'open': isOpen}">
       <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
@@ -147,14 +152,84 @@ header .nav_menu .page_nav li.page_link a .nav_txt {
   font-size: 1.2em;
   color: rgb(71, 160, 61);
 }
+.header_container .pc_nav {
+  display: none;
+}
 @media screen and (min-width: 768px){
-  header .nav_menu .page_nav li.page_link {
-    font-size: 50px;
+  .level.is-mobile .level-right.nav_btn {
+    display: none;
   }
-  header .nav_menu .page_nav li.nv_logo {
-    top: -70px;
-    width: 70px;
-    height: 70px;
+  .header_container .pc_nav {
+    display: flex;
+    align-items: center;
+  }
+  .header_container .pc_nav li {
+    margin-right: 20px;
+  }
+  .header_container .pc_nav li:last-child {
+    margin: 0;
+  }
+  .header_container .pc_nav li.page_link a {
+    position: relative;
+    color: rgb(74, 74, 74);
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 5px;
+    font-weight: bold;
+  }
+  .header_container .pc_nav li.page_link a.nuxt-link-exact-active {
+    pointer-events: none;
+  }
+  .header_container .pc_nav li.page_link a.nuxt-link-exact-active:before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 2px;
+    background-color: #47a03d;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+  .header_container .pc_nav li.page_link a .nav_txt {
+    font-size: 1.1em;
+    color: #218e15;
+  }
+  .header_container .pc_nav li.lang_wrap .lang_wrap_inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header_container .pc_nav li.lang_wrap a {
+    align-items: center;
+    border: 1px solid #47a03d;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1px;
+    padding: 3px 0;
+    vertical-align: top;
+    background-color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    font-size: 16px;
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .header_container .pc_nav li.lang_wrap a:first-child {
+    border-bottom-left-radius: 290486px;
+    border-top-left-radius: 290486px;
+    padding-left: 10px;
+  }
+  .header_container .pc_nav li.lang_wrap a:last-child {
+    border-bottom-right-radius: 290486px;
+    border-top-right-radius: 290486px;
+    padding-right: 10px;
+  }
+  .header_container .pc_nav li.lang_wrap a.nuxt-link-exact-active {
+    pointer-events: none;
+    background-color: rgb(120, 199, 111);
+    z-index: 1;
   }
 }
 </style>
