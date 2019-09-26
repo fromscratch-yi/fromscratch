@@ -6,7 +6,11 @@
         <Terminal :typeTxt="typeTxt"></Terminal>
       </div>
     </div>
-    <p class="page_description" v-html="$t('work.introduction')"></p>
+    <div class="slide_wrap page_description">
+      <div class="slide_box move">
+        <p class="slide_txt" v-html="$t('work.introduction')"></p>
+      </div>
+    </div>
     <div class="tabs is-centered">
       <ul>
         <li v-bind:class="{ 'is-active': tabsel == 'service' }" @click="tabsel = 'service'"><a>Service</a></li>
@@ -48,9 +52,11 @@
                 <li class="tag">SQLite</li>
                 <li class="tag">AndroidStudio</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.used')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.used')"></p>
+              </div>
             </section>
-            <section class="work_wrap">
+            <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">Employee Management System</h2>
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -91,9 +97,11 @@
                 <li class="tag">Docker</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.ems')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.ems')"></p>
+              </div>
             </section>
-            <section class="work_wrap">
+            <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">Sales Management System</h2>
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -132,9 +140,11 @@
                 <li class="tag">jQuery</li>
                 <li class="tag">Vagrant</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.sms')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.sms')"></p>
+              </div>
             </section>
-            <section class="work_wrap">
+            <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">TimeRecorder System</h2>
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -173,7 +183,9 @@
                 <li class="tag">jQuery</li>
                 <li class="tag">Docker</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.timerecorder')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.timerecorder')"></p>
+              </div>
             </section>
           </div>
         </transition>
@@ -205,9 +217,11 @@
                 <li class="tag">Firebase</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.portfolio')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.portfolio')"></p>
+              </div>
             </section>
-            <section class="work_wrap">
+            <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">The relation, Inc.</h2>
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -227,9 +241,11 @@
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.relation')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.relation')"></p>
+              </div>
             </section>
-            <section class="work_wrap">
+            <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -248,7 +264,9 @@
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.unaman')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.unaman')"></p>
+              </div>
             </section>
           </div>
         </transition>
@@ -271,17 +289,21 @@
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.fromscratch')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.fromscratch')"></p>
+              </div>
             </section>
-            <section class="work_wrap">
+            <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">ch.create</h2>
               <div class="img_wrap"><img src="~assets/img/works/bc/chcreate.png" alt="ch.create 名刺"></div>
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.chcreate')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.chcreate')"></p>
+              </div>
             </section>
-            <section class="work_wrap">
+            <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">T'z Auto</h2>
               <no-ssr>
                 <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -296,7 +318,9 @@
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <p class="item_desc" v-html="$t('work.overview.tzauto')"></p>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.tzauto')"></p>
+              </div>
             </section>
           </div>
         </transition>
@@ -330,6 +354,16 @@ export default {
         .then(m => m.Slide)
         .catch()
   },
+  methods: {
+    handleScroll: (evt, el) => {
+      let top = el.getBoundingClientRect().top;
+      if (window.scrollY > top + window.pageYOffset - 600) {
+        el.classList.add('move');
+        return true;
+      }
+      return false;
+    }
+  },
   data(){
     var meta = {
       headline: 'Work',
@@ -350,6 +384,127 @@ export default {
 </script>
 
 <style>
+/* animation */
+@-webkit-keyframes slide_box {
+  0% {
+    left: 0;
+    right: auto;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  51% {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  100% {
+    left: auto;
+    right: 0;
+    width: 0;
+  }
+}
+@keyframes slide_box {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  51% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+@-webkit-keyframes slide_txt {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slide_txt {
+  0% { opacity:0; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotation_img {
+  0% {
+    clip-path: circle(0 at 50% 50%);
+    -webkit-clip-path: circle(0 at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    -webkit-clip-path: circle(100% at 50% 50%);
+  }
+}
+.slide_wrap {
+  text-align: center;
+}
+.slide_box {
+  position: relative;
+  display: inline-block;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slide_box:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: #44a043;
+}
+.slide_txt {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slide_box.move:before {
+  -webkit-animation: slide_box 1s ease 0s 1 normal forwards;
+  animation: slide_box 1s ease 0s 1 normal forwards;
+}
+.slide_box.move .slide_txt {
+  -webkit-animation: slide_txt 0s ease .5s 1 normal forwards;
+  animation:slide_txt 0s ease .5s 1 normal forwards;
+}
+.fadein {
+  opacity: 0;
+}
+.move.fadein {
+  opacity: 1;
+  animation: fadein 2s ease;
+}
+.rotation_img {
+  opacity: 0;
+}
+.move.rotation_img {
+  opacity: 1;
+  animation: rotation_img 2s cubic-bezier(.4, 0, .2, 1);
+}
+
 .link_wrap .center_p .left,
 .link_wrap .center_p .right {
   float: left;

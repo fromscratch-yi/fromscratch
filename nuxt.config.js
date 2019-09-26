@@ -108,6 +108,7 @@ module.exports = {
     }
   },
   plugins: [
+    '~/plugins/scroll.js',
     '~/plugins/i18n.js',
     { src: '~plugins/contentful' },
   ],

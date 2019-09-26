@@ -6,7 +6,7 @@
         <div class="max_size_wrap">
           <div class="inner_contents_wrap">
             <nuxt />
-            <div class="blog_menu sub_contents">
+            <div class="blog_menu sub_contents fadein" v-scroll="handleScroll">
               <h2>Categories</h2>
               <div class="max_size_wrap columns is-tablet category_wrap">
                 <section class="column category">
@@ -15,7 +15,7 @@
                       <span class="category_name" v-html="$t('word.frontend')"></span>
                       <picture>
                         <source type="image/webp" srcset="~assets/img/icon_front.webp" />
-                        <img src="~assets/img/icon_front.png" :alt="$t('word.frontend')" width="100" height="100">
+                        <img class="rotation_img" v-scroll="handleScroll" src="~assets/img/icon_front.png" :alt="$t('word.frontend')" width="100" height="100">
                       </picture>
                     </nuxt-link>
                   </h3>
@@ -26,7 +26,7 @@
                       <span class="category_name" v-html="$t('word.backend')"></span>
                       <picture>
                         <source type="image/webp" srcset="~assets/img/icon_back.webp" />
-                        <img src="~assets/img/icon_back.png" :alt="$t('word.backend')" width="100" height="100">
+                        <img class="rotation_img" v-scroll="handleScroll" src="~assets/img/icon_back.png" :alt="$t('word.backend')" width="100" height="100">
                       </picture>
                     </nuxt-link>
                   </h3>
@@ -37,7 +37,7 @@
                       <span class="category_name" v-html="$t('word.mobile')"></span>
                       <picture>
                         <source type="image/webp" srcset="~assets/img/icon_mobile.webp" />
-                        <img src="~assets/img/icon_mobile.png" :alt="$t('word.mobile')" width="100" height="100">
+                        <img class="rotation_img" v-scroll="handleScroll" src="~assets/img/icon_mobile.png" :alt="$t('word.mobile')" width="100" height="100">
                       </picture>
                     </nuxt-link>
                   </h3>
@@ -48,7 +48,7 @@
                       <span class="category_name" v-html="$t('word.other')"></span>
                       <picture>
                         <source type="image/webp" srcset="~assets/img/icon_other.webp" />
-                        <img src="~assets/img/icon_other.png" :alt="$t('word.other')" width="100" height="100">
+                        <img class="rotation_img" v-scroll="handleScroll" src="~assets/img/icon_other.png" :alt="$t('word.other')" width="100" height="100">
                       </picture>
                     </nuxt-link>
                   </h3>
@@ -77,9 +77,139 @@ export default {
     PostFooter,
     Footer,
   },
+  methods: {
+    handleScroll: (evt, el) => {
+      let top = el.getBoundingClientRect().top;
+      if (window.scrollY > top + window.pageYOffset - 600) {
+        el.classList.add('move');
+        return true;
+      }
+      return false;
+    }
+  }
 };
 </script>
 <style>
+  /* animation */
+  @-webkit-keyframes slide_box {
+    0% {
+      left: 0;
+      right: auto;
+      width: 0;
+    }
+    50% {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+    51% {
+      left: auto;
+      right: 0;
+      width: 100%;
+    }
+    100% {
+      left: auto;
+      right: 0;
+      width: 0;
+    }
+  }
+  @keyframes slide_box {
+    0% {
+      left: 0;
+      width: 0;
+    }
+    50% {
+      left: 0;
+      width: 100%;
+    }
+    51% {
+      left: 0;
+      width: 100%;
+    }
+    100% {
+      left: 100%;
+      width: 0;
+    }
+  }
+  @-webkit-keyframes slide_txt {
+    0% { opacity: 0; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes slide_txt {
+    0% { opacity:0; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes rotation_img {
+    0% {
+      clip-path: circle(0 at 50% 50%);
+      -webkit-clip-path: circle(0 at 50% 50%);
+    }
+    100% {
+      clip-path: circle(100% at 50% 50%);
+      -webkit-clip-path: circle(100% at 50% 50%);
+    }
+  }
+  .slide_wrap {
+    text-align: center;
+  }
+  .slide_box {
+    position: relative;
+    display: inline-block;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .slide_box:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: #44a043;
+  }
+  .slide_txt {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .slide_box.move:before {
+    -webkit-animation: slide_box 1s ease 0s 1 normal forwards;
+    animation: slide_box 1s ease 0s 1 normal forwards;
+  }
+  .slide_box.move .slide_txt {
+    -webkit-animation: slide_txt 0s ease .5s 1 normal forwards;
+    animation:slide_txt 0s ease .5s 1 normal forwards;
+  }
+  .fadein {
+    opacity: 0;
+  }
+  .move.fadein {
+    opacity: 1;
+    animation: fadein 2s ease;
+  }
+  .rotation_img {
+    opacity: 0;
+  }
+  .move.rotation_img {
+    opacity: 1;
+    animation: rotation_img 2s cubic-bezier(.4, 0, .2, 1);
+  }
 .columns.is-multiline.new_posts {
   margin-bottom: 30px;
 }

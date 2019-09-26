@@ -55,5 +55,4 @@ footer .copyright {
   color: rgb(177, 177, 177);
   background-color: rgb(43, 42, 42);
 }
-
 </style>

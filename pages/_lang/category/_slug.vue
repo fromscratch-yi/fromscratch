@@ -1,11 +1,15 @@
 <template>
   <div>
     <TitleDescription :meta="meta"></TitleDescription>
-    <p class="page_description" v-html="$t(this.$route.params.slug + '.introduction')"></p>
+    <div class="slide_wrap page_description">
+      <div class="slide_box move">
+        <p class="slide_txt" v-html="$t(this.$route.params.slug + '.introduction')"></p>
+      </div>
+    </div>
     <div class="posts_area">
       <p v-if="posts.length <= 0" class="no_posts" v-html="$t('blog.no-posts')"></p>
       <section v-else class="columns is-mobile is-multiline new_posts">
-        <div class="column is-12-mobile is-4-tablet" v-for="post in posts" :key="post.id">
+        <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
           <Card
             v-bind:key="post.fields.slug"
             :title="post.fields.title"
@@ -62,6 +66,16 @@ export default {
     };
     var posts = [];
     return { meta, posts }
+  },
+  methods: {
+    handleScroll: (evt, el) => {
+      let top = el.getBoundingClientRect().top;
+      if (window.scrollY > top + window.pageYOffset - 600) {
+        el.classList.add('move');
+        return true;
+      }
+      return false;
+    }
   }
 }
 </script>
