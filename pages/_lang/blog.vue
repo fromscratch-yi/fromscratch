@@ -13,46 +13,13 @@
           <div class="blog_menu sub_contents fadein move">
             <h2>Categories</h2>
             <div class="max_size_wrap columns is-tablet category_wrap">
-              <section class="column category">
+              <section v-for="skill in skills" :key="skill" class="column category">
                 <h3 class="category_ttl_wrap fadein move">
-                  <nuxt-link :to="$i18n.path('category/frontend')" class="wrapper">
-                    <span class="category_name" v-html="$t('word.frontend')"></span>
+                  <nuxt-link :to="$i18n.path('category/' + skill)" class="wrapper">
+                    <span class="category_name" v-html="$t('word.' + skill)"></span>
                     <picture>
-                      <source type="image/webp" srcset="~assets/img/icon_front.webp" />
-                      <img class="rotation_img move" src="~assets/img/icon_front.png" :alt="$t('word.frontend')" width="100" height="100">
-                    </picture>
-                  </nuxt-link>
-                </h3>
-              </section>
-              <section class="column category">
-                <h3 class="category_ttl_wrap fadein move">
-                  <nuxt-link :to="$i18n.path('category/backend')" class="wrapper">
-                    <span class="category_name" v-html="$t('word.backend')"></span>
-                    <picture>
-                      <source type="image/webp" srcset="~assets/img/icon_back.webp" />
-                      <img class="rotation_img move" src="~assets/img/icon_back.png" :alt="$t('word.backend')" width="100" height="100">
-                    </picture>
-                  </nuxt-link>
-                </h3>
-              </section>
-              <section class="column category">
-                <h3 class="category_ttl_wrap fadein move">
-                  <nuxt-link :to="$i18n.path('category/mobile')" class="wrapper">
-                    <span class="category_name" v-html="$t('word.mobile')"></span>
-                    <picture>
-                      <source type="image/webp" srcset="~assets/img/icon_mobile.webp" />
-                      <img class="rotation_img move" src="~assets/img/icon_mobile.png" :alt="$t('word.mobile')" width="100" height="100">
-                    </picture>
-                  </nuxt-link>
-                </h3>
-              </section>
-              <section class="column category">
-                <h3 class="category_ttl_wrap fadein move">
-                  <nuxt-link :to="$i18n.path('category/other')" class="wrapper">
-                    <span class="category_name" v-html="$t('word.other')"></span>
-                    <picture>
-                      <source type="image/webp" srcset="~assets/img/icon_other.webp" />
-                      <img class="rotation_img move" src="~assets/img/icon_other.png" :alt="$t('word.other')" width="100" height="100">
+                      <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill + '.webp')"/>
+                      <img class="rotation_img move" :src="require('~/assets/img/icon_' + skill + '.png')" :alt="$t('word.' + skill)" width="100" height="100">
                     </picture>
                   </nuxt-link>
                 </h3>
@@ -128,7 +95,8 @@ export default {
     };
     var typeTxt = '$ cat ./blog.txt\n\> Welcome to my Blog page.\n\> To output that the study was.';
     var posts = [];
-    return { meta, typeTxt, posts }
+    var skills = ['frontend', 'backend', 'mobile', 'other'];
+    return { meta, typeTxt, posts, skills }
   },
   methods: {
     handleScroll: (evt, el) => {

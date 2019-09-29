@@ -25,83 +25,30 @@
           </div>
         </section>
         <div class="slide_box" v-scroll="handleScroll">
-          <p class="slide_txt profile_txt" v-html="$t('about.kind')"></p>
+          <div class="slide_txt profile_txt" v-html="$t('about.introduction')"></div>
         </div>
       </div>
     </div>
     <div class="sub_contents_wrap">
+      <!-- Skill & Tools -->
       <section class="sub_contents">
         <h2>Skills &amp; Tools</h2>
         <div class="max_size_wrap columns is-tablet">
-          <section class="column category fadein" v-scroll="handleScroll">
+          <section v-for="(skill, skill_name) in skills" :key="skill_name" class="column category fadein" v-scroll="handleScroll">
             <h3 class="category_ttl_wrap">
-              <span class="category_name" v-html="$t('word.frontend')"></span>
-              <picture>
-                <source type="image/webp" srcset="~assets/img/icon_front.webp" />
-                <img class="rotation_img" v-scroll="handleScroll" src="~assets/img/icon_front.png" :alt="$t('word.frontend')" width="100" height="100">
+              <span class="category_name" v-html="$t('word.' + skill_name)"></span>
+              <picture class="link_img" @click="openModal($event, skill, skill_name)">
+                <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill_name + '.webp')"/>
+                <img class="rotation_img" v-scroll="handleScroll" :src="require('~/assets/img/icon_' + skill_name + '.png')" :alt="$t('word.' + skill_name)" width="100" height="100">
               </picture>
             </h3>
             <ul class="skill_list">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Twig</li>
-              <li>Blade</li>
-              <li>js</li>
-              <li>jquery</li>
-              <li>vue.js</li>
-              <li>nuxt.js</li>
-            </ul>
-          </section>
-          <section class="column category fadein" v-scroll="handleScroll">
-            <h3 class="category_ttl_wrap">
-              <span class="category_name" v-html="$t('word.backend')"></span>
-              <picture>
-                <source type="image/webp" srcset="~assets/img/icon_back.webp" />
-                <img class="rotation_img" v-scroll="handleScroll" src="~assets/img/icon_back.png" :alt="$t('word.backend')" width="100" height="100">
-              </picture>
-            </h3>
-            <ul class="skill_list">
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>Yii2</li>
-              <li>Python</li>
-              <li>Java</li>
-            </ul>
-          </section>
-          <section class="column category fadein" v-scroll="handleScroll">
-            <h3 class="category_ttl_wrap">
-              <span class="category_name" v-html="$t('word.mobile')"></span>
-              <picture>
-                <source type="image/webp" srcset="~assets/img/icon_mobile.webp" />
-                <img class="rotation_img" v-scroll="handleScroll" src="~assets/img/icon_mobile.png" :alt="$t('word.mobile')" width="100" height="100">
-              </picture>
-            </h3>
-            <ul class="skill_list">
-              <li>Android Java</li>
-              <li>Swift</li>
-            </ul>
-          </section>
-          <section class="column category fadein" v-scroll="handleScroll">
-            <h3 class="category_ttl_wrap">
-              <span class="category_name" v-html="$t('word.other')"></span>
-              <picture>
-                <source type="image/webp" srcset="~assets/img/icon_other.webp" />
-                <img class="rotation_img" v-scroll="handleScroll" src="~assets/img/icon_other.png" :alt="$t('word.other')" width="100" height="100">
-              </picture>
-            </h3>
-            <ul class="skill_list">
-              <li>Docker</li>
-              <li>Vagrant</li>
-              <li>Linux</li>
-              <li>Mac</li>
-              <li>VSCode</li>
-              <li>Vim</li>
-              <li>Chrome</li>
-              <li>Firefox</li>
+              <li v-for="(lang, lang_name) in skill" :key="lang_name" v-html="lang_name"></li>
             </ul>
           </section>
         </div>
       </section>
+      <!-- Career -->
       <section class="sub_contents fadein" v-scroll="handleScroll">
         <h2>Career</h2>
         <div class="max_size_wrap">
@@ -126,6 +73,10 @@
           <p class="note" v-html="$t('about.note')"></p>
         </div>
       </section>
+      <!-- モーダル -->
+      <section class="modal_sec">
+        <skill-modal v-for="(skill, skill_name) in skills" :key="skill_name" :class="skill_name" :title="skill_name" :skills="skill" @close="closeModal"></skill-modal>
+      </section>
     </div>
 
     <!-- FootNav -->
@@ -140,10 +91,12 @@
 <script>
 import TitleDescription from "~/components/TitleDescription.vue";
 import Terminal from "~/components/Terminal.vue";
+import SkillModal from "~/components/SkillModal.vue";
 export default {
   components: {
     TitleDescription,
-    Terminal
+    Terminal,
+    SkillModal
   },
   data () {
     var meta = {
@@ -157,7 +110,41 @@ export default {
     };
     var typeTxt = '$ cat ./about.txt\n\> This is Yuichi Ishiyama\'s Profile.\n\> Who am I\? Can I do\?';
     var projects = this.$t('about.project');
-    return { meta, typeTxt, projects }
+    var skill = [];
+    var skills = {
+      'frontend': {
+        'HTML': '5',
+        'CSS': '4.5',
+        'Twig': '4',
+        'Blade': '4',
+        'js': '4.5',
+        'jquery': '4',
+        'vue.js': '3',
+        'nuxt.js': '3'
+      },
+      'backend': {
+        'PHP': '4.5',
+        'Laravel': '4',
+        'Yii2': '4',
+        'Python': '3',
+        'Java': '3',
+        'Android Java': '3',
+        'Swift': '2'
+      },
+      'other': {
+        'AWS': '2',
+        'GCP': '2',
+        'Docker': '3.5',
+        'Vagrant': '3',
+        'Git': '4',
+        'Svn': '4',
+        'Linux': '3.5',
+        'Mac': '4',
+        'VSCode': '3.5',
+        'Vim': '3',
+      }
+    };
+    return { meta, typeTxt, projects, skills, skill }
   },
   methods: {
     handleScroll: (evt, el) => {
@@ -173,6 +160,16 @@ export default {
         return true;
       }
       return false;
+    },
+    openModal(event, skill, skill_name) {
+      this.skill = skill;
+      document.querySelector('.' + skill_name).classList.add('open')
+    },
+    closeModal(event) {
+      var els = document.querySelectorAll('.modal_mask')
+      for (var i = 0; i < els.length; i++) {
+        els[i].classList.remove('open')
+      }
     }
   },
 }
@@ -230,6 +227,16 @@ export default {
   50% { opacity:0; }
   100% { opacity:1; }
 }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes fadein {
   from {
     opacity: 0;
@@ -248,6 +255,48 @@ export default {
   100% {
     clip-path: circle(100% at 50% 50%);
     -webkit-clip-path: circle(100% at 50% 50%);
+  }
+}
+@-webkit-keyframes rotation_img {
+  0% {
+    clip-path: circle(0 at 50% 50%);
+    -webkit-clip-path: circle(0 at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    -webkit-clip-path: circle(100% at 50% 50%);
+  }
+}
+@-webkit-keyframes link_img {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+@keyframes link_img {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+@-webkit-keyframes textanimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes textanimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 .slide_box {
@@ -282,6 +331,7 @@ export default {
   -webkit-animation: slide_txt 0s ease .5s 1 normal forwards;
   animation:slide_txt 0s ease .5s 1 normal forwards;
 }
+
 .fadein {
   opacity: 0;
 }
@@ -295,6 +345,9 @@ export default {
 .move.rotation_img {
   opacity: 1;
   animation: rotation_img 2s cubic-bezier(.4, 0, .2, 1);
+}
+.link_img {
+  animation: link_img 2s linear infinite 2s alternate;
 }
 
 .profile_area .image_area {
@@ -364,13 +417,32 @@ export default {
   margin: 0 auto 10px;
   text-align: center;
 }
+.sub_contents .category .category_ttl_wrap picture {
+  position: relative;
+  display: inline-block;
+}
+.sub_contents .category .category_ttl_wrap picture::before {
+  position: absolute;
+  content: 'Click!';
+  bottom: -12px;
+  left: 50%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #62be56;
+  color: #fff;
+  font-weight: bold;
+  z-index: 2;
+  animation: textanimation 2s linear infinite 2s alternate-reverse;
+  cursor: pointer;
+}
 .sub_contents .category .category_ttl_wrap img {
+  cursor: pointer;
   display: block;
   width: 100px;
   margin: 10px auto 15px;
 }
 .sub_contents .category .category_ttl_wrap .category_name {
-  display: inline-block;
+  display: block;
   padding: 5px;
   font-size: 15px;
   color: #62BE56;
@@ -381,7 +453,7 @@ export default {
   text-align: center;
 }
 .sub_contents .category .skill_list li {
-  display: inline;
+  display: inline-block;
 }
 .sub_contents .category .skill_list li::after {
   content: ',';
