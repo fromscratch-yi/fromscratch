@@ -46,6 +46,7 @@ export default {
   background: #fff;
   transform: scale(0.3);
   transition: 0.5s;
+  border-radius: 15px;
 }
 .modal_content h2 {
   margin: 0 0 20px;
