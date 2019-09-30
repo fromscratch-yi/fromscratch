@@ -408,7 +408,7 @@ export default {
   margin: 0 0 20px;
   text-align: center;
 }
-.sub_contents .category {
+.sub_contents .category.about {
   padding: 30px 15px;
   max-width: 255px;
   margin: 0 auto;
