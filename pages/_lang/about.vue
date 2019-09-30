@@ -34,7 +34,7 @@
       <section class="sub_contents">
         <h2>Skills &amp; Tools</h2>
         <div class="max_size_wrap columns is-tablet">
-          <section v-for="(skill, skill_name) in skills" :key="skill_name" class="column category fadein" v-scroll="handleScroll">
+          <section v-for="(skill, skill_name) in skills" :key="skill_name" class="column category about_cate fadein" v-scroll="handleScroll">
             <h3 class="category_ttl_wrap">
               <span class="category_name" v-html="$t('word.' + skill_name)"></span>
               <picture class="link_img" @click="openModal($event, skill, skill_name)">
@@ -285,18 +285,18 @@ export default {
 }
 @-webkit-keyframes textanimation {
   0% {
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0);
   }
 }
 @keyframes textanimation {
   0% {
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0);
   }
 }
 .slide_box {
@@ -413,15 +413,15 @@ export default {
   max-width: 255px;
   margin: 0 auto;
 }
-.sub_contents .category .category_ttl_wrap {
+.sub_contents .category.about_cate .category_ttl_wrap {
   margin: 0 auto 10px;
   text-align: center;
 }
-.sub_contents .category .category_ttl_wrap picture {
+.sub_contents .category.about_cate .category_ttl_wrap picture {
   position: relative;
   display: inline-block;
 }
-.sub_contents .category .category_ttl_wrap picture::before {
+.sub_contents .category.about_cate .category_ttl_wrap picture::before {
   position: absolute;
   content: 'Click!';
   bottom: -12px;
@@ -432,16 +432,16 @@ export default {
   color: #fff;
   font-weight: bold;
   z-index: 2;
-  animation: textanimation 2s linear infinite 2s alternate-reverse;
+  animation: textanimation 2s linear infinite 2s alternate;
   cursor: pointer;
 }
-.sub_contents .category .category_ttl_wrap img {
+.sub_contents .category.about_cate .category_ttl_wrap img {
   cursor: pointer;
   display: block;
   width: 100px;
   margin: 10px auto 15px;
 }
-.sub_contents .category .category_ttl_wrap .category_name {
+.sub_contents .category.about_cate .category_ttl_wrap .category_name {
   display: block;
   padding: 5px;
   font-size: 15px;
