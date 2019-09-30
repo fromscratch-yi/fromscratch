@@ -1,7 +1,9 @@
 <style>
 .chartjs-render-monitor {
+  max-height: 200px;
   margin: 0 auto;
 }
+
 </style>
 <script>
 import { Radar } from 'vue-chartjs'
