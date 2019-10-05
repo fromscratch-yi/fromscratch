@@ -328,9 +328,6 @@ export default {
     max-width: 450px;
     font-size: 20px;
   }
-  .welcom_page .typer_wrap:nth-child(4) {
-    font-size:
-  }
 }
 .welcom_page .glitch {/*基本設定*/
   position: relative;
