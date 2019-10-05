@@ -1,48 +1,50 @@
 <template>
   <header>
-    <div class="header_container level is-mobile">
-      <div class="logo level-left">
-        <nuxt-link :to="$i18n.path('')"><img src="~assets/img/logo.png" alt="FromScratch logo"></nuxt-link>
+    <div class="header_inner">
+      <div class="header_container level is-mobile">
+        <div class="logo level-left">
+          <nuxt-link :to="$i18n.path('')"><img src="~assets/img/logo.png" alt="FromScratch logo"></nuxt-link>
+        </div>
+        <div class="nav_btn level-right">
+          <p class="level-item icon" @click="clickNavBtn"><font-awesome-icon icon="bars"/></p>
+        </div>
+        <ul class="pc_nav">
+          <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
+          <li class="page_link"><nuxt-link :to="$i18n.path('work/')"><span class="nav_txt">W</span>ork</nuxt-link></li>
+          <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
+          <li class="lang_wrap">
+            <div class="lang_wrap_inner">
+              <!-- setting for english -->
+              <nuxt-link v-if="$i18n.locale === 'ja'" :to="$route.fullPath.replace('\/ja','').replace(/\/$/, '') + `/`">en</nuxt-link>
+              <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">en</nuxt-link>
+              <!-- setting for japanese -->
+              <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
+              <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="nav_btn level-right">
-        <p class="level-item icon" @click="clickNavBtn"><font-awesome-icon icon="bars"/></p>
-      </div>
-      <ul class="pc_nav">
-        <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('work/')"><span class="nav_txt">W</span>ork</nuxt-link></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
-        <li class="lang_wrap">
-          <div class="lang_wrap_inner">
-            <!-- setting for english -->
-            <nuxt-link v-if="$i18n.locale === 'ja'" :to="$route.fullPath.replace('\/ja','').replace(/\/$/, '') + `/`">en</nuxt-link>
-            <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">en</nuxt-link>
-            <!-- setting for japanese -->
-            <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
-            <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
-          </div>
-        </li>
-      </ul>
+      <nav class="nav_menu" v-bind:class="{'open': isOpen}">
+        <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
+        <ul class="page_nav">
+          <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo"></li>
+          <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
+          <li class="page_link"><nuxt-link :to="$i18n.path('work/')"><span class="nav_txt">W</span>ork</nuxt-link></li>
+          <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
+          <li class="lang_wrap">
+            <p class="attention">Language</p>
+            <div class="lang_wrap_inner">
+              <!-- setting for english -->
+              <nuxt-link v-if="$i18n.locale === 'ja'" :to="$route.fullPath.replace('\/ja','').replace(/\/$/, '') + `/`">en</nuxt-link>
+              <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">en</nuxt-link>
+              <!-- setting for japanese -->
+              <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
+              <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav_menu" v-bind:class="{'open': isOpen}">
-      <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
-      <ul class="page_nav">
-        <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo"></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('work/')"><span class="nav_txt">W</span>ork</nuxt-link></li>
-        <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
-        <li class="lang_wrap">
-          <p class="attention">Language</p>
-          <div class="lang_wrap_inner">
-            <!-- setting for english -->
-            <nuxt-link v-if="$i18n.locale === 'ja'" :to="$route.fullPath.replace('\/ja','').replace(/\/$/, '') + `/`">en</nuxt-link>
-            <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">en</nuxt-link>
-            <!-- setting for japanese -->
-            <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
-            <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
-          </div>
-        </li>
-      </ul>
-    </nav>
   </header>
 </template>
 
@@ -67,7 +69,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 header {
   width: 100%;
   height: 60px;
@@ -76,7 +78,7 @@ header {
   transform: none;
   z-index: 2;
 }
-.header_container {
+.header_inner {
   position: fixed;
   left: 0;
   top: 0;
@@ -85,6 +87,10 @@ header {
   margin: 0;
   background: rgba(255, 255, 255, 0.5);
   z-index: 50;
+}
+.header_container {
+  max-width: 1040px;
+  margin: 0 auto;
 }
 .header_container .logo, .header_container .nav_btn {
   cursor: pointer;

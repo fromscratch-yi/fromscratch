@@ -117,7 +117,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* animation */
 @-webkit-keyframes slide_box {
   0% {

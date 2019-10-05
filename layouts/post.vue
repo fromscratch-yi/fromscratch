@@ -27,7 +27,7 @@ export default {
 
 };
 </script>
-<style>
+<style scoped>
 html {
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
@@ -41,7 +41,7 @@ html::-webkit-scrollbar {
   background-color: #fff;
 }
 .max_size_wrap {
-  max-width: 770px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .note {

@@ -28,7 +28,7 @@
             <section class="work_wrap">
               <h2 class="item_ttl">UseD</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap">
                       <picture>
@@ -59,7 +59,7 @@
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">Employee Management System</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap">
                       <picture>
@@ -104,7 +104,7 @@
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">Sales Management System</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap">
                       <picture>
@@ -147,7 +147,7 @@
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">TimeRecorder System</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap">
                       <picture>
@@ -196,7 +196,7 @@
             <section class="work_wrap">
               <h2 class="item_ttl">FromScratch</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web 1"></div>
                   </slide>
@@ -224,7 +224,7 @@
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">The relation, Inc.</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web 1"></div>
                   </slide>
@@ -248,7 +248,7 @@
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web 1"></div>
                   </slide>
@@ -277,7 +277,7 @@
             <section class="work_wrap">
               <h2 class="item_ttl">FromScratch</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="FromScratch 名刺"></div>
                   </slide>
@@ -306,7 +306,7 @@
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">T'z Auto</h2>
               <no-ssr>
-                <carousel v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/bc/tzauto1.png" alt="Tz Auto 名刺"></div>
                   </slide>
@@ -389,126 +389,9 @@ export default {
 }
 </script>
 
-<style>
-/* animation */
-@-webkit-keyframes slide_box {
-  0% {
-    left: 0;
-    right: auto;
-    width: 0;
-  }
-  50% {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-  51% {
-    left: auto;
-    right: 0;
-    width: 100%;
-  }
-  100% {
-    left: auto;
-    right: 0;
-    width: 0;
-  }
-}
-@keyframes slide_box {
-  0% {
-    left: 0;
-    width: 0;
-  }
-  50% {
-    left: 0;
-    width: 100%;
-  }
-  51% {
-    left: 0;
-    width: 100%;
-  }
-  100% {
-    left: 100%;
-    width: 0;
-  }
-}
-@-webkit-keyframes slide_txt {
-  0% { opacity: 0; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-@keyframes slide_txt {
-  0% { opacity:0; }
-  50% { opacity:0; }
-  100% { opacity:1; }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes rotation_img {
-  0% {
-    clip-path: circle(0 at 50% 50%);
-    -webkit-clip-path: circle(0 at 50% 50%);
-  }
-  100% {
-    clip-path: circle(100% at 50% 50%);
-    -webkit-clip-path: circle(100% at 50% 50%);
-  }
-}
+<style scoped>
 .slide_wrap {
   text-align: center;
-}
-.slide_box {
-  position: relative;
-  display: inline-block;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.slide_box:before {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  background: #44a043;
-}
-.slide_txt {
-  opacity: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.slide_box.move:before {
-  -webkit-animation: slide_box 1s ease 0s 1 normal forwards;
-  animation: slide_box 1s ease 0s 1 normal forwards;
-}
-.slide_box.move .slide_txt {
-  -webkit-animation: slide_txt 0s ease .5s 1 normal forwards;
-  animation:slide_txt 0s ease .5s 1 normal forwards;
-}
-.fadein {
-  opacity: 0;
-}
-.move.fadein {
-  opacity: 1;
-  animation: fadein 2s ease;
-}
-.rotation_img {
-  opacity: 0;
-}
-.move.rotation_img {
-  opacity: 1;
-  animation: rotation_img 2s cubic-bezier(.4, 0, .2, 1);
 }
 
 .link_wrap .center_p .left,
@@ -574,8 +457,8 @@ export default {
   background: rgb(64, 161, 63);
 }
 .tab_item .work_wrap .skill_list {
-  margin: 15px 0 10px;
-  font-size: 12px;
+  max-width: 700px;
+  margin: 15px auto 10px;
   text-align: center;
 }
 .tab_item .work_wrap .skill_list li.tag {
@@ -584,8 +467,12 @@ export default {
   color: #464646;
   margin-bottom: 5px;
 }
+.tab_item .work_wrap .slide_box {
+  display: block;
+}
 .tab_item .work_wrap .item_desc {
-  margin: 5px 0 0;
+  max-width: 680px;
+  margin: 5px auto 0;
   text-align: left;
   font-size: 14px;
   line-height: 1.9;
@@ -610,6 +497,28 @@ export default {
 }
 .v-leave-to {
   transform: translateX(-100%);
+}
+.VueCarousel-dot {
+  margin-top: 0;
+}
+.VueCarousel-dot-container {
+  margin-top: 0 !important;
+}
+@media screen and (min-width: 768px) {
+  .tab_item .work_wrap .item_ttl {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .tab_item .work_wrap .item_desc {
+    font-size: 16px;
+  }
+  .tab_item .work_wrap .skill_list li.tag {
+    font-size: 14px;
+  }
+  .page_contents .tabs li a {
+    font-size: 20px;
+    font-size: bold;
+  }
 }
 </style>
 

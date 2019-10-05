@@ -31,5 +31,16 @@ export default {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
 }
+/* PC用 */
+@media screen and (min-width: 768px) {
+  .main_ttl {
+    margin: 40px 0;
+    font-size: 45px;
+  }
+  .main_ttl::before {
+    width: 45px;
+    height: 4px;
+  }
+}
 </style>
 

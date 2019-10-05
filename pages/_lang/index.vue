@@ -300,13 +300,25 @@ export default {
   }
 }
 @media screen and (min-width: 768px){
+  .welcom_page .typer_wrap:nth-child(1) {
+    font-size: 60px;
+  }
+  .welcom_page .typer_wrap .middle_txt {
+    font-size: 40px;
+  }
+  .welcom_page .typer_wrap .small_txt {
+    font-size: 30px;
+  }
+  .welcom_page .typer_wrap {
+    font-size: 16px;
+  }
   .welcom_page .typer_wrap .logo {
-    width: 5vw;
+    width: 60px;
     margin: 0 auto 10px;
   }
   .welcom_page .typer_wrap .tap_txt {
     display: block;
-    font-size: 2vw;
+    font-size: 35px;
   }
   .welcom_page .back_ctn .desc_txt {
     padding: 20px 0 35px;
@@ -315,6 +327,9 @@ export default {
   .welcom_page .back_ctn nav ul {
     max-width: 450px;
     font-size: 20px;
+  }
+  .welcom_page .typer_wrap:nth-child(4) {
+    font-size:
   }
 }
 .welcom_page .glitch {/*基本設定*/

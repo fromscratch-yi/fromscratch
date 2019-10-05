@@ -176,180 +176,6 @@ export default {
 </script>
 
 <style>
-/* animation */
-@-webkit-keyframes slide_box {
-  0% {
-    left: 0;
-    right: auto;
-    width: 0;
-  }
-  50% {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-  51% {
-    left: auto;
-    right: 0;
-    width: 100%;
-  }
-  100% {
-    left: auto;
-    right: 0;
-    width: 0;
-  }
-}
-@keyframes slide_box {
-  0% {
-    left: 0;
-    width: 0;
-  }
-  50% {
-    left: 0;
-    width: 100%;
-  }
-  51% {
-    left: 0;
-    width: 100%;
-  }
-  100% {
-    left: 100%;
-    width: 0;
-  }
-}
-@-webkit-keyframes slide_txt {
-  0% { opacity: 0; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-}
-@keyframes slide_txt {
-  0% { opacity:0; }
-  50% { opacity:0; }
-  100% { opacity:1; }
-}
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes rotation_img {
-  0% {
-    clip-path: circle(0 at 50% 50%);
-    -webkit-clip-path: circle(0 at 50% 50%);
-  }
-  100% {
-    clip-path: circle(100% at 50% 50%);
-    -webkit-clip-path: circle(100% at 50% 50%);
-  }
-}
-@-webkit-keyframes rotation_img {
-  0% {
-    clip-path: circle(0 at 50% 50%);
-    -webkit-clip-path: circle(0 at 50% 50%);
-  }
-  100% {
-    clip-path: circle(100% at 50% 50%);
-    -webkit-clip-path: circle(100% at 50% 50%);
-  }
-}
-@-webkit-keyframes link_img {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.8);
-  }
-}
-@keyframes link_img {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.8);
-  }
-}
-@-webkit-keyframes textanimation {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-}
-@keyframes textanimation {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0);
-  }
-}
-.slide_box {
-  position: relative;
-  display: inline-block;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.slide_box:before {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  background: #44a043;
-}
-.slide_txt {
-  opacity: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.slide_box.move:before {
-  -webkit-animation: slide_box 1s ease 0s 1 normal forwards;
-  animation: slide_box 1s ease 0s 1 normal forwards;
-}
-.slide_box.move .slide_txt {
-  -webkit-animation: slide_txt 0s ease .5s 1 normal forwards;
-  animation:slide_txt 0s ease .5s 1 normal forwards;
-}
-
-.fadein {
-  opacity: 0;
-}
-.move.fadein {
-  opacity: 1;
-  animation: fadein 2s ease;
-}
-.rotation_img {
-  opacity: 0;
-}
-.move.rotation_img {
-  opacity: 1;
-  animation: rotation_img 2s cubic-bezier(.4, 0, .2, 1);
-}
-.link_img {
-  animation: link_img 2s linear infinite 2s alternate;
-}
-
 .profile_area .image_area {
   max-width: 200px;
   margin: 0 auto;
@@ -368,7 +194,7 @@ export default {
   font-size: 18px;
 }
 .columns.inner .name_space p {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.8;
   color: #595959;
 }
@@ -382,7 +208,7 @@ export default {
 }
 .profile_txt {
   padding: 0.75rem 8px;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.9;
   text-align: left;
 }
@@ -396,7 +222,7 @@ export default {
   padding: 35px 15px 40px;
 }
 .sub_contents:nth-child(odd) {
-  margin: 20px 0 0;
+  margin: 35px 0 0;
   background-color: #1F1F1F;
   color: rgb(177, 177, 177);
 }
@@ -405,7 +231,7 @@ export default {
 }
 .sub_contents h2 {
   font-size: 25px;
-  margin: 0 0 20px;
+  margin: 10px 0 25px;
   text-align: center;
 }
 .sub_contents .category.about {
@@ -438,18 +264,20 @@ export default {
 .sub_contents .category.about_cate .category_ttl_wrap img {
   cursor: pointer;
   display: block;
-  width: 100px;
+  width: 135px;
   margin: 10px auto 15px;
 }
 .sub_contents .category.about_cate .category_ttl_wrap .category_name {
   display: block;
   padding: 5px;
-  font-size: 15px;
+  font-size: 17px;
   color: #62BE56;
   font-weight: bold;
 }
 .sub_contents .category .skill_list {
-  font-size: 14px;
+  max-width: 220px;
+  margin: 0 auto;
+  font-size: 15px;
   text-align: center;
 }
 .sub_contents .category .skill_list li {
@@ -469,7 +297,6 @@ export default {
 }
 .sub_contents .table .skill_list li {
   float: left;
-  font-size: 13px;
 }
 .sub_contents .table .skill_list li::after {
   content: ',';
@@ -479,7 +306,7 @@ export default {
   content: '';
   margin: 0;
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 670px) {
   .columns.inner .column {
     padding: 0.75rem 8px;
   }
@@ -487,7 +314,7 @@ export default {
     padding: 20px 10px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 670px) {
   .columns.inner {
     align-items: center;
     padding: 10px;
@@ -497,6 +324,9 @@ export default {
   }
   .profile_txt {
     padding: 1rem calc(1rem + 8px);
+  }
+  .columns.is-tablet {
+    display: flex;
   }
 }
 footer {
@@ -509,6 +339,22 @@ footer {
 .table thead td, .table thead th {
   padding: 15px;
   font-size: 15px;
+}
+@media screen and (min-width: 768px) {
+  .columns.inner .name_space p,
+  .profile_txt {
+    font-size: 16px;
+  }
+  .sub_contents h2 {
+    font-size: 30px;
+  }
+  .table thead td, .table thead th {
+    font-size: 18px;
+  }
+  .table td, .table th {
+    font-size: 15px;
+  }
+
 }
 </style>
 
