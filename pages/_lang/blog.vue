@@ -1,45 +1,41 @@
 <template>
   <div class="contents_area">
-    <div class="max_size_wrap">
-      <div class="inner_contents_wrap">
-        <TitleDescription :meta="meta"></TitleDescription>
-        <Terminal :typeTxt="typeTxt"></Terminal>
-        <div class="posts_area">
-          <div class="slide_wrap page_description">
-            <div class="slide_box move">
-              <p class="slide_txt" v-html="$t('blog.introduction')"></p>
-            </div>
-          </div>
-          <div class="blog_menu sub_contents fadein move">
-            <h2>Categories</h2>
-            <div class="max_size_wrap columns is-tablet category_wrap">
-              <section v-for="skill in skills" :key="skill" class="column category">
-                <h3 class="category_ttl_wrap fadein move">
-                  <nuxt-link :to="$i18n.path('category/' + skill)" class="wrapper">
-                    <span class="category_name" v-html="$t('word.' + skill)"></span>
-                    <picture>
-                      <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill + '.webp')"/>
-                      <img class="rotation_img move" :src="require('~/assets/img/icon_' + skill + '.png')" :alt="$t('word.' + skill)" width="100" height="100">
-                    </picture>
-                  </nuxt-link>
-                </h3>
-              </section>
-            </div>
-            <h2 class="fadein" v-scroll="handleScroll">New Posts</h2>
-            <p v-if="posts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
-            <section v-else class="columns is-mobile is-multiline new_posts">
-              <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
-                <Card
-                  v-bind:key="post.fields.slug"
-                  :title="post.fields.title"
-                  :slug="post.fields.slug"
-                  :headerImage="post.fields.headerImage"
-                  :publishedAt="post.fields.publishedAt"
-                  :tags="post.fields.tags"></Card>
-              </div>
-            </section>
-          </div>
+    <TitleDescription :meta="meta"></TitleDescription>
+    <Terminal :typeTxt="typeTxt"></Terminal>
+    <div class="posts_area">
+      <div class="slide_wrap page_description">
+        <div class="slide_box move">
+          <p class="slide_txt" v-html="$t('blog.introduction')"></p>
         </div>
+      </div>
+      <div class="blog_menu sub_contents fadein move">
+        <h2>Categories</h2>
+        <div class="max_size_wrap columns is-tablet category_wrap">
+          <section v-for="skill in skills" :key="skill" class="column category">
+            <h3 class="category_ttl_wrap fadein move">
+              <nuxt-link :to="$i18n.path('category/' + skill)" class="wrapper">
+                <span class="category_name" v-html="$t('word.' + skill)"></span>
+                <picture>
+                  <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill + '.webp')"/>
+                  <img class="rotation_img move" :src="require('~/assets/img/icon_' + skill + '.png')" :alt="$t('word.' + skill)" width="100" height="100">
+                </picture>
+              </nuxt-link>
+            </h3>
+          </section>
+        </div>
+        <h2 class="fadein" v-scroll="handleScroll">New Posts</h2>
+        <p v-if="posts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
+        <section v-else class="columns is-mobile is-multiline new_posts">
+          <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
+            <Card
+              v-bind:key="post.fields.slug"
+              :title="post.fields.title"
+              :slug="post.fields.slug"
+              :headerImage="post.fields.headerImage"
+              :publishedAt="post.fields.publishedAt"
+              :tags="post.fields.tags"></Card>
+          </div>
+        </section>
       </div>
     </div>
     <!-- FootNav -->

@@ -219,6 +219,7 @@ a:hover {
   .page_contents_wrap {
     float: left;
     width: 72%;
+    padding: 15px 20px;
   }
   .side_contents_wrap {
     display: block;
