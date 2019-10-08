@@ -1,48 +1,58 @@
 <template>
-  <div class="contents_area">
-    <TitleDescription :meta="meta"></TitleDescription>
-    <Terminal :typeTxt="typeTxt"></Terminal>
-    <div class="posts_area">
-      <div class="slide_wrap page_description">
-        <div class="slide_box move">
-          <p class="slide_txt" v-html="$t('blog.introduction')"></p>
-        </div>
-      </div>
-      <div class="blog_menu sub_contents fadein move">
-        <h2>Categories</h2>
-        <div class="max_size_wrap columns is-tablet category_wrap">
-          <section v-for="skill in skills" :key="skill" class="column category">
-            <h3 class="category_ttl_wrap fadein move">
-              <nuxt-link :to="$i18n.path('category/' + skill)" class="wrapper">
-                <span class="category_name" v-html="$t('word.' + skill)"></span>
-                <picture>
-                  <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill + '.webp')"/>
-                  <img class="rotation_img move" :src="require('~/assets/img/icon_' + skill + '.png')" :alt="$t('word.' + skill)" width="100" height="100">
-                </picture>
-              </nuxt-link>
-            </h3>
-          </section>
-        </div>
-        <h2 class="fadein" v-scroll="handleScroll">New Posts</h2>
-        <p v-if="posts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
-        <section v-else class="columns is-mobile is-multiline new_posts">
-          <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
-            <Card
-              v-bind:key="post.fields.slug"
-              :title="post.fields.title"
-              :slug="post.fields.slug"
-              :headerImage="post.fields.headerImage"
-              :publishedAt="post.fields.publishedAt"
-              :tags="post.fields.tags"></Card>
+  <div class="page_wrap">
+    <breadcrumb :breadcrumbs="breadcrumbs" />
+    <div class="contents_inner">
+      <section class="page_contents_wrap">
+        <div class="contents_area">
+          <TitleDescription :meta="meta"></TitleDescription>
+          <Terminal :typeTxt="typeTxt"></Terminal>
+          <div class="posts_area">
+            <div class="slide_wrap page_description">
+              <div class="slide_box move">
+                <p class="slide_txt" v-html="$t('blog.introduction')"></p>
+              </div>
+            </div>
+            <div class="blog_menu sub_contents fadein move">
+              <h2>Categories</h2>
+              <div class="max_size_wrap columns is-tablet category_wrap">
+                <section v-for="skill in skills" :key="skill" class="column category">
+                  <h3 class="category_ttl_wrap fadein move">
+                    <nuxt-link :to="$i18n.path('category/' + skill)" class="wrapper">
+                      <span class="category_name" v-html="$t('word.' + skill)"></span>
+                      <picture>
+                        <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill + '.webp')"/>
+                        <img class="rotation_img move" :src="require('~/assets/img/icon_' + skill + '.png')" :alt="$t('word.' + skill)" width="100" height="100">
+                      </picture>
+                    </nuxt-link>
+                  </h3>
+                </section>
+              </div>
+              <h2 class="fadein" v-scroll="handleScroll">New Posts</h2>
+              <p v-if="posts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
+              <section v-else class="columns is-mobile is-multiline new_posts">
+                <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
+                  <Card
+                    v-bind:key="post.fields.slug"
+                    :title="post.fields.title"
+                    :slug="post.fields.slug"
+                    :headerImage="post.fields.headerImage"
+                    :publishedAt="post.fields.publishedAt"
+                    :tags="post.fields.tags"></Card>
+                </div>
+              </section>
+            </div>
           </div>
-        </section>
-      </div>
-    </div>
-    <!-- FootNav -->
-    <div class="max_size_wrap link_wrap">
-      <div class="inner_contents_wrap">
-        <p class="left"><nuxt-link :to="$i18n.path('work/')">Work</nuxt-link></p>
-      </div>
+          <!-- FootNav -->
+          <div class="max_size_wrap link_wrap">
+            <div class="inner_contents_wrap">
+              <p class="left"><nuxt-link :to="$i18n.path('work/')">Work</nuxt-link></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="side_contents_wrap">
+        <SideContents/>
+      </section>
     </div>
   </div>
 </template>
@@ -51,13 +61,17 @@
 import TitleDescription from "~/components/TitleDescription.vue";
 import Terminal from "~/components/Terminal.vue";
 import Card from '~/components/Card.vue';
+import SideContents from "~/components/SideContents.vue";
+import Breadcrumb from '~/components/Breadcrumb.vue';
 import {createClient} from '~/plugins/contentful.js';
 const client = createClient()
 export default {
   components: {
     TitleDescription,
     Terminal,
-    Card
+    Card,
+    SideContents,
+    Breadcrumb,
   },
   layout: 'blog',
   async asyncData ({ app, env, params }) {
@@ -111,13 +125,7 @@ export default {
       }
     }
   },
-  mounted() {
-    this.updateBreadcrumb()
-  },
   methods: {
-    updateBreadcrumb() {
-      this.$nuxt.$emit('updateBreadcrumb', this.breadcrumbs)
-    },
     handleScroll: (evt, el) => {
       let top = el.getBoundingClientRect().top;
       var offcet = 0;
@@ -270,6 +278,36 @@ export default {
   text-align: center;
   font-size: 14px;
 }
+/* コンテンツ部共通 */
+.contents_inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.page_contents_wrap,
+.side_contents_wrap {
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  filter: drop-shadow(3px 3px 7px rgba(0,0,0,0.1));
+}
+.side_contents_wrap {
+  display: none;
+}
+/* タブレットより上 */
+@media screen and (min-width: 1024px) {
+  .page_contents_wrap {
+    float: left;
+    width: 72%;
+    padding: 15px 20px;
+  }
+  .side_contents_wrap {
+    display: block;
+    float: right;
+    width: 26%;
+    margin-left: auto;
+  }
+}
+
 .sub_contents h2 {
   font-size: 25px;
   margin: 0 0 20px;

@@ -15,12 +15,12 @@ export default {
   },
   computed: {
     jsonld() {
-      var items = Array.prototype.map.call(Object((this.breadcrumbs).data), (item, index) => ({
+      const items = Array.prototype.map.call(Object((this.breadcrumbs).data), (item, index) => ({
         '@type': 'ListItem',
         position: index + 1,
         item: {
-          '@id': Object(item.path),
-          name: Object(item.name),
+          '@id': (item.path).toString(),
+          name: (item.name).toString(),
         },
       }));
       return  {
@@ -31,6 +31,7 @@ export default {
     },
   },
   head() {
+    console.log(this.jsonld)
     const hid = `jsonld-${this._uid}`;
     return {
       script: [

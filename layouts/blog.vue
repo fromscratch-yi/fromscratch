@@ -2,15 +2,7 @@
   <div class="blog_wrap" id="page_top">
     <Header/>
     <div class="contents_wrap clearfix">
-      <breadcrumb :breadcrumbs="breadcrumbs" />
-      <div class="contents_inner">
-        <section class="page_contents_wrap">
-          <nuxt/>
-        </section>
-        <section class="side_contents_wrap">
-          <SideContents/>
-        </section>
-      </div>
+      <nuxt />
     </div>
     <Footer/>
     <a href="#page_top" class="h_top_btn" v-scroll-to="'#page_top'">▲</a>
@@ -19,37 +11,16 @@
 
 <script>
 import Header from "~/components/BlogHeader.vue";
-import SideContents from "~/components/SideContents.vue";
 import Footer from "~/components/BlogFooter.vue";
-import Breadcrumb from '~/components/Breadcrumb.vue';
 import vueScrollTo from "vue-scrollto";
-
 
 export default {
   scrollToTop: true,
   components: {
     Header,
-    SideContents,
     Footer,
-    Breadcrumb,
     vueScrollTo
   },
-  data() {
-    return {
-      breadcrumbs: {}
-    }
-  },
-  created() {
-    this.setListener()
-  },
-  methods: {
-    setListener() {
-      this.$nuxt.$on('updateBreadcrumb', this.setBreadcrumb)
-    },
-    setBreadcrumb(breadcrumbs) {
-      this.breadcrumbs = breadcrumbs
-    }
-  }
 }
 </script>
 <style>
@@ -199,33 +170,5 @@ a:hover {
   position: relative;
   padding: 20px 15px 30px;
   background: #ececec;
-}
-.contents_inner {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-.page_contents_wrap,
-.side_contents_wrap {
-  padding: 15px;
-  background: #fff;
-  border-radius: 5px;
-  filter: drop-shadow(3px 3px 7px rgba(0,0,0,0.1));
-}
-.side_contents_wrap {
-  display: none;
-}
-/* タブレットより上 */
-@media screen and (min-width: 1024px) {
-  .page_contents_wrap {
-    float: left;
-    width: 72%;
-    padding: 15px 20px;
-  }
-  .side_contents_wrap {
-    display: block;
-    float: right;
-    width: 26%;
-    margin-left: auto;
-  }
 }
 </style>
