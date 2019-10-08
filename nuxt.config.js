@@ -31,7 +31,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', size: "152x152", href: '/apple_icon.png' }
+      { rel: 'apple-touch-icon', href: '/apple_icon.png' }
     ]
   },
   /*

@@ -4,6 +4,7 @@
       <div class="header_container level is-mobile">
         <div class="logo level-left">
           <nuxt-link :to="$i18n.path('')"><img src="~assets/img/logo.png" alt="FromScratch logo"></nuxt-link>
+          <p class="blog_ttl df_ttl">FromScratch</p>
         </div>
         <div class="nav_btn level-right">
           <p class="level-item icon" @click="clickNavBtn"><font-awesome-icon icon="bars"/></p>
@@ -95,8 +96,22 @@ header {
 .header_container .logo, .header_container .nav_btn {
   cursor: pointer;
 }
-.header_container .logo {
+.header_container .logo img {
   width: 35px;
+}
+.header_container .logo .blog_ttl {
+  cursor: auto;
+  padding-left: 15px;
+  font-size: 25px;
+  line-height: 1;
+}
+.header_container .logo .blog_ttl.df_ttl {
+  display: none;
+}
+.header_container .logo .blog_ttl span {
+  font-size: 12px;
+  padding-left: 7px;
+  line-height: 2;
 }
 .header_container .nav_btn {
   font-size: 25px;
@@ -176,7 +191,6 @@ header .nav_menu .page_nav li.lang_wrap a {
   padding: 12px 0;
   vertical-align: top;
   background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
   font-size: 18px;
   width: 80px;
   text-align: center;
@@ -226,7 +240,15 @@ header .nav_menu .page_nav li.page_link a .nav_txt {
 .header_container .pc_nav {
   display: none;
 }
+@media screen and (max-width: 320px){
+  .header_container .logo .blog_ttl {
+    font-size: 6.3vw;
+  }
+}
 @media screen and (min-width: 768px){
+  .header_container .logo .blog_ttl.df_ttl {
+    display: block;
+  }
   .level.is-mobile .level-right.nav_btn {
     display: none;
   }
@@ -281,7 +303,6 @@ header .nav_menu .page_nav li.page_link a .nav_txt {
     padding: 3px 0;
     vertical-align: top;
     background-color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
     font-size: 16px;
     width: 50px;
     text-align: center;

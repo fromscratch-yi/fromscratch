@@ -1,6 +1,6 @@
 <template>
   <div class="card_wrap">
-    <div class="post card" ontouchstart="">
+    <div class="post card">
       <nuxt-link :to="$i18n.path('post/' + slug + '/')" class="wrapper">
         <div class="card-image">
           <figure class="image is-5by3">

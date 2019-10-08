@@ -63,6 +63,7 @@ export default {
     Terminal,
     Card
   },
+  layout: 'blog',
   async asyncData ({ app, env, params }) {
     var content_type = env.CTF_BLOG_POST_TYPE_ID_EN;
     if (params.lang == 'ja') {
@@ -98,7 +99,29 @@ export default {
     var skills = ['frontend', 'backend', 'mobile', 'other'];
     return { meta, typeTxt, posts, skills }
   },
+  computed: {
+    breadcrumbs: function() {
+      return {
+        data: [
+          {
+            name: 'Top',
+            path: this.$i18n.path('')
+          },
+          {
+            name: 'Blog',
+            path: this.$route.fullPath
+          }
+        ]
+      }
+    }
+  },
+  mounted() {
+    this.updateBreadcrumb()
+  },
   methods: {
+    updateBreadcrumb() {
+      this.$nuxt.$emit('updateBreadcrumb', this.breadcrumbs)
+    },
     handleScroll: (evt, el) => {
       let top = el.getBoundingClientRect().top;
       var offcet = 0;

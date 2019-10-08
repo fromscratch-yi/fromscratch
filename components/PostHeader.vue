@@ -210,7 +210,6 @@ header .nav_menu .page_nav li.page_link a .nav_txt {
     padding: 3px 0;
     vertical-align: top;
     background-color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
     font-size: 16px;
     width: 50px;
     text-align: center;
