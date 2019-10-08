@@ -31,7 +31,6 @@ export default {
     },
   },
   head() {
-    console.log(this.jsonld)
     const hid = `jsonld-${this._uid}`;
     return {
       script: [
