@@ -32,7 +32,16 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', href: '/apple_icon.png' }
-    ]
+    ],
+    script: [{
+      innerHTML: `{
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "https://fromscratch-y.work/",
+        "logo": "https://fromscratch-y.work/icon.png"
+      }`,
+      type: 'application/ld+json'
+    }]
   },
   /*
   ** Customize the progress bar color
