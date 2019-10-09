@@ -278,35 +278,6 @@ export default {
   text-align: center;
   font-size: 14px;
 }
-/* コンテンツ部共通 */
-.contents_inner {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-.page_contents_wrap,
-.side_contents_wrap {
-  padding: 15px;
-  background: #fff;
-  border-radius: 5px;
-  filter: drop-shadow(3px 3px 7px rgba(0,0,0,0.1));
-}
-.side_contents_wrap {
-  display: none;
-}
-/* タブレットより上 */
-@media screen and (min-width: 1024px) {
-  .page_contents_wrap {
-    float: left;
-    width: 72%;
-    padding: 15px 20px;
-  }
-  .side_contents_wrap {
-    display: block;
-    float: right;
-    width: 26%;
-    margin-left: auto;
-  }
-}
 
 .sub_contents h2 {
   font-size: 25px;

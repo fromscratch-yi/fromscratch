@@ -51,9 +51,11 @@ export default {
 .breadcrumb_wrap {
   max-width: 1300px;
   margin: 0 auto 15px;
+  padding: 0 15px;
 }
 .breadcrumb_list {
   display: flex;
+  align-items: center;
 }
 .breadcrumb_list li {
   position: relative;
@@ -80,9 +82,18 @@ export default {
 }
 .breadcrumb_list li a.nuxt-link-exact-active {
   cursor: auto;
-  color: rgb(71, 71, 71);
+  color: rgb(109, 108, 108);
 }
 .breadcrumb_list li:last-child::after{
   display: none;
+}
+@media screen and (max-width: 768px){
+  .breadcrumb_wrap {
+    padding: 0 15px;
+  }
+  .breadcrumb_list li a,
+  .breadcrumb_list li {
+    font-size: 12px;
+  }
 }
 </style>

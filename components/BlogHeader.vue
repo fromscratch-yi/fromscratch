@@ -18,10 +18,10 @@
               <div class="lang_wrap_inner">
                 <!-- setting for english -->
                 <nuxt-link v-if="$i18n.locale === 'ja'" :to="'/blog/'">en</nuxt-link>
-                <nuxt-link v-else :to="'/blog/'">en</nuxt-link>
+                <nuxt-link v-else :to="'/blog/'" class="current_locale">en</nuxt-link>
                 <!-- setting for japanese -->
                 <nuxt-link v-if="$i18n.locale === 'en'" :to="'/ja/blog/'">ja</nuxt-link>
-                <nuxt-link v-else :to="'/ja/blog/'">ja</nuxt-link>
+                <nuxt-link v-else :to="'/ja/blog/'" class="current_locale">ja</nuxt-link>
               </div>
             </li>
           </ul>
@@ -35,10 +35,10 @@
               <div class="lang_wrap_inner">
                 <!-- setting for english -->
                 <nuxt-link v-if="$i18n.locale === 'ja'" :to="'/blog/'">en</nuxt-link>
-                <nuxt-link v-else :to="'/blog/'">en</nuxt-link>
+                <nuxt-link v-else :to="'/blog/'" class="current_locale">en</nuxt-link>
                 <!-- setting for japanese -->
                 <nuxt-link v-if="$i18n.locale === 'en'" :to="'/ja/blog/'">ja</nuxt-link>
-                <nuxt-link v-else :to="'/ja/blog/'">ja</nuxt-link>
+                <nuxt-link v-else :to="'/ja/blog/'" class="current_locale">ja</nuxt-link>
               </div>
             </li>
             <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
@@ -338,7 +338,7 @@ header .nav_menu .page_nav li.nv_logo a:last-child {
   border-top-right-radius: 290486px;
   padding-right: 10px;
 }
-header .nav_menu .page_nav li.nv_logo a.nuxt-link-exact-active {
+header .nav_menu .page_nav li.nv_logo a.current_locale {
   pointer-events: none;
   background-color: rgb(120, 199, 111);
   z-index: 1;
@@ -517,7 +517,7 @@ header .nav_menu .page_nav li.page_link a .nav_txt {
     border-top-right-radius: 290486px;
     padding-right: 10px;
   }
-  .header_container .pc_nav li.lang_wrap a.nuxt-link-exact-active {
+  .header_container .pc_nav li.lang_wrap a.current_locale {
     pointer-events: none;
     background-color: rgb(120, 199, 111);
     z-index: 1;

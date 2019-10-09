@@ -38,7 +38,8 @@ module.exports = {
         "@context": "http://schema.org",
         "@type": "Organization",
         "url": "https://fromscratch-y.work/",
-        "logo": "https://fromscratch-y.work/icon.png"
+        "logo": "https://fromscratch-y.work/icon.png",
+        "name": "FromScratch FromsBlog"
       }`,
       type: 'application/ld+json'
     }]

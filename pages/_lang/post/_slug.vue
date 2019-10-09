@@ -1,33 +1,49 @@
 <template>
-  <div class="contents_area">
-    <div class="blog_slug_wrap">
-      <section class="slug">
-        <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url" :alt="currentPost.fields.title"></p>
-        <div class="content_inner">
-          <p class="slug_date">{{ currentPost.fields.publishedAt }}</p>
-          <h1 class="slug_title">{{ currentPost.fields.title }}</h1>
-          <ul class="tag_wrap">
-            <li v-for="tag in currentPost.fields.tags" :key="tag.id" class="tag">#{{tag}}</li>
-          </ul>
-          <div class="slug_content" v-html="$md.render(currentPost.fields.body)"></div>
+  <div class="page_wrap">
+    <breadcrumb :breadcrumbs="breadcrumbs" />
+    <div class="contents_inner">
+      <section class="page_contents_wrap">
+        <div class="contents_area">
+          <div class="blog_slug_wrap">
+            <section class="slug">
+              <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url" :alt="currentPost.fields.title"></p>
+              <div class="content_inner">
+                <p class="slug_date">{{ currentPost.fields.publishedAt }}</p>
+                <h1 class="slug_title">{{ currentPost.fields.title }}</h1>
+                <ul class="tag_wrap">
+                  <li v-for="tag in currentPost.fields.tags" :key="tag.id" class="tag">#{{tag}}</li>
+                </ul>
+                <div class="slug_content" v-html="$md.render(currentPost.fields.body)"></div>
+              </div>
+            </section>
+            <div class="inner_contents_wrap">
+              <nav class="post_nav">
+                <nuxt-link v-if="prevPost" class="pagination-previous" :to="$i18n.path('post/' + prevPost.fields.slug + '/')">&laquo; Prev</nuxt-link>
+                <nuxt-link v-if="nextPost" class="pagination-next" :to="$i18n.path('post/' + nextPost.fields.slug + '/')">Next &raquo;</nuxt-link>
+              </nav>
+            </div>
+          </div>
         </div>
       </section>
-      <div class="inner_contents_wrap">
-        <nav class="post_nav">
-          <nuxt-link v-if="prevPost" class="pagination-previous" :to="$i18n.path('post/' + prevPost.fields.slug + '/')">&laquo; Prev</nuxt-link>
-          <nuxt-link v-if="nextPost" class="pagination-next" :to="$i18n.path('post/' + nextPost.fields.slug + '/')">Next &raquo;</nuxt-link>
-        </nav>
-      </div>
+      <section class="side_contents_wrap">
+        <SideContents/>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
+import SideContents from "~/components/SideContents.vue";
+import Breadcrumb from '~/components/Breadcrumb.vue';
 import {createClient} from '~/plugins/contentful.js';
 const client = createClient();
 const Domain = 'https://fromscratch-y.work';
 export default {
-  layout: 'post',
+  components: {
+    SideContents,
+    Breadcrumb,
+  },
+  layout: 'blog',
   head () {
     return {
       __dangerouslyDisableSanitizers: ['script'],
@@ -106,6 +122,20 @@ export default {
     })
   },
   computed: {
+    breadcrumbs: function() {
+      return {
+        data: [
+          {
+            name: 'Blog',
+            path: this.$i18n.path('blog/')
+          },
+          {
+            name: this.currentPost.fields.title,
+            path: ''
+          }
+        ]
+      }
+    },
     dateOrder: function () {
       for (let i = 0; i < this.allPosts.length; i++) {
         if (this.allPosts[i].fields.publishedAt === this.currentPost.fields.publishedAt) {
