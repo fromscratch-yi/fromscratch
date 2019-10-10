@@ -181,7 +181,7 @@ export default {
 }
 .side_contents .content_wrap .inner .category_wrap .main_category {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 17px;
 }
 .side_contents .content_wrap .inner .category_wrap:first-child {
   border-bottom: 2px dashed #77c76e;

@@ -168,13 +168,19 @@ export default {
 }
 .slug .content_inner {
   position: relative;
-  width: 94%;
+  width: calc(100% - 30px);
   margin: -13% auto 0;
   padding: 20px 15px;
   box-shadow: 0 0 25px -6px #636363;
   background: #fff;
   z-index: 1;
   font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .slug .content_inner {
+    width: 100%;
+    box-shadow: none;
+  }
 }
 .slug .content_inner .slug_date {
   font-size: 13px;

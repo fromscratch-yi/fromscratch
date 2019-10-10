@@ -281,7 +281,11 @@ export default {
   text-align: center;
   font-size: 14px;
 }
-
+@media screen and (min-width: 768px) {
+  .page_contents_wrap .main_ttl {
+    margin: 15px 0 35px;
+  }
+}
 .sub_contents h2 {
   font-size: 25px;
   margin: 0 0 20px;
