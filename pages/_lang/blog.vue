@@ -268,6 +268,9 @@ export default {
 .columns.is-multiline.new_posts {
   margin-bottom: 30px;
 }
+.contents_area {
+  padding: 15px 20px;
+}
 .no_posts {
   padding: 15px 0;
   font-weight: bold;

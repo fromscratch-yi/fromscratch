@@ -1,6 +1,6 @@
 <template>
   <div class="category_wrap">
-    <p v-on:click="toggle" class="main_category"><font-awesome-icon icon="laptop-code"/>{{ title }}<span class="arrow"></span></p>
+    <p v-on:click="toggle" class="main_category"><font-awesome-icon :icon="icon"/>{{ title }}<span class="arrow"></span></p>
     <vue-slide-up-down :active="active">
       <div class="sub_category_wrap">
         <ul class="sub_category">
@@ -23,7 +23,7 @@ export default {
       active: false
     }
   },
-  props:['title', 'categories'],
+  props:['icon','title', 'categories'],
   components: {
     VueSlideUpDown
   },

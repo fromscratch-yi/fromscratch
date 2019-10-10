@@ -60,7 +60,7 @@ export default {
 .breadcrumb_list li {
   position: relative;
   padding-right: 30px;
-  font-size: 16px;
+  font-size: 14px;
 }
 .breadcrumb_list li::after {
   display: block;
@@ -76,7 +76,7 @@ export default {
   content: "";
 }
 .breadcrumb_list li a {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: rgb(41, 99, 39);
 }

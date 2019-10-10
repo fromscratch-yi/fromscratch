@@ -120,6 +120,7 @@
       <div class="inner">
         <Accordion
           v-bind:key="'Technology'"
+          :icon="'laptop-code'"
           :title="$t('blog.categories.technology.title')"
           :categories="[
             {
@@ -150,6 +151,7 @@
 
         <Accordion
           v-bind:key="'BusinessLife'"
+          :icon="'user-tie'"
           :title="$t('blog.categories.businesslife.title')"
           :categories="[
             {
