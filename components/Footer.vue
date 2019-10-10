@@ -20,7 +20,7 @@
         </li>
         <li class="column">
           <p class="contanc_item">
-            <a href="https://www.facebook.com/y.fromscratch" target="_blank" rel="noopener"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
+            <a href="fb://profile/100009266871916%3A100009266871916%3A1570738429" target="_blank" rel="noopener"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
           </p>
         </li>
       </ul>

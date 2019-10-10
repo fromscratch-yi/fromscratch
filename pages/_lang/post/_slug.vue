@@ -163,8 +163,10 @@ export default {
 
 <style>
 .blog_slug_wrap {
-  max-width: 800px;
   margin: 0 auto;
+}
+.blog_slug_wrap .head_img img {
+  width: 100%;
 }
 .slug .content_inner {
   position: relative;

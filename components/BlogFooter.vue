@@ -98,6 +98,7 @@
             <dt><nuxt-link :to="$i18n.path('blog/')"><span class="em_txt">B</span>log Page</nuxt-link></dt>
             <dd>{{ $t('links.blog') }}</dd>
           </dl>
+          <h3 class="contact_ttl">Contact &amp; Follow</h3>
           <ul class="contact_item_wrap columns is-mobile">
             <li class="column">
               <p class="contanc_item">
@@ -116,7 +117,7 @@
             </li>
             <li class="column">
               <p class="contanc_item">
-                <a href="https://www.facebook.com/y.fromscratch" target="_blank" rel="noopener"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
+                <a href="fb://profile/100009266871916%3A100009266871916%3A1570738429" target="_blank" rel="noopener"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
               </p>
             </li>
           </ul>
@@ -128,6 +129,9 @@
 </template>
 
 <style>
+footer a:hover {
+  font-weight: bold;
+}
 footer .footer_content_wrap {
   max-width: 1300px;
   margin: 40px auto 0;
@@ -233,8 +237,13 @@ footer .footer_content_wrap .footer_content .inner dl dd {
   margin: 0 0 15px;
   padding: 0 0 0 5px;
 }
+footer .footer_content_wrap .footer_content .contact_ttl {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
 footer .footer_content_wrap .footer_content .contact_item_wrap {
-  max-width: 300px;
+  max-width: 250px;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px){

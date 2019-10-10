@@ -19,6 +19,29 @@
             <nuxt-link :to="$i18n.path('work/')"><span class="em_txt">W</span>ork</nuxt-link>
           </p>
         </div>
+        <h3 class="contact_ttl">Contact &amp; Follow</h3>
+        <ul class="contact_item_wrap columns is-mobile">
+          <li class="column">
+            <p class="contanc_item">
+              <a href="mailto:yufroms@gmail.com?subject=[Contact]Contact from Portfolio."><img src="~assets/img/Mail.png" alt="Mail"></a>
+            </p>
+          </li>
+          <li class="column">
+            <p class="contanc_item">
+              <a href="https://twitter.com/IshiyamaYuichi" target="_blank" rel="noopener"><img src="~assets/img/Twitter.png" alt="Twitter"></a>
+            </p>
+          </li>
+          <li class="column">
+            <p class="contanc_item">
+              <a href="https://www.pinterest.jp/yu123daa/" target="_blank" rel="noopener"><img src="~assets/img/Pinterest.png" alt="Pinterest"></a>
+            </p>
+          </li>
+          <li class="column">
+            <p class="contanc_item">
+              <a href="fb://profile/100009266871916%3A100009266871916%3A1570738429" target="_blank" rel="noopener"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="content_wrap sticky_wrap">
@@ -129,7 +152,7 @@ export default {
   font-size: 20px;
   font-weight: bold;
   color: #4a4a4a;
-  background: #77c76e;
+  background: #cac6c6;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
@@ -179,9 +202,25 @@ export default {
 .side_contents .about_wrap .inner .links .link_btn:last-child {
   margin-left: auto;
 }
+.side_contents .about_wrap .inner .contact_ttl {
+  margin: 25px 0 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+.side_contents .about_wrap .inner .contact_item_wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+.side_contents .about_wrap .inner .contact_item_wrap li {
+  padding: 0 0.75rem;
+}
 .side_contents .content_wrap .inner .category_wrap .main_category {
   cursor: pointer;
   font-size: 17px;
+}
+.side_contents .content_wrap .inner .category_wrap .main_category svg {
+  margin-right: 7px;
 }
 .side_contents .content_wrap .inner .category_wrap:first-child {
   border-bottom: 2px dashed #77c76e;
@@ -214,6 +253,8 @@ export default {
 }
 .side_contents .content_wrap .inner .category_wrap .sub_category_wrap li a:hover {
   text-decoration: underline;
+  color: rgb(71, 160, 61);
+  font-weight: bold;
 }
 /* タブレット以上用 */
 @media screen and (min-width: 768px) {
