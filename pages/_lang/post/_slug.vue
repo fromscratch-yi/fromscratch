@@ -53,7 +53,7 @@ export default {
           "@type": "Article",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "${Domain}"
+            "@id": "${Domain}/"
           },
           "headline": "${this.currentPost.fields.title}",
           "image": "https:${this.currentPost.fields.headerImage.fields.file.url}",

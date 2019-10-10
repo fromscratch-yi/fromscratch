@@ -334,7 +334,7 @@ footer {
 }
 .table td, .table th {
   padding: 15px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .table thead td, .table thead th {
   padding: 15px;

@@ -11,7 +11,7 @@ export default {
           "url": "${Domain + this.meta.url}",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "${Domain}"
+            "@id": "${Domain}/"
           },
           "description": "${this.meta.description}"
         }`,
