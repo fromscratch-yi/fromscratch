@@ -5,48 +5,24 @@
       <section class="page_contents_wrap">
         <div class="contents_area">
           <TitleDescription :meta="meta"></TitleDescription>
-          <Terminal :typeTxt="typeTxt"></Terminal>
-          <div class="posts_area">
-            <div class="slide_wrap page_description">
-              <div class="slide_box move">
-                <p class="slide_txt" v-html="$t('blog.introduction')"></p>
-              </div>
-            </div>
-            <div class="blog_menu sub_contents fadein move">
-              <h2>Categories</h2>
-              <div class="max_size_wrap columns is-tablet category_wrap">
-                <section v-for="skill in skills" :key="skill" class="column category">
-                  <h3 class="category_ttl_wrap fadein move">
-                    <nuxt-link :to="$i18n.path('category/' + skill)" class="wrapper">
-                      <span class="category_name" v-html="$t('word.' + skill)"></span>
-                      <picture>
-                        <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill + '.webp')"/>
-                        <img class="rotation_img move" :src="require('~/assets/img/icon_' + skill + '.png')" :alt="$t('word.' + skill)" width="100" height="100">
-                      </picture>
-                    </nuxt-link>
-                  </h3>
-                </section>
-              </div>
-              <h2 class="fadein" v-scroll="handleScroll">New Posts</h2>
-              <p v-if="posts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
-              <section v-else class="columns is-mobile is-multiline new_posts">
-                <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
-                  <Card
-                    v-bind:key="post.fields.slug"
-                    :title="post.fields.title"
-                    :slug="post.fields.slug"
-                    :headerImage="post.fields.headerImage"
-                    :publishedAt="post.fields.publishedAt"
-                    :tags="post.fields.tags"></Card>
-                </div>
-              </section>
+          <div class="slide_wrap page_description">
+            <div class="slide_box move">
+              <p class="slide_txt" v-html="$t(this.$route.params.slug + '.introduction')"></p>
             </div>
           </div>
-          <!-- FootNav -->
-          <div class="link_wrap">
-            <div class="inner_contents_wrap">
-              <p class="left"><nuxt-link :to="$i18n.path('work/')">Work</nuxt-link></p>
-            </div>
+          <div class="posts_area">
+            <p v-if="posts.length <= 0" class="no_posts" v-html="$t('blog.no-posts')"></p>
+            <section v-else class="columns is-mobile is-multiline new_posts">
+              <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
+                <Card
+                  v-bind:key="post.fields.slug"
+                  :title="post.fields.title"
+                  :slug="post.fields.slug"
+                  :headerImage="post.fields.headerImage"
+                  :publishedAt="post.fields.publishedAt"
+                  :tags="post.fields.tags"></Card>
+              </div>
+            </section>
           </div>
         </div>
       </section>
@@ -59,16 +35,14 @@
 
 <script>
 import TitleDescription from "~/components/TitleDescription.vue";
-import Terminal from "~/components/Terminal.vue";
-import Card from '~/components/Card.vue';
 import SideContents from "~/components/SideContents.vue";
 import Breadcrumb from '~/components/Breadcrumb.vue';
+import Card from '~/components/Card.vue';
 import {createClient} from '~/plugins/contentful.js';
 const client = createClient()
 export default {
   components: {
     TitleDescription,
-    Terminal,
     Card,
     SideContents,
     Breadcrumb,
@@ -82,8 +56,9 @@ export default {
     return await client.getEntries({
       'content_type': content_type,
       'order': '-fields.publishedAt',
-      'limit': 3
+      'fields.category[match]': params.slug
     }).then(entries => {
+      console.log(entries)
       return {
         posts: entries.items
       }
@@ -96,30 +71,28 @@ export default {
   },
   data () {
     var meta = {
-      headline: 'Blog',
-      title: this.$t('blog.pageTitle'),
-      description: this.$t('blog.description'),
+      headline: this.$t('word.' + this.$route.params.slug),
+      title: this.$t(this.$route.params.slug + '.pageTitle'),
+      description: this.$t(this.$route.params.slug +'.description'),
       type: 'article',
       url: this.$route.fullPath,
       image: 'https://fromscratch-y.work/ogp.gif',
       lang: this.$i18n.locale
     };
-    var typeTxt = '$ cat ./blog.txt\n\> Welcome to my Blog page.\n\> To output that the study was.';
     var posts = [];
-    var skills = ['frontend', 'backend', 'mobile', 'other'];
-    return { meta, typeTxt, posts, skills }
+    return { meta, posts }
   },
   computed: {
     breadcrumbs: function() {
       return {
         data: [
           {
-            name: 'Top',
-            path: this.$i18n.path('')
+            name: 'Blog',
+            path: this.$i18n.path('blog/')
           },
           {
-            name: 'Blog',
-            path: this.$route.fullPath
+            name: this.$t('word.' + this.$route.params.slug),
+            path: ''
           }
         ]
       }
@@ -145,14 +118,8 @@ export default {
 </script>
 
 <style scoped>
-.blog_wrap .columns.is-multiline.new_posts {
-  margin-bottom: 0;
-}
 .contents_area {
   padding: 15px 20px;
-}
-.blog_wrap .link_wrap {
-  margin-top: 15px;
 }
 .no_posts {
   padding: 15px 0;
@@ -164,11 +131,6 @@ export default {
   text-align: center;
   font-size: 14px;
 }
-@media screen and (min-width: 768px) {
-  .page_contents_wrap .main_ttl {
-    margin: 15px 0 35px;
-  }
-}
 .sub_contents h2 {
   font-size: 25px;
   margin: 0 0 20px;
@@ -176,7 +138,7 @@ export default {
 }
 .sub_contents .category_wrap {
   border-radius: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   position: relative;
   background: #1F1F1F;
 }
@@ -200,7 +162,10 @@ export default {
   color: #62BE56;
   font-weight: bold;
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px) {
+  .page_contents_wrap .main_ttl {
+    margin: 25px 0 35px;
+  }
   .sub_contents .category_wrap {
     padding: 30px 10px;
   }
@@ -217,4 +182,3 @@ export default {
   }
 }
 </style>
-

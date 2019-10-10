@@ -12,14 +12,14 @@
 <script>
 import Header from "~/components/BlogHeader.vue";
 import Footer from "~/components/BlogFooter.vue";
+import Vue from "vue";
 import vueScrollTo from "vue-scrollto";
-
+Vue.use(vueScrollTo);
 export default {
   scrollToTop: true,
   components: {
     Header,
-    Footer,
-    vueScrollTo
+    Footer
   }
 }
 </script>
@@ -212,5 +212,124 @@ a:hover {
     border-radius: 0;
   }
 }
-
+/* animation */
+@-webkit-keyframes slide_box {
+  0% {
+    left: 0;
+    right: auto;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  51% {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  100% {
+    left: auto;
+    right: 0;
+    width: 0;
+  }
+}
+@keyframes slide_box {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  51% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+@-webkit-keyframes slide_txt {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slide_txt {
+  0% { opacity:0; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotation_img {
+  0% {
+    clip-path: circle(0 at 50% 50%);
+    -webkit-clip-path: circle(0 at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    -webkit-clip-path: circle(100% at 50% 50%);
+  }
+}
+.slide_wrap {
+  text-align: center;
+}
+.slide_box {
+  position: relative;
+  display: inline-block;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slide_box:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: #44a043;
+}
+.slide_txt {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slide_box.move:before {
+  -webkit-animation: slide_box 1s ease 0s 1 normal forwards;
+  animation: slide_box 1s ease 0s 1 normal forwards;
+}
+.slide_box.move .slide_txt {
+  -webkit-animation: slide_txt 0s ease .5s 1 normal forwards;
+  animation:slide_txt 0s ease .5s 1 normal forwards;
+}
+.fadein {
+  opacity: 0;
+}
+.move.fadein {
+  opacity: 1;
+  animation: fadein 2s ease;
+}
+.rotation_img {
+  opacity: 0;
+}
+.move.rotation_img {
+  opacity: 1;
+  animation: rotation_img 2s cubic-bezier(.4, 0, .2, 1);
+}
 </style>

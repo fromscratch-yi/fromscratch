@@ -1,0 +1,27 @@
+[debug] [2019-10-10T22:04:26.288Z] ----------------------------------------------------------------------
+[debug] [2019-10-10T22:04:26.291Z] Command:       /Users/yuichi-ishiyama/.nodebrew/node/v12.11.1/bin/node /Users/yuichi-ishiyama/.nodebrew/current/bin/firebase deploy
+[debug] [2019-10-10T22:04:26.291Z] CLI Version:   7.5.0
+[debug] [2019-10-10T22:04:26.291Z] Platform:      darwin
+[debug] [2019-10-10T22:04:26.291Z] Node Version:  v12.11.1
+[debug] [2019-10-10T22:04:26.293Z] Time:          Fri Oct 11 2019 07:04:26 GMT+0900 (GMT+09:00)
+[debug] [2019-10-10T22:04:26.293Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-10T22:04:26.304Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-10T22:04:26.305Z] > authorizing via signed-in user
+[debug] [2019-10-10T22:04:26.305Z] [iam] checking project fromscratch-y for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-10-10T22:04:26.307Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-10-10T22:04:26.308Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-10-10T22:04:26.554Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-10T22:04:26.573Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/fromscratch-y:testIamPermissions  
+
+[debug] [2019-10-10T22:04:27.449Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-10T22:04:27.451Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/fromscratch-y  
+ 
+[debug] [2019-10-10T22:04:28.267Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'fromscratch-y'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-10-10T22:04:28.269Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/fromscratch-y/versions  
+
