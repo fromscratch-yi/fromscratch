@@ -101,7 +101,7 @@ export default {
       'content_type': params.mainCategory,
       'locale': app.i18n.locale,
       'order': '-fields.publishedAt',
-      'fields.category': params.subCategory,
+      'fields.category[match]': params.subCategory,
       'fields.slug': params.slug
     }).then(entries => {
       const posts = entries.items
