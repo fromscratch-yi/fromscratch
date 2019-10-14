@@ -118,7 +118,7 @@ export default {
     content: none;
   }
   .post.card .card-content {
-    padding: 15px;
+    padding: 15px 10px;
     width: calc(70% - 15px);
   }
   .card-image {
