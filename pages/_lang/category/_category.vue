@@ -116,7 +116,7 @@ export default {
 
 <style scoped>
 .contents_area {
-  padding: 15px 20px;
+  padding: 15px 20px 20px;
 }
 .no_posts {
   padding: 15px 0;

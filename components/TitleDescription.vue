@@ -42,5 +42,10 @@ export default {
     height: 4px;
   }
 }
+@media screen and (max-width: 320px){
+  .main_ttl {
+    font-size: 8vw;
+  }
+}
 </style>
 

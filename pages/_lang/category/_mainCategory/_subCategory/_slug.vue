@@ -167,19 +167,20 @@ export default {
 <style>
 .blog_slug_wrap {
   margin: 0 auto;
+  font-family: Noto, Hiragino Sans,Helvetica,Arial,sans-serif;
 }
 .blog_slug_wrap .head_img img {
   width: 100%;
 }
 .slug .content_inner {
   position: relative;
-  width: calc(100% - 30px);
+  width: calc(100% - 15px);
   margin: -13% auto 0;
-  padding: 20px 15px;
+  padding: 20px 17px;
   box-shadow: 0 0 25px -6px #636363;
   background: #fff;
   z-index: 1;
-  font-size: 14px;
+  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   .slug .content_inner {
@@ -188,14 +189,16 @@ export default {
   }
 }
 .slug .content_inner .slug_date {
-  font-size: 13px;
+  padding: 12px 0;
+  font-size: 16px;
   text-align: center;
   color: rgb(57, 72, 85);
 }
 .slug .content_inner .slug_title {
   position: relative;
+  margin: 10px 0 30px;
   padding: 5px 10px 8px;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
 }
@@ -211,24 +214,31 @@ export default {
     -webkit-transform: translateX(-50%);
 }
 .slug .content_inner .tag_wrap {
-  margin: 20px 0 15px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  justify-content: center;
+  margin: 20px 0 35px;
 }
 .slug .content_inner .tag_wrap .tag {
-  margin-right: 5px;
-  margin-bottom: 5px;
-  font-size: 12px;
+  margin-right: 7px;
+  margin-bottom: 7px;
+  font-size: 14px;
   border:1px solid rgb(255, 142, 26);
   color: #464646;
 }
+.slug .content_inner .tag_wrap .tag:last-child {
+  margin-right: 0;
+}
 .slug .content_inner .slug_content {
-  font-size: 15px;
-  line-height: 1.9;
+  font-size: 16px;
+  line-height: 2;
+  padding: 0 15px;
 }
 .slug .content_inner .slug_content .mokuji {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
-  padding: 15px;
+  padding: 15px 12px;
   border: 2px dotted #458c61;
 }
 .slug .content_inner .slug_content .mokuji p {
@@ -255,17 +265,18 @@ export default {
   text-align: center;
 }
 .slug .content_inner .slug_content .h_link {
-   margin-top: -75px;
-   padding-top: 75px;
+   margin-top: -20px;
+   padding-top: 20px;
 }
 .slug .content_inner .slug_content h2 {
-  font-size: 17px;
+  font-size: 23px;
   font-weight:bold;
-  margin: 30px 0;
+  margin: 55px 0 40px;
   position: relative;
   padding-bottom: 5px;
   padding-left: 5px;
   border-bottom: 4px solid #DDD;
+  line-height: 1.6;
 }
 .slug .content_inner .slug_content h2::after {
   position: absolute;
@@ -281,10 +292,11 @@ export default {
   position:relative;
   border-bottom: 1px dashed rgb(71, 160, 61);;
   font-weight:bold;
-  margin: 25px 0;
+  margin: 45px 0 25px;
   padding: 0 0 3px 27px;
-  font-size: 16px;
+  font-size: 19px;
   clear:right;
+  line-height: 1.6;
 }
 .slug .content_inner .slug_content h3::before,
 .slug .content_inner .slug_content h3::after{
@@ -309,19 +321,15 @@ export default {
   -transform: rotate(15deg);
   transform: rotate(15deg);
 }
-.slug .content_inner .slug_content .section_inner {
-  padding: 0 5px;
-}
 .slug .content_inner .slug_content dl {
   margin-bottom: 15px;
 }
 .slug .content_inner .slug_content dl dt {
   position: relative;
-  margin: 20px 0 10px;
-  padding: 0 0 0 18px;
+  margin: 30px 0 15px;
   font-weight: bold;
 }
-.slug .content_inner .slug_content dl dt::before {
+/* .slug .content_inner .slug_content dl dt::before {
   content: '';
   display: block;
   position: absolute;
@@ -334,9 +342,9 @@ export default {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-}
+} */
 .slug .content_inner .slug_content dl dd {
-  padding: 0 10px;
+  padding: 0 5px;
 }
 .slug .content_inner .slug_content p {
   margin: 15px 0 20px;
@@ -351,7 +359,7 @@ export default {
 }
 .slug .content_inner .slug_content .memo {
   position: relative;
-  padding: 10px 15px;
+  padding: 13px 15px;
   margin: 15px 0 20px;
   background: rgb(241, 241, 241);
   border-radius: 5px;
@@ -362,6 +370,7 @@ export default {
   top: -15px;
   right: -5px;
   content: "Memo";
+  font-size: 14px;
   padding: 4px 10px;
   border-radius: 16px;
   background: #fff;
@@ -380,6 +389,7 @@ export default {
   padding-right: 15px;
   color: #4a4a4a;
   text-decoration: none;
+  line-height: 2;
 }
 .slug .content_inner .slug_content a.refer.decoration {
   text-decoration: underline;
@@ -427,7 +437,7 @@ pre {
   overflow-x: auto;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  margin-bottom: 20px;
+  margin: 15px 0 25px;
 }
 pre:not(.hljs) {
   padding: 23px;
@@ -443,7 +453,7 @@ blockquote {
 /* for inline code */
 :not(pre):not(.hljs) > code {
   color: #C9AE75; /* Change the old color so it seems less like an error */
-  font-size: inherit;
+  font-size: 16px;
 }
 code {
   font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
@@ -516,5 +526,44 @@ code {
 
 .hljs-strong {
   font-weight: bold;
+}
+
+/* ipad未満 */
+@media screen and (max-width: 767px){
+  .slug .content_inner .slug_content {
+    padding: 0;
+  }
+  .slug .content_inner .slug_title,
+  .slug .content_inner .slug_content h2 {
+    font-size: 18px;
+  }
+  .slug .content_inner .slug_content h3 {
+    font-size: 17px;
+  }
+  .slug .content_inner .slug_content .mokuji {
+    width: 98%;
+  }
+  .slug .content_inner .slug_content ul {
+    padding: 0px 0.5em 0 24px;
+  }
+}
+/* iPhone8以下 */
+/* iPhone5以下 */
+@media screen and (max-width: 320px){
+  .slug .content_inner,
+  .slug .content_inner .slug_content,
+  :not(pre):not(.hljs) > code {
+    font-size: 4.3vw;
+  }
+  .slug .content_inner .slug_title,
+  .slug .content_inner .slug_content h2 {
+    font-size: 5.7vw;
+  }
+  .slug .content_inner .slug_content h3 {
+    font-size: 5.2vw;
+  }
+  .slug .content_inner .tag_wrap .tag {
+    font-size: 4vw;
+  }
 }
 </style>
