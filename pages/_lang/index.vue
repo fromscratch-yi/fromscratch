@@ -83,7 +83,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .welcom_page {
   width: 100%;
   height: 100%;
@@ -112,7 +112,8 @@ export default {
   overflow: hidden;
   z-index: 3;
 }
-.welcom_page .vue-typer .custom.char.typed {
+.typed,
+.vue-typer .custom.char.typed {
   color: rgb(71, 160, 61);
 }
 .welcom_page .vue-typer .custom.caret {
