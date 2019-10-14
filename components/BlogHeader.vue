@@ -337,6 +337,12 @@ header .nav_menu .page_nav li.nv_logo p {
 header .nav_menu .page_nav li.category_link {
   clear: both;
 }
+header .nav_menu .page_nav li.category_link .nuxt-link-exact-active.nuxt-link-active {
+  cursor: inherit;
+  font-weight: bold;
+  color: #44a043 !important;
+  pointer-events: none;
+}
 header .nav_menu .page_nav li.category_link:last-child {
   margin-bottom: 0;
 }

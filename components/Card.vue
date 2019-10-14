@@ -1,7 +1,7 @@
 <template>
   <div class="card_wrap">
     <div class="post card">
-      <nuxt-link :to="$i18n.path('post/' + slug + '/')" class="wrapper">
+      <nuxt-link :to="$i18n.path(slug + '/')" class="wrapper">
         <div class="card-image">
           <figure class="image is-5by3">
             <img v-bind:src="headerImage.fields.file.url" v-bind:alt="headerImage.fields.description">

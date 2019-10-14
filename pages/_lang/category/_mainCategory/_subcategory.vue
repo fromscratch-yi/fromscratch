@@ -17,7 +17,7 @@
                 <Card
                   v-bind:key="post.fields.slug"
                   :title="post.fields.title"
-                  :slug="post.fields.slug"
+                  :slug="'category/' + category + '/' + post.fields.category + '/' + post.fields.slug"
                   :headerImage="post.fields.headerImage"
                   :publishedAt="post.fields.publishedAt"
                   :tags="post.fields.tags"></Card>
@@ -76,7 +76,8 @@ export default {
       lang: this.$i18n.locale
     };
     var posts = [];
-    return { meta, posts }
+    var category = this.$route.params.mainCategory;
+    return { meta, posts , category}
   },
   computed: {
     breadcrumbs: function() {

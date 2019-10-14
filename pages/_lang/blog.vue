@@ -13,28 +13,27 @@
               </div>
             </div>
             <div class="blog_menu sub_contents fadein move">
-              <h2>Categories</h2>
-              <div class="max_size_wrap columns is-tablet category_wrap">
-                <section v-for="skill in skills" :key="skill" class="column category">
-                  <h3 class="category_ttl_wrap fadein move">
-                    <nuxt-link :to="$i18n.path('category/' + skill)" class="wrapper">
-                      <span class="category_name" v-html="$t('word.' + skill)"></span>
-                      <picture>
-                        <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill + '.webp')"/>
-                        <img class="rotation_img move" :src="require('~/assets/img/icon_' + skill + '.png')" :alt="$t('word.' + skill)" width="100" height="100">
-                      </picture>
-                    </nuxt-link>
-                  </h3>
-                </section>
-              </div>
-              <h2 class="fadein" v-scroll="handleScroll">New Posts</h2>
-              <p v-if="posts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
+              <h2 class="fadein" v-scroll="handleScroll">Technology</h2>
+              <p v-if="technologyPosts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
               <section v-else class="columns is-mobile is-multiline new_posts">
-                <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
+                <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in technologyPosts" :key="post.id">
                   <Card
                     v-bind:key="post.fields.slug"
                     :title="post.fields.title"
-                    :slug="post.fields.slug"
+                    :slug="'category/technology/' + post.fields.category + '/' + post.fields.slug"
+                    :headerImage="post.fields.headerImage"
+                    :publishedAt="post.fields.publishedAt"
+                    :tags="post.fields.tags"></Card>
+                </div>
+              </section>
+              <h2 class="fadein" v-scroll="handleScroll">BusinessLife</h2>
+              <p v-if="businessPosts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
+              <section v-else class="columns is-mobile is-multiline new_posts">
+                <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in businessPosts" :key="post.id">
+                  <Card
+                    v-bind:key="post.fields.slug"
+                    :title="post.fields.title"
+                    :slug="'category/businesslife/' + post.fields.category + '/' + post.fields.slug"
                     :headerImage="post.fields.headerImage"
                     :publishedAt="post.fields.publishedAt"
                     :tags="post.fields.tags"></Card>
@@ -75,24 +74,39 @@ export default {
   },
   layout: 'blog',
   async asyncData ({ app, env, params }) {
-    var content_type = env.CTF_BLOG_POST_TYPE_ID_EN;
-    if (params.lang == 'ja') {
-      content_type = env.CTF_BLOG_POST_TYPE_ID;
-    }
-    return await client.getEntries({
-      'content_type': content_type,
+    var technologyPosts = await client.getEntries({
+      'content_type': 'technology',
+      'locale': app.i18n.locale,
+      'fields.title[exists]': 'true',
       'order': '-fields.publishedAt',
       'limit': 3
     }).then(entries => {
       return {
-        posts: entries.items
+        technologyPosts: entries.items
       }
     })
     .catch(entries => {
       return{
-        posts: []
+        technologyPosts: []
       }
     })
+    var businessPosts = await client.getEntries({
+      'content_type': 'businesslife',
+      'locale': app.i18n.locale,
+      'fields.title[exists]': 'true',
+      'order': '-fields.publishedAt',
+      'limit': 3
+    }).then(entries => {
+      return {
+        businessPosts: entries.items
+      }
+    })
+    .catch(entries => {
+      return{
+        businessPosts: []
+      }
+    })
+    return {technologyPosts: technologyPosts['technologyPosts'] , businessPosts: businessPosts['businessPosts']}
   },
   data () {
     var meta = {
@@ -105,9 +119,10 @@ export default {
       lang: this.$i18n.locale
     };
     var typeTxt = '$ cat ./blog.txt\n\> Welcome to my Blog page.\n\> To output that the study was.';
-    var posts = [];
+    var technologyPosts = [];
+    var businessPosts = [];
     var skills = ['frontend', 'backend', 'mobile', 'other'];
-    return { meta, typeTxt, posts, skills }
+    return { meta, typeTxt, technologyPosts, businessPosts, skills }
   },
   computed: {
     breadcrumbs: function() {
@@ -173,48 +188,6 @@ export default {
   font-size: 25px;
   margin: 0 0 20px;
   text-align: center;
-}
-.sub_contents .category_wrap {
-  border-radius: 20px;
-  margin-bottom: 40px;
-  position: relative;
-  background: #1F1F1F;
-}
-.sub_contents .category_wrap .category {
-  padding: 30px 15px;
-  margin: 0 auto;
-}
-.sub_contents .category_wrap .category .category_ttl_wrap {
-  margin: 0 auto 10px;
-  text-align: center;
-}
-.sub_contents .category_wrap .category .category_ttl_wrap img {
-  display: block;
-  width: 100px;
-  margin: 10px auto 15px;
-}
-.sub_contents .category_wrap .category .category_ttl_wrap .category_name {
-  display: inline-block;
-  padding: 5px;
-  font-size: 15px;
-  color: #62BE56;
-  font-weight: bold;
-}
-@media screen and (max-width: 768px){
-  .sub_contents .category_wrap {
-    padding: 30px 10px;
-  }
-  .sub_contents .category_wrap::after {
-    content: '';
-    clear: both;
-    display: block;
-  }
-  .sub_contents .category_wrap .category {
-    float: left;
-    flex: none;
-    width: 50%;
-    padding: 0;
-  }
 }
 </style>
 
