@@ -1,7 +1,6 @@
 const {getConfigForKeys} = require('./lib/config.js')
 const ctfConfig = getConfigForKeys([
-  'CTF_BLOG_POST_TYPE_ID',
-  'CTF_BLOG_POST_TYPE_ID_EN',
+  'BASE_URL',
   'CTF_SPACE_ID',
   'CTF_CDA_ACCESS_TOKEN',
   'GOOGLE_ANALYTICS_ID'
@@ -68,16 +67,67 @@ module.exports = {
     ],
     generate: true,
     async routes () {
-      var routeList = ['/', '/about', '/work', '/blog', '/ja', '/ja/about', '/ja/work', '/ja/blog'];
+      var routeList = [
+        '/',
+        '/about',
+        '/work',
+        '/blog',
+        '/category/technology',
+        '/category/technology/frontend',
+        '/category/technology/backend',
+        '/category/technology/mobile',
+        '/category/technology/infrastructure',
+        '/category/technology/other',
+        '/category/businesslife',
+        '/category/businesslife/motivation',
+        '/category/businesslife/management',
+        '/category/businesslife/blogskill',
+        '/ja',
+        '/ja/about',
+        '/ja/work',
+        '/ja/blog',
+        '/ja/category/technology',
+        '/ja/category/technology/frontend',
+        '/ja/category/technology/backend',
+        '/ja/category/technology/mobile',
+        '/ja/category/technology/infrastructure',
+        '/ja/category/technology/other',
+        '/ja/category/businesslife/',
+        '/ja/category/businesslife/motivation',
+        '/ja/category/businesslife/management',
+        '/ja/category/businesslife/blogskill',
+      ];
       await cdaClient.getEntries({
-        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
+        'content_type': 'technology',
+        'locale': 'ja',
+        'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
           ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
         )
       });
       await cdaClient.getEntries({
-        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID_EN
+        'content_type': 'businesslife',
+        'locale': 'ja',
+        'fields.title[exists]': 'true'
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
+        )
+      });
+      await cdaClient.getEntries({
+        'content_type': 'technology',
+        'locale': 'en',
+        'fields.title[exists]': 'true'
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/post/${entry.fields.slug}`)
+        )
+      });
+      await cdaClient.getEntries({
+        'content_type': 'businesslife',
+        'locale': 'en',
+        'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
           ...entries.items.map(entry => `/post/${entry.fields.slug}`)
@@ -126,47 +176,90 @@ module.exports = {
     middleware: 'i18n'
   },
   generate: {
+    fallback: true,
     routes: async function() {
       var routeList = [
         '/',
         '/about',
         '/work',
         '/blog',
-        '/category/frontend',
-        '/category/backend',
-        '/category/mobile',
-        '/category/other',
+        '/category/technology',
+        '/category/technology/frontend',
+        '/category/technology/backend',
+        '/category/technology/mobile',
+        '/category/technology/infrastructure',
+        '/category/technology/other',
+        '/category/businesslife',
+        '/category/businesslife/motivation',
+        '/category/businesslife/management',
+        '/category/businesslife/blogskill',
         '/ja',
         '/ja/about',
         '/ja/work',
         '/ja/blog',
-        '/ja/category/frontend',
-        '/ja/category/backend',
-        '/ja/category/mobile',
-        '/ja/category/other'
+        '/ja/category/technology',
+        '/ja/category/technology/frontend',
+        '/ja/category/technology/backend',
+        '/ja/category/technology/mobile',
+        '/ja/category/technology/infrastructure',
+        '/ja/category/technology/other',
+        '/ja/category/businesslife/',
+        '/ja/category/businesslife/motivation',
+        '/ja/category/businesslife/management',
+        '/ja/category/businesslife/blogskill',
       ];
       await cdaClient.getEntries({
-        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID
+        'content_type': 'technology',
+        'locale': 'ja',
+        'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
           ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
         )
       });
       await cdaClient.getEntries({
-        'content_type': ctfConfig.CTF_BLOG_POST_TYPE_ID_EN
+        'content_type': 'businessLife',
+        'locale': 'ja',
+        'fields.title[exists]': 'true'
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/ja/post/${entry.fields.slug}`)
+        )
+      });
+      await cdaClient.getEntries({
+        'content_type': 'technology',
+        'locale': 'en',
+        'fields.title[exists]': 'true'
+      }).then(entries => {
+        routeList.push(
+          ...entries.items.map(entry => `/post/${entry.fields.slug}`)
+        )
+      });
+      await cdaClient.getEntries({
+        'content_type': 'businessLife',
+        'locale': 'en',
+        'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
           ...entries.items.map(entry => `/post/${entry.fields.slug}`)
         )
       });
       return routeList;
+    },
+    router: {
+      extendRoutes(routes, resolve) {
+        routes.push({
+          name: 'notFound',
+          path: '*',
+          component: resolve(__dirname, 'pages/404.vue')
+        });
+      }
     }
   },
   env: {
+    BASE_URL: ctfConfig.BASE_URL,
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
-    CTF_BLOG_POST_TYPE_ID: ctfConfig.CTF_BLOG_POST_TYPE_ID,
-    CTF_BLOG_POST_TYPE_ID_EN: ctfConfig.CTF_BLOG_POST_TYPE_ID_EN
   },
   /*
   ** Build configuration

@@ -1,4 +1,4 @@
 <script>
-import CategorySlug from '~/pages/_lang/category/_category'
-export default CategorySlug
+import MainCategorySlug from '~/pages/_lang/category/_category'
+export default MainCategorySlug
 </script>

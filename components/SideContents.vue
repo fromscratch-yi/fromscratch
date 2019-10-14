@@ -50,30 +50,30 @@
         <Accordion
           v-bind:key="'Technology'"
           :icon="'laptop-code'"
-          :title="$t('blog.categories.technology.title')"
+          :title="$t('blog.categories.technology.name')"
           :categories="[
             {
               'title': 'All',
               'link': 'technology/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.frontend'),
+              'title': $t('blog.categories.technology.subCategory.frontend.name'),
               'link': 'technology/frontend/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.backend'),
+              'title': $t('blog.categories.technology.subCategory.backend.name'),
               'link': 'technology/backend/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.mobile'),
+              'title': $t('blog.categories.technology.subCategory.mobile.name'),
               'link': 'technology/mobile/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.infrastructure'),
+              'title': $t('blog.categories.technology.subCategory.infrastructure.name'),
               'link': 'technology/infrastructure/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.other'),
+              'title': $t('blog.categories.technology.subCategory.other.name'),
               'link': 'technology/other/'
             }
           ]">
@@ -82,30 +82,22 @@
         <Accordion
           v-bind:key="'BusinessLife'"
           :icon="'user-tie'"
-          :title="$t('blog.categories.businesslife.title')"
+          :title="$t('blog.categories.businesslife.name')"
           :categories="[
             {
               'title': 'All',　'link': 'businesslife/'
             },
             {
-              'title': $t('blog.categories.businesslife.subCategory.motivation'),
+              'title': $t('blog.categories.businesslife.subCategory.motivation.name'),
               'link': 'businesslife/motivation/'
             },
             {
-              'title': $t('blog.categories.businesslife.subCategory.management'),
+              'title': $t('blog.categories.businesslife.subCategory.management.name'),
               'link': 'businesslife/management/'
             },
             {
-              'title': $t('blog.categories.businesslife.subCategory.blogskill'),
+              'title': $t('blog.categories.businesslife.subCategory.blogskill.name'),
               'link': 'businesslife/blogskill/'
-            },
-            {
-              'title': $t('blog.categories.businesslife.subCategory.lifestyle'),
-              'link': 'businesslife/lifestyle/'
-            },
-            {
-              'title': $t('blog.categories.businesslife.subCategory.other'),
-              'link': 'businesslife/other/'
             }
           ]">
         </Accordion>

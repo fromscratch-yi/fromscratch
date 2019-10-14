@@ -1,7 +1,7 @@
 {
   "word": {
-    "frontend": "Front-End",
-    "backend": "Back-End",
+    "frontend": "FrontEnd",
+    "backend": "BackEnd",
     "mobile": "Mobile",
     "other": "Other"
   },
@@ -83,56 +83,76 @@
     "note": "Note: For the sake of personal information and confidentiality obligation, I'm changing or hidden some display."
   },
   "blog": {
-    "pageTitle": "Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
+    "pageTitle": "Blog | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) | IT Technology, Software, Programming, Management, BusinessSkill Blog Posts",
     "description": "This is Yuichi Ishiyama's Blog Page. The blog post will be the contents of IT related technology.",
     "introduction": "As an output of what I learned, I write about articles about programming.",
     "no-posts": "No Posts exists.",
     "categories": {
       "technology": {
-        "title": "Technology",
+        "name": "Technology",
+        "pageTitle": "IT Technology | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) | IT Technology, Software, Programming Blog Posts",
+        "introduction": "I write post about IT Technology and Software Development skills. Frontend and Backend and Mobile Application and infrastructure and so on.",
+        "description": "I write post about IT Technology and Software Development skills. Frontend and Backend and Mobile Application and infrastructure and so on.",
         "subCategory": {
-          "frontend": "FrontEnd",
-          "backend": "BackEnd",
-          "mobile": "Mobile",
-          "infrastructure": "Infrastructure",
-          "other": "Other"
+          "frontend": {
+            "name": "FrontEnd",
+            "pageTitle": "FrontEnd | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) | IT Technology, Software, Programming Blog Posts",
+            "description": "I write post about FrontEnd Development skills for web application. Html, CSS, Javascript, and various framework (Nuxt.js, Vue.js, Bluma etc.)",
+            "introduction": "I write post about FrontEnd Development skills for web application. Html, CSS, Javascript, and various framework (Nuxt.js, Vue.js, Bluma etc.)"
+          },
+          "backend": {
+            "name": "BackEnd",
+            "pageTitle": "BackEnd | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) | IT Technology, Software, Programming Blog Posts",
+            "description": "I write post about BackEnd Development skills. PHP, Python, Go, and various framework etc.",
+            "introduction": "I write post about BackEnd Development skills. PHP, Python, Go, and various framework etc."
+          },
+          "mobile": {
+            "name": "Mobile",
+            "pageTitle": "Mobile | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) | IT Technology, Software, Programming Blog Posts",
+            "description": "I write post about Mobile Application Development skills. Native Mobile Application (Kotolin, Swift) and Hybrid Mobile Application skill's post",
+            "introduction": "I write post about Mobile Application Development skills. Native Mobile Application (Kotolin, Swift) and Hybrid Mobile Application skill's post"
+          },
+          "infrastructure": {
+            "name": "Infrastructure",
+            "pageTitle": "Infrastructure and Other Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
+            "description": "I write post about Infrastructure. Docker, VirtualBox, Network, Security skill etc.",
+            "introduction": "I write post about Infrastructure. Docker, VirtualBox, Network, Security skill etc."
+          },
+          "other": {
+            "name": "Other",
+            "pageTitle": "Other Technology | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) | IT Technology, Software, Programming Blog Posts",
+            "description": "I write post about Other Development skills. How to use VScode, git, Chrome Devtool etc.",
+            "introduction": "I write post about Other Development skills. How to use VScode, git, Chrome Devtool etc."
+          }
         }
       },
       "businesslife": {
-        "title": "BusinessLife",
+        "name": "BusinessLife",
+        "pageTitle": "ビジネスライフ | FromsBlog(石山 雄一 ポートフォリオ・ブログ) | ビジネススキル・マネージメント技術ブログ",
+        "description": "ビジネススキル・マネージメント技術関連記事。仕事におけるビジネススキルやセルフマネージメント・モチベーションに関する記事をまとめています。",
+        "introduction": "ビジネススキル・マネージメント技術関連記事。仕事におけるビジネススキルやセルフマネージメント・モチベーションに関する記事をまとめています。管理職になったばかりの方、初めて部下を持った方、自身のモチベーションが上がらないという方のためになるような記事を載せています。",
         "subCategory": {
-          "motivation": "Motivation",
-          "management": "Management",
-          "blogskill": "BlogSkill",
-          "lifestyle": "LifeStyle",
-          "other": "Other"
+          "motivation": {
+            "name": "Motivation",
+            "pageTitle": "モチベーション | FromsBlog(石山 雄一 ポートフォリオ・ブログ) | ビジネススキル・マネージメント技術ブログ",
+            "description": "モチベーション関連記事。自身のモチベーション、部下や後輩のモチベーションの向上に繋がるような記事をまとめています。",
+            "introduction": "モチベーション関連記事。自身のモチベーション、部下や後輩のモチベーションの向上に繋がるような記事をまとめています。モチベーションの上がる本や映画なども紹介していきます。"
+          },
+          "management": {
+            "name": "Management",
+            "pageTitle": "マネージメント | FromsBlog(石山 雄一 ポートフォリオ・ブログ) | ビジネススキル・マネージメント技術ブログ",
+            "description": "マネージメント技術関連記事。はじめて部下を持った方、管理職の方のためになる記事をまとめています。",
+            "introduction": "マネージメント技術関連記事。はじめて部下を持った方、管理職の方のためになる記事をまとめています。"
+          },
+          "blogskill": {
+            "name": "BlogSkill",
+            "pageTitle": "ブログスキル・SEO | FromsBlog(石山 雄一 ポートフォリオ・ブログ) | ブログスキル・SEOブログ",
+            "description": "ブログ・SEO技術関連記事。ブログにおけるSEOやブログ作成・運営に役立つツールや技術についてまとめています。",
+            "introduction": "ブログ・SEO技術関連記事。ブログにおけるSEOやブログ作成・運営に役立つツールや技術についてまとめています。"
+          }
         }
       }
     }
-  },
-  "frontend": {
-    "pageTitle": "FrontEnd Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
-    "description": "I write post about FrontEnd Development skills for web application. Html, CSS, Javascript, and various framework etc.",
-    "introduction": "I write post about FrontEnd Development skills for web application. Html, CSS, Javascript, and various framework etc.",
-    "no-posts": "No Posts exeists."
-  },
-  "backend": {
-    "pageTitle": "BackEnd Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
-    "description": "I write post about BackEnd Development skills. PHP, Python, Go, and various framework etc.",
-    "introduction": "I write post about BackEnd Development skills. PHP, Python, Go, and various framework etc.",
-    "no-posts": "No Posts exeists."
-  },
-  "mobile": {
-    "pageTitle": "Mobile Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
-    "description": "I write post about Mobile Application Development skills. Native Mobile Application (Kotolin, Swift) and Hybrid Mobile Application skill's post",
-    "introduction": "I write post about Mobile Application Development skills. Native Mobile Application (Kotolin, Swift) and Hybrid Mobile Application skill's post",
-    "no-posts": "No Posts exeists."
-  },
-  "other": {
-    "pageTitle": "Infrastructure and Other Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
-    "description": "I write post about Infrastructure and Other Development skills. Docker, VirtualBox, Network, Security, and Other programming skill etc.",
-    "introduction": "I write post about Infrastructure and Other Development skills. Docker, VirtualBox, Network, Security, and Other programming skill etc.",
-    "no-posts": "No Posts exeists."
   },
   "links": {
     "about": "Introduces skills and career.",

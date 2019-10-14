@@ -5,7 +5,7 @@
       <div class="sub_category_wrap">
         <ul class="sub_category">
           <li v-for="category in categories" :key="category.title">
-            <nuxt-link :to="$i18n.path('category/' + category.link)">{{ category.title }}</nuxt-link>
+            <nuxt-link :to="$i18n.path('category/' + category.link)" @click.native="toggle">{{ category.title }}</nuxt-link>
           </li>
         </ul>
       </div>

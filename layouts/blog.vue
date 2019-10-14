@@ -24,6 +24,12 @@ export default {
 }
 </script>
 <style>
+.blog_wrap .nuxt-link-exact-active.nuxt-link-active {
+  cursor: inherit;
+  font-weight: bold;
+  color: #44a043 !important;
+  pointer-events: none;
+}
 html {
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;

@@ -20,33 +20,33 @@
           <div class="inner_ctn">
             <p class="main_category">
               <nuxt-link :to="$i18n.path('category/technology/')">
-                <font-awesome-icon icon="laptop-code"/>{{ $t('blog.categories.technology.title') }}
+                <font-awesome-icon icon="laptop-code"/>{{ $t('blog.categories.technology.name') }}
               </nuxt-link>
             </p>
             <ul class="sub_category">
               <li>
                 <nuxt-link :to="$i18n.path('category/technology/frontend/')">
-                  {{ $t('blog.categories.technology.subCategory.frontend') }}
+                  {{ $t('blog.categories.technology.subCategory.frontend.name') }}
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link :to="$i18n.path('category/technology/backend/')">
-                  {{ $t('blog.categories.technology.subCategory.backend') }}
+                  {{ $t('blog.categories.technology.subCategory.backend.name') }}
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link :to="$i18n.path('category/technology/mobile/')">
-                  {{ $t('blog.categories.technology.subCategory.mobile') }}
+                  {{ $t('blog.categories.technology.subCategory.mobile.name') }}
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link :to="$i18n.path('category/technology/infrastructure/')">
-                  {{ $t('blog.categories.technology.subCategory.infrastructure') }}
+                  {{ $t('blog.categories.technology.subCategory.infrastructure.name') }}
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link :to="$i18n.path('category/technology/other/')">
-                  {{ $t('blog.categories.technology.subCategory.other') }}
+                  {{ $t('blog.categories.technology.subCategory.other.name') }}
                 </nuxt-link>
               </li>
             </ul>
@@ -54,33 +54,23 @@
           <div class="inner_ctn">
             <p class="main_category">
               <nuxt-link :to="$i18n.path('category/businesslife/')">
-                <font-awesome-icon icon="user-tie"/>{{ $t('blog.categories.businesslife.title') }}
+                <font-awesome-icon icon="user-tie"/>{{ $t('blog.categories.businesslife.name') }}
               </nuxt-link>
             </p>
             <ul class="sub_category">
               <li>
                 <nuxt-link :to="$i18n.path('category/businesslife/motivation/')">
-                  {{ $t('blog.categories.businesslife.subCategory.motivation') }}
+                  {{ $t('blog.categories.businesslife.subCategory.motivation.name') }}
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link :to="$i18n.path('category/businesslife/management/')">
-                  {{ $t('blog.categories.businesslife.subCategory.management') }}
+                  {{ $t('blog.categories.businesslife.subCategory.management.name') }}
                 </nuxt-link>
               </li>
               <li>
                 <nuxt-link :to="$i18n.path('category/businesslife/blogskill/')">
-                  {{ $t('blog.categories.businesslife.subCategory.blogskill') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="$i18n.path('category/businesslife/lifestyle/')">
-                  {{ $t('blog.categories.businesslife.subCategory.lifestyle') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="$i18n.path('category/businesslife/other/')">
-                  {{ $t('blog.categories.businesslife.subCategory.other') }}
+                  {{ $t('blog.categories.businesslife.subCategory.blogskill.name') }}
                 </nuxt-link>
               </li>
             </ul>
@@ -265,7 +255,7 @@ footer .footer_content_wrap .footer_content .contact_item_wrap {
   footer .footer_content_wrap .footer_content.category_wrap .inner {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: top;
   }
   footer .footer_content_wrap .footer_content.category_wrap .inner .inner_ctn {
     display: inline-block;

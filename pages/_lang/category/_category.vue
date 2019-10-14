@@ -7,7 +7,7 @@
           <TitleDescription :meta="meta"></TitleDescription>
           <div class="slide_wrap page_description">
             <div class="slide_box move">
-              <p class="slide_txt" v-html="$t(this.$route.params.category + '.introduction')"></p>
+              <p class="slide_txt" v-html="this.$t('blog.categories.' + this.$route.params.category + '.introduction')"></p>
             </div>
           </div>
           <div class="posts_area">
@@ -49,16 +49,12 @@ export default {
   },
   layout: 'blog',
   async asyncData ({ app, env, params }) {
-    var content_type = env.CTF_BLOG_POST_TYPE_ID_EN;
-    if (params.lang == 'ja') {
-      content_type = env.CTF_BLOG_POST_TYPE_ID;
-    }
-    return await client.getEntries({
-      'content_type': content_type,
+    return client.getEntries({
+      'locale': app.i18n.locale,
+      'content_type': params.category,
+      'fields.title[exists]': 'true',
       'order': '-fields.publishedAt',
-      'fields.category[match]': params.category
     }).then(entries => {
-      console.log(entries)
       return {
         posts: entries.items
       }
@@ -71,9 +67,9 @@ export default {
   },
   data () {
     var meta = {
-      headline: this.$t('word.' + this.$route.params.category),
-      title: this.$t(this.$route.params.category + '.pageTitle'),
-      description: this.$t(this.$route.params.category +'.description'),
+      headline: this.$t('blog.categories.' + this.$route.params.category + '.name'),
+      title: this.$t('blog.categories.' + this.$route.params.category + '.pageTitle'),
+      description: this.$t('blog.categories.' + this.$route.params.category +'.description'),
       type: 'article',
       url: this.$route.fullPath,
       image: 'https://fromscratch-y.work/ogp.gif',
@@ -91,7 +87,7 @@ export default {
             path: this.$i18n.path('blog/')
           },
           {
-            name: this.$t('word.' + this.$route.params.category),
+            name: this.$t('blog.categories.' + this.$route.params.category + '.name'),
             path: ''
           }
         ]

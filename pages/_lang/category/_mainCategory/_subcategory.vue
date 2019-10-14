@@ -7,7 +7,7 @@
           <TitleDescription :meta="meta"></TitleDescription>
           <div class="slide_wrap page_description">
             <div class="slide_box move">
-              <p class="slide_txt" v-html="$t(this.$route.params.slug + '.introduction')"></p>
+              <p class="slide_txt" v-html="$t('blog.categories.' + this.$route.params.mainCategory + '.subCategory.' + this.$route.params.subcategory + '.introduction')"></p>
             </div>
           </div>
           <div class="posts_area">
@@ -49,16 +49,12 @@ export default {
   },
   layout: 'blog',
   async asyncData ({ app, env, params }) {
-    var content_type = env.CTF_BLOG_POST_TYPE_ID_EN;
-    if (params.lang == 'ja') {
-      content_type = env.CTF_BLOG_POST_TYPE_ID;
-    }
     return await client.getEntries({
-      'content_type': content_type,
+      'content_type': params.mainCategory,
+      'locale': app.i18n.locale,
       'order': '-fields.publishedAt',
-      'fields.category[match]': params.slug
+      'fields.category[match]': params.subcategory
     }).then(entries => {
-      console.log(entries)
       return {
         posts: entries.items
       }
@@ -71,9 +67,9 @@ export default {
   },
   data () {
     var meta = {
-      headline: this.$t('word.' + this.$route.params.slug),
-      title: this.$t(this.$route.params.slug + '.pageTitle'),
-      description: this.$t(this.$route.params.slug +'.description'),
+      headline: this.$t('blog.categories.' + this.$route.params.mainCategory + '.subCategory.' + this.$route.params.subcategory + '.name'),
+      title: this.$t('blog.categories.' + this.$route.params.mainCategory + '.subCategory.' + this.$route.params.subcategory + '.pageTitle'),
+      description: this.$t('blog.categories.' + this.$route.params.mainCategory + '.subCategory.' + this.$route.params.subcategory + '.description'),
       type: 'article',
       url: this.$route.fullPath,
       image: 'https://fromscratch-y.work/ogp.gif',
@@ -91,7 +87,11 @@ export default {
             path: this.$i18n.path('blog/')
           },
           {
-            name: this.$t('word.' + this.$route.params.slug),
+            name: this.$t('blog.categories.' + this.$route.params.mainCategory + '.name'),
+            path: this.$i18n.path('category/' + this.$route.params.mainCategory + '/')
+          },
+          {
+            name: this.$t('blog.categories.' + this.$route.params.mainCategory + '.subCategory.' + this.$route.params.subcategory + '.name'),
             path: ''
           }
         ]

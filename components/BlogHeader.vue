@@ -47,33 +47,33 @@
             <li class="category_link">
               <p class="main_category">
                 <nuxt-link :to="$i18n.path('category/technology/')">
-                  <font-awesome-icon icon="laptop-code"/>{{ $t('blog.categories.technology.title') }}
+                  <font-awesome-icon icon="laptop-code"/>{{ $t('blog.categories.technology.name') }}
                 </nuxt-link>
               </p>
               <ul class="sub_category">
                 <li>
                   <nuxt-link :to="$i18n.path('category/technology/frontend/')">
-                    {{ $t('blog.categories.technology.subCategory.frontend') }}
+                    {{ $t('blog.categories.technology.subCategory.frontend.name') }}
                   </nuxt-link>
                 </li>
                 <li>
                   <nuxt-link :to="$i18n.path('category/technology/backend/')">
-                    {{ $t('blog.categories.technology.subCategory.backend') }}
+                    {{ $t('blog.categories.technology.subCategory.backend.name') }}
                   </nuxt-link>
                 </li>
                 <li>
                   <nuxt-link :to="$i18n.path('category/technology/mobile/')">
-                    {{ $t('blog.categories.technology.subCategory.mobile') }}
+                    {{ $t('blog.categories.technology.subCategory.mobile.name') }}
                   </nuxt-link>
                 </li>
                 <li>
                   <nuxt-link :to="$i18n.path('category/technology/infrastructure/')">
-                    {{ $t('blog.categories.technology.subCategory.infrastructure') }}
+                    {{ $t('blog.categories.technology.subCategory.infrastructure.name') }}
                   </nuxt-link>
                 </li>
                 <li>
                   <nuxt-link :to="$i18n.path('category/technology/other/')">
-                    {{ $t('blog.categories.technology.subCategory.other') }}
+                    {{ $t('blog.categories.technology.subCategory.other.name') }}
                   </nuxt-link>
                 </li>
               </ul>
@@ -81,33 +81,23 @@
             <li class="category_link">
               <p class="main_category">
                 <nuxt-link :to="$i18n.path('category/businesslife/')">
-                  <font-awesome-icon icon="user-tie"/>{{ $t('blog.categories.businesslife.title') }}
+                  <font-awesome-icon icon="user-tie"/>{{ $t('blog.categories.businesslife.name') }}
                 </nuxt-link>
               </p>
               <ul class="sub_category">
                 <li>
                   <nuxt-link :to="$i18n.path('category/businesslife/motivation/')">
-                    {{ $t('blog.categories.businesslife.subCategory.motivation') }}
+                    {{ $t('blog.categories.businesslife.subCategory.motivation.name') }}
                   </nuxt-link>
                 </li>
                 <li>
                   <nuxt-link :to="$i18n.path('category/businesslife/management/')">
-                    {{ $t('blog.categories.businesslife.subCategory.management') }}
+                    {{ $t('blog.categories.businesslife.subCategory.management.name') }}
                   </nuxt-link>
                 </li>
                 <li>
                   <nuxt-link :to="$i18n.path('category/businesslife/blogskill/')">
-                    {{ $t('blog.categories.businesslife.subCategory.blogskill') }}
-                  </nuxt-link>
-                </li>
-                <li>
-                  <nuxt-link :to="$i18n.path('category/businesslife/lifestyle/')">
-                    {{ $t('blog.categories.businesslife.subCategory.lifestyle') }}
-                  </nuxt-link>
-                </li>
-                <li>
-                  <nuxt-link :to="$i18n.path('category/businesslife/other/')">
-                    {{ $t('blog.categories.businesslife.subCategory.other') }}
+                    {{ $t('blog.categories.businesslife.subCategory.blogskill.name') }}
                   </nuxt-link>
                 </li>
               </ul>
@@ -121,30 +111,30 @@
         <Accordion
           v-bind:key="'Technology'"
           :icon="'laptop-code'"
-          :title="$t('blog.categories.technology.title')"
+          :title="$t('blog.categories.technology.name')"
           :categories="[
             {
               'title': 'All',
               'link': 'technology/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.frontend'),
+              'title': $t('blog.categories.technology.subCategory.frontend.name'),
               'link': 'technology/frontend/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.backend'),
+              'title': $t('blog.categories.technology.subCategory.backend.name'),
               'link': 'technology/backend/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.mobile'),
+              'title': $t('blog.categories.technology.subCategory.mobile.name'),
               'link': 'technology/mobile/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.infrastructure'),
+              'title': $t('blog.categories.technology.subCategory.infrastructure.name'),
               'link': 'technology/infrastructure/'
             },
             {
-              'title': $t('blog.categories.technology.subCategory.other'),
+              'title': $t('blog.categories.technology.subCategory.other.name'),
               'link': 'technology/other/'
             }
           ]"></Accordion>
@@ -152,30 +142,22 @@
         <Accordion
           v-bind:key="'BusinessLife'"
           :icon="'user-tie'"
-          :title="$t('blog.categories.businesslife.title')"
+          :title="$t('blog.categories.businesslife.name')"
           :categories="[
             {
               'title': 'All',　'link': 'businesslife/'
             },
             {
-              'title': $t('blog.categories.businesslife.subCategory.motivation'),
+              'title': $t('blog.categories.businesslife.subCategory.motivation.name'),
               'link': 'businesslife/motivation/'
             },
             {
-              'title': $t('blog.categories.businesslife.subCategory.management'),
+              'title': $t('blog.categories.businesslife.subCategory.management.name'),
               'link': 'businesslife/management/'
             },
             {
-              'title': $t('blog.categories.businesslife.subCategory.blogskill'),
+              'title': $t('blog.categories.businesslife.subCategory.blogskill.name'),
               'link': 'businesslife/blogskill/'
-            },
-            {
-              'title': $t('blog.categories.businesslife.subCategory.lifestyle'),
-              'link': 'businesslife/lifestyle/'
-            },
-            {
-              'title': $t('blog.categories.businesslife.subCategory.other'),
-              'link': 'businesslife/other/'
             }
           ]"></Accordion>
 
