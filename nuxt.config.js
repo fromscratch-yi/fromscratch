@@ -54,7 +54,8 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/bulma',
     'nuxt-fontawesome',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap'
   ],
   sitemap: {
     path: '/sitemap.xml', // 出力パス
@@ -63,39 +64,42 @@ module.exports = {
     gzip: true,
     exclude: [ // 除外項目
       '/404*',
-      '/500*'
+      '/500*',
+      '/about',
+      '/work',
+      '/blog'
     ],
     generate: true,
     async routes () {
       var routeList = [
         '/',
-        '/about',
-        '/work',
-        '/blog',
-        '/category/technology',
-        '/category/technology/frontend',
-        '/category/technology/backend',
-        '/category/technology/mobile',
-        '/category/technology/infrastructure',
-        '/category/technology/other',
-        '/category/businesslife',
-        '/category/businesslife/motivation',
-        '/category/businesslife/management',
-        '/category/businesslife/blogskill',
-        '/ja',
-        '/ja/about',
-        '/ja/work',
-        '/ja/blog',
-        '/ja/category/technology',
-        '/ja/category/technology/frontend',
-        '/ja/category/technology/backend',
-        '/ja/category/technology/mobile',
-        '/ja/category/technology/infrastructure',
-        '/ja/category/technology/other',
+        '/about/',
+        '/work/',
+        '/blog/',
+        '/category/technology/',
+        '/category/technology/frontend/',
+        '/category/technology/backend/',
+        '/category/technology/mobile/',
+        '/category/technology/infrastructure/',
+        '/category/technology/other/',
+        '/category/businesslife/',
+        '/category/businesslife/motivation/',
+        '/category/businesslife/management/',
+        '/category/businesslife/blogskill/',
+        '/ja/',
+        '/ja/about/',
+        '/ja/work/',
+        '/ja/blog/',
+        '/ja/category/technology/',
+        '/ja/category/technology/frontend/',
+        '/ja/category/technology/backend/',
+        '/ja/category/technology/mobile/',
+        '/ja/category/technology/infrastructure/',
+        '/ja/category/technology/other/',
         '/ja/category/businesslife/',
-        '/ja/category/businesslife/motivation',
-        '/ja/category/businesslife/management',
-        '/ja/category/businesslife/blogskill',
+        '/ja/category/businesslife/motivation/',
+        '/ja/category/businesslife/management/',
+        '/ja/category/businesslife/blogskill/',
       ];
       await cdaClient.getEntries({
         'content_type': 'technology',
@@ -103,7 +107,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/category/technology/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/ja/category/technology/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -112,7 +116,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/category/businesslife/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/ja/category/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -121,7 +125,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/category/technology/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/category/technology/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -130,7 +134,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/category/businesslife/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/category/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       return routeList;

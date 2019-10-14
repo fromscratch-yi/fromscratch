@@ -175,7 +175,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .profile_area .image_area {
   max-width: 200px;
   margin: 0 auto;
