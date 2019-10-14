@@ -67,7 +67,7 @@ export default {
   }
   .pc_category_nav .sub_category {
     border: 2px solid #47a03d;
-    width: 180px;
+    width: 160px;
     border-top: none;
   }
   .pc_category_nav .sub_category li {

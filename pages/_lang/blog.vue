@@ -13,7 +13,7 @@
               </div>
             </div>
             <div class="blog_menu sub_contents fadein move">
-              <h2 class="fadein" v-scroll="handleScroll">Technology</h2>
+              <h2 class="fadein" v-scroll="handleScroll">{{ $t('blog.categories.technology.name') }}</h2>
               <p v-if="technologyPosts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
               <section v-else class="columns is-mobile is-multiline new_posts">
                 <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in technologyPosts" :key="post.id">
@@ -26,7 +26,7 @@
                     :tags="post.fields.tags"></Card>
                 </div>
               </section>
-              <h2 class="fadein" v-scroll="handleScroll">BusinessLife</h2>
+              <h2 class="fadein" v-scroll="handleScroll">{{ $t('blog.categories.businesslife.name') }}</h2>
               <p v-if="businessPosts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
               <section v-else class="columns is-mobile is-multiline new_posts">
                 <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in businessPosts" :key="post.id">
@@ -177,7 +177,7 @@ export default {
 .page_description {
   margin: 35px 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
 }
 @media screen and (min-width: 768px) {
   .page_contents_wrap .main_ttl {
@@ -185,9 +185,31 @@ export default {
   }
 }
 .sub_contents h2 {
-  font-size: 25px;
-  margin: 0 0 20px;
-  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  margin: 40px 0 25px;
+  position: relative;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-bottom: 4px solid #DDD;
+  line-height: 1.6;
+}
+.sub_contents h2::after {
+    position: absolute;
+    content: " ";
+    border-bottom: solid 4px rgb(71, 160, 61);
+    bottom: -4px;
+    left: 0;
+    width: 15%;
+    display: block;
+}
+@media screen and (max-width: 768px) {
+  .blog_menu .columns .column.move {
+    margin-bottom: 10px;
+  }
+  .blog_menu .columns .column.move:last-child {
+    margin-bottom: 0;
+  }
 }
 </style>
 

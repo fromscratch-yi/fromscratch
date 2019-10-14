@@ -39,7 +39,7 @@ html::-webkit-scrollbar {
 }
 .note {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 13px;
   color: #595959;
 }
 .link_wrap {

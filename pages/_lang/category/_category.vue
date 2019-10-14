@@ -126,7 +126,7 @@ export default {
 .page_description {
   margin: 35px 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
 }
 .sub_contents h2 {
   font-size: 25px;
@@ -176,6 +176,14 @@ export default {
     flex: none;
     width: 50%;
     padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .posts_area .columns .column.move {
+    margin-bottom: 10px;
+  }
+  .posts_area .columns .column.move:last-child {
+    margin-bottom: 0;
   }
 }
 </style>

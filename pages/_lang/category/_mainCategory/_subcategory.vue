@@ -130,7 +130,7 @@ export default {
 .page_description {
   margin: 35px 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
 }
 .sub_contents h2 {
   font-size: 25px;

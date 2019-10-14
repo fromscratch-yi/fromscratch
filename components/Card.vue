@@ -42,7 +42,7 @@ export default {
   height: 100%;
 }
 .post.card .card-content {
-  padding: 12px 10px 5px;
+  padding: 18px 15px;
 }
 .post.card a {
   position: relative;
@@ -87,12 +87,58 @@ export default {
   font-size: 15px;
   font-weight: bold;
 }
-.post.card .tags {
-  margin: 10px 0 0;
-}
 .post.card .tags .tag {
   font-size: 12px;
   border:1px solid rgb(255, 142, 26);
   color: #464646;
+  margin-bottom: 0;
+  margin-top: 7px;
+}
+.card-image .image {
+  overflow: hidden;
+}
+.card-image .image img {
+  transition-duration: 0.5s;
+}
+.post.card a:hover .card-image .image img {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.post.card .tags:last-child {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .post.card a {
+    display: flex;
+    align-items: center;
+  }
+  .post.card a::before, .post.card a::after {
+    content: none;
+  }
+  .post.card .card-content {
+    padding: 15px;
+    width: calc(70% - 15px);
+  }
+  .card-image {
+    width: 30%;
+    min-width: 140px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .card-image .image {
+    text-align: center;
+    padding: 0;
+  }
+  .card-image .image img {
+    display: block;
+    position: static;
+    height: auto;
+    min-width: 120px;
+    min-height: 120px;
+    object-fit: cover;
+  }
 }
 </style>
