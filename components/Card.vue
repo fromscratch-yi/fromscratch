@@ -1,5 +1,6 @@
 <template>
   <div class="card_wrap">
+    <p class="sub_category" :class="mainCategory">{{ subCategory }}</p>
     <div class="post card">
       <nuxt-link :to="$i18n.path(slug + '/')" class="wrapper">
         <div class="card-image">
@@ -21,7 +22,7 @@
 
 <script>
 export default {
-  props: ['title', 'slug', 'headerImage', 'publishedAt', 'tags'],
+  props: ['mainCategory', 'subCategory', 'title', 'slug', 'headerImage', 'publishedAt', 'tags'],
   methods: {
     format: function(date) {
       var month = '' + (date.getMonth() + 1),
@@ -40,6 +41,34 @@ export default {
 .card_wrap,
 .post.card {
   height: 100%;
+}
+.card_wrap {
+  position: relative;
+}
+.card_wrap .sub_category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  min-width: 100px;
+  text-align: center;
+  padding: 3px;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px #f9f9f9a3;
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
+  .card_wrap .sub_category {
+    left: auto;
+    right: 0;
+  }
+}
+.card_wrap .sub_category.technology {
+  background: #ff9000a8;
+  color: #151515;
+}
+.card_wrap .sub_category.businesslife {
+  background: #2ec126a8;
+  color: #151515;
 }
 .post.card .card-content {
   padding: 18px 15px;

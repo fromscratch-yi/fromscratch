@@ -19,6 +19,8 @@
                 <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in technologyPosts" :key="post.id">
                   <Card
                     v-bind:key="post.fields.slug"
+                    :mainCategory="'technology'"
+                    :subCategory="$t('blog.categories.technology.subCategory.' + post.fields.category + '.name')"
                     :title="post.fields.title"
                     :slug="'category/technology/' + post.fields.category + '/' + post.fields.slug"
                     :headerImage="post.fields.headerImage"
@@ -32,6 +34,8 @@
                 <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in businessPosts" :key="post.id">
                   <Card
                     v-bind:key="post.fields.slug"
+                    :mainCategory="'businesslife'"
+                    :subCategory="$t('blog.categories.businesslife.subCategory.' + post.fields.category + '.name')"
                     :title="post.fields.title"
                     :slug="'category/businesslife/' + post.fields.category + '/' + post.fields.slug"
                     :headerImage="post.fields.headerImage"

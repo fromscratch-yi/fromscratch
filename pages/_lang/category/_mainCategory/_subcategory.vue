@@ -16,6 +16,8 @@
               <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in posts" :key="post.id">
                 <Card
                   v-bind:key="post.fields.slug"
+                  :mainCategory="category"
+                  :subCategory="$t('blog.categories.' + category + '.subCategory.' + post.fields.category + '.name')"
                   :title="post.fields.title"
                   :slug="'category/' + category + '/' + post.fields.category + '/' + post.fields.slug"
                   :headerImage="post.fields.headerImage"
