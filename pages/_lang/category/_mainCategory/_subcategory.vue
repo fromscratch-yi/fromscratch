@@ -3,7 +3,7 @@
     <breadcrumb :breadcrumbs="breadcrumbs" />
     <div class="contents_inner">
       <section class="page_contents_wrap">
-        <div class="contents_area">
+        <div class="contents_area fadein move">
           <TitleDescription :meta="meta"></TitleDescription>
           <div class="slide_wrap page_description">
             <div class="slide_box move">

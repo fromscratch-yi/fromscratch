@@ -1,16 +1,22 @@
 <template>
-  <div class="side_contents">
+  <div class="fadein move side_contents">
     <div class="content_wrap about_wrap">
       <h2><font-awesome-icon icon="id-card"/>About Me</h2>
       <div class="inner">
-        <figure class="profile_img image">
-          <picture>
-            <source type="image/webp" srcset="~assets/img/YuichiIshiyama.webp"/>
-            <img class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
-          </picture>
-        </figure>
+        <div class="image_area">
+          <figure class="profile_img rotation_img image move" v-scroll="handleScroll">
+            <picture>
+              <source type="image/webp" srcset="~assets/img/YuichiIshiyama.webp"/>
+              <img class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
+            </picture>
+          </figure>
+        </div>
         <h3 class="name" v-html="$t('about.name')"></h3>
-        <div class="introduction_wrap" v-html="$t('about.kind')"></div>
+        <div class="slide_wrap">
+          <div class="slide_box move">
+            <div class="slide_txt introduction_wrap" v-html="$t('about.kind')"></div>
+          </div>
+        </div>
         <div class="links">
           <p class="link_btn">
             <nuxt-link :to="$i18n.path('about/')"><span class="em_txt">A</span>bout</nuxt-link>
@@ -116,10 +122,25 @@ export default {
   },
   components: {
     Accordion,
+  },
+  methods: {
+    handleScroll: (evt, el) => {
+      let top = el.getBoundingClientRect().top;
+      var offcet = 0;
+      if (window.innerHeight > 900) {
+        offcet = 1200;
+      } else {
+        offcet = 600;
+      }
+      if (window.scrollY > top + window.pageYOffset - offcet) {
+        el.classList.add('move');
+        return true;
+      }
+      return false;
+    },
   }
 }
 </script>
-
 <style>
 .side_contents {
   display: flex;
@@ -163,6 +184,9 @@ export default {
   font-size: 18px;
   padding: 15px 0 10px;
   text-align: center;
+}
+.side_contents .about_wrap .inner .introduction_wrap {
+  font-size: 16px;
 }
 .side_contents .about_wrap .inner .links {
   display: flex;

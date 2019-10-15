@@ -1,15 +1,17 @@
 <template>
   <footer>
-    <div class="footer_content_wrap columns is-tablet">
+    <div class="fadein footer_content_wrap columns is-tablet" v-scroll="handleScroll">
       <section class="footer_content column is-half-desktop about_wrap">
         <h2><font-awesome-icon icon="id-card"/>About Me</h2>
         <div class="inner">
-          <figure class="profile_img image">
-            <picture>
-              <source type="image/webp" srcset="~assets/img/YuichiIshiyama.webp"/>
-              <img class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
-            </picture>
-          </figure>
+          <div class="image_area">
+            <figure class="profile_img rotation_img image" v-scroll="handleScroll">
+              <picture>
+                <source type="image/webp" srcset="~assets/img/YuichiIshiyama.webp"/>
+                <img class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
+              </picture>
+            </figure>
+          </div>
           <h3 class="name" v-html="$t('about.name')"></h3>
           <div class="introduction_wrap" v-html="$t('about.introduction')"></div>
         </div>
@@ -87,6 +89,26 @@
     <p class="copyright">&copy;2019 FromScratch All Rights Reserved</p>
   </footer>
 </template>
+<script>
+export default {
+  methods: {
+    handleScroll: (evt, el) => {
+      let top = el.getBoundingClientRect().top;
+      var offcet = 0;
+      if (window.innerHeight > 900) {
+        offcet = 1200;
+      } else {
+        offcet = 600;
+      }
+      if (window.scrollY > top + window.pageYOffset - offcet) {
+        el.classList.add('move');
+        return true;
+      }
+      return false;
+    },
+  },
+}
+</script>
 
 <style>
 footer .nuxt-link-exact-active.nuxt-link-active {
@@ -136,8 +158,10 @@ footer .footer_content_wrap .footer_content .inner .name {
   font-size: 22px;
 }
 footer .footer_content_wrap .footer_content .inner .introduction_wrap {
+  text-align: left;
   float: none;
   margin: 15px 0 0;
+  font-size: 16px;
 }
 footer .copyright {
   padding: 15px 0;

@@ -3,7 +3,7 @@
     <breadcrumb :breadcrumbs="breadcrumbs" />
     <div class="contents_inner">
       <section class="page_contents_wrap">
-        <div class="contents_area">
+        <div class="contents_area fadein move">
           <div class="blog_slug_wrap">
             <section class="slug">
               <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url" :alt="currentPost.fields.title"></p>

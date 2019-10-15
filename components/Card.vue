@@ -10,7 +10,7 @@
         </div>
         <div class="card-content">
           <p class="card_date">{{ publishedAt }}</p>
-          <h1 class="card_title">{{ title }}</h1>
+          <h3 class="card_title">{{ title }}</h3>
           <div class="tags">
             <span v-for="tag in tags" :key="tag.id" class="tag">#{{tag}}</span>
           </div>
@@ -56,7 +56,7 @@ export default {
   font-size: 14px;
   text-shadow: 1px 1px 1px #f9f9f9a3;
 }
-@media screen and (min-width: 321px) and (max-width: 768px) {
+@media screen and (min-width: 354px) and (max-width: 768px) {
   .card_wrap .sub_category {
     left: auto;
     right: 0;

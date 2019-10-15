@@ -3,7 +3,7 @@
     <breadcrumb :breadcrumbs="breadcrumbs" />
     <div class="contents_inner">
       <section class="page_contents_wrap">
-        <div class="contents_area">
+        <div class="fadein move contents_area">
           <TitleDescription :meta="meta"></TitleDescription>
           <Terminal :typeTxt="typeTxt"></Terminal>
           <div class="posts_area">
