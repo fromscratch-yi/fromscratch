@@ -40,6 +40,7 @@
                 </div>
               </section>
             </div>
+            <ShareButtons :title="meta.title" />
           </div>
           <!-- FootNav -->
           <div class="link_wrap">
@@ -59,6 +60,7 @@
 <script>
 import TitleDescription from "~/components/TitleDescription.vue";
 import Terminal from "~/components/Terminal.vue";
+import ShareButtons from "~/components/ShareButtons"
 import Card from '~/components/Card.vue';
 import SideContents from "~/components/SideContents.vue";
 import Breadcrumb from '~/components/Breadcrumb.vue';
@@ -71,6 +73,7 @@ export default {
     Card,
     SideContents,
     Breadcrumb,
+    ShareButtons
   },
   layout: 'blog',
   async asyncData ({ app, env, params }) {

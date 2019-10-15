@@ -23,6 +23,7 @@
               </nav>
             </div>
           </div>
+          <ShareButtons :title="currentPost.fields.title + ' - FromScratch'" />
         </div>
       </section>
       <section class="side_contents_wrap">
@@ -35,6 +36,7 @@
 <script>
 import SideContents from "~/components/SideContents.vue";
 import Breadcrumb from '~/components/Breadcrumb.vue';
+import ShareButtons from "~/components/ShareButtons"
 import {createClient} from '~/plugins/contentful.js';
 const client = createClient();
 const Domain = 'https://fromscratch-y.work';
@@ -42,6 +44,7 @@ export default {
   components: {
     SideContents,
     Breadcrumb,
+    ShareButtons
   },
   layout: 'blog',
   head () {

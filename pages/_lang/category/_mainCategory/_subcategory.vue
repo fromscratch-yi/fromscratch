@@ -24,6 +24,7 @@
               </div>
             </section>
           </div>
+          <ShareButtons :title="meta.title" />
         </div>
       </section>
       <section class="side_contents_wrap">
@@ -36,6 +37,7 @@
 <script>
 import TitleDescription from "~/components/TitleDescription.vue";
 import SideContents from "~/components/SideContents.vue";
+import ShareButtons from "~/components/ShareButtons"
 import Breadcrumb from '~/components/Breadcrumb.vue';
 import Card from '~/components/Card.vue';
 import {createClient} from '~/plugins/contentful.js';
@@ -46,6 +48,7 @@ export default {
     Card,
     SideContents,
     Breadcrumb,
+    ShareButtons
   },
   layout: 'blog',
   async asyncData ({ app, env, params }) {

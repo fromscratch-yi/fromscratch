@@ -24,6 +24,7 @@
               </div>
             </section>
           </div>
+          <ShareButtons :title="meta.title" />
         </div>
       </section>
       <section class="side_contents_wrap">
@@ -35,6 +36,7 @@
 
 <script>
 import TitleDescription from "~/components/TitleDescription.vue";
+import ShareButtons from "~/components/ShareButtons"
 import SideContents from "~/components/SideContents.vue";
 import Breadcrumb from '~/components/Breadcrumb.vue';
 import Card from '~/components/Card.vue';
@@ -46,6 +48,7 @@ export default {
     Card,
     SideContents,
     Breadcrumb,
+    ShareButtons
   },
   layout: 'blog',
   async asyncData ({ app, env, params }) {

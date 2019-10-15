@@ -24,29 +24,9 @@
               </nuxt-link>
             </p>
             <ul class="sub_category">
-              <li>
-                <nuxt-link :to="$i18n.path('category/technology/frontend/')">
-                  {{ $t('blog.categories.technology.subCategory.frontend.name') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="$i18n.path('category/technology/backend/')">
-                  {{ $t('blog.categories.technology.subCategory.backend.name') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="$i18n.path('category/technology/mobile/')">
-                  {{ $t('blog.categories.technology.subCategory.mobile.name') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="$i18n.path('category/technology/infrastructure/')">
-                  {{ $t('blog.categories.technology.subCategory.infrastructure.name') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="$i18n.path('category/technology/other/')">
-                  {{ $t('blog.categories.technology.subCategory.other.name') }}
+              <li v-for="(val, key) in $t('blog.categories.technology.subCategory')" :key="key">
+                <nuxt-link :to="$i18n.path('category/technology/' + key + '/')">
+                  {{ val.name }}
                 </nuxt-link>
               </li>
             </ul>
@@ -58,19 +38,9 @@
               </nuxt-link>
             </p>
             <ul class="sub_category">
-              <li>
-                <nuxt-link :to="$i18n.path('category/businesslife/motivation/')">
-                  {{ $t('blog.categories.businesslife.subCategory.motivation.name') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="$i18n.path('category/businesslife/management/')">
-                  {{ $t('blog.categories.businesslife.subCategory.management.name') }}
-                </nuxt-link>
-              </li>
-              <li>
-                <nuxt-link :to="$i18n.path('category/businesslife/blogskill/')">
-                  {{ $t('blog.categories.businesslife.subCategory.blogskill.name') }}
+              <li v-for="(val, key) in $t('blog.categories.businesslife.subCategory')" :key="key">
+                <nuxt-link :to="$i18n.path('category/businesslife/' + key + '/')">
+                  {{ val.name }}
                 </nuxt-link>
               </li>
             </ul>

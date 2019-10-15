@@ -114,7 +114,7 @@
           },
           "infrastructure": {
             "name": "Infrastructure",
-            "pageTitle": "Infrastructure and Other Blog | Yuichi Ishiyama's Blog | IT, Software, Programming 's Blog Posts",
+            "pageTitle": "Infrastructure and Other Blog | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) | IT, Software, Programming 's Blog Posts",
             "description": "I write post about Infrastructure. Docker, VirtualBox, Network, Security skill etc.",
             "introduction": "I write post about Infrastructure. Docker, VirtualBox, Network, Security skill etc."
           },
@@ -128,7 +128,7 @@
       },
       "businesslife": {
         "name": "BusinessLife",
-        "pageTitle": "ビジネスライフ | FromsBlog(石山 雄一 ポートフォリオ・ブログ) | ビジネススキル・マネージメント技術ブログ",
+        "pageTitle": "BusinessLife | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) |  Managiment, Business Skill",
         "description": "ビジネススキル・マネージメント技術関連記事。仕事におけるビジネススキルやセルフマネージメント・モチベーションに関する記事をまとめています。",
         "introduction": "ビジネススキル・マネージメント技術関連記事。仕事におけるビジネススキルやセルフマネージメント・モチベーションに関する記事をまとめています。管理職になったばかりの方、初めて部下を持った方、自身のモチベーションが上がらないという方のためになるような記事を載せています。",
         "subCategory": {
