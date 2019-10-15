@@ -123,7 +123,7 @@ export default {
   }
   .card-image {
     width: 30%;
-    min-width: 140px;
+    min-width: 125px;
     padding: 10px;
     text-align: center;
     overflow: hidden;
@@ -136,8 +136,8 @@ export default {
     display: block;
     position: static;
     height: auto;
-    min-width: 120px;
-    min-height: 120px;
+    min-width: 100px;
+    min-height: 100px;
     object-fit: cover;
   }
 }

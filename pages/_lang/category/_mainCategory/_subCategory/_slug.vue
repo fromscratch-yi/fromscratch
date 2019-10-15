@@ -81,11 +81,11 @@ export default {
       htmlAttrs: {
         lang: this.$i18n.locale,
       },
-      title: this.currentPost.fields.title + " - FromScratch",
+      title: this.currentPost.fields.title + " | FromsBlog",
       meta: [
         { hid: 'description', name: 'description', content: this.currentPost.fields.description },
         { hid: 'og:type', property: 'og:type', content: 'article' },
-        { hid: 'og:title', property: 'og:title', content: 'FromScratch | ' + this.currentPost.fields.title },
+        { hid: 'og:title', property: 'og:title', content: 'FromsBlog | ' + this.currentPost.fields.title },
         { hid: 'og:description', property: 'og:description', content: this.currentPost.fields.description },
         { hid: 'og:url', property: 'og:url', content: Domain + this.$route.fullPath },
         { hid: 'og:image', property: 'og:image', content: 'https:' + this.currentPost.fields.headerImage.fields.file.url },

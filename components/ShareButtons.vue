@@ -47,10 +47,9 @@ export default {
     return {
       url: `https://fromscratch-y.work${this.$route.path}`,
       twitter_url: "https://twitter.com/intent/tweet?url={0}&text={1}",
-      facebook_url:
-        "https://www.facebook.com/sharer/sharer.php?u={0}&amp;t={1}",
+      facebook_url: "https://www.facebook.com/sharer/sharer.php?u={0}&amp;t={1}",
       pocket_url: "http://getpocket.com/edit?url={0}",
-      line_url: "http://line.me/R/msg/text/?{0}"
+      line_url: "https://social-plugins.line.me/lineit/share?url={0}"
     };
   },
   methods: {
@@ -77,7 +76,7 @@ export default {
       return this.formatByArr(this.pocket_url, this.url);
     },
     lineUrl() {
-      return this.formatByArr(this.line_url, this.title);
+      return this.formatByArr(this.line_url, this.url);
     }
   }
 };
@@ -128,7 +127,7 @@ a.social-list-link:hover {
   margin-top: 0;
 }
 .section {
-  padding: 40px 10px;
+  padding: 40px 15px;
 }
 .share_ttl {
   font-size: 20px;
@@ -139,4 +138,11 @@ a.social-list-link:hover {
 .share_ttl svg {
   margin-left: 7px;
 }
+@media screen and (max-width: 375px) {
+  .social-list-item {
+    width: 50%;
+    min-width: auto;
+  }
+}
+
 </style>
