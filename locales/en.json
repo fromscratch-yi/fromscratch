@@ -128,27 +128,27 @@
       },
       "businesslife": {
         "name": "BusinessLife",
-        "pageTitle": "BusinessLife | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) |  Managiment, Business Skill",
-        "description": "ビジネススキル・マネージメント技術関連記事。仕事におけるビジネススキルやセルフマネージメント・モチベーションに関する記事をまとめています。",
-        "introduction": "ビジネススキル・マネージメント技術関連記事。仕事におけるビジネススキルやセルフマネージメント・モチベーションに関する記事をまとめています。管理職になったばかりの方、初めて部下を持った方、自身のモチベーションが上がらないという方のためになるような記事を載せています。",
+        "pageTitle": "BusinessLife | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) |  Managiment, Business, Blog Skill",
+        "description": "I write post about Business Skill and Management Skill.",
+        "introduction": "I write post about Business Skill and Management Skill.",
         "subCategory": {
           "motivation": {
             "name": "Motivation",
-            "pageTitle": "モチベーション | FromsBlog(石山 雄一 ポートフォリオ・ブログ) | ビジネススキル・マネージメント技術ブログ",
-            "description": "モチベーション関連記事。自身のモチベーション、部下や後輩のモチベーションの向上に繋がるような記事をまとめています。",
-            "introduction": "モチベーション関連記事。自身のモチベーション、部下や後輩のモチベーションの向上に繋がるような記事をまとめています。モチベーションの上がる本や映画なども紹介していきます。"
+            "pageTitle": "Motivation | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) |  Managiment, Business, Blog Skill",
+            "description": "I write post about that how to improve motivation.",
+            "introduction": "I write post about that how to improve motivation."
           },
           "management": {
             "name": "Management",
-            "pageTitle": "マネージメント | FromsBlog(石山 雄一 ポートフォリオ・ブログ) | ビジネススキル・マネージメント技術ブログ",
-            "description": "マネージメント技術関連記事。はじめて部下を持った方、管理職の方のためになる記事をまとめています。",
-            "introduction": "マネージメント技術関連記事。はじめて部下を持った方、管理職の方のためになる記事をまとめています。"
+            "pageTitle": "Management | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) |  Managiment, Business, Blog Skill",
+            "description": "I write post about Management Skills.",
+            "introduction": "I write post about Management Skills."
           },
           "blogskill": {
             "name": "BlogSkill",
-            "pageTitle": "ブログスキル・SEO | FromsBlog(石山 雄一 ポートフォリオ・ブログ) | ブログスキル・SEOブログ",
-            "description": "ブログ・SEO技術関連記事。ブログにおけるSEOやブログ作成・運営に役立つツールや技術についてまとめています。",
-            "introduction": "ブログ・SEO技術関連記事。ブログにおけるSEOやブログ作成・運営に役立つツールや技術についてまとめています。"
+            "pageTitle": "BlogSkill | FromsBlog(Yuichi Ishiyama's Portfolio/ Blog) |  Managiment, Business, Blog Skill",
+            "description": "I write post about Blog Skills. SEO, Analytics, How to use tools etc...",
+            "introduction": "I write post about Blog Skills. SEO, Analytics, How to use tools etc..."
           }
         }
       }
