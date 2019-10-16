@@ -3,7 +3,9 @@
     "frontend": "FrontEnd",
     "backend": "BackEnd",
     "mobile": "Mobile",
-    "other": "Other"
+    "other": "Other",
+    "share": "Share This Page",
+    "reccomend": "Recommend Posts"
   },
   "top": {
     "pageTitle": "Yuichi Ishiyama | Portfolio and Blog site",

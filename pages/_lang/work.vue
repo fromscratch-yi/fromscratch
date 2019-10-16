@@ -405,7 +405,7 @@ export default {
   clear: both;
 }
 .page_description {
-  margin: 35px 0;
+  margin: 35px 15px;
   text-align: center;
 }
 .page_contents .tabs {

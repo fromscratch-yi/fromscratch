@@ -14,16 +14,27 @@
                   <li v-for="tag in currentPost.fields.tags" :key="tag.id" class="tag">#{{tag}}</li>
                 </ul>
                 <div class="slug_content" v-html="$md.render(currentPost.fields.body)"></div>
+                <ShareButtons :title="currentPost.fields.title + ' - FromScratch'" />
               </div>
+
             </section>
-            <div class="inner_contents_wrap">
-              <nav class="post_nav">
-                <nuxt-link v-if="prevPost" class="pagination-previous" :to="$i18n.path('post/' + prevPost.fields.slug + '/')">&laquo; Prev</nuxt-link>
-                <nuxt-link v-if="nextPost" class="pagination-next" :to="$i18n.path('post/' + nextPost.fields.slug + '/')">Next &raquo;</nuxt-link>
-              </nav>
-            </div>
           </div>
-          <ShareButtons :title="currentPost.fields.title + ' - FromScratch'" />
+          <section v-if="recommends.length > 0" class="recommend_wrap">
+            <h2 class="recommend_ttl"><font-awesome-icon icon="blog" />{{ $t('word.reccomend') }}</h2>
+            <div class="recommends columns is-mobile is-multiline ">
+              <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in recommends" :key="post.id">
+                <Card
+                  v-bind:key="post.fields.slug"
+                  :mainCategory="post.sys.contentType.sys.id"
+                  :subCategory="$t('blog.categories.' + (post.sys.contentType.sys.id) + '.subCategory.' + post.fields.category + '.name')"
+                  :title="post.fields.title"
+                  :slug="'category/' + post.sys.contentType.sys.id + '/' + post.fields.category + '/' + post.fields.slug"
+                  :headerImage="post.fields.headerImage"
+                  :publishedAt="post.fields.publishedAt"
+                  :tags="post.fields.tags"></Card>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
       <section class="side_contents_wrap">
@@ -36,12 +47,14 @@
 <script>
 import SideContents from "~/components/SideContents.vue";
 import Breadcrumb from '~/components/Breadcrumb.vue';
-import ShareButtons from "~/components/ShareButtons"
+import ShareButtons from "~/components/ShareButtons";
+import Card from '~/components/Card.vue';
 import {createClient} from '~/plugins/contentful.js';
 const client = createClient();
 const Domain = 'https://fromscratch-y.work';
 export default {
   components: {
+    Card,
     SideContents,
     Breadcrumb,
     ShareButtons
@@ -95,7 +108,7 @@ export default {
   },
   data () {
     return {
-      allPosts: [],
+      recommends: [],
       currentPost: [],
     }
   },
@@ -110,13 +123,13 @@ export default {
       const posts = entries.items
       const current = posts.filter(function (item) {
         return item.fields.slug === params.slug
-      })
+      })[0]
       if (posts.length == 0 || current.length == 0) {
         throw({ statusCode: 404, message: 'Post not found' })
       }
       return {
-        allPosts: posts,
-        currentPost: current[0]
+        recommends: current.fields.recommend,
+        currentPost: current
       }
     })
     .catch(e => {
@@ -142,26 +155,42 @@ export default {
         ]
       }
     },
-    dateOrder: function () {
-      for (let i = 0; i < this.allPosts.length; i++) {
-        if (this.allPosts[i].fields.publishedAt === this.currentPost.fields.publishedAt) {
-          return i;
-        }
-      }
-    },
-    nextPost: function () {
-      if (this.dateOrder === 0) {
-        return false;
+    // dateOrder: function () {
+    //   for (let i = 0; i < this.allPosts.length; i++) {
+    //     if (this.allPosts[i].fields.publishedAt === this.currentPost.fields.publishedAt) {
+    //       return i;
+    //     }
+    //   }
+    // },
+    // nextPost: function () {
+    //   if (this.dateOrder === 0) {
+    //     return false;
+    //   } else {
+    //     return this.allPosts[this.dateOrder - 1];
+    //   }
+    // },
+    // prevPost: function () {
+    //   if (this.dateOrder === this.allPosts.length - 1) {
+    //     return false;
+    //   } else {
+    //     return this.allPosts[this.dateOrder + 1];
+    //   }
+    // }
+  },
+  methods: {
+    handleScroll: (evt, el) => {
+      let top = el.getBoundingClientRect().top;
+      var offcet = 0;
+      if (window.innerHeight > 900) {
+        offcet = 1200;
       } else {
-        return this.allPosts[this.dateOrder - 1];
+        offcet = 600;
       }
-    },
-    prevPost: function () {
-      if (this.dateOrder === this.allPosts.length - 1) {
-        return false;
-      } else {
-        return this.allPosts[this.dateOrder + 1];
+      if (window.scrollY > top + window.pageYOffset - offcet) {
+        el.classList.add('move');
+        return true;
       }
+      return false;
     }
   }
 }
@@ -184,6 +213,21 @@ export default {
   background: #fff;
   z-index: 1;
   font-size: 16px;
+}
+.share_wrap.section {
+  padding: 40px 0 20px;
+}
+.recommend_wrap {
+  padding: 45px 20px 35px;
+}
+.recommend_wrap .recommend_ttl {
+  font-size: 21px;
+  text-align: center;
+  margin: 0 0 20px;
+  font-weight: bold;
+}
+.recommend_wrap .recommend_ttl svg {
+  margin-right: 7px;
 }
 @media screen and (min-width: 768px) {
   .slug .content_inner {

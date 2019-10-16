@@ -1,6 +1,6 @@
 <template>
-  <section class="section">
-    <h2 class="share_ttl">Share This Page<font-awesome-icon icon="share-alt" /></h2>
+  <section class="share_wrap section">
+    <h2 class="share_ttl">{{ $t('word.share') }}<font-awesome-icon icon="share-alt" /></h2>
     <aside>
       <ul class="social-list">
         <li class="social-list-item">
@@ -138,7 +138,7 @@ a.social-list-link:hover {
 .share_ttl svg {
   margin-left: 7px;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 407px) {
   .social-list-item {
     width: 50%;
     min-width: auto;
