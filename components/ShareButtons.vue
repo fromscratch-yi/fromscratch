@@ -9,7 +9,7 @@
             :href="twitterUrl()"
             target="_blank"
             title="Twitterで共有"
-          ><font-awesome-icon :icon="['fab','twitter']" /></a>
+          ><font-awesome-icon :icon="['fab','twitter']" /><b hidden>Twitter</b></a>
         </li>
         <li class="social-list-item">
           <a
@@ -17,7 +17,7 @@
             :href="facebookUrl()"
             target="_blank"
             title="Facebookで共有"
-          ><font-awesome-icon :icon="['fab','facebook-f']" /></a>
+          ><font-awesome-icon :icon="['fab','facebook-f']" /><b hidden>Facebook</b></a>
         </li>
         <li class="social-list-item">
           <a
@@ -25,7 +25,7 @@
             :href="pocketUrl()"
             target="_blank"
             title="pocketで共有"
-          ><font-awesome-icon :icon="['fab','get-pocket']" /></a>
+          ><font-awesome-icon :icon="['fab','get-pocket']" /><b hidden>Pocket</b></a>
         </li>
         <li class="social-list-item">
           <a

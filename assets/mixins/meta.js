@@ -20,7 +20,7 @@ export default {
       htmlAttrs: {
         lang: this.meta.lang,
       },
-      title: this.meta.title + " - FromScratch",
+      title: this.meta.title,
       meta: [
         { hid: 'canonical', name: 'canonical', content: Domain + this.meta.url.replace(/\/$/, '') + '/' },
         { hid: 'description', name: 'description', content: this.meta.description },
