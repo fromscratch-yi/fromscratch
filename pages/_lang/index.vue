@@ -4,11 +4,11 @@
     <div class="front_wrap">
       <!-- top-left -->
       <div class="typer_wrap" v-bind:class="{active: isActive}">
-        <div class="inner">
+        <h1 class="inner">
           <p><span class="glitch" data-text="Welcome">Welcome</span></p>
-          <h1 class="middle_txt">From Scratch</h1>
+          <p class="middle_txt">From Scratch</p>
           <p class="small_txt">Yuichi Ishiyama's<br>{{ $t('top.name') }}</p>
-        </div>
+        </h1>
       </div>
       <!-- top-right -->
       <p class="typer_wrap" v-bind:class="{active: isActive}">
@@ -31,7 +31,7 @@
     <!-- welcome back -->
     <div class="back_wrap" v-bind:class="{active: isActive}">
       <section class="back_ctn">
-        <h1 class="main_line"><img class="logo" src="~assets/img/logo.png" alt="FromScratch" @click="click"></h1>
+        <p class="main_line"><img class="logo" src="~assets/img/logo.png" alt="FromScratch" @click="click"></p>
         <p class="desc_txt">Welcome to this site.<br>All will begin <span class="emp">From Scratch</span></p>
         <nav>
           <ul>
