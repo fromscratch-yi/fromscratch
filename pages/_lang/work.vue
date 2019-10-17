@@ -27,7 +27,7 @@
           <div class="tab_item" v-if="tabsel == 'service'">
             <section class="work_wrap">
               <h2 class="item_ttl">UseD</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap">
@@ -46,7 +46,7 @@
                     </div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">Android Java</li>
                 <li class="tag">SQLite</li>
@@ -58,7 +58,7 @@
             </section>
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">Employee Management System</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap">
@@ -85,7 +85,7 @@
                     </div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">Laravel</li>
@@ -103,7 +103,7 @@
             </section>
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">Sales Management System</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap">
@@ -130,7 +130,7 @@
                     </div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">Laravel</li>
@@ -146,7 +146,7 @@
             </section>
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">TimeRecorder System</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap">
@@ -173,7 +173,7 @@
                     </div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">Laravel</li>
@@ -195,7 +195,7 @@
           <div class="tab_item" v-if="tabsel == 'web'">
             <section class="work_wrap">
               <h2 class="item_ttl">FromScratch</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web 1"></div>
@@ -207,7 +207,7 @@
                     <div class="img_wrap"><img src="~assets/img/works/web/fromscratch3.png" alt="FromScratch Web 3"></div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">Nuxt.js</li>
                 <li class="tag">Vue.js</li>
@@ -223,7 +223,7 @@
             </section>
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">The relation, Inc.</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web 1"></div>
@@ -232,7 +232,7 @@
                     <div class="img_wrap"><img src="~assets/img/works/web/relation2.png" alt="relation Web 2"></div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">jQuery</li>
@@ -247,7 +247,7 @@
             </section>
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web 1"></div>
@@ -256,7 +256,7 @@
                     <div class="img_wrap"><img src="~assets/img/works/web/unaman2.png" alt="unaman Web 2"></div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">jQuery</li>
                 <li class="tag">HTML</li>
@@ -276,7 +276,7 @@
           <div class="tab_item" v-if="tabsel == 'card'">
             <section class="work_wrap">
               <h2 class="item_ttl">FromScratch</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="FromScratch 名刺"></div>
@@ -285,7 +285,7 @@
                     <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch2.png" alt="FromScratch 名刺 裏"></div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
@@ -305,7 +305,7 @@
             </section>
             <section class="work_wrap fadein" v-scroll="handleScroll">
               <h2 class="item_ttl">T'z Auto</h2>
-              <no-ssr>
+              <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
                     <div class="img_wrap"><img src="~assets/img/works/bc/tzauto1.png" alt="Tz Auto 名刺"></div>
@@ -314,7 +314,7 @@
                     <div class="img_wrap"><img src="~assets/img/works/bc/tzauto2.png" alt="Tz Auto 名刺 裏"></div>
                   </slide>
                 </carousel>
-              </no-ssr>
+              </client-only>
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>

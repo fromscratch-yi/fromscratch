@@ -20,7 +20,7 @@
             </section>
           </div>
           <section v-if="recommends.length > 0" class="recommend_wrap">
-            <h2 class="recommend_ttl"><font-awesome-icon icon="blog" />{{ $t('word.reccomend') }}</h2>
+            <h2 class="recommend_ttl"><fa :icon="faBlog" />{{ $t('word.reccomend') }}</h2>
             <div class="recommends columns is-mobile is-multiline ">
               <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in recommends" :key="post.id">
                 <Card
@@ -50,6 +50,7 @@ import Breadcrumb from '~/components/Breadcrumb.vue';
 import ShareButtons from "~/components/ShareButtons";
 import Card from '~/components/Card.vue';
 import {createClient} from '~/plugins/contentful.js';
+import {faBlog} from "@fortawesome/free-solid-svg-icons"
 const client = createClient();
 const Domain = 'https://fromscratch-y.work';
 export default {
@@ -137,6 +138,9 @@ export default {
     })
   },
   computed: {
+    faBlog() {
+      return faBlog
+    },
     breadcrumbs: function() {
       return {
         data: [

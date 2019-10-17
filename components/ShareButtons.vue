@@ -1,6 +1,6 @@
 <template>
   <section class="share_wrap section">
-    <h2 class="share_ttl">{{ $t('word.share') }}<font-awesome-icon icon="share-alt" /></h2>
+    <h2 class="share_ttl">{{ $t('word.share') }}<fa :icon="faShareAlt" /></h2>
     <aside>
       <ul class="social-list">
         <li class="social-list-item">
@@ -9,7 +9,7 @@
             :href="twitterUrl()"
             target="_blank"
             title="Twitterで共有"
-          ><font-awesome-icon :icon="['fab','twitter']" /><b hidden>Twitter</b></a>
+          ><fa :icon="faTwitter" /><b hidden>Twitter</b></a>
         </li>
         <li class="social-list-item">
           <a
@@ -17,7 +17,7 @@
             :href="facebookUrl()"
             target="_blank"
             title="Facebookで共有"
-          ><font-awesome-icon :icon="['fab','facebook-f']" /><b hidden>Facebook</b></a>
+          ><fa :icon="faFacebookF" /><b hidden>Facebook</b></a>
         </li>
         <li class="social-list-item">
           <a
@@ -25,7 +25,7 @@
             :href="pocketUrl()"
             target="_blank"
             title="pocketで共有"
-          ><font-awesome-icon :icon="['fab','get-pocket']" /><b hidden>Pocket</b></a>
+          ><fa :icon="faGetPocket" /><b hidden>Pocket</b></a>
         </li>
         <li class="social-list-item">
           <a
@@ -40,7 +40,27 @@
   </section>
 </template>
 <script>
+import {faShareAlt} from "@fortawesome/free-solid-svg-icons"
+import {
+  faTwitter,
+  faFacebookF,
+  faGetPocket
+} from "@fortawesome/free-brands-svg-icons"
 export default {
+  computed: {
+    faShareAlt() {
+      return faShareAlt
+    },
+    faTwitter() {
+      return faTwitter
+    },
+    faFacebookF() {
+      return faFacebookF
+    },
+    faGetPocket() {
+      return faGetPocket
+    }
+  },
   name: "ShareButtons",
   props: ["title"],
   data() {

@@ -7,7 +7,7 @@
           <h1 class="blog_ttl df_ttl">FromScratch<span>Yuichi Ishiyama</span></h1>
         </div>
         <div class="nav_btn level-right">
-          <p class="level-item icon" @click="clickNavBtn"><font-awesome-icon icon="bars"/></p>
+          <p class="level-item icon" @click="clickNavBtn"><fa :icon="faBars" /></p>
         </div>
         <ul class="pc_nav">
           <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
@@ -26,7 +26,7 @@
         </ul>
       </div>
       <nav class="nav_menu" v-bind:class="{'open': isOpen}">
-        <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
+        <p class="close_btn" @click="clickNavBtn"><fa :icon="faTimes" /></p>
         <ul class="page_nav">
           <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo"></li>
           <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
@@ -50,10 +50,22 @@
 </template>
 
 <script>
+import {
+  faBars,
+  faTimes
+} from "@fortawesome/free-solid-svg-icons"
 export default {
   data() {
     return {
       isOpen: false
+    }
+  },
+  computed: {
+    faBars() {
+      return faBars
+    },
+    faTimes() {
+      return faTimes
     }
   },
   methods: {

@@ -1,7 +1,7 @@
 <template>
   <div class="fadein move side_contents">
     <div class="content_wrap about_wrap">
-      <h2><font-awesome-icon icon="id-card"/>About Me</h2>
+      <h2><fa :icon="faIdCard" />About Me</h2>
       <div class="inner">
         <div class="image_area">
           <figure class="profile_img rotation_img image move" v-scroll="handleScroll">
@@ -51,11 +51,11 @@
       </div>
     </div>
     <div class="content_wrap sticky_wrap">
-      <h2><font-awesome-icon icon="folder-open"/>Categories</h2>
+      <h2><fa :icon="faFolderOpen" />Categories</h2>
       <div class="inner">
         <Accordion
           v-bind:key="'Technology'"
-          :icon="'laptop-code'"
+          :icon="faLaptopCode"
           :title="$t('blog.categories.technology.name')"
           :categories="[
             {
@@ -87,7 +87,7 @@
 
         <Accordion
           v-bind:key="'BusinessLife'"
-          :icon="'user-tie'"
+          :icon="faUserTie"
           :title="$t('blog.categories.businesslife.name')"
           :categories="[
             {
@@ -114,6 +114,12 @@
 
 <script>
 import Accordion from '~/components/Accordion.vue';
+import {
+  faIdCard,
+  faFolderOpen,
+  faLaptopCode,
+  faUserTie
+} from "@fortawesome/free-solid-svg-icons"
 export default {
   data() {
     return {
@@ -138,6 +144,20 @@ export default {
       }
       return false;
     },
+  },
+  computed: {
+    faIdCard() {
+      return faIdCard
+    },
+    faFolderOpen() {
+      return faFolderOpen
+    },
+    faLaptopCode() {
+      return faLaptopCode
+    },
+    faUserTie() {
+      return faUserTie
+    }
   }
 }
 </script>

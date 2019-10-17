@@ -151,18 +151,9 @@ module.exports = {
     typography: true,  // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
   },
   fontawesome: {
-    imports: [
-      {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
-      },
-      {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fab']
-      }
-    ]
+    component: 'fa'
   },
-  transition: {
+  pageTransition: {
     name: 'page',
     mode: 'out-in',
     beforeEnter (el) {
@@ -272,6 +263,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: true,
     postcss: {
       plugins: {
         'postcss-custom-properties': {

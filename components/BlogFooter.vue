@@ -2,7 +2,7 @@
   <footer>
     <div class="fadein footer_content_wrap columns is-tablet" v-scroll="handleScroll">
       <section class="footer_content column is-half-desktop about_wrap">
-        <h2><font-awesome-icon icon="id-card"/>About Me</h2>
+        <h2><fa :icon="faIdCard"/>About Me</h2>
         <div class="inner">
           <div class="image_area">
             <figure class="profile_img rotation_img image" v-scroll="handleScroll">
@@ -17,12 +17,12 @@
         </div>
       </section>
       <section class="footer_content column category_wrap">
-        <h2><font-awesome-icon icon="folder-open"/>Categories</h2>
+        <h2><fa :icon="faFolderOpen"/>Categories</h2>
         <div class="inner">
           <div class="inner_ctn">
             <p class="main_category">
               <nuxt-link :to="$i18n.path('category/technology/')">
-                <font-awesome-icon icon="laptop-code"/>{{ $t('blog.categories.technology.name') }}
+                <fa :icon="faLaptopCode"/>{{ $t('blog.categories.technology.name') }}
               </nuxt-link>
             </p>
             <ul class="sub_category">
@@ -36,7 +36,7 @@
           <div class="inner_ctn">
             <p class="main_category">
               <nuxt-link :to="$i18n.path('category/businesslife/')">
-                <font-awesome-icon icon="user-tie"/>{{ $t('blog.categories.businesslife.name') }}
+                <fa :icon="faUserTie"/>{{ $t('blog.categories.businesslife.name') }}
               </nuxt-link>
             </p>
             <ul class="sub_category">
@@ -50,7 +50,7 @@
         </div>
       </section>
       <section class="footer_content column links_wrap">
-        <h2><font-awesome-icon icon="link"/>Links</h2>
+        <h2><fa :icon="faLink"/>Links</h2>
         <div class="inner">
           <dl>
             <dt><nuxt-link :to="$i18n.path('about/')"><span class="em_txt">A</span>bout Page</nuxt-link></dt>
@@ -90,7 +90,31 @@
   </footer>
 </template>
 <script>
+import {
+  faIdCard,
+  faFolderOpen,
+  faLaptopCode,
+  faUserTie,
+  faLink
+} from "@fortawesome/free-solid-svg-icons"
 export default {
+  computed: {
+    faIdCard() {
+      return faIdCard
+    },
+    faFolderOpen() {
+      return faFolderOpen
+    },
+    faLaptopCode() {
+      return faLaptopCode
+    },
+    faUserTie() {
+      return faUserTie
+    },
+    faLink() {
+      return faLink
+    }
+  },
   methods: {
     handleScroll: (evt, el) => {
       let top = el.getBoundingClientRect().top;

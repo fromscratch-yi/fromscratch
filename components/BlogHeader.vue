@@ -8,7 +8,7 @@
             <h1 class="blog_ttl">FromsBlog<span>Yuichi Ishiyama</span></h1>
           </div>
           <div class="nav_btn level-right">
-            <p class="level-item icon" @click="clickNavBtn"><font-awesome-icon icon="bars"/></p>
+            <p class="level-item icon" @click="clickNavBtn"><fa :icon="faBars"/></p>
           </div>
           <ul class="pc_nav">
             <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
@@ -27,7 +27,7 @@
           </ul>
         </div>
         <nav class="nav_menu" v-bind:class="{'open': isOpen}">
-          <p class="close_btn" @click="clickNavBtn"><font-awesome-icon icon="times"/></p>
+          <p class="close_btn" @click="clickNavBtn"><fa :icon="faTimes"/></p>
           <ul class="page_nav">
             <li class="nv_logo">
               <img src="~assets/img/logo.png" alt="FromsBlog">
@@ -47,7 +47,7 @@
             <li class="category_link">
               <p class="main_category">
                 <nuxt-link :to="$i18n.path('category/technology/')">
-                  <font-awesome-icon icon="laptop-code"/>{{ $t('blog.categories.technology.name') }}
+                  <fa :icon="faLaptopCode"/>{{ $t('blog.categories.technology.name') }}
                 </nuxt-link>
               </p>
               <ul class="sub_category">
@@ -81,7 +81,7 @@
             <li class="category_link">
               <p class="main_category">
                 <nuxt-link :to="$i18n.path('category/businesslife/')">
-                  <font-awesome-icon icon="user-tie"/>{{ $t('blog.categories.businesslife.name') }}
+                  <fa :icon="faUserTie"/>{{ $t('blog.categories.businesslife.name') }}
                 </nuxt-link>
               </p>
               <ul class="sub_category">
@@ -110,7 +110,7 @@
       <div class="inner">
         <Accordion
           v-bind:key="'Technology'"
-          :icon="'laptop-code'"
+          :icon="faLaptopCode"
           :title="$t('blog.categories.technology.name')"
           :categories="[
             {
@@ -141,7 +141,7 @@
 
         <Accordion
           v-bind:key="'BusinessLife'"
-          :icon="'user-tie'"
+          :icon="faUserTie"
           :title="$t('blog.categories.businesslife.name')"
           :categories="[
             {
@@ -170,8 +170,28 @@
 </template>
 
 <script>
+import {
+  faBars,
+  faTimes,
+  faLaptopCode,
+  faUserTie
+} from "@fortawesome/free-solid-svg-icons"
 import Accordion from '~/components/Accordion.vue';
 export default {
+  computed: {
+    faBars() {
+      return faBars
+    },
+    faTimes() {
+      return faTimes
+    },
+    faLaptopCode() {
+      return faLaptopCode
+    },
+    faUserTie() {
+      return faUserTie
+    },
+  },
   data() {
     return {
       isOpen: false,
