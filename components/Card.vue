@@ -1,21 +1,23 @@
 <template>
-  <div class="card_wrap">
-    <p class="sub_category" :class="mainCategory">{{ subCategory }}</p>
-    <div class="post card">
-      <nuxt-link :to="$i18n.path(slug + '/')" class="wrapper">
-        <div class="card-image">
-          <figure class="image is-5by3">
-            <img v-bind:src="headerImage.fields.file.url" v-bind:alt="headerImage.fields.description">
-          </figure>
-        </div>
-        <div class="card-content">
-          <p class="card_date">{{ publishedAt }}</p>
-          <h3 class="card_title">{{ title }}</h3>
-          <div class="tags">
-            <span v-for="tag in tags" :key="tag.id" class="tag">#{{tag}}</span>
+  <div>
+    <div class="card_wrap">
+      <p class="sub_category" :class="mainCategory">{{ subCategory }}</p>
+      <div class="post card">
+        <nuxt-link :to="$i18n.path(slug + '/')" class="wrapper">
+          <div class="card-image">
+            <figure class="image is-5by3">
+              <img v-bind:src="headerImage.fields.file.url" v-bind:alt="headerImage.fields.description">
+            </figure>
           </div>
-        </div>
-      </nuxt-link>
+          <div class="card-content">
+            <p class="card_date">{{ publishedAt }}</p>
+            <h3 class="card_title">{{ title }}</h3>
+            <div class="tags">
+              <span v-for="tag in tags" :key="tag.id" class="tag">#{{tag}}</span>
+            </div>
+          </div>
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>

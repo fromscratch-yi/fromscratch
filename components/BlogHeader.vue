@@ -253,8 +253,8 @@ header .nav_menu .close_btn {
 }
 header .nav_menu .page_nav {
   position: relative;
-  margin: 55px 0 0;
-  padding: 20px 15px 15px;
+  margin: 45px 0 0;
+  padding: 20px 15px 10px;
   text-align: left;
   background: #fff;
   border-radius: 10px;
@@ -275,7 +275,7 @@ header .nav_menu .page_nav li.page_link {
   position: relative;
   float: left;
   width: calc(100% / 3 - 5px);
-  margin: 10px 0;
+  margin: 5px 0;
   padding: 10px 5px;
   text-align: center;
 }
