@@ -6,7 +6,7 @@
       <div class="typer_wrap" v-bind:class="{active: isActive}">
         <div class="inner">
           <p><span class="glitch" data-text="Welcome">Welcome</span></p>
-          <p class="middle_txt">From Scratch</p>
+          <h1 class="middle_txt">From Scratch</h1>
           <p class="small_txt">Yuichi Ishiyama's<br>{{ $t('top.name') }}</p>
         </div>
       </div>
