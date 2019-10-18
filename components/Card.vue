@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <div class="card_wrap">
+  <div class="card_wrap">
+    <div class="card_inner">
       <p class="sub_category" :class="mainCategory">{{ subCategory }}</p>
       <div class="post card">
         <nuxt-link :to="$i18n.path(slug + '/')" class="wrapper">
           <div class="card-image">
             <figure class="image is-5by3">
-              <img v-bind:src="headerImage.fields.file.url" v-bind:alt="headerImage.fields.description">
+              <img v-bind:src="thumbnail.file.url" v-bind:alt="title">
             </figure>
           </div>
           <div class="card-content">
@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  props: ['mainCategory', 'subCategory', 'title', 'slug', 'headerImage', 'publishedAt', 'tags'],
+  props: ['mainCategory', 'subCategory', 'title', 'slug', 'thumbnail', 'publishedAt', 'tags'],
   methods: {
     format: function(date) {
       var month = '' + (date.getMonth() + 1),
@@ -44,10 +44,10 @@ export default {
 .post.card {
   height: 100%;
 }
-.card_wrap {
+.card_inner {
   position: relative;
 }
-.card_wrap .sub_category {
+.card_inner .sub_category {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,16 +59,16 @@ export default {
   text-shadow: 1px 1px 1px #f9f9f9a3;
 }
 @media screen and (min-width: 354px) and (max-width: 768px) {
-  .card_wrap .sub_category {
+  .card_inner .sub_category {
     left: auto;
     right: 0;
   }
 }
-.card_wrap .sub_category.technology {
+.card_inner .sub_category.technology {
   background: #ff9000a8;
   color: #151515;
 }
-.card_wrap .sub_category.businesslife {
+.card_inner .sub_category.businesslife {
   background: #2ec126a8;
   color: #151515;
 }

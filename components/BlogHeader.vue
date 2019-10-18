@@ -5,7 +5,7 @@
         <div class="header_container level is-mobile">
           <div class="logo level-left">
             <nuxt-link :to="$i18n.path('')"><img src="~assets/img/logo.png" alt="FromScratch logo"></nuxt-link>
-            <h1 class="blog_ttl">FromsBlog<span>Yuichi Ishiyama</span></h1>
+            <p class="blog_ttl">FromsBlog<span>Yuichi Ishiyama</span></p>
           </div>
           <div class="nav_btn level-right">
             <p class="level-item icon" @click="clickNavBtn"><fa :icon="faBars"/></p>

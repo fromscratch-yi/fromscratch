@@ -23,7 +23,7 @@
                     :subCategory="$t('blog.categories.technology.subCategory.' + post.fields.category + '.name')"
                     :title="post.fields.title"
                     :slug="'category/technology/' + post.fields.category + '/' + post.fields.slug"
-                    :headerImage="post.fields.headerImage"
+                    :thumbnail="post.fields.thumbnail.fields"
                     :publishedAt="post.fields.publishedAt"
                     :tags="post.fields.tags"></Card>
                 </div>
@@ -38,7 +38,7 @@
                     :subCategory="$t('blog.categories.businesslife.subCategory.' + post.fields.category + '.name')"
                     :title="post.fields.title"
                     :slug="'category/businesslife/' + post.fields.category + '/' + post.fields.slug"
-                    :headerImage="post.fields.headerImage"
+                    :thumbnail="post.fields.thumbnail.fields"
                     :publishedAt="post.fields.publishedAt"
                     :tags="post.fields.tags"></Card>
                 </div>

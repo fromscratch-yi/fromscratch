@@ -1,5 +1,5 @@
 <template>
-  <h2 class="main_ttl">{{ this.meta.headline }}</h2>
+  <h1 class="main_ttl">{{ this.meta.headline }}</h1>
 </template>
 
 <script>

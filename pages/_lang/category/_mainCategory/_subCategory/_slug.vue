@@ -29,7 +29,7 @@
                   :subCategory="$t('blog.categories.' + (post.sys.contentType.sys.id) + '.subCategory.' + post.fields.category + '.name')"
                   :title="post.fields.title"
                   :slug="'category/' + post.sys.contentType.sys.id + '/' + post.fields.category + '/' + post.fields.slug"
-                  :headerImage="post.fields.headerImage"
+                  :thumbnail="post.fields.thumbnail.fields"
                   :publishedAt="post.fields.publishedAt"
                   :tags="post.fields.tags"></Card>
               </div>

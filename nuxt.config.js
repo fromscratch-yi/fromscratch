@@ -275,6 +275,7 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
+      config.resolve.alias['chart.js'] = 'chart.js/dist/Chart.js'
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
