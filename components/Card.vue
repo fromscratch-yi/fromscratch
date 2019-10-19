@@ -46,6 +46,7 @@ export default {
 }
 .card_inner {
   position: relative;
+  height: 100%;
 }
 .card_inner .sub_category {
   position: absolute;

@@ -2,7 +2,7 @@
   <div class="contents_area">
     <div class="max_size_wrap">
       <div class="inner_contents_wrap">
-        <TitleDescription :meta="meta"></TitleDescription>
+        <NormalTitleDescription :meta="meta"></NormalTitleDescription>
         <Terminal :typeTxt="typeTxt"></Terminal>
       </div>
     </div>
@@ -339,11 +339,11 @@
 </template>
 
 <script>
-import TitleDescription from "~/components/TitleDescription.vue";
+import NormalTitleDescription from "~/components/NormalTitleDescription.vue";
 import Terminal from "~/components/Terminal.vue";
 export default {
   components: {
-    TitleDescription,
+    NormalTitleDescription,
     Terminal,
     Carousel: () =>
       import('vue-carousel')

@@ -2,7 +2,7 @@
   <div class="contents_area">
     <div class="max_size_wrap">
       <div class="inner_contents_wrap">
-        <TitleDescription :meta="meta"></TitleDescription>
+        <NormalTitleDescription :meta="meta"></NormalTitleDescription>
         <Terminal :typeTxt="typeTxt"></Terminal>
         <section class="columns is-tablet inner">
           <div class="column is-three-fifths name_space">
@@ -89,12 +89,12 @@
 </template>
 
 <script>
-import TitleDescription from "~/components/TitleDescription.vue";
+import NormalTitleDescription from "~/components/NormalTitleDescription.vue";
 import Terminal from "~/components/Terminal.vue";
 import SkillModal from "~/components/SkillModal.vue";
 export default {
   components: {
-    TitleDescription,
+    NormalTitleDescription,
     Terminal,
     SkillModal
   },

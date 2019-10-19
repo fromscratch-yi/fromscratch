@@ -219,7 +219,7 @@ export default {
   font-size: 16px;
 }
 .share_wrap.section {
-  padding: 40px 0 20px;
+  padding: 40px 0 0;
 }
 .recommend_wrap {
   padding: 45px 20px 35px;

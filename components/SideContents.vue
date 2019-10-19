@@ -1,5 +1,8 @@
 <template>
   <div class="fadein move side_contents">
+    <div class="content_wrap">
+      <adsbygoogle ad-slot="6891167634" />
+    </div>
     <div class="content_wrap about_wrap">
       <h2><fa :icon="faIdCard" />About Me</h2>
       <div class="inner">
@@ -50,63 +53,68 @@
         </ul>
       </div>
     </div>
-    <div class="content_wrap sticky_wrap">
-      <h2><fa :icon="faFolderOpen" />Categories</h2>
-      <div class="inner">
-        <Accordion
-          v-bind:key="'Technology'"
-          :icon="faLaptopCode"
-          :title="$t('blog.categories.technology.name')"
-          :categories="[
-            {
-              'title': 'All',
-              'link': 'technology/'
-            },
-            {
-              'title': $t('blog.categories.technology.subCategory.frontend.name'),
-              'link': 'technology/frontend/'
-            },
-            {
-              'title': $t('blog.categories.technology.subCategory.backend.name'),
-              'link': 'technology/backend/'
-            },
-            {
-              'title': $t('blog.categories.technology.subCategory.mobile.name'),
-              'link': 'technology/mobile/'
-            },
-            {
-              'title': $t('blog.categories.technology.subCategory.infrastructure.name'),
-              'link': 'technology/infrastructure/'
-            },
-            {
-              'title': $t('blog.categories.technology.subCategory.other.name'),
-              'link': 'technology/other/'
-            }
-          ]">
-        </Accordion>
+    <div class="sticky_wrap">
+      <div class="content_wrap">
+        <h2><fa :icon="faFolderOpen" />Categories</h2>
+        <div class="inner">
+          <Accordion
+            v-bind:key="'Technology'"
+            :icon="faLaptopCode"
+            :title="$t('blog.categories.technology.name')"
+            :categories="[
+              {
+                'title': 'All',
+                'link': 'technology/'
+              },
+              {
+                'title': $t('blog.categories.technology.subCategory.frontend.name'),
+                'link': 'technology/frontend/'
+              },
+              {
+                'title': $t('blog.categories.technology.subCategory.backend.name'),
+                'link': 'technology/backend/'
+              },
+              {
+                'title': $t('blog.categories.technology.subCategory.mobile.name'),
+                'link': 'technology/mobile/'
+              },
+              {
+                'title': $t('blog.categories.technology.subCategory.infrastructure.name'),
+                'link': 'technology/infrastructure/'
+              },
+              {
+                'title': $t('blog.categories.technology.subCategory.other.name'),
+                'link': 'technology/other/'
+              }
+            ]">
+          </Accordion>
 
-        <Accordion
-          v-bind:key="'BusinessLife'"
-          :icon="faUserTie"
-          :title="$t('blog.categories.businesslife.name')"
-          :categories="[
-            {
-              'title': 'All',　'link': 'businesslife/'
-            },
-            {
-              'title': $t('blog.categories.businesslife.subCategory.motivation.name'),
-              'link': 'businesslife/motivation/'
-            },
-            {
-              'title': $t('blog.categories.businesslife.subCategory.management.name'),
-              'link': 'businesslife/management/'
-            },
-            {
-              'title': $t('blog.categories.businesslife.subCategory.blogskill.name'),
-              'link': 'businesslife/blogskill/'
-            }
-          ]">
-        </Accordion>
+          <Accordion
+            v-bind:key="'BusinessLife'"
+            :icon="faUserTie"
+            :title="$t('blog.categories.businesslife.name')"
+            :categories="[
+              {
+                'title': 'All',　'link': 'businesslife/'
+              },
+              {
+                'title': $t('blog.categories.businesslife.subCategory.motivation.name'),
+                'link': 'businesslife/motivation/'
+              },
+              {
+                'title': $t('blog.categories.businesslife.subCategory.management.name'),
+                'link': 'businesslife/management/'
+              },
+              {
+                'title': $t('blog.categories.businesslife.subCategory.blogskill.name'),
+                'link': 'businesslife/blogskill/'
+              }
+            ]">
+          </Accordion>
+        </div>
+      </div>
+      <div class="content_wrap">
+        <adsbygoogle ad-slot="6891167634" />
       </div>
     </div>
   </div>
@@ -172,10 +180,10 @@ export default {
   filter: drop-shadow(3px 3px 7px rgba(0,0,0,0.1));
   margin-bottom: 20px;
 }
-.side_contents .content_wrap:last-child {
+.side_contents .sticky_wrap.content_wrap.last {
   margin-bottom: 0;
 }
-.side_contents .content_wrap.sticky_wrap {
+.side_contents .sticky_wrap {
   position: sticky;
   position: -webkit-sticky;
   top: 20px;

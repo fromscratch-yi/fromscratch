@@ -3,7 +3,8 @@ const ctfConfig = getConfigForKeys([
   'BASE_URL',
   'CTF_SPACE_ID',
   'CTF_CDA_ACCESS_TOKEN',
-  'GOOGLE_ANALYTICS_ID'
+  'GOOGLE_ANALYTICS_ID',
+  'GOOGLE_ADSENSE_ID'
 ])
 const {createClient} = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
@@ -50,6 +51,14 @@ module.exports = {
   modules: [
     ['@nuxtjs/google-analytics', {
       id: ctfConfig.GOOGLE_ANALYTICS_ID
+    }],
+    ['@nuxtjs/google-adsense', {
+      id: ctfConfig.GOOGLE_ADSENSE_ID,
+      pageLevelAds: true,
+      tag: 'adsbygoogle',
+      includeQuery: false,
+      analyticsUacct: ctfConfig.GOOGLE_ANALYTICS_ID,
+      analyticsDomainName: 'fromscratch-y.work'
     }],
     '@nuxtjs/pwa',
     '@nuxtjs/bulma',

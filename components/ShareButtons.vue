@@ -37,6 +37,7 @@
         </li>
       </ul>
     </aside>
+    <div class="ad_wrap"><adsbygoogle ad-slot="3307145842" /></div>
   </section>
 </template>
 <script>
@@ -146,8 +147,8 @@ a.social-list-link:hover {
 .content li + li {
   margin-top: 0;
 }
-.section {
-  padding: 40px 15px;
+.share_wrap.section {
+  padding: 40px 15px 0;
 }
 .share_ttl {
   font-size: 20px;
@@ -157,6 +158,9 @@ a.social-list-link:hover {
 }
 .share_ttl svg {
   margin-left: 7px;
+}
+.ad_wrap {
+  margin-top: 50px;
 }
 @media screen and (max-width: 407px) {
   .social-list-item {
