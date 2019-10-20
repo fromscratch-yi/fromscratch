@@ -37,7 +37,7 @@
         </li>
       </ul>
     </aside>
-    <div class="ad_wrap"><adsbygoogle ad-slot="3307145842" /></div>
+    <div class="ad_wrap"><adsbygoogle :ad-slot="'3307145842'" /></div>
   </section>
 </template>
 <script>

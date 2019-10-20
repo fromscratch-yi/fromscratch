@@ -1,7 +1,7 @@
 <template>
   <div class="fadein move side_contents">
     <div class="content_wrap">
-      <adsbygoogle ad-slot="6891167634" />
+      <adsbygoogle :ad-slot="'6891167634'" />
     </div>
     <div class="content_wrap about_wrap">
       <h2><fa :icon="faIdCard" />About Me</h2>
@@ -114,7 +114,7 @@
         </div>
       </div>
       <div class="content_wrap">
-        <adsbygoogle ad-slot="6891167634" />
+        <adsbygoogle :ad-slot="'6891167634'" />
       </div>
     </div>
   </div>
