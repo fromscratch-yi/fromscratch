@@ -272,6 +272,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    hardSource: true,
     analyze: true,
     postcss: {
       plugins: {
