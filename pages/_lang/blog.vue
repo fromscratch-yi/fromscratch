@@ -13,7 +13,7 @@
               </div>
             </div>
             <div class="blog_menu sub_contents fadein move">
-              <h2 class="fadein" v-scroll="handleScroll">{{ $t('blog.categories.technology.name') }}</h2>
+              <h2 class="fadein" v-scroll="handleScroll"><nuxt-link :to="$i18n.path('category/technology')"><fa :icon="faLaptopCode" />{{ $t('blog.categories.technology.name') }}</nuxt-link></h2>
               <p v-if="technologyPosts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
               <section v-else class="columns is-mobile is-multiline new_posts">
                 <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in technologyPosts" :key="post.id">
@@ -28,7 +28,7 @@
                     :tags="post.fields.tags"></Card>
                 </div>
               </section>
-              <h2 class="fadein" v-scroll="handleScroll">{{ $t('blog.categories.businesslife.name') }}</h2>
+              <h2 class="fadein" v-scroll="handleScroll"><nuxt-link :to="$i18n.path('category/businesslife')"><fa :icon="faUserTie" />{{ $t('blog.categories.businesslife.name') }}</nuxt-link></h2>
               <p v-if="businessPosts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
               <section v-else class="columns is-mobile is-multiline new_posts">
                 <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in businessPosts" :key="post.id">
@@ -69,6 +69,10 @@ import Card from '~/components/Card.vue';
 import SideContents from "~/components/SideContents.vue";
 import Breadcrumb from '~/components/Breadcrumb.vue';
 import {createClient} from '~/plugins/contentful.js';
+import {
+  faLaptopCode,
+  faUserTie
+} from "@fortawesome/free-solid-svg-icons"
 const client = createClient()
 export default {
   components: {
@@ -145,6 +149,12 @@ export default {
           }
         ]
       }
+    },
+    faLaptopCode() {
+      return faLaptopCode
+    },
+    faUserTie() {
+      return faUserTie
     }
   },
   methods: {
@@ -200,6 +210,35 @@ export default {
   padding-left: 5px;
   border-bottom: 4px solid #DDD;
   line-height: 1.6;
+}
+.sub_contents h2 a {
+  display: inline-block;
+  position: relative;
+  color: rgb(74, 74, 74);
+  padding-right: 20px;
+}
+.sub_contents h2 a::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0;
+  border-top: 2px solid rgb(74, 74, 74);
+  border-right: 2px solid rgb(74, 74, 74);
+  transform: rotate(45deg);
+  content: "";
+}
+.sub_contents h2 a:hover {
+  color:#18820c;
+}
+.sub_contents h2 a:hover::after {
+  border-top: 2px solid #18820c;
+  border-right: 2px solid #18820c;
+}
+.sub_contents h2 svg {
+  margin-right: 7px;
 }
 .sub_contents h2::after {
     position: absolute;

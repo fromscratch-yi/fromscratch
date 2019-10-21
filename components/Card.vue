@@ -11,7 +11,7 @@
           </div>
           <div class="card-content">
             <p class="card_date">{{ publishedAt }}</p>
-            <h3 class="card_title">{{ title }}</h3>
+            <h2 class="card_title">{{ title }}</h2>
             <div class="tags">
               <span v-for="tag in tags" :key="tag.id" class="tag">#{{tag}}</span>
             </div>

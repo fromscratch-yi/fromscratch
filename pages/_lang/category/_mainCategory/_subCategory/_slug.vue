@@ -267,7 +267,6 @@ export default {
 .slug .content_inner .tag_wrap {
   display: flex;
   flex-wrap: wrap;
-  align-items: top;
   justify-content: center;
   margin: 20px 0 35px;
 }
@@ -320,7 +319,7 @@ export default {
    padding-top: 20px;
 }
 .slug .content_inner .slug_content h2 {
-  font-size: 23px;
+  font-size: 25px;
   font-weight:bold;
   margin: 55px 0 40px;
   position: relative;
@@ -345,7 +344,7 @@ export default {
   font-weight:bold;
   margin: 45px 0 25px;
   padding: 0 0 3px 27px;
-  font-size: 19px;
+  font-size: 21px;
   clear:right;
   line-height: 1.6;
 }
@@ -377,10 +376,12 @@ export default {
 }
 .slug .content_inner .slug_content dl dt {
   position: relative;
-  margin: 30px 0 15px;
+  margin: 40px 0 20px;
   font-weight: bold;
+  padding-left: 20px;
+  font-size: 19px;
 }
-/* .slug .content_inner .slug_content dl dt::before {
+.slug .content_inner .slug_content dl dt::before {
   content: '';
   display: block;
   position: absolute;
@@ -393,13 +394,13 @@ export default {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-} */
+}
 .slug .content_inner .slug_content dl dd {
   padding: 0 5px;
 }
 .slug .content_inner .slug_content p {
-  margin: 15px 0 20px;
-  line-height: 1.9;
+  margin: 25px 0 35px;
+  line-height: 2.2;
 }
 .slug .content_inner .slug_content code {
   color: #E0002C;
@@ -596,6 +597,12 @@ code {
   }
   .slug .content_inner .slug_content ul {
     padding: 0px 0.5em 0 24px;
+  }
+  .slug .content_inner .slug_content dl dt {
+    font-size: 17px;
+  }
+  .share_wrap.section[data-v-61026706] {
+    padding: 40px 0 0;
   }
 }
 /* iPhone8以下 */

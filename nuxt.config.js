@@ -49,9 +49,6 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   modules: [
-    ['@nuxtjs/google-analytics', {
-      id: ctfConfig.GOOGLE_ANALYTICS_ID
-    }],
     ['@nuxtjs/google-adsense', {
       id: ctfConfig.GOOGLE_ADSENSE_ID,
       pageLevelAds: true,
@@ -64,8 +61,12 @@ module.exports = {
     '@nuxtjs/bulma',
     'nuxt-fontawesome',
     '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-analytics'
   ],
+  googleAnalytics: {
+    id: ctfConfig.GOOGLE_ANALYTICS_ID
+  },
   sitemap: {
     path: '/sitemap.xml', // 出力パス
     hostname: process.env.BASE_URL,

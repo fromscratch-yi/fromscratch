@@ -5,7 +5,7 @@
       <ul class="columns is-mobile">
         <li class="column">
           <p class="contanc_item">
-            <a href="mailto:yufroms@gmail.com?subject=[Contact]Contact from Portfolio."><img src="~assets/img/Mail.png" alt="Mail"></a>
+            <a href="mailto:yufroms@gmail.com?subject=Contact-to-FromScratch"><img src="~assets/img/Mail.png" alt="Mail"></a>
           </p>
         </li>
         <li class="column">
