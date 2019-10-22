@@ -79,7 +79,6 @@ module.exports = {
       '/work',
       '/blog'
     ],
-    generate: true,
     async routes () {
       var routeList = [
         '/',
@@ -150,8 +149,13 @@ module.exports = {
       return routeList;
     }
   },
-  manifest: {
-    name: "Yuichi Ishiyama's Portfolio & Blog",
+  pwa: {
+    workbox: {
+      offlineAnalytics: true
+    },
+    manifest: {
+      name: "Yuichi Ishiyama's Portfolio & Blog",
+    }
   },
   markdownit: {
     injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
