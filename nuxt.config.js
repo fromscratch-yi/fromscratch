@@ -18,20 +18,13 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Yuichi Ishiyama\'s Portfolio & Blog site.' },
-      { hid: 'canonical', name: 'canonical', content: 'https://fromscratch-y.work/' },
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', property: 'twitter:site', content: '@IshiyamaYuichi' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'FromScratch | Yuichi Ishiyama' },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'https://fromscratch-y.work/' },
-      { hid: 'og:title', property: 'og:title', content: 'FromScratch | Yuichi Ishiyama' },
-      { hid: 'og:description', property: 'og:description', content: 'This is Yuichi Ishiyama\'s Portfolio and Blog site.' },
-      { hid: 'og:image', property: 'og:image', content: 'https://fromscratch-y.work/ogp.gif' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'FromScratch' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/apple_icon.png' }
+      { rel: 'apple-touch-icon', href: '/apple_icon.png' },
     ],
     script: [{
       innerHTML: `{

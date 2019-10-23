@@ -99,11 +99,13 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.currentPost.fields.description },
         { hid: 'og:type', property: 'og:type', content: 'article' },
-        { hid: 'og:title', property: 'og:title', content: 'FromsBlog | ' + this.currentPost.fields.title },
+        { hid: 'og:title', property: 'og:title', content: this.currentPost.fields.title + ' | FromsBlog'},
         { hid: 'og:description', property: 'og:description', content: this.currentPost.fields.description },
         { hid: 'og:url', property: 'og:url', content: Domain + this.$route.fullPath },
-        { hid: 'og:image', property: 'og:image', content: 'https:' + this.currentPost.fields.headerImage.fields.file.url },
-        { hid: 'canonical', name: 'canonical', content: Domain + this.$route.fullPath.replace(/\/$/, '') + '/' }
+        { hid: 'og:image', property: 'og:image', content: 'https:' + this.currentPost.fields.headerImage.fields.file.url }
+      ],
+      link: [
+        { rel: 'canonical', href: Domain + this.$route.fullPath.replace(/\/$/, '') + '/' }
       ],
     }
   },

@@ -22,16 +22,16 @@ export default {
       },
       title: this.meta.title,
       meta: [
-        { hid: 'canonical', name: 'canonical', content: Domain + this.meta.url.replace(/\/$/, '') + '/' },
         { hid: 'description', name: 'description', content: this.meta.description },
         { hid: 'og:type', property: 'og:type', content: this.meta.type },
-        { hid: 'og:title', property: 'og:title', content: 'FromScratch | ' + this.meta.title },
+        { hid: 'og:title', property: 'og:title', content: this.meta.title + ' | FromScratch' },
         { hid: 'og:description', property: 'og:description', content: this.meta.description },
         { hid: 'og:url', property: 'og:url', content: Domain + this.meta.url.replace(/\/$/, '') + '/' },
         { hid: 'og:image', property: 'og:image', content: this.meta.image },
       ],
       link: [
-        { rel: 'alternate', hreflang: this.meta.lang, href: Domain + this.meta.url.replace(/\/$/, '') + '/' }
+        { rel: 'alternate', hreflang: this.meta.lang, href: Domain + this.meta.url.replace(/\/$/, '') + '/' },
+        { rel: 'canonical', href: Domain + this.meta.url.replace(/\/$/, '') + '/' }
       ],
       bodyAttrs: {
         class: (this.meta.bodyClass ? this.meta.bodyClass : 'base')
