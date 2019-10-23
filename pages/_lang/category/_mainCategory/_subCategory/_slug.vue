@@ -398,6 +398,14 @@ export default {
 .slug .content_inner .slug_content dl dd {
   padding: 0 5px;
 }
+.slug .content_inner .slug_content b {
+  color: #f96985;
+}
+.slug .content_inner .slug_content em {
+  font-style: normal;
+  background:linear-gradient(transparent 75%, #b2ffb2 75%);
+  font-weight:bold;
+}
 .slug .content_inner .slug_content p {
   margin: 25px 0 35px;
   line-height: 2.2;
