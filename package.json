@@ -28,6 +28,7 @@
     "markdown-it-toc": "^1.1.0",
     "nuxt": "^2.10.1",
     "nuxt-fontawesome": "^0.4.0",
+    "vue-analytics": "^5.17.2",
     "vue-carousel": "^0.18.0",
     "vue-chartjs": "^3.4.2",
     "vue-i18n": "^8.15.0",

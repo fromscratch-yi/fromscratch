@@ -49,23 +49,23 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   modules: [
-    ['@nuxtjs/google-adsense', {
-      id: ctfConfig.GOOGLE_ADSENSE_ID,
-      pageLevelAds: true,
-      tag: 'adsbygoogle',
-      includeQuery: false,
-      analyticsUacct: ctfConfig.GOOGLE_ANALYTICS_ID,
-      analyticsDomainName: 'fromscratch-y.work'
-    }],
+    '@nuxtjs/google-analytics',
+    ['@nuxtjs/google-adsense'],
     '@nuxtjs/pwa',
     '@nuxtjs/bulma',
     'nuxt-fontawesome',
     '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/sitemap'
   ],
   googleAnalytics: {
-    id: ctfConfig.GOOGLE_ANALYTICS_ID
+    id: ctfConfig.GOOGLE_ANALYTICS_ID,
+    debug: {
+      sendHitTask: true
+    },
+  },
+
+  'google-adsense': {
+    id: ctfConfig.GOOGLE_ADSENSE_ID
   },
   sitemap: {
     path: '/sitemap.xml', // 出力パス
