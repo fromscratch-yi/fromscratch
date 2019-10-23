@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  deploy_dev: # ジョブ名
+    docker:
+      - image: circleci/node:10.7 # ジョブ実行環境のDockerイメージを記述
+    steps:
+      - checkout # ソースコードのチェックアウト
+      - run:
+          name: setting env # .envを作成　セキュリティためGitHubにはアップしないため
+          command: |
+            echo "BASE_URL=$BASE_URL" > .env
+            echo "CTF_SPACE_ID=$CTF_SPACE_ID" >> .env
+            echo "CTF_CDA_ACCESS_TOKEN=$CTF_CDA_ACCESS_TOKEN" >> .env
+            echo "CTF_CMA_ACCESS_TOKEN=$CTF_CMA_ACCESS_TOKEN" >> .env
+            echo "GOOGLE_ANALYTICS_ID=$GOOGLE_ANALYTICS_ID" >> .env
+            echo "GOOGLE_ADSENSE_ID=$GOOGLE_ADSENSE_ID" >> .env
+      - run: # 順に実行したいコマンドとコマンドに名前をつけます
+          name: npm install
+          command: npm i
+      - run:
+          name: build
+          command: npm run generate
+      - run:
+          name: deploy to Firebase Hosting
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN # プロジェクト上のfirebase-toolsでデプロイします
+
+workflows:
+  version: 2
+  deploy_dev: # ワークフローの名前
+    jobs:
+      - deploy_dev: # 上で定義したジョブを指定します
+          filters:
+            branches:
+              only: master # developブランチのみを実行対象とします
