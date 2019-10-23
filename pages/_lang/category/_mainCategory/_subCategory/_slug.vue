@@ -414,7 +414,6 @@ export default {
   color: #E0002C;
 }
 .slug .content_inner .slug_content p.img_wrap {
-  margin: 0;
   text-align: center;
 }
 .slug .content_inner .slug_content .memo {
@@ -471,6 +470,21 @@ export default {
   line-height: 1.5;
   padding: 5px 0;
   list-style: disc;
+}
+.slug .content_inner .slug_content ul.desc_ul_wrap {
+  background: #ececec;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+.slug .content_inner .slug_content ul.desc_ul_wrap li {
+  font-weight: bold;
+  line-height: 1.7;
+  list-style: none;
+}
+.slug .content_inner .slug_content ul.desc_ul_wrap li span {
+  display: inline-block;
+  font-weight: normal;
+  padding-left: 7px;
 }
 .post_nav {
   position: relative;
