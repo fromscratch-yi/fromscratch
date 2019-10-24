@@ -8,7 +8,7 @@ const ctfConfig = getConfigForKeys([
 ])
 const {createClient} = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
-
+const webpack = require('webpack');
 module.exports = {
   /*
   ** Headers of the page
@@ -279,6 +279,12 @@ module.exports = {
         }
       }
     },
+    vendor: [
+      'moment',
+    ],
+    plugins: [
+      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+    ],
     /*
     ** Run ESLint on save
     */
