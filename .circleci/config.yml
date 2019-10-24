@@ -31,4 +31,4 @@ workflows:
       - deploy_master: # 上で定義したジョブを指定します
           filters:
             branches:
-              only: master # developブランチのみを実行対象とします
+              only: master # masterブランチのみを実行対象とします
