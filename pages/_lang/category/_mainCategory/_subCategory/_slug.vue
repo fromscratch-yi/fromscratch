@@ -401,7 +401,7 @@ export default {
   padding: 0 5px;
 }
 .slug .content_inner .slug_content b {
-  color: #f96985;
+  color: red;
 }
 .slug .content_inner .slug_content em {
   font-style: normal;
@@ -414,6 +414,9 @@ export default {
 }
 .slug .content_inner .slug_content code {
   color: #E0002C;
+}
+.slug .content_inner .slug_content .shell code {
+  color: #4dd03e;
 }
 .slug .content_inner .slug_content p.img_wrap {
   text-align: center;
@@ -445,12 +448,12 @@ export default {
 .slug .content_inner .slug_content .memo p.memo_ttl {
   font-weight: bold;
 }
+.slug .content_inner .slug_content a {
+  text-decoration: underline;
+}
 .slug .content_inner .slug_content a.refer {
   position: relative;
   padding-right: 15px;
-  color: #4a4a4a;
-  text-decoration: none;
-  line-height: 2;
 }
 .slug .content_inner .slug_content a.refer.decoration {
   text-decoration: underline;
@@ -533,13 +536,12 @@ blockquote {
 }
 code {
   font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-  line-height: 19px;
+  line-height: 1.7;
 }
 .hljs-comment,
 .hljs-quote {
   color: #8e908c;
 }
-
 /* Tomorrow Red */
 .hljs-variable,
 .hljs-template-variable,
@@ -551,7 +553,6 @@ code {
 .hljs-deletion {
   color: #c82829;
 }
-
 /* Tomorrow Orange */
 .hljs-number,
 .hljs-built_in,
@@ -563,12 +564,10 @@ code {
 .hljs-link {
   color: #f5871f;
 }
-
 /* Tomorrow Yellow */
 .hljs-attribute {
   color: #eab700;
 }
-
 /* Tomorrow Green */
 .hljs-string,
 .hljs-symbol,
@@ -576,34 +575,31 @@ code {
 .hljs-addition {
   color: #718c00;
 }
-
 /* Tomorrow Blue */
 .hljs-title,
 .hljs-section {
   color: #4271ae;
 }
-
 /* Tomorrow Purple */
 .hljs-keyword,
 .hljs-selector-tag {
   color: #8959a8;
 }
-
 .hljs {
   display: block;
   overflow-x: auto;
   color: #4d4d4c;
-  padding: 0.5em;
+  padding: 10px 12px;
 }
-
 .hljs-emphasis {
   font-style: italic;
 }
-
 .hljs-strong {
   font-weight: bold;
 }
-
+pre.hljs.shell {
+    background: #2b2b2b;
+}
 /* ipad未満 */
 @media screen and (max-width: 767px){
   .slug .content_inner .slug_content {
