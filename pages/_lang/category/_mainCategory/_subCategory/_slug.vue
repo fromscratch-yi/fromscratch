@@ -444,8 +444,10 @@ export default {
 .slug .content_inner .slug_content .memo p.memo_ttl,
 .slug .content_inner .slug_content .memo p.memo_desc {
   margin: 0;
+  line-height: 1.7;
 }
 .slug .content_inner .slug_content .memo p.memo_ttl {
+  margin-bottom: 7px;
   font-weight: bold;
 }
 .slug .content_inner .slug_content a {
