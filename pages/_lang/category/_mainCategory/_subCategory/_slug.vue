@@ -339,7 +339,10 @@ export default {
   width: 15%;
   display: block;
 }
-
+.slug .content_inner .slug_content h2 a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
 .slug .content_inner .slug_content h3 {
   position:relative;
   border-bottom: 1px dashed rgb(71, 160, 61);;
@@ -474,7 +477,7 @@ export default {
   padding: 0 0.5em 0 2em;
 }
 .slug .content_inner .slug_content ul li {
-  line-height: 1.5;
+  line-height: 2;
   padding: 5px 0;
   list-style: disc;
 }
@@ -485,13 +488,15 @@ export default {
 }
 .slug .content_inner .slug_content ul.desc_ul_wrap li {
   font-weight: bold;
-  line-height: 1.7;
+  line-height: 1.9;
   list-style: none;
+  margin-bottom: 10px;
 }
 .slug .content_inner .slug_content ul.desc_ul_wrap li span {
   display: inline-block;
   font-weight: normal;
   padding-left: 7px;
+  line-height: 1.9;
 }
 .slug .content_inner .slug_content ul.desc_ul_wrap li a {
   color: #003da0;
