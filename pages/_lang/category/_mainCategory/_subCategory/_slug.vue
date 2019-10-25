@@ -401,7 +401,7 @@ export default {
   padding: 0 5px;
 }
 .slug .content_inner .slug_content b {
-  color: red;
+  color: #af0000;
 }
 .slug .content_inner .slug_content em {
   font-style: normal;
@@ -492,6 +492,9 @@ export default {
   display: inline-block;
   font-weight: normal;
   padding-left: 7px;
+}
+.slug .content_inner .slug_content ul.desc_ul_wrap li a {
+  color: #003da0;
 }
 .post_nav {
   position: relative;

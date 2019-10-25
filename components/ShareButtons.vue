@@ -8,6 +8,7 @@
             class="social-list-link icon-twitter"
             :href="twitterUrl()"
             target="_blank"
+            rel="noopener"
             title="Twitterで共有"
           ><fa :icon="faTwitter" /><b hidden>Twitter</b></a>
         </li>
@@ -16,6 +17,7 @@
             class="social-list-link icon-facebook"
             :href="facebookUrl()"
             target="_blank"
+            rel="noopener"
             title="Facebookで共有"
           ><fa :icon="faFacebookF" /><b hidden>Facebook</b></a>
         </li>
@@ -24,6 +26,7 @@
             class="social-list-link icon-pocket"
             :href="pocketUrl()"
             target="_blank"
+            rel="noopener"
             title="pocketで共有"
           ><fa :icon="faGetPocket" /><b hidden>Pocket</b></a>
         </li>
@@ -32,6 +35,7 @@
             class="social-list-link icon-line"
             :href="lineUrl()"
             target="_blank"
+            rel="noopener"
             title="Lineで共有"
           ><b>LINE</b></a>
         </li>
@@ -132,7 +136,7 @@ export default {
   background: #eb4654;
 }
 .social-list-link.icon-line {
-  background: #00c300;
+  background: #00a200;
 }
 a.social-list-link {
   display: block;
