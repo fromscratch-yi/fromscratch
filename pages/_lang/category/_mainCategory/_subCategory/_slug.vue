@@ -600,6 +600,9 @@ code {
 pre.hljs.shell {
     background: #2b2b2b;
 }
+pre.hljs.under_p {
+  margin-top: -25px;
+}
 /* ipad未満 */
 @media screen and (max-width: 767px){
   .slug .content_inner .slug_content {
