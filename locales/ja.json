@@ -13,7 +13,7 @@
     "name": "ポートフォリオ"
   },
   "about": {
-    "pageTitle": "プロフィール・経歴・プログラミングスキルについて | FromScratch",
+    "pageTitle": "FromScratch | 石山 雄一(Yuichi Ishiyama)のプロフィール・経歴・プログラミングスキルについて",
     "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。Webエンジニアになった経緯、プログラミングに関するスキル、経歴を紹介させていただきます。",
     "name": "石山 雄一",
     "kind": "Webデザイン, 名刺デザイン, <span class=\"em_color\">フロントエンド</span>開発, <span class=\"em_color\">バックエンド</span>開発, モバイルアプリ開発, etc.",
@@ -75,7 +75,7 @@
     "note": "※ 守秘義務・機密情報保持の観点から、抽象的な表現としています。"
   },
   "work": {
-    "pageTitle": "ポートフォリオ・作品集のご紹介(Webアプリ・Webサイト・名刺 etc) | FromScratch",
+    "pageTitle": "FromScratch | 石山 雄一(Yuichi Ishiyama)のポートフォリオ・作品集のご紹介(Webアプリ・Webサイト・名刺 etc)",
     "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。個人で作成したWebアプリ、Webサイト、名刺デザインなどの作品を紹介させていただきます。",
     "introduction" : "個人で作成したWebアプリ、Webサイト、名刺デザインなどのポートフォリオ・作品集をご紹介します。ぜひご覧ください。",
     "overview": {
@@ -93,44 +93,44 @@
     "note": "※ 個人情報と機密保持のために、一部表示変更または非表示を行っております。"
   },
   "blog": {
-    "pageTitle": "FromsBlog | 石山 雄一(Yuichi Ishiyama)のブログ",
+    "pageTitle": "FromsBlog | 石山 雄一(Yuichi Ishiyama)のブログ | プログラミング,マネージメント,IT技術系ブログ",
     "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。プログラミング関連(フロントエンド・バックエンド・モバイル・インフラetc)から各種ツールの使い方、またマネージメントやモチベーションについての記事を投稿しています。また、個人勉強のアウトプットとしても活用しています。",
     "introduction": "学んだことのアウトプットとして、プログラミング関連(フロントエンド・バックエンド・モバイル・インフラetc)・マネージメント・モチベーション向上などに関する記事を中心に書いています。できるだけ初学者の方々にもわかりやすくなるよう心掛けていますので、ぜひご覧ください！",
     "no-posts": "記事がありません。",
     "categories": {
       "technology": {
         "name": "テクノロジー",
-        "pageTitle": "テクノロジー | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | プログラミング",
+        "pageTitle": "FromsBlog - テクノロジー | 石山 雄一(Yuichi Ishiyama)のブログ | プログラミング関連ブログ",
         "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらはITに関する技術全般、フロントエンド・バックエンド・モバイルアプリ・インフラ・その他ツールやサービスについてまでプログラミング技術に関するカテゴリです。プログラミング初学者にもわかりやすよう心がけて投稿しています。",
         "introduction": "こちらはITに関する技術全般、フロントエンド・バックエンド・モバイルアプリ・インフラ・その他ツールやサービスについてまでプログラミング技術に関するカテゴリです。<br>プログラミング初学者にもわかりやすよう心がけて投稿しています。",
         "subCategory": {
           "frontend": {
             "name": "フロントエンド",
-            "pageTitle": "フロントエンド | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | プログラミング",
+            "pageTitle": "FromsBlog - フロントエンド |石山 雄一(Yuichi Ishiyama)のブログ | プログラミング関連ブログ",
             "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらはフロントエンド関連のカテゴリーです。フロントエンド技術であるHTML, CSS, JavascriptなどからVue.jsやNuxt.js・Blumaなど各種フレームワークについての記事をプログラミング初学者にもわかりやすよう心がけて投稿しています。",
             "introduction": "こちらはフロントエンド関連のカテゴリーです。<br>フロントエンド技術であるHTML, CSS, JavascriptなどからVue.jsやNuxt.js・Blumaなど各種フレームワークについての記事をプログラミング初学者にもわかりやすよう心がけて投稿しています。"
           },
           "backend": {
             "name": "バックエンド",
-            "pageTitle": "バックエンド | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | プログラミング",
+            "pageTitle": "FromsBlog - バックエンド | 石山 雄一(Yuichi Ishiyama)のブログ | プログラミング関連ブログ",
             "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらはバックエンド・サーバサイドといわれる技術関連のカテゴリーです。バックエンド技術いわゆるプログラミング言語、PHP、Python、Go、DBなどのサーバサイド・バックエンドの技術についての記事をプログラミング初学者にもわかりやすよう心がけて投稿しています。",
             "introduction": "こちらはバックエンド・サーバサイドといわれる技術関連のカテゴリーです。<br>バックエンド技術いわゆるプログラミング言語、PHP、Python、Go、DBなどのサーバサイド・バックエンドの技術についての記事をプログラミング初学者にもわかりやすよう心がけて投稿しています。"
           },
           "mobile": {
             "name": "モバイルアプリ",
-            "pageTitle": "モバイルアプリ | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | プログラミング",
+            "pageTitle": "FromsBlog - モバイルアプリ | 石山 雄一(Yuichi Ishiyama)のブログ | プログラミング関連ブログ",
             "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。ちらはモバイルアプリ開発関連カテゴリーです。Android、iOSのネイティブアプリの開発からハイブリットアプリの技術まで、モバイルアプリ開発に関連する記事をプログラミング初学者にもわかりやすよう心がけて投稿しています。",
             "introduction": "こちらはモバイルアプリ開発関連カテゴリーです。<br>Android、iOSのネイティブアプリの開発からハイブリットアプリの技術まで、モバイルアプリ開発に関連する記事をプログラミング初学者にもわかりやすよう心がけて投稿しています。"
           },
           "infrastructure": {
             "name": "インフラ・環境",
-            "pageTitle": "インフラ・環境 | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | プログラミング",
+            "pageTitle": "FromsBlog - インフラ・環境 | 石山 雄一(Yuichi Ishiyama)のブログ | プログラミング関連ブログ",
             "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらは環境構築、ネットワーク、セキュリティなどのインフラ関連カテゴリーです。Docker、VMなどの仮想環境やネットワーク・セキュリティなどに関するインフラ・環境関連の記事をまとめています。",
             "introduction": "こちらは環境構築、ネットワーク、セキュリティなどのインフラ関連カテゴリーです。<br>Docker、VMなどの仮想環境やネットワーク・セキュリティなどに関するインフラ・環境関連の記事をまとめています。"
           },
           "other": {
             "name": "その他",
-            "pageTitle": "その他 | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | プログラミング",
+            "pageTitle": "FromsBlog - その他 | 石山 雄一(Yuichi Ishiyama)のブログ | プログラミング関連ブログ",
             "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらはその他、アプリケーション開発で使用するツールやサービスなどの関連カテゴリーです。GitやVScode、AWSやGCPなどのアプリケーション開発で使用するサービス、ツールについて初学者にわかりやすくなるよう心掛けて投稿しています。",
             "introduction": "こちらはその他、アプリケーション開発で使用するツールやサービスなどの関連カテゴリーです。<br>GitやVScode、AWSやGCPなどのアプリケーション開発で使用するサービス、ツールについて初学者にわかりやすくなるよう心掛けて投稿しています"
           }
@@ -138,25 +138,25 @@
       },
       "businesslife": {
         "name": "ビジネスライフ",
-        "pageTitle": "ビジネスライフ | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | マネージメント",
+        "pageTitle": "FromsBlog - ビジネスライフ | 石山 雄一(Yuichi Ishiyama)のブログ | マネージメント・ビジネス関連ブログ",
         "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらはビジネススキル(マネージメントやモチベーション、ブログスキル）関連のカテゴリーです。仕事におけるビジネススキルやセルフマネージメント・モチベーションに関して勉強したアウトプットとしてかつ、管理職になったばかりの方、初めて部下を持った方、自身のモチベーションが上がらないという方のためになるような記事を投稿しています。",
         "introduction": "こちらはビジネススキル(マネージメントやモチベーション、ブログスキル）関連のカテゴリーです。<br>仕事におけるビジネススキルやセルフマネージメント・モチベーションに関して勉強したアウトプットとしてかつ、管理職になったばかりの方、初めて部下を持った方、自身のモチベーションが上がらないという方のためになるような記事を投稿しています。",
         "subCategory": {
           "motivation": {
             "name": "モチベーション",
-            "pageTitle": "モチベーション | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | マネージメント",
+            "pageTitle": "FromsBlog - モチベーション | 石山 雄一(Yuichi Ishiyama)のブログ | マネージメント・ビジネス関連ブログ",
             "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらはモチベーション関連のカテゴリーです。仕事・私生活・勉強・部活など、自身のモチベーションアップにつながるような記事や、部下、教え子などのモチベーションアップのための方法についてのヒントになるような記事を投稿しています。",
             "introduction": "こちらはモチベーション関連のカテゴリーです。<br>仕事・私生活・勉強・部活など、自身のモチベーションアップにつながるような記事や、部下、教え子などのモチベーションアップのための方法についてのヒントになるような記事を投稿しています。"
           },
           "management": {
             "name": "マネージメント",
-            "pageTitle": "マネージメント | FromsBlog  石山 雄一(Yuichi Ishiyama)のブログ | マネージメント",
+            "pageTitle": "FromsBlog - マネージメント | 石山 雄一(Yuichi Ishiyama)のブログ | マネージメント・ビジネス関連ブログ",
             "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらはマネージメント関連のカテゴリーです。管理職になったばかりの方、初めて部下を持った方のためになるようなマネージメントについての記事を投稿しています。",
             "introduction": "こちらはマネージメント関連のカテゴリーです。<br>管理職になったばかりの方、初めて部下を持った方のためになるようなマネージメントについての記事を投稿しています。"
           },
           "blogskill": {
             "name": "ブログスキル",
-            "pageTitle": "ブログスキル | romsBlog  石山 雄一(Yuichi Ishiyama)のブログ | マネージメント",
+            "pageTitle": "FromsBlog - ブログスキル | 石山 雄一(Yuichi Ishiyama)のブログ | マネージメント・ビジネス関連ブログ",
             "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)です。こちらはブログスキル関連のカテゴリーです。ブログを作成するにあたっての技術的なことから、SEO対策、各種必要なツールなどについての記事を投稿しています。",
             "introduction": "こちらはブログスキル関連のカテゴリーです。<br>ブログを作成するにあたっての技術的なことから、SEO対策、各種必要なツールなどについての記事を投稿しています。"
           }
