@@ -160,28 +160,7 @@ export default {
           }
         ]
       }
-    },
-    // dateOrder: function () {
-    //   for (let i = 0; i < this.allPosts.length; i++) {
-    //     if (this.allPosts[i].fields.publishedAt === this.currentPost.fields.publishedAt) {
-    //       return i;
-    //     }
-    //   }
-    // },
-    // nextPost: function () {
-    //   if (this.dateOrder === 0) {
-    //     return false;
-    //   } else {
-    //     return this.allPosts[this.dateOrder - 1];
-    //   }
-    // },
-    // prevPost: function () {
-    //   if (this.dateOrder === this.allPosts.length - 1) {
-    //     return false;
-    //   } else {
-    //     return this.allPosts[this.dateOrder + 1];
-    //   }
-    // }
+    }
   },
   methods: {
     handleScroll: (evt, el) => {
