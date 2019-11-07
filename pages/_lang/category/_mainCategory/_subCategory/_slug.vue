@@ -274,6 +274,7 @@ export default {
 }
 .slug .content_inner .slug_content .mokuji p {
   text-align: center;
+  margin: 15px 0 20px;
 }
 .slug .content_inner .slug_content .mokuji ul li a {
   color: #464646;
@@ -479,6 +480,34 @@ export default {
 }
 .slug .content_inner .slug_content ul.desc_ul_wrap li a {
   color: #003da0;
+}
+.slug .content_inner .slug_content .slide_tbl_wrap {
+  z-index: 1;
+  overflow-x: auto;
+  background-attachment: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.slug .content_inner .slug_content .slide_tbl_wrap .table {
+  table-layout: fixed;
+  width: auto;
+  min-width: 665px;
+  max-width: 100%;
+}
+.slug .content_inner .slug_content .slide_tbl_wrap .table th {
+  text-align: center;
+}
+.slug .content_inner .slug_content .slide_tbl_wrap .table {
+  border: 1px solid #dbdbdb;
+}
+.slug .content_inner .slug_content .slide_tbl_wrap .table td,
+.slug .content_inner .slug_content .slide_tbl_wrap .table th {
+  border-width: 1px;
+}
+.slug .content_inner .slug_content .slide_tbl_wrap .table thead th {
+  background: #d6fdd9;
+}
+.slug .content_inner .slug_content .slide_tbl_wrap .table tbody th {
+  background: #fde8d6;
 }
 .post_nav {
   position: relative;
