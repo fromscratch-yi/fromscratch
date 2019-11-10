@@ -75,7 +75,7 @@ export default {
           "headline": "${this.currentPost.fields.title}",
           "image": "https:${this.currentPost.fields.headerImage.fields.file.url}",
           "datePublished": "${this.currentPost.fields.publishedAt}",
-          "dateModified": "${this.currentPost.fields.publishedAt}",
+          "dateModified": "${this.currentPost.sys.updatedAt}",
           "author": {
             "@type": "Person",
             "name": "Yuichi Ishiyama"
