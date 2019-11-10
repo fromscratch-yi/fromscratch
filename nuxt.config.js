@@ -279,9 +279,6 @@ module.exports = {
         }
       }
     },
-    vendor: [
-      'moment',
-    ],
     plugins: [
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
