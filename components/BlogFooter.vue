@@ -21,13 +21,13 @@
         <div class="inner">
           <div class="inner_ctn">
             <p class="main_category">
-              <nuxt-link :to="$i18n.path('category/technology/')">
+              <nuxt-link :to="$i18n.path('blog/technology/')">
                 <fa :icon="faLaptopCode"/>{{ $t('blog.categories.technology.name') }}
               </nuxt-link>
             </p>
             <ul class="sub_category">
               <li v-for="(val, key) in $t('blog.categories.technology.subCategory')" :key="key">
-                <nuxt-link :to="$i18n.path('category/technology/' + key + '/')">
+                <nuxt-link :to="$i18n.path('blog/technology/' + key + '/')">
                   {{ val.name }}
                 </nuxt-link>
               </li>
@@ -35,13 +35,13 @@
           </div>
           <div class="inner_ctn">
             <p class="main_category">
-              <nuxt-link :to="$i18n.path('category/businesslife/')">
+              <nuxt-link :to="$i18n.path('blog/businesslife/')">
                 <fa :icon="faUserTie"/>{{ $t('blog.categories.businesslife.name') }}
               </nuxt-link>
             </p>
             <ul class="sub_category">
               <li v-for="(val, key) in $t('blog.categories.businesslife.subCategory')" :key="key">
-                <nuxt-link :to="$i18n.path('category/businesslife/' + key + '/')">
+                <nuxt-link :to="$i18n.path('blog/businesslife/' + key + '/')">
                   {{ val.name }}
                 </nuxt-link>
               </li>

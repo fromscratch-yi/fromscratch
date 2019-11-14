@@ -13,7 +13,7 @@
               </div>
             </div>
             <div class="blog_menu sub_contents fadein move">
-              <h2 class="fadein" v-scroll="handleScroll"><nuxt-link :to="$i18n.path('category/technology')"><fa :icon="faLaptopCode" />{{ $t('blog.categories.technology.name') }}</nuxt-link></h2>
+              <h2 class="fadein" v-scroll="handleScroll"><nuxt-link :to="$i18n.path('blog/technology')"><fa :icon="faLaptopCode" />{{ $t('blog.categories.technology.name') }}</nuxt-link></h2>
               <p v-if="technologyPosts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
               <section v-else class="columns is-mobile is-multiline new_posts">
                 <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in technologyPosts" :key="post.id">
@@ -22,13 +22,13 @@
                     :mainCategory="'technology'"
                     :subCategory="$t('blog.categories.technology.subCategory.' + post.fields.category + '.name')"
                     :title="post.fields.title"
-                    :slug="'category/technology/' + post.fields.category + '/' + post.fields.slug"
+                    :slug="'blog/technology/' + post.fields.category + '/' + post.fields.slug"
                     :thumbnail="post.fields.thumbnail.fields"
                     :publishedAt="post.fields.publishedAt"
                     :tags="post.fields.tags"></Card>
                 </div>
               </section>
-              <h2 class="fadein" v-scroll="handleScroll"><nuxt-link :to="$i18n.path('category/businesslife')"><fa :icon="faUserTie" />{{ $t('blog.categories.businesslife.name') }}</nuxt-link></h2>
+              <h2 class="fadein" v-scroll="handleScroll"><nuxt-link :to="$i18n.path('blog/businesslife')"><fa :icon="faUserTie" />{{ $t('blog.categories.businesslife.name') }}</nuxt-link></h2>
               <p v-if="businessPosts.length <= 0" class="no_posts fadein" v-scroll="handleScroll" v-html="$t('blog.no-posts')"></p>
               <section v-else class="columns is-mobile is-multiline new_posts">
                 <div class="column is-12-mobile is-4-tablet fadein" v-scroll="handleScroll" v-for="post in businessPosts" :key="post.id">
@@ -37,7 +37,7 @@
                     :mainCategory="'businesslife'"
                     :subCategory="$t('blog.categories.businesslife.subCategory.' + post.fields.category + '.name')"
                     :title="post.fields.title"
-                    :slug="'category/businesslife/' + post.fields.category + '/' + post.fields.slug"
+                    :slug="'blog/businesslife/' + post.fields.category + '/' + post.fields.slug"
                     :thumbnail="post.fields.thumbnail.fields"
                     :publishedAt="post.fields.publishedAt"
                     :tags="post.fields.tags"></Card>

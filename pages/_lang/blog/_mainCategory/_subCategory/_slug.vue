@@ -28,7 +28,7 @@
                   :mainCategory="post.sys.contentType.sys.id"
                   :subCategory="$t('blog.categories.' + (post.sys.contentType.sys.id) + '.subCategory.' + post.fields.category + '.name')"
                   :title="post.fields.title"
-                  :slug="'category/' + post.sys.contentType.sys.id + '/' + post.fields.category + '/' + post.fields.slug"
+                  :slug="'blog/' + post.sys.contentType.sys.id + '/' + post.fields.category + '/' + post.fields.slug"
                   :thumbnail="post.fields.thumbnail.fields"
                   :publishedAt="post.fields.publishedAt"
                   :tags="post.fields.tags"></Card>
@@ -152,11 +152,11 @@ export default {
           },
           {
             name: this.$t('blog.categories.' + this.$route.params.mainCategory + '.name'),
-            path: this.$i18n.path('category/' + this.$route.params.mainCategory + '/')
+            path: this.$i18n.path('blog/' + this.$route.params.mainCategory + '/')
           },
           {
             name: this.$t('blog.categories.' + this.$route.params.mainCategory + '.subCategory.' + this.$route.params.subCategory + '.name'),
-            path: this.$i18n.path('category/' + this.$route.params.mainCategory + '/' + this.$route.params.subCategory + '/')
+            path: this.$i18n.path('blog/' + this.$route.params.mainCategory + '/' + this.$route.params.subCategory + '/')
           }
         ]
       }

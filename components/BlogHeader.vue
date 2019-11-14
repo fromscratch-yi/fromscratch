@@ -46,33 +46,33 @@
             <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
             <li class="category_link">
               <p class="main_category">
-                <nuxt-link :to="$i18n.path('category/technology/')">
+                <nuxt-link :to="$i18n.path('blog/technology/')">
                   <fa :icon="faLaptopCode"/>{{ $t('blog.categories.technology.name') }}
                 </nuxt-link>
               </p>
               <ul class="sub_category">
                 <li>
-                  <nuxt-link :to="$i18n.path('category/technology/frontend/')">
+                  <nuxt-link :to="$i18n.path('blog/technology/frontend/')">
                     {{ $t('blog.categories.technology.subCategory.frontend.name') }}
                   </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="$i18n.path('category/technology/backend/')">
+                  <nuxt-link :to="$i18n.path('blog/technology/backend/')">
                     {{ $t('blog.categories.technology.subCategory.backend.name') }}
                   </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="$i18n.path('category/technology/mobile/')">
+                  <nuxt-link :to="$i18n.path('blog/technology/mobile/')">
                     {{ $t('blog.categories.technology.subCategory.mobile.name') }}
                   </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="$i18n.path('category/technology/infrastructure/')">
+                  <nuxt-link :to="$i18n.path('blog/technology/infrastructure/')">
                     {{ $t('blog.categories.technology.subCategory.infrastructure.name') }}
                   </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="$i18n.path('category/technology/other/')">
+                  <nuxt-link :to="$i18n.path('blog/technology/other/')">
                     {{ $t('blog.categories.technology.subCategory.other.name') }}
                   </nuxt-link>
                 </li>
@@ -80,23 +80,23 @@
             </li>
             <li class="category_link">
               <p class="main_category">
-                <nuxt-link :to="$i18n.path('category/businesslife/')">
+                <nuxt-link :to="$i18n.path('blog/businesslife/')">
                   <fa :icon="faUserTie"/>{{ $t('blog.categories.businesslife.name') }}
                 </nuxt-link>
               </p>
               <ul class="sub_category">
                 <li>
-                  <nuxt-link :to="$i18n.path('category/businesslife/motivation/')">
+                  <nuxt-link :to="$i18n.path('blog/businesslife/motivation/')">
                     {{ $t('blog.categories.businesslife.subCategory.motivation.name') }}
                   </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="$i18n.path('category/businesslife/management/')">
+                  <nuxt-link :to="$i18n.path('blog/businesslife/management/')">
                     {{ $t('blog.categories.businesslife.subCategory.management.name') }}
                   </nuxt-link>
                 </li>
                 <li>
-                  <nuxt-link :to="$i18n.path('category/businesslife/blogskill/')">
+                  <nuxt-link :to="$i18n.path('blog/businesslife/blogskill/')">
                     {{ $t('blog.categories.businesslife.subCategory.blogskill.name') }}
                   </nuxt-link>
                 </li>

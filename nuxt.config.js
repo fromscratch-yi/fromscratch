@@ -78,30 +78,30 @@ module.exports = {
         '/about/',
         '/work/',
         '/blog/',
-        '/category/technology/',
-        '/category/technology/frontend/',
-        '/category/technology/backend/',
-        '/category/technology/mobile/',
-        '/category/technology/infrastructure/',
-        '/category/technology/other/',
-        '/category/businesslife/',
-        '/category/businesslife/motivation/',
-        '/category/businesslife/management/',
-        '/category/businesslife/blogskill/',
+        '/blog/technology/',
+        '/blog/technology/frontend/',
+        '/blog/technology/backend/',
+        '/blog/technology/mobile/',
+        '/blog/technology/infrastructure/',
+        '/blog/technology/other/',
+        '/blog/businesslife/',
+        '/blog/businesslife/motivation/',
+        '/blog/businesslife/management/',
+        '/blog/businesslife/blogskill/',
         '/ja/',
         '/ja/about/',
         '/ja/work/',
         '/ja/blog/',
-        '/ja/category/technology/',
-        '/ja/category/technology/frontend/',
-        '/ja/category/technology/backend/',
-        '/ja/category/technology/mobile/',
-        '/ja/category/technology/infrastructure/',
-        '/ja/category/technology/other/',
-        '/ja/category/businesslife/',
-        '/ja/category/businesslife/motivation/',
-        '/ja/category/businesslife/management/',
-        '/ja/category/businesslife/blogskill/',
+        '/ja/blog/technology/',
+        '/ja/blog/technology/frontend/',
+        '/ja/blog/technology/backend/',
+        '/ja/blog/technology/mobile/',
+        '/ja/blog/technology/infrastructure/',
+        '/ja/blog/technology/other/',
+        '/ja/blog/businesslife/',
+        '/ja/blog/businesslife/motivation/',
+        '/ja/blog/businesslife/management/',
+        '/ja/blog/businesslife/blogskill/',
       ];
       await cdaClient.getEntries({
         'content_type': 'technology',
@@ -109,7 +109,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/category/technology/${entry.fields.category}/${entry.fields.slug}/`)
+          ...entries.items.map(entry => `/ja/blog/technology/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -118,7 +118,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/category/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
+          ...entries.items.map(entry => `/ja/blog/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -127,7 +127,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/category/technology/${entry.fields.category}/${entry.fields.slug}/`)
+          ...entries.items.map(entry => `/blog/technology/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -136,7 +136,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/category/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
+          ...entries.items.map(entry => `/blog/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       return routeList;
@@ -188,30 +188,30 @@ module.exports = {
         '/about',
         '/work',
         '/blog',
-        '/category/technology',
-        '/category/technology/frontend',
-        '/category/technology/backend',
-        '/category/technology/mobile',
-        '/category/technology/infrastructure',
-        '/category/technology/other',
-        '/category/businesslife',
-        '/category/businesslife/motivation',
-        '/category/businesslife/management',
-        '/category/businesslife/blogskill',
+        '/blog/technology',
+        '/blog/technology/frontend',
+        '/blog/technology/backend',
+        '/blog/technology/mobile',
+        '/blog/technology/infrastructure',
+        '/blog/technology/other',
+        '/blog/businesslife',
+        '/blog/businesslife/motivation',
+        '/blog/businesslife/management',
+        '/blog/businesslife/blogskill',
         '/ja',
         '/ja/about',
         '/ja/work',
         '/ja/blog',
-        '/ja/category/technology',
-        '/ja/category/technology/frontend',
-        '/ja/category/technology/backend',
-        '/ja/category/technology/mobile',
-        '/ja/category/technology/infrastructure',
-        '/ja/category/technology/other',
-        '/ja/category/businesslife/',
-        '/ja/category/businesslife/motivation',
-        '/ja/category/businesslife/management',
-        '/ja/category/businesslife/blogskill',
+        '/ja/blog/technology',
+        '/ja/blog/technology/frontend',
+        '/ja/blog/technology/backend',
+        '/ja/blog/technology/mobile',
+        '/ja/blog/technology/infrastructure',
+        '/ja/blog/technology/other',
+        '/ja/blog/businesslife/',
+        '/ja/blog/businesslife/motivation',
+        '/ja/blog/businesslife/management',
+        '/ja/blog/businesslife/blogskill',
       ];
       await cdaClient.getEntries({
         'content_type': 'technology',
@@ -219,7 +219,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/category/technology/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/ja/blog/technology/${entry.fields.category}/${entry.fields.slug}`)
         )
       });
       await cdaClient.getEntries({
@@ -228,7 +228,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/category/businesslife/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/ja/blog/businesslife/${entry.fields.category}/${entry.fields.slug}`)
         )
       });
       await cdaClient.getEntries({
@@ -237,7 +237,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/category/technology/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/blog/technology/${entry.fields.category}/${entry.fields.slug}`)
         )
       });
       await cdaClient.getEntries({
@@ -246,7 +246,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/category/businesslife/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/blog/businesslife/${entry.fields.category}/${entry.fields.slug}`)
         )
       });
       return routeList;

@@ -19,7 +19,7 @@
                   :mainCategory="category"
                   :subCategory="$t('blog.categories.' + category + '.subCategory.' + post.fields.category + '.name')"
                   :title="post.fields.title"
-                  :slug="'category/' + category + '/' + post.fields.category + '/' + post.fields.slug"
+                  :slug="'blog/' + category + '/' + post.fields.category + '/' + post.fields.slug"
                   :thumbnail="post.fields.thumbnail.fields"
                   :publishedAt="post.fields.publishedAt"
                   :tags="post.fields.tags"></Card>
