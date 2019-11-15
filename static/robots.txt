@@ -1,0 +1,3 @@
+User-agent : *
+Disallow :
+Sitemap : https://fromscratch-y.work/sitemap.xml
