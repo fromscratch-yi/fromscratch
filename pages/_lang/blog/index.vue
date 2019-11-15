@@ -92,8 +92,12 @@ export default {
       'order': '-fields.publishedAt',
       'limit': 3
     }).then(entries => {
+      var posts = (entries.items).filter(function(item, index){
+        var data = item.fields;
+        if (data.title && data.description && data.tags && data.body && data.recommend) return true;
+      });
       return {
-        technologyPosts: entries.items
+        technologyPosts: posts
       }
     })
     .catch(entries => {
@@ -108,8 +112,12 @@ export default {
       'order': '-fields.publishedAt',
       'limit': 3
     }).then(entries => {
+      var posts = (entries.items).filter(function(item, index){
+        var data = item.fields;
+        if (data.title && data.description && data.tags && data.body && data.recommend) return true;
+      });
       return {
-        businessPosts: entries.items
+        businessPosts: posts
       }
     })
     .catch(entries => {

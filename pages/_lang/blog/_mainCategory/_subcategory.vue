@@ -60,8 +60,12 @@ export default {
       'order': '-fields.publishedAt',
       'fields.category[match]': params.subcategory
     }).then(entries => {
+      var posts = (entries.items).filter(function(item, index){
+        var data = item.fields;
+        if (data.title && data.description && data.tags && data.body && data.recommend) return true;
+      });
       return {
-        posts: entries.items
+        posts: posts
       }
     })
     .catch(entries => {
