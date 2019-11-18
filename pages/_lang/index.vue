@@ -21,7 +21,7 @@
       <!-- bottom-right -->
       <div class="typer_wrap" v-bind:class="{active: isActive}" @click="click">
         <div class="inner">
-          <img class="logo" src="~assets/img/logo.png" alt="FromScratch logo">
+          <img loading="lazy" class="logo" src="~assets/img/logo.png" alt="FromScratch logo">
           <span class="tap_txt">
             <vue-typer :text='["Tap"]' :repeat='0' :type-delay='200'></vue-typer>
           </span>
@@ -31,7 +31,7 @@
     <!-- welcome back -->
     <div class="back_wrap" v-bind:class="{active: isActive}">
       <section class="back_ctn">
-        <p class="main_line"><img class="logo" src="~assets/img/logo.png" alt="FromScratch" @click="click"></p>
+        <p class="main_line"><img loading="lazy" class="logo" src="~assets/img/logo.png" alt="FromScratch" @click="click"></p>
         <p class="desc_txt">Welcome to this site.<br>All will begin <span class="emp">From Scratch</span></p>
         <nav>
           <ul>

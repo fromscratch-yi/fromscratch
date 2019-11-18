@@ -7,7 +7,7 @@
           <figure class="profile_img rotation_img image move" v-scroll="handleScroll">
             <picture>
               <source type="image/webp" srcset="~assets/img/YuichiIshiyama.webp"/>
-              <img class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
+              <img loading="lazy" class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
             </picture>
           </figure>
         </div>
@@ -29,22 +29,22 @@
         <ul class="contact_item_wrap columns is-mobile">
           <li class="column">
             <p class="contanc_item">
-              <a href="mailto:yufroms@gmail.com?subject=Contact-to-FromScratch"><img src="~assets/img/Mail.png" alt="Mail"></a>
+              <a href="mailto:yufroms@gmail.com?subject=Contact-to-FromScratch"><img loading="lazy" src="~assets/img/Mail.png" alt="Mail"></a>
             </p>
           </li>
           <li class="column">
             <p class="contanc_item">
-              <a href="https://twitter.com/IshiyamaYuichi" target="_blank" rel="noopener"><img src="~assets/img/Twitter.png" alt="Twitter"></a>
+              <a href="https://twitter.com/IshiyamaYuichi" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Twitter.png" alt="Twitter"></a>
             </p>
           </li>
           <li class="column">
             <p class="contanc_item">
-              <a href="https://www.pinterest.jp/yu123daa/" target="_blank" rel="noopener"><img src="~assets/img/Pinterest.png" alt="Pinterest"></a>
+              <a href="https://www.pinterest.jp/yu123daa/" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Pinterest.png" alt="Pinterest"></a>
             </p>
           </li>
           <li class="column">
             <p class="contanc_item">
-              <a href="fb://profile/100009266871916%3A100009266871916%3A1570738429" target="_blank" rel="noopener"><img src="~assets/img/Facebook.png" alt="Facebook"></a>
+              <a href="fb://profile/100009266871916%3A100009266871916%3A1570738429" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Facebook.png" alt="Facebook"></a>
             </p>
           </li>
         </ul>

@@ -18,7 +18,7 @@
               <figure class="move rotation_img image is-square">
                 <picture>
                   <source type="image/webp" srcset="~assets/img/YuichiIshiyama.webp"/>
-                  <img class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
+                  <img loading="lazy" class="is-rounded" src="~assets/img/YuichiIshiyama.jpg" :alt="$t('about.name')" width="200" height="200">
                 </picture>
               </figure>
             </div>
@@ -39,7 +39,7 @@
               <span class="category_name" v-html="$t('word.' + skill_name)"></span>
               <picture class="link_img" @click="openModal($event, skill, skill_name)">
                 <source type="image/webp" :srcset="require('~/assets/img/icon_' + skill_name + '.webp')"/>
-                <img class="rotation_img" v-scroll="handleScroll" :src="require('~/assets/img/icon_' + skill_name + '.png')" :alt="$t('word.' + skill_name)" width="100" height="100">
+                <img loading="lazy" class="rotation_img" v-scroll="handleScroll" :src="require('~/assets/img/icon_' + skill_name + '.png')" :alt="$t('word.' + skill_name)" width="100" height="100">
               </picture>
             </h3>
             <ul class="skill_list">

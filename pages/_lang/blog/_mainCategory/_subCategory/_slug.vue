@@ -6,7 +6,7 @@
         <div class="contents_area fadein move">
           <div class="blog_slug_wrap">
             <section class="slug">
-              <p class="head_img"><img class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url" :alt="currentPost.fields.title"></p>
+              <p class="head_img"><img loading="lazy" class="slug_image" v-bind:src="currentPost.fields.headerImage.fields.file.url" :alt="currentPost.fields.title"></p>
               <div class="content_inner">
                 <p class="slug_date">{{ currentPost.fields.publishedAt }}</p>
                 <h1 class="slug_title">{{ currentPost.fields.title }}</h1>

@@ -6,7 +6,7 @@
         <nuxt-link :to="$i18n.path(slug + '/')" class="wrapper">
           <div class="card-image">
             <figure class="image is-5by3">
-              <img v-bind:src="thumbnail.file.url" v-bind:alt="title">
+              <img loading="lazy" v-bind:src="thumbnail.file.url" v-bind:alt="title">
             </figure>
           </div>
           <div class="card-content">
