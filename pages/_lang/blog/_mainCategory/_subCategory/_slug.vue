@@ -162,6 +162,12 @@ export default {
       }
     }
   },
+  mounted() {
+    const hash = this.$route.hash
+    if (hash && hash.match(/^#.+$/)) {
+      this.$scrollTo(hash);
+    }
+  },
   methods: {
     handleScroll: (evt, el) => {
       let top = el.getBoundingClientRect().top;
