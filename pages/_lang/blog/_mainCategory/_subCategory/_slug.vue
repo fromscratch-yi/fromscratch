@@ -147,7 +147,7 @@ export default {
       return {
         data: [
           {
-            name: 'Blog',
+            name: this.$t('word.blogTop'),
             path: this.$i18n.path('blog/')
           },
           {

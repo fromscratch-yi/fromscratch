@@ -148,11 +148,11 @@ export default {
       return {
         data: [
           {
-            name: 'Top',
+            name: this.$t('word.portfolio'),
             path: this.$i18n.path('')
           },
           {
-            name: 'Blog',
+            name: this.$t('word.blogTop'),
             path: this.$route.fullPath
           }
         ]
