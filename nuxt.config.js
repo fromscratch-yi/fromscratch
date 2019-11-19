@@ -279,14 +279,18 @@ module.exports = {
         }
       }
     },
-    plugins: [
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-    ],
+    splitChunks: {
+      layouts: true,
+      pages: true,
+      commons: true
+    },
     /*
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
-      config.resolve.alias['chart.js'] = 'chart.js/dist/Chart.js'
+      config.externals = {
+        moment: "moment"
+      };
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
