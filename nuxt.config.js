@@ -271,7 +271,6 @@ module.exports = {
   */
   build: {
     hardSource: true,
-    analyze: false,
     postcss: {
       plugins: {
         'postcss-custom-properties': {
