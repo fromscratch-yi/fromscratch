@@ -114,13 +114,16 @@ export default {
     var skills = {
       'frontend': {
         'HTML': '5',
+        'pug': '4',
         'CSS': '4.5',
+        'scss': '4',
         'Twig': '4',
         'Blade': '4',
         'js': '4.5',
         'jquery': '4',
         'vue.js': '3',
-        'nuxt.js': '3'
+        'nuxt.js': '3',
+        'gulp.js': '3'
       },
       'backend': {
         'PHP': '4.5',

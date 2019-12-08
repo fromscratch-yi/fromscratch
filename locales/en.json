@@ -23,7 +23,7 @@
     "project": [
       {
         "title": "Some web sites Front-End &amp; Back-End.",
-        "skills": ["PHP", "Yii", "Laravel", "HTML", "CSS", "js", "Vue.js", "Nuxt.js"]
+        "skills": ["PHP", "Yii", "Laravel", "HTML", "CSS", "js", "Vue.js", "Nuxt.js", "pug", "scss", "gulp.js"]
       },
       {
         "title": "Programming school instructor",
