@@ -10,12 +10,12 @@
     "blogTop": "ブログ"
   },
   "top": {
-    "pageTitle": "石山 雄一(Yuichi Ishiyama)のポートフォリオ・ブログサイト | FromScratch",
+    "pageTitle": "石山 雄一(Yuichi Ishiyama)のサイト | FromScratch",
     "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)のポートフォリオ兼ブログサイトです。Nuxt.js, Contentful, firebaseでポートフォリオ・ブログサイトを作成しました。",
     "name": "ポートフォリオ"
   },
   "about": {
-    "pageTitle": "石山 雄一(Yuichi Ishiyama)のプロフィール・経歴・プログラミングスキル | FromScratch",
+    "pageTitle": "プロフィール・経歴・スキル | FromScratch | 石山 雄一(Yuichi Ishiyama)のサイト",
     "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)のプロフィールページです。Webエンジニアになった経緯、プログラミングに関するスキル、経歴を紹介させていただきます。",
     "name": "石山 雄一",
     "kind": "Webデザイン, 名刺デザイン, <span class=\"em_color\">フロントエンド</span>開発, <span class=\"em_color\">バックエンド</span>開発, モバイルアプリ開発, etc.",
@@ -77,7 +77,7 @@
     "note": "※ 守秘義務・機密情報保持の観点から、抽象的な表現としています。"
   },
   "work": {
-    "pageTitle": "石山 雄一(Yuichi Ishiyama)のポートフォリオ・作品集 | FromScratch",
+    "pageTitle": "ポートフォリオ・作品集 | FromScratch | 石山 雄一(Yuichi Ishiyama)のサイト",
     "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)のポートフォリオページです。個人で作成したWebアプリ、Webサイト、名刺デザインなどの作品を紹介させていただきます。",
     "introduction" : "個人で作成したWebアプリ、Webサイト、名刺デザインなどのポートフォリオ・作品集をご紹介します。ぜひご覧ください。",
     "overview": {
@@ -95,7 +95,7 @@
     "note": "※ 個人情報と機密保持のために、一部表示変更または非表示を行っております。"
   },
   "blog": {
-    "pageTitle": "FromsBlog 石山 雄一(Yuichi Ishiyama)のブログ | プログラミング・マネージメント関連ブログ",
+    "pageTitle": "ブログ | FromsBlog 石山 雄一(Yuichi Ishiyama) | プログラミング・マネージメント関連ブログ",
     "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)のブログページです。プログラミング関連(フロントエンド・バックエンド・モバイル・インフラetc)から各種ツールの使い方、またマネージメントやモチベーションについての記事を投稿しています。また、個人勉強のアウトプットとしても活用しています。",
     "introduction": "学んだことのアウトプットとして、プログラミング関連(フロントエンド・バックエンド・モバイル・インフラetc)・マネージメント・モチベーション向上などに関する記事を中心に書いています。できるだけ初学者の方々にもわかりやすくなるよう心掛けていますので、ぜひご覧ください！",
     "no-posts": "記事がありません。",
