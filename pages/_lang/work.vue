@@ -284,6 +284,8 @@
                 <li class="tag">CSS</li>
                 <li class="tag">Bluma</li>
                 <li class="tag">Firebase</li>
+                <li class="tag">CircleCI</li>
+                <li class="tag">Contentful</li>
                 <li class="tag">Responsive</li>
               </ul>
               <div class="slide_box" v-scroll="handleScroll">
@@ -305,8 +307,8 @@
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">jQuery</li>
-                <li class="tag">HTML(pug)</li>
-                <li class="tag">CSS(scss)</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
@@ -328,8 +330,9 @@
               </client-only>
               <ul class="skill_list">
                 <li class="tag">jQuery</li>
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
+                <li class="tag">HTML(pug)</li>
+                <li class="tag">CSS(scss)</li>
+                <li class="tag">Gulp</li>
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
