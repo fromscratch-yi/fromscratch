@@ -25,7 +25,7 @@
         </li>
       </ul>
     </section>
-    <p class="copyright">&copy;2019 FromScratch All Rights Reserved</p>
+    <p class="copyright">&copy;2020 FromScratch All Rights Reserved</p>
   </footer>
 </template>
 

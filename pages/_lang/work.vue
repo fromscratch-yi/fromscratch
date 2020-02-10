@@ -25,6 +25,75 @@
         <!-- Service -->
         <transition>
           <div class="tab_item" v-if="tabsel == 'service'">
+            <section class="work_wrap fadein" v-scroll="handleScroll">
+              <h2 class="item_ttl">WasTim</h2>
+              <client-only>
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/wastim1.webp" />
+                        <img src="~assets/img/works/web/wastim1.png" alt="wastim 画面1" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/wastim2.webp" />
+                        <img src="~assets/img/works/web/wastim2.png" alt="wastim 画面2" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/wastim3.webp" />
+                        <img src="~assets/img/works/web/wastim3.png" alt="wastim 画面3" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/wastim4.webp" />
+                        <img src="~assets/img/works/web/wastim4.png" alt="wastim 画面4" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/wastim5.webp" />
+                        <img src="~assets/img/works/web/wastim5.png" alt="wastim 画面5" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/wastim6.webp" />
+                        <img src="~assets/img/works/web/wastim6.png" alt="wastim 画面6" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                </carousel>
+              </client-only>
+              <ul class="skill_list">
+                <li class="tag">Vue.js</li>
+                <li class="tag">Nuxt.js</li>
+                <li class="tag">HTML(pug)</li>
+                <li class="tag">CSS(scss)</li>
+                <li class="tag">Firebase Hosting</li>
+                <li class="tag">Firebase Function</li>
+                <li class="tag">Firebase Authentication</li>
+                <li class="tag">Firebase Firestore</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <div class="slide_box" v-scroll="handleScroll">
+                <p class="slide_txt item_desc" v-html="$t('work.overview.wastim')"></p>
+              </div>
+            </section>
             <section class="work_wrap">
               <h2 class="item_ttl">UseD</h2>
               <client-only>
@@ -236,8 +305,8 @@
               <ul class="skill_list">
                 <li class="tag">PHP</li>
                 <li class="tag">jQuery</li>
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
+                <li class="tag">HTML(pug)</li>
+                <li class="tag">CSS(scss)</li>
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>

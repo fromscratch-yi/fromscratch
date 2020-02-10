@@ -73,6 +73,7 @@
     "description": "This is Yuichi Ishiyama's Portfolio Page. I will introduce Application, Web site, Business Card that I made.",
     "introduction" : "These are stuff I made.<br>Please have a look at it.",
     "overview": {
+      "wastim": "I quantified my daily evaluation and created a self-development application \"<span class=\"em_txt\">WasTim</span>\" that supports awareness change by realizing it.<br>Since I had never developed a serverless app, I created it using Google's Firebase. Currently under development. I was aware of using the latest technologies such as <span class=\"em_txt\">Firebase, SSR (server-side-rendering), PWA</span>, etc., and kept my UI / UX conscious design in mind.<br>Please take a look at <a href=\"https://wastim-yufroms.web.app/about\" target=\"_blank\" rel=\"noopener\">WasTim</a>.",
       "used": "This is Android Native App. The Name is UseD.<br>It is an application I made to recognize my own waste.<br>You can classify expenses into three types of spent, waste, investment, and you can see the proportion of expenditure.<br>And you can notice how much money we waste.",
       "ems": "This web application solves the problem that employee's face and name do not match.<br>And it make communication easier by profile page.<br>I was in charge of all planning, designing and implementation as New Project.<br><br>Note: Administrator screen is omitted.",
       "sms": "Managers usually manage sales on paper, so I developed salse management web application.<br>It can manage salses on PC, and make sales comparison easier.",
