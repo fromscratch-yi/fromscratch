@@ -25,7 +25,7 @@
         <!-- Service -->
         <transition>
           <div class="tab_item" v-if="tabsel == 'service'">
-            <section class="work_wrap fadein" v-scroll="handleScroll">
+            <section class="work_wrap">
               <h2 class="item_ttl">WasTim</h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -481,9 +481,15 @@ export default {
   text-align: center;
 }
 .page_contents .tabs {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 99;
   margin: 0;
+  box-shadow: 2px 3px 3px hsla(0,0%,70.5%,.2);
 }
 .page_contents .tabs li a {
+  padding: 15px 20px;
   font-weight: bold;
 }
 .page_contents .tabs li a:hover {
