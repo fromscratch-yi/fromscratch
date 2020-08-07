@@ -110,7 +110,7 @@
           </Accordion>
         </div>
       </div>
-      <div class="content_wrap" v-if="$window.width > 1023">
+      <div class="content_wrap">
         <adsbygoogle :ad-slot="'6891167634'" />
       </div>
     </div>
