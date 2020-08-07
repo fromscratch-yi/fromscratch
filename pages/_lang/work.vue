@@ -8,7 +8,7 @@
     </div>
     <div class="slide_wrap page_description">
       <div class="slide_box move">
-        <p class="slide_txt" v-html="$t('work.introduction')"></p>
+        <p class="" v-html="$t('work.introduction')"></p>
       </div>
     </div>
     <div class="tabs is-centered">
@@ -90,8 +90,8 @@
                 <li class="tag">Firebase Firestore</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.wastim')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.wastim')"></p>
               </div>
             </section>
             <section class="work_wrap">
@@ -121,11 +121,11 @@
                 <li class="tag">SQLite</li>
                 <li class="tag">AndroidStudio</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.used')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.used')"></p>
               </div>
             </section>
-            <section class="work_wrap fadein" v-scroll="handleScroll">
+            <section class="work_wrap">
               <h2 class="item_ttl">Employee Management System</h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -166,11 +166,11 @@
                 <li class="tag">Docker</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.ems')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.ems')"></p>
               </div>
             </section>
-            <section class="work_wrap fadein" v-scroll="handleScroll">
+            <section class="work_wrap">
               <h2 class="item_ttl">Sales Management System</h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -209,11 +209,11 @@
                 <li class="tag">jQuery</li>
                 <li class="tag">Vagrant</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.sms')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.sms')"></p>
               </div>
             </section>
-            <section class="work_wrap fadein" v-scroll="handleScroll">
+            <section class="work_wrap">
               <h2 class="item_ttl">TimeRecorder System</h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -252,8 +252,8 @@
                 <li class="tag">jQuery</li>
                 <li class="tag">Docker</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.timerecorder')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.timerecorder')"></p>
               </div>
             </section>
           </div>
@@ -288,11 +288,11 @@
                 <li class="tag">Contentful</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.portfolio')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.portfolio')"></p>
               </div>
             </section>
-            <section class="work_wrap fadein" v-scroll="handleScroll">
+            <section class="work_wrap">
               <h2 class="item_ttl">The relation, Inc.</h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -312,11 +312,11 @@
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.relation')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.relation')"></p>
               </div>
             </section>
-            <section class="work_wrap fadein" v-scroll="handleScroll">
+            <section class="work_wrap">
               <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -336,8 +336,8 @@
                 <li class="tag">Bootstrap</li>
                 <li class="tag">Responsive</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.unaman')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.unaman')"></p>
               </div>
             </section>
           </div>
@@ -361,21 +361,21 @@
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.fromscratch')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.fromscratch')"></p>
               </div>
             </section>
-            <section class="work_wrap fadein" v-scroll="handleScroll">
+            <section class="work_wrap">
               <h2 class="item_ttl">ch.create</h2>
               <div class="img_wrap"><img src="~assets/img/works/bc/chcreate.png" alt="ch.create 名刺"></div>
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.chcreate')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.chcreate')"></p>
               </div>
             </section>
-            <section class="work_wrap fadein" v-scroll="handleScroll">
+            <section class="work_wrap">
               <h2 class="item_ttl">T'z Auto</h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -390,8 +390,8 @@
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
-              <div class="slide_box" v-scroll="handleScroll">
-                <p class="slide_txt item_desc" v-html="$t('work.overview.tzauto')"></p>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.tzauto')"></p>
               </div>
             </section>
           </div>

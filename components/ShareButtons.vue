@@ -103,6 +103,11 @@ export default {
     lineUrl() {
       return this.formatByArr(this.line_url, this.url);
     }
+  },
+  methods() {
+    this.$nextTick(() => {
+      setTimeout(function(){(adsbygoogle = window.adsbygoogle || []).push({})}, 1000);
+    })
   }
 };
 </script>
