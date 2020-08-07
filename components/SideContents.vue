@@ -150,11 +150,6 @@ export default {
       return false;
     },
   },
-  methods() {
-    this.$nextTick(() => {
-      setTimeout(function(){(adsbygoogle = window.adsbygoogle || []).push({})}, 1000);
-    })
-  },
   computed: {
     faIdCard() {
       return faIdCard
