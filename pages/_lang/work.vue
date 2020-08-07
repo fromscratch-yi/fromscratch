@@ -496,8 +496,8 @@ export default {
 .page_contents .tabs li {
   width: calc(100% / 3);
   padding: 15px 10px;
-  border-right: 1px solid #dddddd;
-  border-bottom: 3px solid #dddddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 3px solid #ddd;
 }
 .page_contents .tabs li:last-child {
   border-right: none;
