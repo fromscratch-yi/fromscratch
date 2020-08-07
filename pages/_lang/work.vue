@@ -13,9 +13,9 @@
     </div>
     <div class="tabs is-centered">
       <ul>
-        <li v-bind:class="{ 'is-active': tabsel == 'service' }" @click="tabsel = 'service'"><a>Service</a></li>
-        <li v-bind:class="{ 'is-active': tabsel == 'web' }" @click="tabsel = 'web'"><a>Web Site</a></li>
-        <li v-bind:class="{ 'is-active': tabsel == 'card' }" @click="tabsel = 'card'"><a>Busines Card</a></li>
+        <li v-bind:class="{ 'is-active': tabsel == 'service' }" @click="tabsel = 'service'"><a v-html="$t('work.tabs.service')">Service</a></li>
+        <li v-bind:class="{ 'is-active': tabsel == 'web' }" @click="tabsel = 'web'"><a v-html="$t('work.tabs.web')">Web Site</a></li>
+        <li v-bind:class="{ 'is-active': tabsel == 'card' }" @click="tabsel = 'card'"><a v-html="$t('work.tabs.card')">Busines Card</a></li>
       </ul>
     </div>
 
@@ -486,18 +486,35 @@ export default {
   background: #fff;
   z-index: 99;
   margin: 0;
-  box-shadow: 2px 3px 3px hsla(0,0%,70.5%,.2);
+  box-shadow: 0px 10px 10px -5px hsla(0,0%,70.5%,.2);
+}
+.page_contents .tabs ul {
+  border: none;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.page_contents .tabs li {
+  width: calc(100% / 3);
+  padding: 15px 10px;
+  border-right: 1px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+}
+.page_contents .tabs li:last-child {
+  border-right: none;
+}
+.page_contents .tabs li.is-active {
+  border-bottom: 3px solid rgb(54, 134, 54);
 }
 .page_contents .tabs li a {
-  padding: 15px 20px;
+  padding: 0;
+  border-bottom: none;
   font-weight: bold;
 }
 .page_contents .tabs li a:hover {
-  border-bottom-width: 2px;
+  color: rgb(54, 134, 54);
 }
 .page_contents .tabs li.is-active a {
-  border-bottom-color: rgb(54, 134, 54);
-  border-bottom-width: 2px;
+  font-weight: bold;
   color: rgb(54, 134, 54);
 }
 .page_contents .VueCarousel-pagination {
@@ -592,10 +609,6 @@ export default {
   }
   .tab_item .work_wrap .skill_list li.tag {
     font-size: 14px;
-  }
-  .page_contents .tabs li a {
-    font-size: 20px;
-    font-size: bold;
   }
 }
 </style>

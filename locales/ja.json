@@ -80,6 +80,11 @@
     "pageTitle": "ポートフォリオ・作品集 | FromScratch | 石山 雄一(Yuichi Ishiyama)のサイト",
     "description": "Webエンジニアの石山 雄一(Yuichi Ishiyama)のポートフォリオページです。個人で作成したWebアプリ、Webサイト、名刺デザインなどの作品を紹介させていただきます。",
     "introduction" : "個人で作成したWebアプリ、Webサイト、名刺デザインなどのポートフォリオ・作品集をご紹介します。ぜひご覧ください。",
+    "tabs": {
+      "service": "サービス",
+      "web": "Webサイト",
+      "card": "名刺"
+    },
     "overview": {
       "wastim": "自分の１日の評価を数値化し、気づきによる意識改革をサポートする自己啓発サービス「<span class=\"em_txt\">WasTim</span>」を作成しました。<br>サーバレスなWebアプリ開発をしたことがなかったので、GoogleのFirebaseを使用し作成しました。現在進行形で開発中です。<span class=\"em_txt\">Firebase、SSR(server-side-rendering)、PWA</span>など、最新の技術を使うことを意識し、UI/UXを意識したデザインを心がけました。<br>ぜひ、<a href=\"https://wastim-yufroms.web.app/about\" target=\"_blank\" rel=\"noopener\">WasTim</a>をご覧ください。",
       "used": "ネイティブアプリの勉強のため、「<span class=\"em_txt\">UseD</span>」というお金の支出管理アプリ作成しました。<br>「支出（家賃などどうしても必要な出費）」、「浪費（無駄な出費）」、「投資（意味のある出費）」という3つの種別に分類し、<span class=\"em_txt\">いかに自分のお金の使い方に無駄が多いか</span>ということを認識するためのアプリです。<br>今後Swift(iOSのネイティブ言語)でも作成したいと考えています。",

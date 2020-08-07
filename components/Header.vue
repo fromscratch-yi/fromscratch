@@ -25,7 +25,8 @@
           </li>
         </ul>
       </div>
-      <nav class="nav_menu" v-bind:class="{'open': isOpen}">
+    </div>
+    <nav class="nav_menu" v-bind:class="{'open': isOpen}">
         <p class="close_btn" @click="clickNavBtn"><fa :icon="faTimes" /></p>
         <ul class="page_nav">
           <li class="nv_logo"><img loading="lazy" src="~assets/img/logo.png" alt="FromScratch logo"></li>
@@ -45,7 +46,6 @@
           </li>
         </ul>
       </nav>
-    </div>
   </header>
 </template>
 
