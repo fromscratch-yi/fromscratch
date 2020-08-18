@@ -26,7 +26,7 @@
         <transition>
           <div class="tab_item" v-if="tabsel == 'service'">
             <section class="work_wrap">
-              <h2 class="item_ttl">WasTim</h2>
+              <h2 class="item_ttl"><a href="https://wastim-yufroms.web.app/about" target="_blank">WasTim</a></h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
@@ -126,7 +126,7 @@
               </div>
             </section>
             <section class="work_wrap">
-              <h2 class="item_ttl">Employee Management System</h2>
+              <h2 class="item_ttl" v-html="$t('work.title.ems')"></h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
@@ -171,7 +171,7 @@
               </div>
             </section>
             <section class="work_wrap">
-              <h2 class="item_ttl">Sales Management System</h2>
+              <h2 class="item_ttl" v-html="$t('work.title.sms')"></h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
@@ -214,7 +214,7 @@
               </div>
             </section>
             <section class="work_wrap">
-              <h2 class="item_ttl">TimeRecorder System</h2>
+              <h2 class="item_ttl" v-html="$t('work.title.timerecorder')"></h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
@@ -293,7 +293,7 @@
               </div>
             </section>
             <section class="work_wrap">
-              <h2 class="item_ttl">The relation, Inc.</h2>
+              <h2 class="item_ttl"><a href="http://relation2012.com/" target="_blank" v-html="$t('work.title.relation')"></a></h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
@@ -317,7 +317,7 @@
               </div>
             </section>
             <section class="work_wrap">
-              <h2 class="item_ttl">The Dairid, Inc. (Unaman)</h2>
+              <h2 class="item_ttl"><a href="http://unaman-d.com/" target="_blank" v-html="$t('work.title.unaman')"></a></h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
@@ -526,7 +526,7 @@ export default {
 }
 .tab_item {
   box-sizing: border-box;
-  padding: 10px;
+  padding: 10px 3px;
   width: 100%;
   transition: all 0.8s ease;
 }
@@ -539,6 +539,22 @@ export default {
   padding: 5px 0 5px 15px;
   margin: 0 0 5px;
   font-size: 16px;
+}
+.tab_item .work_wrap .item_ttl a {
+  position: relative;
+  color: #333;
+  font-size: 16px;
+  text-decoration: underline;
+}
+.tab_item .work_wrap .item_ttl a::after {
+  vertical-align: super;
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  background: url('~assets/img/out-link.png');
+  background-size: contain;
 }
 .tab_item .work_wrap .item_ttl::before {
   position: absolute;
@@ -603,6 +619,9 @@ export default {
   .tab_item .work_wrap .item_ttl {
     font-size: 20px;
     margin-bottom: 15px;
+  }
+  .tab_item .work_wrap .item_ttl a {
+    font-size: 20px;
   }
   .tab_item .work_wrap .item_desc {
     font-size: 16px;
