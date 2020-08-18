@@ -526,7 +526,7 @@ export default {
 }
 .tab_item {
   box-sizing: border-box;
-  padding: 10px 3px;
+  padding: 10px 0;
   width: 100%;
   transition: all 0.8s ease;
 }
@@ -616,6 +616,9 @@ export default {
   margin-top: 0 !important;
 }
 @media screen and (min-width: 768px) {
+  .tab_item .work_wrap {
+    padding: 25px 20px 35px;
+  }
   .tab_item .work_wrap .item_ttl {
     font-size: 20px;
     margin-bottom: 15px;
