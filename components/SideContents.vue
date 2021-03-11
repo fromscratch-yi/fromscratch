@@ -110,7 +110,7 @@
           </Accordion>
         </div>
       </div>
-      <div class="content_wrap">
+      <div v-if="isShow" class="sideadd content_wrap">
         <adsbygoogle :ad-slot="'6891167634'" />
       </div>
     </div>
@@ -129,7 +129,11 @@ export default {
   data() {
     return {
       isOpen: false,
+      isShow: false
     }
+  },
+  mounted() {
+    this.isShow = window.innerWidth >= 1024;
   },
   components: {
     Accordion,
