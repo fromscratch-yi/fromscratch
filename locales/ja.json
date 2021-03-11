@@ -46,12 +46,20 @@
         "skills": ["PHP", "Laravel", "HTML", "CSS", "js", "CentOS", "Nginx", "MySQL", "Vagrant"]
       },
       {
+        "title": "児童福祉・障害福祉ポータルサイトのフロントエンド・バックエンド開発",
+        "skills": ["PHP", "HTML", "CSS", "js", "CentOS", "Nginx", "MySQL", "Docker"]
+      },
+      {
         "title": "Androidネイティブアプリ(UseD).",
         "skills": ["Android Java", "AndroidStudio"]
       },
       {
         "title": "Slack Bot.",
         "skills": ["Python"]
+      },
+      {
+        "title": "3Eテスト分析プログラム",
+        "skills": ["Python", "Flask"]
       },
       {
         "title": "マルチメディア放送アプリのAPI開発",

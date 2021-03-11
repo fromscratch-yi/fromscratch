@@ -136,13 +136,13 @@ export default {
       },
       'other': {
         'AWS': '2',
-        'GCP': '2',
+        'GCP': '3',
         'Docker': '3.5',
         'Vagrant': '3',
         'Git': '4',
         'Svn': '4',
-        'Linux': '3.5',
-        'Mac': '4',
+        'GA': '3.5',
+        'GTM': '3.5',
         'VSCode': '3.5',
         'Vim': '3',
       }

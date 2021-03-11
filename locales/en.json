@@ -30,20 +30,36 @@
         "skills": ["PHP", "Laravel", "HTML", "CSS", "js"]
       },
       {
-        "title": "Employee management system's Front-End &amp; Back-End.",
+        "title": "Front-end / back-end development of Employee management system",
         "skills": ["PHP", "Laravel", "PostgreSQL", "HTML", "CSS", "js", "AWS(ElasticBeansTalk + RDB)", "Docker"]
       },
       {
-        "title": "Sales management system's Front-End &amp; Back-End.",
+        "title": "Front-end / back-end development of Sales management system",
         "skills": ["PHP", "Laravel", "HTML", "CSS", "js", "CentOS", "Nginx", "MySQL", "Vagrant"]
+      },
+      {
+        "title": "Front-end / back-end development of child welfare / disability welfare portal site",
+        "skills": ["PHP", "HTML", "CSS", "js", "CentOS", "Nginx", "MySQL", "Docker"]
+      },
+      {
+        "title": "Data analysis project utilizing GCP / GA / GTM",
+        "skills": ["Python", "Google Cloud Platform", "Google Analytics", "Google Tag Manager"]
       },
       {
         "title": "My android application (UseD).",
         "skills": ["Android Java", "AndroidStudio"]
       },
       {
+        "title": "Scraping tool for specific data",
+        "skills": ["Python"]
+      },
+      {
         "title": "Slack Bot.",
         "skills": ["Python"]
+      },
+      {
+        "title": "3E TEST Analysis Tool",
+        "skills": ["Python", "Flask"]
       },
       {
         "title": "API of Multimedia broadcasting App.",
