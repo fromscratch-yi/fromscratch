@@ -21,10 +21,15 @@ module.exports = {
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:site', property: 'twitter:site', content: '@IshiyamaYuichi' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'FromScratch' },
+      { 'http-equiv': 'x-dns-prefetch-control', content: 'on' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', href: '/apple_icon.png' },
+      { rel: 'preconnect dns-prefetch', href: '//www.google.com' },
+      { rel: 'preconnect dns-prefetch', href: '//www.google-analytics.com' },
+      { rel: 'preconnect dns-prefetch', href: '//www.googletagservices.com' },
+      { rel: 'preconnect dns-prefetch', href: '//pagead2.googlesyndication.com' }
     ],
     script: [{
       innerHTML: `{
