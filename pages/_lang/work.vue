@@ -267,13 +267,13 @@
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web 1"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch1.png" alt="FromScratch Web 1" width="325" height="364"></div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch2.png" alt="FromScratch Web 2"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch2.png" alt="FromScratch Web 2" width="325" height="364"></div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch3.png" alt="FromScratch Web 3"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/fromscratch3.png" alt="FromScratch Web 3" width="325" height="364"></div>
                   </slide>
                 </carousel>
               </client-only>
@@ -297,10 +297,10 @@
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web 1"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/relation1.png" alt="relation Web 1" width="325" height="364"></div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/relation2.png" alt="relation Web 2"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/relation2.png" alt="relation Web 2" width="325" height="364"></div>
                   </slide>
                 </carousel>
               </client-only>
@@ -321,10 +321,10 @@
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web 1"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/unaman1.png" alt="unaman Web 1" width="325" height="364"></div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/web/unaman2.png" alt="unaman Web 2"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/web/unaman2.png" alt="unaman Web 2" width="325" height="364"></div>
                   </slide>
                 </carousel>
               </client-only>
@@ -351,10 +351,10 @@
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="FromScratch 名刺"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch1.png" alt="FromScratch 名刺" width="345" height="214"></div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch2.png" alt="FromScratch 名刺 裏"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/bc/fromscratch2.png" alt="FromScratch 名刺 裏" width="345" height="214"></div>
                   </slide>
                 </carousel>
               </client-only>
@@ -367,7 +367,7 @@
             </section>
             <section class="work_wrap">
               <h2 class="item_ttl">ch.create</h2>
-              <div class="img_wrap"><img src="~assets/img/works/bc/chcreate.png" alt="ch.create 名刺"></div>
+              <div class="img_wrap"><img src="~assets/img/works/bc/chcreate.png" alt="ch.create 名刺" width="345" height="214"></div>
               <ul class="skill_list">
                 <li class="tag">Photoshop</li>
               </ul>
@@ -380,10 +380,10 @@
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/bc/tzauto1.png" alt="Tz Auto 名刺"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/bc/tzauto1.png" alt="Tz Auto 名刺" width="345" height="214"></div>
                   </slide>
                   <slide>
-                    <div class="img_wrap"><img src="~assets/img/works/bc/tzauto2.png" alt="Tz Auto 名刺 裏"></div>
+                    <div class="img_wrap"><img src="~assets/img/works/bc/tzauto2.png" alt="Tz Auto 名刺 裏" width="345" height="214"></div>
                   </slide>
                 </carousel>
               </client-only>
@@ -609,12 +609,7 @@ export default {
 .v-leave-to {
   transform: translateX(-100%);
 }
-.VueCarousel-dot {
-  margin-top: 0;
-}
-.VueCarousel-dot-container {
-  margin-top: 0 !important;
-}
+
 @media screen and (min-width: 768px) {
   .tab_item .work_wrap {
     padding: 25px 20px 35px;
@@ -635,3 +630,11 @@ export default {
 }
 </style>
 
+<style>
+.VueCarousel-dot {
+  margin-top: 0 !important;
+}
+.VueCarousel-dot-container {
+  margin-top: 0 !important;
+}
+</style>

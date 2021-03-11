@@ -50,15 +50,23 @@
         "skills": ["PHP", "HTML", "CSS", "js", "CentOS", "Nginx", "MySQL", "Docker"]
       },
       {
+        "title": "GCP・GA・GTMを活用したデータ分析プロジェクト",
+        "skills": ["Python", "Google Cloud Platform", "Google Analytics", "Google Tag Manager"]
+      },
+      {
         "title": "Androidネイティブアプリ(UseD).",
         "skills": ["Android Java", "AndroidStudio"]
+      },
+      {
+        "title": "特定データのスクレイピングツール",
+        "skills": ["Python"]
       },
       {
         "title": "Slack Bot.",
         "skills": ["Python"]
       },
       {
-        "title": "3Eテスト分析プログラム",
+        "title": "3Eテスト分析ツール",
         "skills": ["Python", "Flask"]
       },
       {

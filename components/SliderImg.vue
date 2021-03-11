@@ -7,7 +7,7 @@
     <slide
       v-for="img in imgList"
       v-bind="img" :key="img.id">
-      <div class="img_wrap"><img loading="lazy" v-bind:src="img.src" v-bind:alt="img.alt"></div>
+      <div class="img_wrap"><img loading="lazy" v-bind:src="img.src" v-bind:alt="img.alt" width="345" height="214"></div>
     </slide>
   </carousel>
 </template>
