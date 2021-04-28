@@ -366,6 +366,16 @@
               </div>
             </section>
             <section class="work_wrap">
+              <h2 class="item_ttl">NR</h2>
+              <div class="img_wrap"><img src="~assets/img/works/bc/nr.png" alt="NR 名刺" width="345" height="214"></div>
+              <ul class="skill_list">
+                <li class="tag">Photoshop</li>
+              </ul>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.nr')"></p>
+              </div>
+            </section>
+            <section class="work_wrap">
               <h2 class="item_ttl">ch.create</h2>
               <div class="img_wrap"><img src="~assets/img/works/bc/chcreate.png" alt="ch.create 名刺" width="345" height="214"></div>
               <ul class="skill_list">
