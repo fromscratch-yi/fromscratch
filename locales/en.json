@@ -97,6 +97,7 @@
       "ems": "Employee Management System",
       "sms": "Sales Management System",
       "timerecorder": "TimeRecorder System",
+      "eryu": "The Eryu Clinic.",
       "relation": "The relation, Inc.",
       "unaman": "The Dairid, Inc. (Unaman)"
     },
@@ -107,6 +108,7 @@
       "sms": "Managers usually manage sales on paper, so I developed salse management web application.<br>It can manage salses on PC, and make sales comparison easier.",
       "timerecorder": "This is the attendance system. They used to manage by paper.",
       "portfolio": "This is my portfolio site. The Name is <span class=\"em_txt\">FromScratch</span>.<br>I want to keep to try that I create products of high quality. So I want to develop <span class=\"em_txt\">FromScratch</span>. No template and no format.",
+      "eryu": "I have created a website for the medical corporation Eryu Clinic.<br>I implemented it using <span class=\"em_txt\">WordPress</span>.",
       "relation": "The relation, Inc. is a system development company.<br>I was in charge of all planning, designing and implementation as Renewal project.",
       "unaman": "The Unaman is specialty store of eel.<br>This is my first work in my life. I was in charge of all planning, designing and implementation as New Project.",
       "fromscratch": "This is a my Business Card.<br>I designed all including Logo.",

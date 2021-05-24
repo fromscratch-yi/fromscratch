@@ -293,6 +293,30 @@
               </div>
             </section>
             <section class="work_wrap">
+              <h2 class="item_ttl"><a href="https://eryu-clinic.main.jp/" target="_blank" v-html="$t('work.title.eryu')"></a></h2>
+              <client-only>
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/eryu1.png" alt="eryu-clinic Web 1" width="325" height="364"></div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap"><img src="~assets/img/works/web/eryu2.png" alt="eryu-clinic Web 2" width="325" height="364"></div>
+                  </slide>
+                </carousel>
+              </client-only>
+              <ul class="skill_list">
+                <li class="tag">Wordpress</li>
+                <li class="tag">PHP</li>
+                <li class="tag">jQuery</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.eryu')"></p>
+              </div>
+            </section>
+            <section class="work_wrap">
               <h2 class="item_ttl"><a href="http://relation2012.com/" target="_blank" v-html="$t('work.title.relation')"></a></h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
