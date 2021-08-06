@@ -34,7 +34,7 @@
           </li>
           <li class="column">
             <p class="contanc_item">
-              <a href="https://twitter.com/IshiyamaYuichi" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Twitter.png" alt="Twitter" width="40" height="40"></a>
+              <a href="https://twitter.com/yuichi_ishiyama" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Twitter.png" alt="Twitter" width="40" height="40"></a>
             </p>
           </li>
           <li class="column">
