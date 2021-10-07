@@ -95,6 +95,40 @@
               </div>
             </section>
             <section class="work_wrap">
+              <h2 class="item_ttl"><a href="https://care-base.jp" target="_blank" v-html="$t('work.title.carebase')"></a></h2>
+              <client-only>
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/carebase1.webp" />
+                        <img src="~assets/img/works/web/carebase1.png" alt="carebase 画面1" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/carebase2.webp" />
+                        <img src="~assets/img/works/web/carebase2.png" alt="carebase 画面2" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                </carousel>
+              </client-only>
+              <ul class="skill_list">
+                <li class="tag">PHP</li>
+                <li class="tag">Laravel</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">Web Design</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.carebase')"></p>
+              </div>
+            </section>
+            <section class="work_wrap">
               <h2 class="item_ttl">UseD</h2>
               <client-only>
                 <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
@@ -125,6 +159,58 @@
                 <p class=" item_desc" v-html="$t('work.overview.used')"></p>
               </div>
             </section>
+
+            <section class="work_wrap">
+              <h2 class="item_ttl" v-html="$t('work.title.ems_new')"></h2>
+              <client-only>
+                <carousel style="max-width: 800px;margin: 0 auto;" v-if="showCarousel" paginationActiveColor="rgb(64, 161, 63)" :perPage="1" :scrollPerPage="true" :perPageCustom="[[480, 2]]" :paginationPadding="8">
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/ems_new1.webp" />
+                        <img src="~assets/img/works/web/ems_new1.png" alt="ems_new 画面1" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/ems_new2.webp" />
+                        <img src="~assets/img/works/web/ems_new2.png" alt="ems_new 画面2" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/ems_new3.webp" />
+                        <img src="~assets/img/works/web/ems_new3.png" alt="ems_new 画面3" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                  <slide>
+                    <div class="img_wrap">
+                      <picture>
+                        <source type="image/webp" srcset="~assets/img/works/web/ems_new4.webp" />
+                        <img src="~assets/img/works/web/ems_new4.png" alt="ems_new 画面3" width="325" height="364">
+                      </picture>
+                    </div>
+                  </slide>
+                </carousel>
+              </client-only>
+              <ul class="skill_list">
+                <li class="tag">Vue.js</li>
+                <li class="tag">Firebase</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">Scss</li>
+                <li class="tag">Responsive</li>
+              </ul>
+              <div>
+                <p class=" item_desc" v-html="$t('work.overview.ems_new')"></p>
+              </div>
+            </section>
+
             <section class="work_wrap">
               <h2 class="item_ttl" v-html="$t('work.title.ems')"></h2>
               <client-only>
