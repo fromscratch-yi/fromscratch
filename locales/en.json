@@ -30,6 +30,10 @@
         "skills": ["PHP", "Laravel", "HTML", "CSS", "js"]
       },
       {
+        "title": "Front-end / back-end development of Employee management system (Server less)",
+        "skills": ["PHP", "Laravel", "PostgreSQL", "HTML", "CSS", "js", "AWS(ElasticBeansTalk, RDB)", "Docker"]
+      },
+      {
         "title": "Front-end / back-end development of Employee management system",
         "skills": ["PHP", "Laravel", "PostgreSQL", "HTML", "CSS", "js", "AWS(ElasticBeansTalk + RDB)", "Docker"]
       },

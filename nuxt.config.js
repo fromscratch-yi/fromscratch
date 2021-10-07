@@ -66,7 +66,15 @@ module.exports = {
   },
 
   'google-adsense': {
-    id: ctfConfig.GOOGLE_ADSENSE_ID
+    onPageLoad: false,
+    pageLevelAds: false,
+  },
+  publicRuntimeConfig: {
+    'google-adsense': {
+      id: ctfConfig.GOOGLE_ADSENSE_ID,
+      pageLevelAds: true,
+      analyticsUacct: ctfConfig.GOOGLE_ANALYTICS_ID,
+    },
   },
   sitemap: {
     path: '/sitemap.xml', // 出力パス

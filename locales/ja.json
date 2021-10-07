@@ -22,20 +22,24 @@
     "introduction" : "<p>1993年1月23日 大阪生まれ<br>4年間バーテンダーとして働いた後、リッチマンプアウーマンというドラマの日向徹(小栗旬)になりたくて、2014年からソフトウェアエンジニア(Webエンジニア)として働いていますw</p><p>Webデザインからフロントエンド・バックエンド・インフラまで、幅広い分野に対応できる<span class=\"em_color\">フルスタックエンジニア</span>を目指して日々精進しています。<br>趣味はサッカー・フットサルです！よろしくお願いいたします！</p>",
     "project": [
       {
-        "title": "いくつかのWebアプリ、Webサイトのフロントエンド・バックエンド開発",
+        "title": "いくつかのWebアプリ、Webサイトのフロントエンド・バックエンド開発(副業案件)",
         "skills": ["PHP", "Yii", "Laravel", "HTML", "CSS", "js", "Vue.js", "Nuxt.js", "pug", "scss", "gulp.js"]
       },
       {
-        "title": "プログラミングスクールのオンライン講師",
+        "title": "プログラミングスクールのオンライン講師(副業案件)",
         "skills": ["PHP", "Laravel", "HTML", "CSS", "js"]
       },
       {
-        "title": "請求書PDFの自動生成・自動送信処理の開発(リモート案件)",
+        "title": "請求書PDFの自動生成・自動送信処理の開発(副業案件)",
         "skills": ["PHP", "Laravel", "HTML", "CSS", "js"]
       },
       {
-        "title": "GMO APIを使用した決算APIの開発(リモート案件)",
+        "title": "GMO APIを使用した決算APIの開発(副業案件)",
         "skills": ["PHP", "Laravel", "GMO API"]
+      },
+      {
+        "title": "社員管理システム(サーバレス)のフロントエンド・バックエンド開発",
+        "skills": ["Vue.js", "Nuxt.js", "Firebase", "HTML", "CSS", "Scss"]
       },
       {
         "title": "社員管理システムのフロントエンド・バックエンド開発",
