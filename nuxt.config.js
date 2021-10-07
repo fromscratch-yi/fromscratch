@@ -72,7 +72,6 @@ module.exports = {
   publicRuntimeConfig: {
     'google-adsense': {
       id: ctfConfig.GOOGLE_ADSENSE_ID,
-      pageLevelAds: true,
       analyticsUacct: ctfConfig.GOOGLE_ANALYTICS_ID,
     },
   },
