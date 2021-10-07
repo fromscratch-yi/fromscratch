@@ -60,7 +60,7 @@ module.exports = {
   ],
   googleAnalytics: {
     asyncID: async (context) => {
-      return ctfConfig.GOOGLE_ANALYTICS_ID
+      return 'UA-90022633-1'
     }
   },
 
