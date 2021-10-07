@@ -59,21 +59,15 @@ module.exports = {
     '@nuxtjs/sitemap'
   ],
   googleAnalytics: {
-    id: ctfConfig.GOOGLE_ANALYTICS_ID,
-    debug: {
-      sendHitTask: true
-    },
+    asyncID: async (context) => {
+      return ctfConfig.GOOGLE_ANALYTICS_ID
+    }
   },
 
   'google-adsense': {
+    id: ctfConfig.GOOGLE_ADSENSE_ID,
     onPageLoad: false,
-    pageLevelAds: false,
-  },
-  publicRuntimeConfig: {
-    'google-adsense': {
-      id: ctfConfig.GOOGLE_ADSENSE_ID,
-      analyticsUacct: ctfConfig.GOOGLE_ANALYTICS_ID,
-    },
+    analyticsUacct: ctfConfig.GOOGLE_ANALYTICS_ID,
   },
   sitemap: {
     path: '/sitemap.xml', // 出力パス
