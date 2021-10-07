@@ -66,7 +66,7 @@ module.exports = {
 
   'google-adsense': {
     id: ctfConfig.GOOGLE_ADSENSE_ID,
-    onPageLoad: false,
+    onPageLoad: true,
     analyticsUacct: ctfConfig.GOOGLE_ANALYTICS_ID,
   },
   sitemap: {
