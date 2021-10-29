@@ -19,7 +19,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
-      { hid: 'twitter:site', property: 'twitter:site', content: '@yuichi_ishiyama' },
+      { hid: 'twitter:site', property: 'twitter:site', content: '@ishiyamayuichi' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'FromScratch' },
       { 'http-equiv': 'x-dns-prefetch-control', content: 'on' },
     ],
