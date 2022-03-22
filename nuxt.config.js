@@ -203,7 +203,8 @@ module.exports = {
     { src: '~plugins/contentful' },
   ],
   router: {
-    middleware: 'i18n'
+    middleware: 'i18n',
+    prefetchLinks: false
   },
   generate: {
     routes: async function() {
