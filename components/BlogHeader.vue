@@ -4,7 +4,7 @@
       <div class="header_inner">
         <div class="header_container level is-mobile">
           <div class="logo level-left">
-            <nuxt-link :to="$i18n.path('')"><img loading="lazy" src="~assets/img/logo.png" alt="FromScratch logo" width="35" height="35"></nuxt-link>
+            <nuxt-link :to="$i18n.path('')"><img src="~assets/img/logo.png" alt="FromScratch logo" width="35" height="35"></nuxt-link>
             <p class="blog_ttl">FromsBlog<span>Yuichi Ishiyama</span></p>
           </div>
           <div class="nav_btn level-right">
@@ -30,7 +30,7 @@
           <p class="close_btn" @click="clickNavBtn"><fa :icon="faTimes"/></p>
           <ul class="page_nav">
             <li class="nv_logo">
-              <img loading="lazy" src="~assets/img/logo.png" alt="FromsBlog" width="35" height="35">
+              <img src="~assets/img/logo.png" alt="FromsBlog" width="35" height="35">
               <p>FromsBlog</p>
               <div class="lang_wrap_inner">
                 <!-- setting for japanese -->
