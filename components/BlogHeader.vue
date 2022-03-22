@@ -17,11 +17,11 @@
             <li class="lang_wrap">
               <div class="lang_wrap_inner">
                 <!-- setting for english -->
-                <nuxt-link v-if="$i18n.locale === 'ja'" :to="'/blog/'">en</nuxt-link>
-                <nuxt-link v-else :to="'/blog/'" class="current_locale">en</nuxt-link>
+                <nuxt-link v-if="$i18n.locale === 'ja'" :to="'/en/blog/'">en</nuxt-link>
+                <nuxt-link v-else :to="'/en/blog/'" class="current_locale">en</nuxt-link>
                 <!-- setting for japanese -->
-                <nuxt-link v-if="$i18n.locale === 'en'" :to="'/ja/blog/'">ja</nuxt-link>
-                <nuxt-link v-else :to="'/ja/blog/'" class="current_locale">ja</nuxt-link>
+                <nuxt-link v-if="$i18n.locale === 'en'" :to="'/blog/'">ja</nuxt-link>
+                <nuxt-link v-else :to="'/blog/'" class="current_locale">ja</nuxt-link>
               </div>
             </li>
           </ul>

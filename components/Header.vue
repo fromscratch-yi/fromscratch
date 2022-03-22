@@ -16,10 +16,10 @@
           <li class="lang_wrap">
             <div class="lang_wrap_inner">
               <!-- setting for english -->
-              <nuxt-link v-if="$i18n.locale === 'ja'" :to="$route.fullPath.replace('\/ja','').replace(/\/$/, '') + `/`">en</nuxt-link>
+              <nuxt-link v-if="$i18n.locale === 'ja'" :to="`/en` + $route.fullPath.replace(/\/$/, '') + `/`">en</nuxt-link>
               <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">en</nuxt-link>
               <!-- setting for japanese -->
-              <nuxt-link v-if="$i18n.locale === 'en'" :to="`/ja` + $route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
+              <nuxt-link v-if="$i18n.locale === 'en'" :to="$route.fullPath.replace('\/en','').replace(/\/$/, '') + `/`">ja</nuxt-link>
               <nuxt-link v-else :to="$route.fullPath.replace(/\/$/, '') + `/`">ja</nuxt-link>
             </div>
           </li>

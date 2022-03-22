@@ -97,6 +97,20 @@ module.exports = {
         '/blog/businesslife/motivation/',
         '/blog/businesslife/management/',
         '/blog/businesslife/blogskill/',
+        '/en/',
+        '/en/about/',
+        '/en/work/',
+        '/en/blog/',
+        '/en/blog/technology/',
+        '/en/blog/technology/frontend/',
+        '/en/blog/technology/backend/',
+        '/en/blog/technology/mobile/',
+        '/en/blog/technology/infrastructure/',
+        '/en/blog/technology/other/',
+        '/en/blog/businesslife/',
+        '/en/blog/businesslife/motivation/',
+        '/en/blog/businesslife/management/',
+        '/en/blog/businesslife/blogskill/',
         '/ja/',
         '/ja/about/',
         '/ja/work/',
@@ -118,7 +132,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/blog/technology/${entry.fields.category}/${entry.fields.slug}/`)
+          ...entries.items.map(entry => `/blog/technology/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -127,7 +141,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/blog/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
+          ...entries.items.map(entry => `/blog/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -136,7 +150,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/blog/technology/${entry.fields.category}/${entry.fields.slug}/`)
+          ...entries.items.map(entry => `/en/blog/technology/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       await cdaClient.getEntries({
@@ -145,7 +159,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/blog/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
+          ...entries.items.map(entry => `/en/blog/businesslife/${entry.fields.category}/${entry.fields.slug}/`)
         )
       });
       return routeList;
@@ -207,6 +221,20 @@ module.exports = {
         '/blog/businesslife/motivation',
         '/blog/businesslife/management',
         '/blog/businesslife/blogskill',
+        '/en',
+        '/en/about',
+        '/en/work',
+        '/en/blog',
+        '/en/blog/technology',
+        '/en/blog/technology/frontend',
+        '/en/blog/technology/backend',
+        '/en/blog/technology/mobile',
+        '/en/blog/technology/infrastructure',
+        '/en/blog/technology/other',
+        '/en/blog/businesslife/',
+        '/en/blog/businesslife/motivation',
+        '/en/blog/businesslife/management',
+        '/en/blog/businesslife/blogskill',
         '/ja',
         '/ja/about',
         '/ja/work',
@@ -228,7 +256,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/blog/technology/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/blog/technology/${entry.fields.category}/${entry.fields.slug}`)
         )
       });
       await cdaClient.getEntries({
@@ -237,7 +265,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/ja/blog/businesslife/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/blog/businesslife/${entry.fields.category}/${entry.fields.slug}`)
         )
       });
       await cdaClient.getEntries({
@@ -246,7 +274,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/blog/technology/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/en/blog/technology/${entry.fields.category}/${entry.fields.slug}`)
         )
       });
       await cdaClient.getEntries({
@@ -255,7 +283,7 @@ module.exports = {
         'fields.title[exists]': 'true'
       }).then(entries => {
         routeList.push(
-          ...entries.items.map(entry => `/blog/businesslife/${entry.fields.category}/${entry.fields.slug}`)
+          ...entries.items.map(entry => `/en/blog/businesslife/${entry.fields.category}/${entry.fields.slug}`)
         )
       });
       return routeList;

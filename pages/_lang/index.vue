@@ -1,7 +1,7 @@
 <template>
   <section class="contents">
     <!-- welcome front -->
-    <div class="front_wrap">
+    <div class="front_wrap" @click="click">
       <!-- top-left -->
       <div class="typer_wrap" v-bind:class="{active: isActive}">
         <h1 class="inner">
@@ -19,7 +19,7 @@
         <vue-typer :text='["$ docker-machine start\n\n                  ##         .\n            ## ## ##        ==\n         ## ## ## ## ##    ===\n     /\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\___/ ===\n~~~ {~~ ~~~~ ~~~\n~~~~ ~~~ ~ / ===- ~~~\n     \______ o           __/\n       \    \         __/\n        \____\_______/\n\ndocker is configured to use the default machine with IP 192.168.99.100\n  docker is running.....\n$"]' :type-delay='70' :repeat='5' :pre-erase-delay='5000'></vue-typer>
       </p>
       <!-- bottom-right -->
-      <div class="typer_wrap" v-bind:class="{active: isActive}" @click="click">
+      <div class="typer_wrap" v-bind:class="{active: isActive}">
         <div class="inner">
           <img loading="lazy" class="logo" src="~assets/img/logo.png" alt="FromScratch logo" width="60" height="60">
           <span class="tap_txt">
@@ -84,6 +84,9 @@ export default {
 </script>
 
 <style>
+.front_wrap {
+  cursor: pointer;
+}
 .welcom_page {
   width: 100%;
   height: 100%;
