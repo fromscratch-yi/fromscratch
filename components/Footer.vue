@@ -5,12 +5,12 @@
       <ul class="columns is-mobile">
         <li class="column">
           <p class="contanc_item">
-            <a href="mailto:yufroms@gmail.com?subject=Contact-to-FromScratch"><img loading="lazy" src="~assets/img/Mail.png" alt="Mail" width="40" height="40"></a>
+            <a href="https://twitter.com/ishiyamayuichi" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Twitter.png" alt="Twitter" width="40" height="40"></a>
           </p>
         </li>
         <li class="column">
           <p class="contanc_item">
-            <a href="https://twitter.com/ishiyamayuichi" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Twitter.png" alt="Twitter" width="40" height="40"></a>
+            <a href="https://github.com/yufrom" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Github.png" alt="Github" width="40" height="40"></a>
           </p>
         </li>
         <li class="column">
@@ -20,7 +20,7 @@
         </li>
         <li class="column">
           <p class="contanc_item">
-            <a href="fb://profile/100009266871916%3A100009266871916%3A1570738429" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Facebook.png" alt="Facebook" width="40" height="40"></a>
+            <a href="mailto:fromscratch.yi@gmail.com?subject=Contact-to-FromScratch"><img loading="lazy" src="~assets/img/Mail.png" alt="Mail" width="40" height="40"></a>
           </p>
         </li>
       </ul>

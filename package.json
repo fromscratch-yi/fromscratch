@@ -1,8 +1,8 @@
 {
-  "name": "yufroms-fromscratch",
+  "name": "fromscratch",
   "version": "1.0.0",
   "description": "Yuichi Ishiyama's portfolio",
-  "author": "Yuichi Ishiyama <yufroms@gmail.com>",
+  "author": "Yuichi Ishiyama <fromscratch.yi@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -25,8 +25,10 @@
     "chart.js": "^2.8.0",
     "contentful": "^7.10.0",
     "dotenv": "^8.2.0",
+    "node-sass": "^7.0.1",
     "nuxt": "^2.10.2",
     "nuxt-fontawesome": "^0.4.0",
+    "sass-loader": "^12.6.0",
     "vue-carousel": "^0.18.0",
     "vue-chartjs": "^3.4.2",
     "vue-i18n": "^8.15.0",

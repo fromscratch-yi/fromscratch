@@ -16,12 +16,12 @@
             <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
             <li class="lang_wrap">
               <div class="lang_wrap_inner">
-                <!-- setting for english -->
-                <nuxt-link v-if="$i18n.locale === 'ja'" :to="'/en/blog/'">en</nuxt-link>
-                <nuxt-link v-else :to="'/en/blog/'" class="current_locale">en</nuxt-link>
                 <!-- setting for japanese -->
                 <nuxt-link v-if="$i18n.locale === 'en'" :to="'/blog/'">ja</nuxt-link>
                 <nuxt-link v-else :to="'/blog/'" class="current_locale">ja</nuxt-link>
+                <!-- setting for english -->
+                <nuxt-link v-if="$i18n.locale === 'ja'" :to="'/en/blog/'">en</nuxt-link>
+                <nuxt-link v-else :to="'/en/blog/'" class="current_locale">en</nuxt-link>
               </div>
             </li>
           </ul>
@@ -33,12 +33,12 @@
               <img loading="lazy" src="~assets/img/logo.png" alt="FromsBlog" width="35" height="35">
               <p>FromsBlog</p>
               <div class="lang_wrap_inner">
-                <!-- setting for english -->
-                <nuxt-link v-if="$i18n.locale === 'ja'" :to="'/blog/'">en</nuxt-link>
-                <nuxt-link v-else :to="'/blog/'" class="current_locale">en</nuxt-link>
                 <!-- setting for japanese -->
                 <nuxt-link v-if="$i18n.locale === 'en'" :to="'/ja/blog/'">ja</nuxt-link>
                 <nuxt-link v-else :to="'/ja/blog/'" class="current_locale">ja</nuxt-link>
+                <!-- setting for english -->
+                <nuxt-link v-if="$i18n.locale === 'ja'" :to="'/blog/'">en</nuxt-link>
+                <nuxt-link v-else :to="'/blog/'" class="current_locale">en</nuxt-link>
               </div>
             </li>
             <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
