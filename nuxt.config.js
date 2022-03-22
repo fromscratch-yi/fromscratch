@@ -10,6 +10,7 @@ const {createClient} = require('./plugins/contentful')
 const cdaClient = createClient(ctfConfig)
 const webpack = require('webpack');
 module.exports = {
+  target: 'static',
   /*
   ** Headers of the page
   */

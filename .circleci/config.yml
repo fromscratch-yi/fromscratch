@@ -2,7 +2,7 @@ version: 2
 jobs:
   deploy_master: # ジョブ名
     docker:
-      - image: circleci/node
+      - image: circleci/node:16.13.2 # ジョブ実行環境のDockerイメージを記述
     steps:
       - checkout # ソースコードのチェックアウト
       - run:
