@@ -2,7 +2,7 @@ version: 2
 jobs:
   deploy_master: # ジョブ名
     docker:
-      - image: cimg/node:17.7.2 # ジョブ実行環境のDockerイメージを記述
+      - image: circleci/node
     steps:
       - checkout # ソースコードのチェックアウト
       - run:
