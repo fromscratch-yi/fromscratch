@@ -1,7 +1,7 @@
 <template>
   <main class="error_wrap container">
     <section class="error_inner has-text-centered">
-      <h1 class="main_line"><img class="logo" src="~assets/img/logo.png" alt="FromScratch" width="35" height="35"></h1>
+      <h1 class="main_line"><LogoImg :size="35"></LogoImg></h1>
       <h2 class="title is-1 m-t-50">４０４</h2>
       <p class="subtitle has-text-grey m-t-30">Not Found.</p>
       <div class="columns has-text-centered m-t-30">
@@ -14,6 +14,16 @@
     </section>
   </main>
 </template>
+
+<script>
+import LogoImg from "~/components/Logo.vue"
+export default {
+  components: {
+    LogoImg
+  }
+}
+</script>
+
 <style scoped>
 .wrap {
   height: 100vh;

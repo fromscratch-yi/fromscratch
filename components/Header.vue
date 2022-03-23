@@ -3,7 +3,7 @@
     <div class="header_inner">
       <div class="header_container level is-mobile">
         <div class="logo level-left">
-          <nuxt-link :to="$i18n.path('')"><img src="~assets/img/logo.png" alt="FromScratch logo" width="35" height="35"></nuxt-link>
+          <nuxt-link :to="$i18n.path('')"><LogoImg :size="35"></LogoImg></nuxt-link>
           <h1 class="blog_ttl df_ttl">FromScratch<span>Yuichi Ishiyama</span></h1>
         </div>
         <div class="nav_btn level-right">
@@ -29,7 +29,7 @@
     <nav class="nav_menu" v-bind:class="{'open': isOpen}">
         <p class="close_btn" @click="clickNavBtn"><fa :icon="faTimes" /></p>
         <ul class="page_nav">
-          <li class="nv_logo"><img src="~assets/img/logo.png" alt="FromScratch logo" width="35" height="35"></li>
+          <li class="nv_logo"><LogoImg :size="35"></LogoImg></li>
           <li class="page_link"><nuxt-link :to="$i18n.path('about/')"><span class="nav_txt">A</span>bout</nuxt-link></li>
           <li class="page_link"><nuxt-link :to="$i18n.path('work/')"><span class="nav_txt">W</span>ork</nuxt-link></li>
           <li class="page_link"><nuxt-link :to="$i18n.path('blog/')"><span class="nav_txt">B</span>log</nuxt-link></li>
@@ -54,11 +54,15 @@ import {
   faBars,
   faTimes
 } from "@fortawesome/free-solid-svg-icons"
+import LogoImg from "~/components/Logo.vue"
 export default {
   data() {
     return {
       isOpen: false
     }
+  },
+  components: {
+    LogoImg
   },
   computed: {
     faBars() {

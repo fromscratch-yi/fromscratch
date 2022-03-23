@@ -25,29 +25,7 @@
             <nuxt-link :to="$i18n.path('work/')"><span class="em_txt">W</span>ork</nuxt-link>
           </p>
         </div>
-        <h3 class="contact_ttl">Contact &amp; Follow</h3>
-        <ul class="contact_item_wrap columns is-mobile">
-          <li class="column">
-            <p class="contanc_item">
-              <a href="mailto:yufroms@gmail.com?subject=Contact-to-FromScratch"><img loading="lazy" src="~assets/img/Mail.png" alt="Mail" width="40" height="40"></a>
-            </p>
-          </li>
-          <li class="column">
-            <p class="contanc_item">
-              <a href="https://twitter.com/ishiyamayuichi" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Twitter.png" alt="Twitter" width="40" height="40"></a>
-            </p>
-          </li>
-          <li class="column">
-            <p class="contanc_item">
-              <a href="https://www.pinterest.jp/yu123daa/" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Pinterest.png" alt="Pinterest" width="40" height="40"></a>
-            </p>
-          </li>
-          <li class="column">
-            <p class="contanc_item">
-              <a href="fb://profile/100009266871916%3A100009266871916%3A1570738429" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Facebook.png" alt="Facebook" width="40" height="40"></a>
-            </p>
-          </li>
-        </ul>
+        <SnsList />
       </div>
     </div>
     <div class="sticky_wrap">
@@ -92,7 +70,7 @@
             :title="$t('blog.categories.businesslife.name')"
             :categories="[
               {
-                'title': 'All',　'link': 'businesslife/'
+                'title': 'All', 'link': 'businesslife/'
               },
               {
                 'title': $t('blog.categories.businesslife.subCategory.motivation.name'),
@@ -119,6 +97,7 @@
 
 <script>
 import Accordion from '~/components/Accordion.vue';
+import SnsList from '~/components/SnsList.vue';
 import {
   faIdCard,
   faFolderOpen,
@@ -137,7 +116,8 @@ export default {
   },
   components: {
     Accordion,
-  },
+    SnsList
+},
   methods: {
     handleScroll: (evt, el) => {
       let top = el.getBoundingClientRect().top;
@@ -219,7 +199,7 @@ export default {
 }
 .side_contents .about_wrap .inner .links {
   display: flex;
-  margin: 15px 0 0;
+  margin: 15px 0 20px;
 }
 .side_contents .about_wrap .inner .links .link_btn {
   text-align: center;
@@ -247,19 +227,7 @@ export default {
 .side_contents .about_wrap .inner .links .link_btn:last-child {
   margin-left: auto;
 }
-.side_contents .about_wrap .inner .contact_ttl {
-  margin: 25px 0 12px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-}
-.side_contents .about_wrap .inner .contact_item_wrap {
-  width: 90%;
-  margin: 0 auto;
-}
-.side_contents .about_wrap .inner .contact_item_wrap li {
-  padding: 0 0.75rem;
-}
+
 .side_contents .content_wrap .inner .category_wrap .main_category {
   cursor: pointer;
   font-size: 17px;

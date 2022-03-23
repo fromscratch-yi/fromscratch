@@ -21,7 +21,7 @@
       <!-- bottom-right -->
       <div class="typer_wrap" v-bind:class="{active: isActive}">
         <div class="inner">
-          <img class="logo" src="~assets/img/logo.png" alt="FromScratch logo" width="60" height="60">
+          <LogoImg :size="60"></LogoImg>
           <span class="tap_txt">
             <vue-typer :text='["Tap"]' :repeat='0' :type-delay='200'></vue-typer>
           </span>
@@ -31,7 +31,7 @@
     <!-- welcome back -->
     <div class="back_wrap" v-bind:class="{active: isActive}">
       <section class="back_ctn">
-        <p class="main_line"><img class="logo" src="~assets/img/logo.png" alt="FromScratch" @click="click" width="60" height="60"></p>
+        <p class="main_line"><LogoImg :size="60"></LogoImg></p>
         <p class="desc_txt">Welcome to this site.<br>All will begin <span class="emp">From Scratch</span></p>
         <nav>
           <ul>
@@ -50,6 +50,7 @@ if (process.browser) {
   var VueTyper = require('vue-typer').VueTyper
 }
 import Meta from '~/assets/mixins/meta'
+import LogoImg from "~/components/Logo.vue"
 export default {
   transition (to, from) {
     if (!from) return 'slide-left'
@@ -58,6 +59,7 @@ export default {
   mixins: [Meta],
   components: {
     VueTyper,
+    LogoImg
   },
   layout: "headerless",
   data() {

@@ -60,29 +60,7 @@
             <dt><nuxt-link :to="$i18n.path('blog/')"><span class="em_txt">B</span>log Page</nuxt-link></dt>
             <dd>{{ $t('links.blog') }}</dd>
           </dl>
-          <h3 class="contact_ttl">Contact &amp; Follow</h3>
-          <ul class="contact_item_wrap columns is-mobile">
-            <li class="column">
-              <p class="contanc_item">
-                <a href="https://twitter.com/ishiyamayuichi" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Twitter.png" alt="Twitter" width="40" height="40"></a>
-              </p>
-            </li>
-            <li class="column">
-              <p class="contanc_item">
-                <a href="https://github.com/yufrom" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Github.png" alt="Github" width="40" height="40"></a>
-              </p>
-            </li>
-            <li class="column">
-              <p class="contanc_item">
-                <a href="https://www.pinterest.jp/yu123daa/" target="_blank" rel="noopener"><img loading="lazy" src="~assets/img/Pinterest.png" alt="Pinterest" width="40" height="40"></a>
-              </p>
-            </li>
-            <li class="column">
-              <p class="contanc_item">
-                <a href="mailto:fromscratch.yi@gmail.com?subject=Contact from Portfolio"><img loading="lazy" src="~assets/img/Mail.png" alt="Mail" width="40" height="40"></a>
-              </p>
-            </li>
-          </ul>
+          <SnsList />
         </div>
       </section>
     </div>
@@ -97,40 +75,43 @@ import {
   faUserTie,
   faLink
 } from "@fortawesome/free-solid-svg-icons"
+import SnsList from '~/components/SnsList.vue';
 export default {
-  computed: {
-    faIdCard() {
-      return faIdCard
+    computed: {
+        faIdCard() {
+            return faIdCard;
+        },
+        faFolderOpen() {
+            return faFolderOpen;
+        },
+        faLaptopCode() {
+            return faLaptopCode;
+        },
+        faUserTie() {
+            return faUserTie;
+        },
+        faLink() {
+            return faLink;
+        }
     },
-    faFolderOpen() {
-      return faFolderOpen
+    methods: {
+        handleScroll: (evt, el) => {
+            let top = el.getBoundingClientRect().top;
+            var offcet = 0;
+            if (window.innerHeight > 900) {
+                offcet = 1200;
+            }
+            else {
+                offcet = 600;
+            }
+            if (window.scrollY > top + window.pageYOffset - offcet) {
+                el.classList.add("move");
+                return true;
+            }
+            return false;
+        },
     },
-    faLaptopCode() {
-      return faLaptopCode
-    },
-    faUserTie() {
-      return faUserTie
-    },
-    faLink() {
-      return faLink
-    }
-  },
-  methods: {
-    handleScroll: (evt, el) => {
-      let top = el.getBoundingClientRect().top;
-      var offcet = 0;
-      if (window.innerHeight > 900) {
-        offcet = 1200;
-      } else {
-        offcet = 600;
-      }
-      if (window.scrollY > top + window.pageYOffset - offcet) {
-        el.classList.add('move');
-        return true;
-      }
-      return false;
-    },
-  },
+    components: { SnsList }
 }
 </script>
 
@@ -250,15 +231,6 @@ footer .footer_content_wrap .footer_content .inner dl dt a .em_txt {
 footer .footer_content_wrap .footer_content .inner dl dd {
   margin: 0 0 15px;
   padding: 0 0 0 5px;
-}
-footer .footer_content_wrap .footer_content .contact_ttl {
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-}
-footer .footer_content_wrap .footer_content .contact_item_wrap {
-  max-width: 250px;
-  margin: 0 auto;
 }
 @media screen and (min-width: 768px){
   footer .footer_content_wrap {
