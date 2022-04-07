@@ -205,4 +205,9 @@ export default {
   googleAnalytics: {
     id: analyticsID,
   },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: analyticsID,
+    },
+  },
 };
