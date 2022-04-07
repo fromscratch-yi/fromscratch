@@ -236,9 +236,9 @@ export default Vue.extend({
 
       .profile-img-wrap {
         position: relative;
-        height: 30vh;
+        height: 40vh;
         padding: 100px 0 40px;
-        margin: 30px 0 90px;
+        margin: 30px 0 120px;
         text-align: center;
         background-image: url('~/assets/css/images/about_bg.jpg');
         background-repeat: no-repeat;
@@ -253,7 +253,7 @@ export default Vue.extend({
 
         picture {
           position: absolute;
-          bottom: -50px;
+          bottom: -85px;
           left: calc(50% - 85px);
           width: 170px;
           height: 170px;
