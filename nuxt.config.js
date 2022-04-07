@@ -197,4 +197,7 @@ export default {
       return routeList;
     },
   },
+  generate: {
+    fallback: '404.html',
+  },
 };
