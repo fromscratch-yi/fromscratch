@@ -1,0 +1,54 @@
+@import '@variable';
+
+.terminal_window {
+  overflow: hidden;
+  border: 1px solid #2b2a2a;
+  border-radius: 5px;
+
+  .tool_bar {
+    position: relative;
+    display: flex;
+    padding: 7px;
+    color: #2b2a2a;
+    text-align: center;
+    background: #d9d9d9;
+    border-bottom: 1px solid #2b2a2a;
+
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+      content: '';
+      background: #f9625d;
+      border-radius: 50%;
+
+      &:nth-child(2) {
+        background: #fdbf41;
+      }
+
+      &:nth-child(3) {
+        background: #35cc4c;
+      }
+    }
+  }
+
+  pre {
+    height: 95px;
+    padding: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    color: rgb(71 160 61);
+    background: rgb(43 42 42);
+
+    @include tablet {
+      height: 135px;
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    code {
+      font-family: 'Courier New', Consolas, monospace;
+    }
+  }
+}

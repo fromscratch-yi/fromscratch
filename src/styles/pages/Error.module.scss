@@ -1,0 +1,27 @@
+@import '@variable';
+
+.error_wrap {
+  position: absolute;
+  top: 20vh;
+  right: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    margin: 25px 0 20px;
+
+    .status_cd {
+      display: block;
+      font-size: 80px;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: 7px;
+    }
+
+    .status_msg {
+      font-size: 20px;
+      color: #666;
+    }
+  }
+}

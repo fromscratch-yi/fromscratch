@@ -1,0 +1,8 @@
+@import '@animation';
+
+.bound {
+  > span {
+    cursor: pointer;
+    animation: bounding 0.3s ease infinite alternate;
+  }
+}

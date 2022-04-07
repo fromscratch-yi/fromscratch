@@ -1,0 +1,343 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import '@variable';
+
+:root {
+  --c-main-color: #47a03d;
+  --c-main-bg: #2b2a2a;
+  --s-max-width: 1000px;
+}
+
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  td {
+    vertical-align: top;
+  }
+
+  th {
+    color: #363636;
+  }
+
+  td:not([align]),
+  th:not([align]) {
+    text-align: left;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  min-width: 300px;
+  overflow: -moz-scrollbars-none;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 16px;
+  -ms-overflow-style: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  background-color: var(--c-main-bg);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family:
+    BlinkMacSystemFont,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: monospace;
+}
+
+body {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #4a4a4a;
+
+  @include tablet {
+    position: static !important;
+  }
+}
+
+strong {
+  font-weight: 700;
+  color: #363636;
+}
+
+a {
+  color: #3273dc;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+a strong {
+  color: currentcolor;
+}
+
+a:hover {
+  color: #363636;
+}
+
+code {
+  padding: 0.25em 0.5em;
+  font-size: 0.875em;
+  font-weight: 400;
+  color: #f14668;
+}
+
+code,
+hr {
+  background-color: #f5f5f5;
+}
+
+hr {
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  vertical-align: baseline;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+fieldset {
+  border: none;
+}
+
+@font-face {
+  font-family: 'M+ 1m';
+  src: local('M+ 1m');
+}
+
+@font-face {
+  font-family: 'Rounded M+ 1m regular';
+  src: local('Rounded M+ 1m regular');
+}
+
+@font-face {
+  font-family: 'Rounded M+ 2m regular';
+  src: local('Rounded M+ 2m regular');
+}
+
+@font-face {
+  font-family: 'Rounded Mgen+ 1m regular';
+  src: local('Rounded Mgen+ 1m regular');
+}
+
+@font-face {
+  font-family: 'Rounded Mgen+ 2m regular';
+  src: local('Rounded Mgen+ 2m regular');
+}
+
+@font-face {
+  font-family: 'Yutapon coding Regular';
+  src: local('Yutapon coding Regular');
+}
+
+@font-face {
+  font-family: 'Myrica M';
+  src: local('Myrica M');
+}
+
+@font-face {
+  font-family: 'MyricaM M';
+  src: local('MyricaM M');
+}
+
+@font-face {
+  font-family: 'Ricty Diminished Discord';
+  src: local('Ricty Diminished Discord');
+}
+
+@font-face {
+  font-family: 'Ricty Diminished';
+  src: local('Ricty Diminished');
+}
+
+@font-face {
+  font-family: 'Migu 1M';
+  src: local('Migu 1M');
+}
+
+@font-face {
+  font-family: 'Migu 2M';
+  src: local('Migu 2M');
+}
+
+@font-face {
+  font-family: 'VL ゴシック';
+  src: local('VL ゴシック');
+}
+
+@font-face {
+  font-family: 'MeiryoKe_Gothic';
+  src: local('MeiryoKe_Gothic');
+}
+
+kbd,
+pre,
+code,
+samp {
+  font-family:
+    'M+ 1m',
+    'Rounded M+ 1m regular',
+    'Rounded M+ 2m regular',
+    'Rounded Mgen+ 1m regular',
+    'Rounded Mgen+ 2m regular',
+    'Yutapon coding Regular',
+    'Myrica M',
+    'MyricaM M',
+    'Ricty Diminished Discord',
+    'Ricty Diminished',
+    'Migu 1M',
+    'Migu 2M',
+    'VL ゴシック',
+    'MeiryoKe_Gothic',
+    monospace;
+}
+
+pre {
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  font-size: 0.875em;
+  color: #4a4a4a;
+  word-wrap: normal;
+  white-space: pre;
+  background-color: #f5f5f5;
+  -webkit-overflow-scrolling: touch;
+}
+
+pre code {
+  padding: 0;
+  font-size: 1em;
+  color: currentcolor;
+  background-color: transparent;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Typewriter__wrapper {
+  white-space: break-spaces;
+}
+
+.react-swipeable-view-container > div[aria-hidden='false'] {
+  height: 100%;
+}
+
+.react-swipeable-view-container > div[aria-hidden='true'] {
+  height: 0;
+}
