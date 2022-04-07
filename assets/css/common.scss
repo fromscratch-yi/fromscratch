@@ -82,11 +82,16 @@ html {
       font-size: 15px;
     }
   }
+
   .ad-wrap {
-    margin: 0 auto;
+    margin: 30px auto 0;
     text-align: center;
     overflow: hidden;
-    inc {
+    padding: 0 15px 10px;
+
+    ins {
+      display: block;
+      // background-color: #d9d9d9;
       width: 100%;
       iframe {
         width: 100%;

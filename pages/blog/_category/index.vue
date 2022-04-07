@@ -95,24 +95,18 @@ export default Vue.extend({
     padding: 0 15px;
 
     .no-article {
-      margin: 50px 0 40px;
+      margin: 100px 0;
       font-size: 15px;
       font-weight: bold;
       color: #777;
       text-align: center;
       @include tablet {
-        margin: 70px 0 80px;
         font-size: 16px;
       }
       @include pc {
-        margin: 100px 0;
         font-size: 17px;
       }
     }
-  }
-
-  .ad-wrap {
-    margin: 30px 0 0;
   }
 }
 </style>

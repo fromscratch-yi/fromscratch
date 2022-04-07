@@ -135,7 +135,10 @@ export default Vue.extend({
       }
 
       .ad-wrap {
-        margin: 25px auto 0;
+        padding: 0;
+        margin: 22px auto 0;
+        overflow: hidden;
+        border-radius: 5px;
       }
     }
   }
