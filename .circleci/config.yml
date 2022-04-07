@@ -21,10 +21,6 @@ jobs:
             - ~/.cache/yarn
 
       - run:
-          name: Run linter
-          command: yarn lint
-
-      - run:
           name: Setting ENV
           command: |
             echo "BASE_URL=$BASE_URL" > .env
