@@ -114,7 +114,7 @@ export default Vue.extend({
     };
   },
   mounted() {
-    window.addEventListener('scroll', this.checkIsTabZindexone);
+    window.addEventListener('scroll', this.checkIsTabZindexone, { passive: true });
     window.addEventListener('resize', this.onResize);
   },
   methods: {
@@ -134,7 +134,7 @@ export default Vue.extend({
           callback();
         }
       };
-      window.addEventListener('scroll', onScroll);
+      window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
       window.scrollTo({
         top: offset,
