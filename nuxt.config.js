@@ -127,7 +127,7 @@ export default {
   },
 
   router: {
-    prefetchLinks: false,
+    prefetchLinks: true,
     trailingSlash: true,
   },
 
