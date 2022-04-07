@@ -3,7 +3,7 @@
     <p class="ttl">Contact &amp; Follow</p>
     <ul class="contact-list">
       <li class="contact-item">
-        <a :href="twitterURL" target="_blank" rel="noopener">
+        <a class="sns-link" :href="twitterURL" target="_blank" rel="noopener">
           <img
             loading="lazy"
             src="~assets/images/sns/twitter.png"
@@ -13,7 +13,7 @@
         /></a>
       </li>
       <li class="contact-item">
-        <a :href="githubURL" target="_blank" rel="noopener">
+        <a class="sns-link" :href="githubURL" target="_blank" rel="noopener">
           <img
             loading="lazy"
             src="~assets/images/sns/github.png"
@@ -23,7 +23,7 @@
         /></a>
       </li>
       <li class="contact-item">
-        <a :href="pintarestURL" target="_blank" rel="noopener">
+        <a class="sns-link" :href="pintarestURL" target="_blank" rel="noopener">
           <img
             loading="lazy"
             src="~assets/images/sns/pinterest.png"
@@ -33,7 +33,7 @@
         /></a>
       </li>
       <li class="contact-item">
-        <a :href="`mailto:${email}?subject=Contact from Portfolio`">
+        <a class="sns-link" :href="`mailto:${email}?subject=Contact from Portfolio`">
           <img loading="lazy" src="~assets/images/sns/mail.png" alt="Mail" width="40" height="40"
         /></a>
       </li>
@@ -75,6 +75,10 @@ export default Vue.extend({
 
     .contact-item {
       text-align: center;
+
+      a {
+        display: block;
+      }
     }
   }
 }
