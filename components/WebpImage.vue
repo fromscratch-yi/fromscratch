@@ -1,7 +1,7 @@
 <template>
   <picture class="webp-wrap">
     <source type="image/webp" :srcset="`${fileName}.webp`" />
-    <img :src="`${fileName}.png`" :alt="alt" :width="width" :height="height" />
+    <img :src="`${fileName}.png`" :alt="alt" :width="width" :height="height" loading="lazy" />
   </picture>
 </template>
 
