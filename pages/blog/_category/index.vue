@@ -101,14 +101,18 @@ export default Vue.extend({
       color: #777;
       text-align: center;
       @include tablet {
-        margin: 70px 0 50px;
+        margin: 70px 0 80px;
         font-size: 16px;
       }
       @include pc {
-        margin: 100px 0 0;
+        margin: 100px 0;
         font-size: 17px;
       }
     }
+  }
+
+  .ad-wrap {
+    margin: 30px 0 0;
   }
 }
 </style>

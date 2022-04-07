@@ -12,7 +12,7 @@
 
     <section class="side-sec category-wrap">
       <p class="sec-ttl category">Categories</p>
-      <ul>
+      <ul class="category-link-list">
         <li v-for="(value, key) in $t('category')" :key="key" class="category-wrap">
           <blog-category-link :type="key" :name="value.name" :explain="value.explain" />
         </li>
@@ -53,9 +53,10 @@ export default Vue.extend({
 #blog-side-menu {
   .side-sec {
     margin-bottom: 20px;
-    background: #fff;
     filter: drop-shadow(3px 3px 7px #0000001a);
     border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 
     .sec-ttl {
       padding: 10px 20px 10px 43px;
@@ -84,6 +85,8 @@ export default Vue.extend({
     }
 
     &.about-wrap {
+      background: #fff;
+
       .profile-img {
         display: block;
         max-width: 180px;
@@ -119,16 +122,20 @@ export default Vue.extend({
       padding: 0;
       margin: 0;
 
-      .contents-inner {
-        padding: 0;
+      .category-link-list {
+        background: #fff;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
 
-        .category-wrap {
-          &:last-child {
-            a {
-              border-bottom: none;
-            }
+        &:last-child {
+          a.category-link {
+            border-bottom: none;
           }
         }
+      }
+
+      .ad-wrap {
+        margin: 25px auto 0;
       }
     }
   }
@@ -140,6 +147,18 @@ export default Vue.extend({
     .name {
       small {
         display: block;
+      }
+    }
+  }
+
+  .category-link-list {
+    background: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    .category-wrap:last-child {
+      a.category-link {
+        border-bottom: none;
       }
     }
   }
