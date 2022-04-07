@@ -49,23 +49,21 @@
                     :pagination-padding="8"
                   >
                     <slide v-for="imgIndex in work.imgCount" :key="imgIndex">
-                      <img
-                        :src="`/images/works/${key}/${work.prefix}${imgIndex}.png`"
+                      <webp-image
+                        :file-name="`/images/works/${key}/${work.prefix}${imgIndex}`"
                         :alt="`${work.title}${imgIndex}`"
                         :width="325"
                         :height="364"
-                        loading=":lazy"
                       />
                     </slide>
                   </carousel>
                 </div>
                 <div v-else class="img-wrap one-img">
-                  <img
-                    :src="`/images/works/${key}/${work.prefix}${work.imgCount}`"
+                  <webp-image
+                    :file-name="`/images/works/${key}/${work.prefix}${work.imgCount}`"
                     :alt="`${work.title}${work.imgCount}`"
                     :width="400"
                     :height="364"
-                    loading=":lazy"
                   />
                 </div>
                 <skill-tags class="work-skills" :tags="work.skillSet" />
@@ -315,7 +313,6 @@ export default Vue.extend({
             .img-wrap {
               max-width: 800px;
               margin: 20px auto;
-              text-align: center;
             }
 
             .skill-tags {
