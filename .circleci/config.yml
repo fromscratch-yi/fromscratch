@@ -1,0 +1,60 @@
+version: 2
+
+jobs:
+  main:
+    docker:
+      - image: cimg/node:16.14.2
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - yarn-v1-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Install dependencies
+          command: yarn --frozen-lockfile --cache-folder ~/.cache/yarn
+
+      - save_cache:
+          key: yarn-v1-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: Run linter
+          command: yarn lint
+
+      - run:
+          name: Setting ENV
+          command: |
+            echo "BASE_URL=$BASE_URL" > .env
+            echo "EMAIL=$EMAIL" > .env
+            echo "TWITTER_URL=$TWITTER_URL" > .env
+            echo "GITHUB_URL=$GITHUB_URL" > .env
+            echo "PINTAREST_URL=$PINTAREST_URL" > .env
+            echo "CTF_SPACE_ID=$CTF_SPACE_ID" >> .env
+            echo "CTF_CDA_ACCESS_TOKEN=$CTF_CDA_ACCESS_TOKEN" >> .env
+            echo "CTF_CMA_ACCESS_TOKEN=$CTF_CMA_ACCESS_TOKEN" >> .env
+            echo "GOOGLE_ANALYTICS_ID=$GOOGLE_ANALYTICS_ID" >> .env
+            echo "GOOGLE_ADSENSE_ID=$GOOGLE_ADSENSE_ID" >> .env
+            echo "GOOGLE_ADSENSE_SLOT_ID=$GOOGLE_ADSENSE_SLOT_ID" >> .env
+            echo "GOOGLE_ADSENSE_SIDE_SLOT_ID=$GOOGLE_ADSENSE_SIDE_SLOT_ID" >> .env
+
+      - run:
+          name: Build
+          command: yarn generate
+
+      - run:
+          name: Deploy to Firebase Hosting
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - main:
+          filters:
+            branches:
+              only:
+                - main
+                - master

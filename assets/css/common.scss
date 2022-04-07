@@ -1,0 +1,124 @@
+/* stylelint-disable-next-line scss/at-import-no-partial-leading-underscore */
+@import '_keyframes';
+html {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  background-color: $main-color;
+  color: #333;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  body,
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.7px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a.ex-link {
+    position: relative;
+    padding: 0 20px 5px 5px;
+    border-bottom: 1px solid #d1d1d1;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-image: url('~assets/css/images/ico-link.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .page-enter,
+  .page-leave-to {
+    opacity: 0;
+  }
+  .page-enter-active,
+  .page-leave-active {
+    transition: opacity 0.4s;
+  }
+  .layout-enter,
+  .layout-leave-active {
+    opacity: 0;
+  }
+  .layout-enter-active,
+  .layout-leave-active {
+    transition: opacity 0.4s;
+  }
+  .attention {
+    color: #666;
+    font-size: 12px;
+    margin: 15px auto 0;
+    padding: 0 5px;
+    line-height: 1.6;
+  }
+  a[aria-current='page'] {
+    pointer-events: none;
+  }
+  .page-explain {
+    max-width: 850px;
+    padding: 0 15px;
+    margin: 30px auto;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.7;
+    @include tablet {
+      margin: 50px auto 60px;
+      font-size: 15px;
+    }
+  }
+  .ad-wrap {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    inc {
+      width: 100%;
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+  body {
+    &.is-open {
+      overflow: hidden;
+      height: 100vh;
+      @include tablet {
+        overflow: auto;
+        height: auto;
+      }
+    }
+  }
+}
+// body {
+//   .layout-leave-active,
+//   .page-leave-active {
+//     transition: all 500ms ease;
+//     transform: translateY(100%);
+//     transition-delay: 0.3s;
+//     @include tablet {
+//       transition-delay: 0s;
+//     }
+//   }
+
+//   &:not(.top-body) {
+//     .layout-enter-active,
+//     .page-enter-active {
+//       animation: transition-enter 500ms ease;
+//     }
+//   }
+// }

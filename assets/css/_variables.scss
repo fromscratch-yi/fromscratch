@@ -1,0 +1,33 @@
+$main-color: #2b2a2a; // メインカラー
+$sub-color: #4bb44b; // サブカラー
+$accent-color: #f7a952; // アクセントカラー
+$note-color: #595959; // 注釈用color
+$dark-sub-color: #3d7a3d;
+
+$txt-wh-color: rgb(177, 177, 177);
+
+$max: 1200px; // Max
+$pc: 1025px; // PC
+$tablet: 768px; // タブレット
+$small: 320px;
+
+@mixin max {
+  @media (min-width: ($max)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: ($tablet)) {
+    @content;
+  }
+}
+@mixin small {
+  @media (max-width: ($iphone5)) {
+    @content;
+  }
+}
