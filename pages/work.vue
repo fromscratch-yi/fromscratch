@@ -75,6 +75,10 @@
       </client-only>
       <p class="attention">{{ $t('work.note') }}</p>
     </div>
+    <div class="bottom-page-link-wrap">
+      <bottom-page-link position="left" to="about" name="About" />
+      <bottom-page-link position="right" to="blog" name="Blog" />
+    </div>
   </article>
 </template>
 

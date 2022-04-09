@@ -107,6 +107,17 @@ html {
         height: auto;
       }
     }
+    .bottom-page-link-wrap {
+      max-width: 1300px;
+      display: flex;
+      padding: 0 15px;
+      justify-content: space-between;
+      margin: 40px auto;
+      @include tablet {
+        margin: 60px auto 40px;
+        padding: 0 20px;
+      }
+    }
   }
 }
 // body {

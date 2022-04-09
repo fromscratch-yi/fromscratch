@@ -85,6 +85,11 @@
       </table>
       <p class="attention">{{ $t('about.note') }}</p>
     </section>
+
+    <div class="bottom-page-link-wrap">
+      <bottom-page-link position="left" to="index" name="Top" />
+      <bottom-page-link position="right" to="work" name="Work" />
+    </div>
   </article>
 </template>
 
