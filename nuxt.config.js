@@ -143,7 +143,7 @@ export default {
   },
 
   router: {
-    prefetchLinks: false,
+    prefetchLinks: true,
     trailingSlash: true,
   },
 
@@ -217,28 +217,28 @@ export default {
   },
   generate: {
     fallback: '404.html',
-    async routes() {
-      const { Categories, getEntriesByCategoryRequest } = require('./libs/contentful');
-      const routeList = [];
-      const categories = [...Object.keys(Categories)];
-      const langs = { ja: '', en: '/en' };
-      const langsArray = [...Object.keys(langs)];
+    // async routes() {
+    //   const { Categories, getEntriesByCategoryRequest } = require('./libs/contentful');
+    //   const routeList = [];
+    //   const categories = [...Object.keys(Categories)];
+    //   const langs = { ja: '', en: '/en' };
+    //   const langsArray = [...Object.keys(langs)];
 
-      for (const langKey of langsArray) {
-        for (const categoryKey of categories) {
-          const categoryPath = `${langs[langKey]}/blog/${categoryKey}`;
-          routeList.push(categoryPath);
-          await getEntriesByCategoryRequest(Categories[categoryKey], langKey, -1).then(
-            (entries) => {
-              routeList.push(
-                ...entries.items.map((item) => `${categoryPath}/${item.fields.slug}/`),
-              );
-            },
-          );
-        }
-      }
-      return routeList;
-    },
+    //   for (const langKey of langsArray) {
+    //     for (const categoryKey of categories) {
+    //       const categoryPath = `${langs[langKey]}/blog/${categoryKey}`;
+    //       routeList.push(categoryPath);
+    //       await getEntriesByCategoryRequest(Categories[categoryKey], langKey, -1).then(
+    //         (entries) => {
+    //           routeList.push(
+    //             ...entries.items.map((item) => `${categoryPath}/${item.fields.slug}/`),
+    //           );
+    //         },
+    //       );
+    //     }
+    //   }
+    //   return routeList;
+    // },
   },
   googleAnalytics: {
     id: analyticsID,
