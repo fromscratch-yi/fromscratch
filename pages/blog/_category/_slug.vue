@@ -96,11 +96,11 @@ export default Vue.extend({
           type: 'application/ld+json',
         },
       ],
-      title: article.title,
+      title: `${article.title} | FromScratch`,
       meta: [
         { hid: 'description', name: 'description', content: article.description },
         { hid: 'og:type', property: 'og:type', content: 'article' },
-        { hid: 'og:title', property: 'og:title', content: article.title + ' | FromScratch' },
+        { hid: 'og:title', property: 'og:title', content: `${article.title} | FromScratch` },
         { hid: 'og:description', property: 'og:description', content: article.description },
         { hid: 'og:url', property: 'og:url', content: siteURL + this.$route.path },
         {
