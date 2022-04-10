@@ -18,7 +18,7 @@
           ad-responsive="false"
         />
       </div>
-      <div v-if="article.recommend" class="recommend-wrap">
+      <div v-if="article.recommend.length > 0" class="recommend-wrap">
         <h2>{{ $t('blog.recommend') }}</h2>
         <article-card-list :articles="article.recommend" />
       </div>
@@ -287,6 +287,83 @@ export default Vue.extend({
 
     p {
       margin: 25px 0 35px;
+    }
+  }
+
+  em {
+    font-style: normal;
+    font-weight: bold;
+    background: linear-gradient(transparent 75%, #b2ffb2 75%);
+  }
+
+  strong {
+    font-size: 1em;
+  }
+
+  a {
+    color: #485fc7;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &.ex-link {
+      font-size: 1em;
+    }
+  }
+
+  figure {
+    display: block;
+    margin: 0;
+
+    &.cicle200 {
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .margin-bottom30 {
+    margin-bottom: 30px;
+  }
+
+  table {
+    max-width: 100%;
+    margin: 0 auto 40px;
+    overflow: hidden;
+
+    tbody {
+      th,
+      td {
+        padding: 6px 8px;
+        font-size: 14px;
+        border: 1px solid #d1d1d1;
+        @include tablet {
+          padding: 6px 13px;
+        }
+      }
+
+      th {
+        font-size: 14px;
+      }
+
+      &.no-wrap-head {
+        th {
+          white-space: nowrap;
+        }
+      }
+
+      &.no-wrap {
+        white-space: nowrap;
+      }
+
+      &.v-center {
+        vertical-align: center;
+      }
     }
   }
 }

@@ -107,11 +107,9 @@ export enum Categories {
   gadget = 'gadget',
   other = 'other',
 }
-export function entriesItemFilter(item: { fields: any }) {
+export function entriesItemFilter(item: { fields: any }): boolean {
   const data = item.fields;
-  if (data.headerImage && data.thumbnail && data.title && data.description && data.body) {
-    return true;
-  }
+  return data.headerImage && data.thumbnail && data.title && data.description && data.body;
 }
 export function formatEntriesItemAsCard(items: Item[]): CardItem[] {
   if (!items) {
@@ -176,7 +174,7 @@ export function getEntriesByCategoryRequest(category: Categories, locale: string
   return client.getEntries(query);
 }
 
-export function getEntry(category: Categories, locale: string, slug: string): Item {
+export function getEntry(category: Categories, locale: string, slug: string): Article {
   const query = {
     content_type: category,
     locale,

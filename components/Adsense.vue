@@ -54,8 +54,6 @@ export default Vue.extend({
   },
   mounted() {
     this.showAd();
-    console.log(this.adSlot);
-    console.log('showAd');
   },
   methods: {
     showAd() {
