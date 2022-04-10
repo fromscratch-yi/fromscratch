@@ -2,9 +2,13 @@
   <div id="breadcrumb">
     <ul class="breadcrumb-list">
       <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.name">
-        <nuxt-link v-if="breadcrumb.path" :to="breadcrumb.path" class="breadcrumb-link">{{
-          breadcrumb.name
-        }}</nuxt-link>
+        <nuxt-link
+          v-if="breadcrumb.path"
+          :to="breadcrumb.path"
+          class="breadcrumb-link"
+          :aria-current="breadcrumb.path == $route.path ? 'page' : ''"
+          >{{ breadcrumb.name }}</nuxt-link
+        >
         <span v-else class="breadcrumb-name">{{ breadcrumb.name }}</span>
       </li>
     </ul>
@@ -54,6 +58,9 @@ export default Vue.extend({
         itemListElement: items,
       };
     },
+    // isCurrentPage() {
+    //   console.log(breadcrumb.path);
+    // },
   },
 });
 </script>
