@@ -1,7 +1,7 @@
 <template>
   <div id="article-wrap">
     <figure class="header-image">
-      <img :src="article.headerImage.url" :alt="article.title" />
+      <img :src="article.headerImage.url" :alt="article.title" width="1000" height="500" />
     </figure>
     <div class="article-contents-wrap">
       <div class="head-info">
