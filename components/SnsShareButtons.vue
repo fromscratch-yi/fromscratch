@@ -44,7 +44,7 @@ export default Vue.extend({
       line: string;
     };
   } {
-    const url = `${process.env.BASE_URL}${this.$route.path}`;
+    const url = `https://fromscratch-y.work${this.$route.path}`;
     return {
       svg: {
         twitter:

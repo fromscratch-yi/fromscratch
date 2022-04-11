@@ -43,23 +43,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-const twitterURL = process.env.TWITTER_URL;
-const githubURL = process.env.GITHUB_URL;
-const pintarestURL = process.env.PINTAREST_URL;
-const email = process.env.EMAIL;
 export default Vue.extend({
   name: 'SnsList',
-  data(): {
-    twitterURL: string | undefined;
-    githubURL: string | undefined;
-    pintarestURL: string | undefined;
-    email: string | undefined;
-  } {
+  data() {
     return {
-      twitterURL,
-      githubURL,
-      pintarestURL,
-      email,
+      twitterURL: 'https://twitter.com/ishiyamayuichi',
+      githubURL: 'https://github.com/yufrom',
+      pintarestURL: 'https://www.pinterest.jp/yu123daa',
+      email: 'fromscratch.yi@gmail.com',
     };
   },
 });
