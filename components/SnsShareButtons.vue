@@ -22,7 +22,6 @@
 
 <script lang="ts">
 import Vue from 'vue';
-const siteURL = process.env.BASE_URL;
 export default Vue.extend({
   name: 'SnsShareButtons',
   props: {
@@ -45,7 +44,7 @@ export default Vue.extend({
       line: string;
     };
   } {
-    const url = `${siteURL}${this.$route.path}`;
+    const url = `${process.env.BASE_URL}${this.$route.path}`;
     return {
       svg: {
         twitter:
