@@ -376,6 +376,11 @@ export default Vue.extend({
         border-radius: 50%;
       }
     }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    img {
+      border: 1px solid #f1f1f1;
+    }
   }
 
   .center {
