@@ -542,5 +542,6 @@ export default Vue.extend({
 
 html body.is-open {
   height: auto !important;
+  overflow: scroll !important;
 }
 </style>
