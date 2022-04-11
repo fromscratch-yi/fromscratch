@@ -19,7 +19,7 @@
         />
       </div>
       <div v-if="article.recommend.length > 0" class="recommend-wrap">
-        <h2>{{ $t('blog.recommend') }}</h2>
+        <h2 class="recommend-ttl">{{ $t('blog.recommend') }}</h2>
         <article-card-list :articles="article.recommend" />
       </div>
     </div>
@@ -213,6 +213,33 @@ export default Vue.extend({
     .article-body {
       line-height: 2;
     }
+
+    .recommend-wrap {
+      margin: 30px 0 0;
+
+      .recommend-ttl {
+        position: relative;
+        padding: 0 3px 3px;
+        margin: 40px 0 25px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.6;
+        border-bottom: 4px solid #ddd;
+        @include tablet {
+          font-size: 23px;
+        }
+
+        &::after {
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          display: block;
+          width: 15%;
+          content: ' ';
+          border-bottom: solid 4px $sub-color;
+        }
+      }
+    }
   }
 }
 </style>
@@ -238,12 +265,15 @@ export default Vue.extend({
 
     h2 {
       position: relative;
-      padding: 0 5px 5px;
-      margin: 0 0 40px;
+      padding: 60px 5px 5px;
+      margin: -60px 0 40px;
       font-size: 18px;
       font-weight: 550;
+      line-height: 1.2;
       border-bottom: 4px solid #ddd;
       @include tablet {
+        padding: 20px 5px 5px;
+        margin: -20px 0 40px;
         font-size: 19px;
       }
 
@@ -260,13 +290,16 @@ export default Vue.extend({
 
     h3 {
       position: relative;
-      padding: 0 0 3px 27px;
-      margin: 45px 0 25px;
+      padding: 60px 0 3px 27px;
+      margin: -35px 0 25px;
       font-size: 16px;
       font-weight: bold;
+      line-height: 1.2;
       color: #555;
       border-bottom: 1px dashed $sub-color;
       @include tablet {
+        padding: 30px 0 3px 27px;
+        margin: 20px 0 25px;
         font-size: 17px;
       }
 
@@ -278,20 +311,26 @@ export default Vue.extend({
       }
 
       &::before {
-        top: 5px;
+        top: 55px;
         left: 7px;
         width: 10px;
         height: 10px;
         transform: rotate(45deg);
+        @include tablet {
+          top: 25px;
+        }
       }
 
       &::after {
-        top: 15px;
+        top: 65px;
         left: 0;
         width: 6px;
         height: 6px;
         background-color: $sub-color;
         transform: rotate(15deg);
+        @include tablet {
+          top: 35px;
+        }
       }
     }
 
@@ -322,7 +361,8 @@ export default Vue.extend({
 
   figure {
     display: block;
-    margin: 0;
+    margin: 0 0 40px;
+    text-align: center;
 
     &.cicle200 {
       img {
@@ -339,6 +379,10 @@ export default Vue.extend({
 
   .margin-bottom30 {
     margin-bottom: 30px;
+  }
+
+  .margin-bottom40 {
+    margin-bottom: 40px;
   }
 
   table {
@@ -370,6 +414,127 @@ export default Vue.extend({
 
       &.v-center {
         vertical-align: center;
+      }
+    }
+  }
+
+  .memo {
+    position: relative;
+    padding: 13px 15px;
+    margin: 15px 0 20px;
+    background: #f1f1f1;
+    border-radius: 5px;
+
+    &::after {
+      position: absolute;
+      top: -15px;
+      right: -5px;
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 14px;
+      color: $sub-color;
+      content: 'Memo';
+      background: #fff;
+      border: 1px solid $sub-color;
+      border-radius: 16px;
+    }
+
+    .ttl {
+      margin: 0 0 7px;
+      font-weight: bold;
+      line-height: 1.7;
+    }
+
+    .desc {
+      margin: 0;
+      line-height: 1.7;
+    }
+  }
+
+  dl {
+    margin-bottom: 15px;
+
+    dt {
+      position: relative;
+      padding-left: 20px;
+      margin: 40px 0 20px;
+      font-weight: bold;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-top: -5px;
+        content: '';
+        background: $sub-color;
+        transform: rotate(-45deg);
+      }
+    }
+
+    dd {
+      padding: 0 5px;
+    }
+  }
+
+  .desc-ul-wrap {
+    padding: 20px;
+    background: #ececec;
+    border-radius: 5px;
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    li {
+      margin-bottom: 10px;
+      font-size: 0.95em;
+      font-weight: bold;
+      line-height: 1.9;
+      list-style: none;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      span {
+        display: inline-block;
+        padding-left: 7px;
+        font-weight: normal;
+        line-height: 1.9;
+      }
+
+      a {
+        color: #003da0;
+      }
+    }
+  }
+
+  .mokuji {
+    padding: 10px 15px;
+    background: #ececec78;
+    border-radius: 5px;
+    @include tablet {
+      padding: 15px 20px;
+    }
+
+    .ttl {
+      padding: 0 5px 3px;
+      margin: 0 0 15px;
+      font-weight: bold;
+      border-bottom: 1px dashed #d1d1d1;
+    }
+
+    ul {
+      padding: 0 0 0 25px;
+      font-size: 14px;
+      list-style: disc;
+      @include tablet {
+        font-size: 15px;
+      }
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      li {
+        margin: 3px;
       }
     }
   }
