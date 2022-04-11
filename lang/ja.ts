@@ -1,14 +1,14 @@
 export default {
   category: {
     programming: {
-      title: 'プログラミング | FromScratch Blog - 石山 雄一 (Yuichi Ishiyama) のブログ',
+      title: 'プログラミング記事 | FromScratch Blog - 石山 雄一 (Yuichi Ishiyama) のブログ',
       description:
         'インフラ・サーバサイドから、フロントエンドまで、幅広いプログラミングに関する情報を配信しております。その他にも開発効率のためのツール紹介なども配信しております。',
       name: 'プログラミング',
       explain: 'プログラミング関連・Tipsなどの記事',
     },
     gadget: {
-      title: 'ガジェット関連| FromScratch Blog - 石山 雄一 (Yuichi Ishiyama) のブログ',
+      title: 'ガジェット関連記事 | FromScratch Blog - 石山 雄一 (Yuichi Ishiyama) のブログ',
       description:
         '仕事効率UPのためのガジェットの紹介＆レビューなどの記事を配信しております。新たなガジェットなどの最新情報なども配信していきます。',
       name: 'ガジェット関連',
@@ -23,13 +23,13 @@ export default {
     },
   },
   top: {
-    title:
-      'FromScratch | 大阪のWebエンジニア 石山雄一 (Yuichi Ishiyama) のポートフォリオ兼ブログサイト',
+    title: 'FromScratch | 石山雄一 (Yuichi Ishiyama) のポートフォリオサイト ',
     description:
       '大阪でWebエンジニアとして活動しております、FromScratch 石山 雄一 (Yuichi Ishiyama) です。そんな私のポートフォリオサイト。ぜひご覧ください。得意分野：Webアプリ開発・Webサイト制作・スマホアプリ開発',
   },
   about: {
-    title: 'About Me | FromScratch - 石山雄一 (Yuichi Ishiyama)のポートフォリオサイト',
+    title:
+      '自己紹介・経歴・スキル | FromScratch - 石山雄一 (Yuichi Ishiyama)のポートフォリオサイト',
     description:
       '大阪でWebエンジニアとして活動しております、FromScratch 石山 雄一 (Yuichi Ishiyama) です。私のプロフィール・スキルセット・経歴をご紹介。お仕事のご依頼はTwitterやメールにてお待ちしております！',
     position: 'Webエンジニア',
@@ -285,7 +285,7 @@ export default {
     note: '※守秘義務・機密情報保持の観点から、一部抽象的な表現あり',
   },
   work: {
-    title: 'Works | FromScratch - 石山雄一 (Yuichi Ishiyama)のポートフォリオサイト',
+    title: '制作実績 | FromScratch - 石山雄一 (Yuichi Ishiyama)のポートフォリオサイト',
     description:
       '大阪でWebエンジニアとして活動しております、FromScratch 石山 雄一 (Yuichi Ishiyama) です。個人開発・受託案件等で制作したWebアプリ・Webサイト・名刺など、私の作品集をご紹介。お仕事のご依頼はTwitterやメールにてお待ちしております！',
     explain:
@@ -532,7 +532,7 @@ export default {
     note: '※守秘義務・機密情報保持の観点から、一部テストデータのキャプチャ含む',
   },
   blog: {
-    title: 'Blog | FromScratch - 石山雄一 (Yuichi Ishiyama)の技術ブログ',
+    title: 'ブログ | FromScratch - 石山雄一 (Yuichi Ishiyama)の技術ブログ',
     description:
       '大阪でWebエンジニアとして活動しております、FromScratch 石山 雄一 (Yuichi Ishiyama) です。プログラミング関連の技術ブログから、業務効率やモチベーションアップにつながるツールやガジェット関連などの配信をしております。',
     explain:

@@ -28,7 +28,8 @@ export default {
       'I am Yuichi Ishiyama (FromScratch), a web developer in Osaka, Japan. Welcome to this site. This is my Portfolio site.',
   },
   about: {
-    title: "About Me | FromScratch - Yuichi Ishiyama's Profile Site.",
+    title:
+      "Self Introduction, Background and Skills | FromScratch - Yuichi Ishiyama's Profile Site.",
     description:
       'I am Yuichi Ishiyama (FromScratch), a web developer in Osaka, Japan.  This is my profile page. I will introduce my history, carrier, and skill.',
     position: 'Web Developer',
@@ -284,7 +285,7 @@ export default {
     note: 'Note: To keep confidential, concrete expression is omitted.',
   },
   work: {
-    title: "Works | FromScratch - Yuichi Ishiyama's Profile Site.",
+    title: "Production Results | FromScratch - Yuichi Ishiyama's Profile Site.",
     description:
       'I am Yuichi Ishiyama (FromScratch), a web developer in Osaka, Japan. This is my portfolio page. I will introduce my works such as Web App, WebSite, Business Card Design, etc.',
     explain:

@@ -8,15 +8,15 @@ export default Vue.extend({
       script: [
         {
           innerHTML: `{
-            "@context": "http://schema.org",
-            "@type": "Person",
-            "name": "Yuichi Ishiyama",
-            "url": "${siteURL + currentURL}",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": "${siteURL}/"
+            '@context': 'http://schema.org',
+            '@type': 'Person',
+            'name': 'Yuichi Ishiyama',
+            'url': '${siteURL + currentURL}',
+            'mainEntityOfPage': {
+              '@type': 'WebPage',
+              '@id': '${siteURL}/'
             },
-            "description": "${this.meta.description}"
+            'description': '${this.meta.description}'
           }`,
           type: 'application/ld+json',
         },
