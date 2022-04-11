@@ -161,7 +161,7 @@ export default Vue.extend({
   .article-contents-wrap {
     padding: 30px 15px 20px;
     overflow: hidden;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.8;
     @include tablet {
       padding: 30px 30px 20px;
@@ -219,7 +219,7 @@ export default Vue.extend({
 
   li {
     margin: 0 5px;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -236,9 +236,12 @@ export default Vue.extend({
       position: relative;
       padding: 0 5px 5px;
       margin: 0 0 40px;
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 550;
       border-bottom: 4px solid #ddd;
+      @include tablet {
+        font-size: 19px;
+      }
 
       &::after {
         position: absolute;
@@ -255,10 +258,13 @@ export default Vue.extend({
       position: relative;
       padding: 0 0 3px 27px;
       margin: 45px 0 25px;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: bold;
       color: #555;
       border-bottom: 1px dashed $sub-color;
+      @include tablet {
+        font-size: 17px;
+      }
 
       &::before,
       &::after {
@@ -344,11 +350,8 @@ export default Vue.extend({
         border: 1px solid #d1d1d1;
         @include tablet {
           padding: 6px 13px;
+          font-size: 15px;
         }
-      }
-
-      th {
-        font-size: 14px;
       }
 
       &.no-wrap-head {
