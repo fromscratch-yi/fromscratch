@@ -540,5 +540,6 @@ export default {
     info: 'お仕事のご依頼はTwitterのDMもしくは、メールにてご相談ください！',
     noArticles: '記事がありません。',
     recommend: 'おすすめコンテンツ',
+    share: 'この記事をシェアする',
   },
 };

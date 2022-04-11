@@ -543,5 +543,6 @@ export default {
     info: 'Please contact us via Twitter DM or email to discuss your job request!',
     noArticles: 'There are no articles available.',
     recommend: 'Recommend Articles',
+    share: 'Share this article',
   },
 };

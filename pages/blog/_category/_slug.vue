@@ -10,6 +10,7 @@
         <skill-tags :tags="article.tags" />
       </div>
       <div class="article-body" v-html="$md.render(article.body)"></div>
+      <sns-share-buttons :title="article.title" />
       <div class="ad-wrap">
         <adsense
           ad-layout="in-article"
@@ -219,14 +220,18 @@ export default Vue.extend({
 
       .recommend-ttl {
         position: relative;
-        padding: 0 3px 3px;
+        padding: 6px 3px 6px 30px;
         margin: 40px 0 25px;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: bold;
         line-height: 1.6;
+        background-image: url('~/assets/css/images/ico-reccomend.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 20px;
         border-bottom: 4px solid #ddd;
         @include tablet {
-          font-size: 23px;
+          font-size: 20px;
         }
 
         &::after {
