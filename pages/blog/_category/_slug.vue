@@ -484,6 +484,16 @@ export default Vue.extend({
     }
   }
 
+  ul {
+    padding: 0 0.5em 0 2em;
+    /* stylelint-disable-next-line no-descending-specificity */
+    li {
+      padding: 5px 0;
+      line-height: 2;
+      list-style: disc;
+    }
+  }
+
   .desc-ul-wrap {
     padding: 20px;
     background: #ececec;
@@ -510,6 +520,46 @@ export default Vue.extend({
 
       a {
         color: #003da0;
+      }
+    }
+  }
+
+  .slide-tbl-wrap {
+    z-index: 1;
+    overflow-x: auto;
+    background-attachment: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    .table {
+      width: auto;
+      min-width: 665px;
+      max-width: 100%;
+      table-layout: fixed;
+
+      td,
+      th {
+        font-size: 14px;
+        border: 1px solid #d1d1d1;
+        border-width: 1px;
+        @include tablet {
+          font-size: 15px;
+        }
+      }
+
+      th {
+        text-align: center;
+      }
+
+      thead {
+        th {
+          background: #d6fdd9;
+        }
+      }
+
+      tbody {
+        th {
+          background: #fde8d6;
+        }
       }
     }
   }
