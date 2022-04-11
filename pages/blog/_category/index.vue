@@ -38,7 +38,7 @@ export default Vue.extend({
     const category = this.$route.params.category;
     return {
       category,
-      text: `$ cat ./${category}.txt\n> This is FromScratch Blog.\n> Programming, Gadget, Management, Motivate....`,
+      text: `$ cat ./${category}.txt\n> This is FromScratch Blog.\n> Programming, Gadget, etc....`,
       meta: {
         title: this.$t(`category.${category}.title`),
         description: this.$t(`category.${category}.description`),
