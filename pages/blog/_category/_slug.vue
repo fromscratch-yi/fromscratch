@@ -540,7 +540,7 @@ export default Vue.extend({
   }
 }
 
-body.is-open {
-  overflow: auto;
+html body.is-open {
+  height: auto !important;
 }
 </style>
