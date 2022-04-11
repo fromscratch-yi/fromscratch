@@ -1,9 +1,7 @@
 <template>
   <article id="error-layout">
     <p class="logo-wrap">
-      <nuxt-link :to="localePath('index')" no-prefetch
-        ><logo-img :size="60" :is-bounding="true"
-      /></nuxt-link>
+      <nuxt-link :to="localePath('index')"><logo-img :size="60" :is-bounding="true" /></nuxt-link>
     </p>
     <h1 class="error-ttl">
       <p class="code">{{ error.statusCode }}</p>

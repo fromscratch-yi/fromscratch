@@ -16,22 +16,22 @@
           <nav class="page-nav">
             <ul>
               <li class="menu-item">
-                <nuxt-link class="menu-link" :to="localePath('index')" no-prefetch
+                <nuxt-link class="menu-link" :to="localePath('index')"
                   ><span class="initial">T</span>op</nuxt-link
                 >
               </li>
               <li class="menu-item">
-                <nuxt-link class="menu-link" :to="localePath('about')" no-prefetch
+                <nuxt-link class="menu-link" :to="localePath('about')"
                   ><span class="initial">A</span>bout</nuxt-link
                 >
               </li>
               <li class="menu-item">
-                <nuxt-link class="menu-link" :to="localePath('work')" no-prefetch
+                <nuxt-link class="menu-link" :to="localePath('work')"
                   ><span class="initial">W</span>ork</nuxt-link
                 >
               </li>
               <li class="menu-item">
-                <nuxt-link class="menu-link" :to="localePath('blog')" no-prefetch
+                <nuxt-link class="menu-link" :to="localePath('blog')"
                   ><span class="initial">B</span>log</nuxt-link
                 >
               </li>

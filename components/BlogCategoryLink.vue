@@ -3,7 +3,6 @@
     :to="localePath({ name: 'blog-category', params: { category: type } })"
     class="category-link"
     :class="classes"
-    no-prefetch
   >
     <p class="ttl">{{ name }}</p>
     <p v-if="explain" class="explain">{{ explain }}</p>

@@ -1,9 +1,9 @@
 <template>
   <nav class="headerless-menu-nav">
     <ul>
-      <li><nuxt-link :to="localePath('about')" no-prefetch>About</nuxt-link></li>
-      <li><nuxt-link :to="localePath('work')" no-prefetch>Work</nuxt-link></li>
-      <li><nuxt-link :to="localePath('blog')" no-prefetch>Blog</nuxt-link></li>
+      <li><nuxt-link :to="localePath('about')">About</nuxt-link></li>
+      <li><nuxt-link :to="localePath('work')">Work</nuxt-link></li>
+      <li><nuxt-link :to="localePath('blog')">Blog</nuxt-link></li>
     </ul>
   </nav>
 </template>

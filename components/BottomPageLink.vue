@@ -1,7 +1,5 @@
 <template>
-  <nuxt-link :to="localePath(to)" :class="position" class="arrow-link" no-prefetch>{{
-    name
-  }}</nuxt-link>
+  <nuxt-link :to="localePath(to)" :class="position" class="arrow-link">{{ name }}</nuxt-link>
 </template>
 
 <script lang="ts">

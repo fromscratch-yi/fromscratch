@@ -2,7 +2,7 @@
   <header id="default-header" :class="{ 'is-open': isMenuOpen, default: isFixed }">
     <div class="header-inner">
       <div class="left-logo-wrap">
-        <nuxt-link :to="localePath('index')" no-prefetch>
+        <nuxt-link :to="localePath('index')">
           <logo-img :size="30" />
         </nuxt-link>
         <p class="header-ttl">

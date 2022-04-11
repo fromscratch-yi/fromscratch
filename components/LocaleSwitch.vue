@@ -1,7 +1,7 @@
 <template>
   <div class="locale-switch">
-    <p class="lang-link"><nuxt-link :to="switchLocalePath('ja')" no-prefetch>ja</nuxt-link></p>
-    <p class="lang-link"><nuxt-link :to="switchLocalePath('en')" no-prefetch>en</nuxt-link></p>
+    <p class="lang-link"><nuxt-link :to="switchLocalePath('ja')">ja</nuxt-link></p>
+    <p class="lang-link"><nuxt-link :to="switchLocalePath('en')">en</nuxt-link></p>
   </div>
 </template>
 

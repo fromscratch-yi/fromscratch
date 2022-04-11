@@ -13,7 +13,6 @@
               },
             })
           "
-          no-prefetch
           class="slug-link"
         >
           <figure class="thumbnail">
