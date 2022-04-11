@@ -136,7 +136,7 @@ export default {
       useShortDoctype: true,
     },
     splitChunks: {
-      layouts: false,
+      layouts: true,
       pages: true,
       commons: true,
     },
