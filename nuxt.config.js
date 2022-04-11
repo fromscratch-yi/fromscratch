@@ -208,13 +208,11 @@ export default {
 
       for (const langKey of langsArray) {
         for (const categoryKey of categories) {
-          const categoryPath = `${langs[langKey]}/blog/${categoryKey}`;
+          const categoryPath = `${langs[langKey]}/blog/${categoryKey}/`;
           routeList.push(categoryPath);
           await getEntriesByCategoryRequest(Categories[categoryKey], langKey, -1).then(
             (entries) => {
-              routeList.push(
-                ...entries.items.map((item) => `${categoryPath}/${item.fields.slug}/`),
-              );
+              routeList.push(...entries.items.map((item) => `${categoryPath}${item.fields.slug}/`));
             },
           );
         }
