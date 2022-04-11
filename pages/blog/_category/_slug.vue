@@ -66,34 +66,34 @@ export default Vue.extend({
       script: [
         {
           innerHTML: JSON.stringify(
-            `{
+            {
               '@context': 'http://schema.org',
               '@type': 'Article',
-              'name': '${article.title}',
-              'headline': '${article.title}',
-              'author': {
+              name: `${article.title}`,
+              headline: `${article.title}`,
+              author: {
                 '@type': 'Person',
-                'name': 'Yuichi Ishiyama',
-                'url': '${this.localePath('about')}'
+                name: 'Yuichi Ishiyama',
+                url: `${this.localePath('about')}`,
               },
-              'image': {
+              image: {
                 '@type': 'ImageObject',
-                'url': 'https:${article.headerImage.url}'
+                url: `https:${article.headerImage.url}`,
               },
-              'description': '${article.description}',
-              'url': '${this.$route.path}',
-              'mainEntityOfPage': '${siteURL + this.$route.path}',
-              'publisher': {
+              description: `${article.description}`,
+              url: `${this.$route.path}`,
+              mainEntityOfPage: `${siteURL + this.$route.path}`,
+              publisher: {
                 '@type': 'Organization',
-                'name': 'FromScratch',
-                'logo': {
+                name: 'FromScratch',
+                logo: {
                   '@type': 'ImageObject',
-                  'url': '${siteURL}/icon.png'
-                }
+                  url: `${siteURL}/icon.png`,
+                },
               },
-              'datePublished': '${article.createdAt}',
-              'dateModified': '${article.updatedAt}'
-            }`,
+              datePublished: `${article.createdAt}`,
+              dateModified: `${article.updatedAt}`,
+            },
             null,
             2,
           ),

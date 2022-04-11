@@ -33,21 +33,21 @@ export default {
     script: [
       {
         innerHTML: JSON.stringify(
-          `{
+          {
             '@context': 'http://schema.org',
             '@type': 'Organization',
-            'url': '${siteURL}/',
-            'logo': '${siteURL}/icon.png',
-            'name': '${siteName}',
-            'founder': {
+            url: `${siteURL}/`,
+            logo: `${siteURL}/icon.png`,
+            name: `${siteName}`,
+            founder: {
               '@type': 'Person',
-              'name': 'Yuichi Ishiyama',
-              'url': '${siteURL}/',
-              'image': '${siteURL}/profile.jpg',
-              'alternateName': '石山 雄一',
-              'sameAs': '${process.env.TWITTER_URL}'
-            }
-          }`,
+              name: 'Yuichi Ishiyama',
+              url: `${siteURL}/`,
+              image: `${siteURL}/profile.jpg`,
+              alternateName: '石山 雄一',
+              sameAs: `${process.env.TWITTER_URL}`,
+            },
+          },
           null,
           2,
         ),

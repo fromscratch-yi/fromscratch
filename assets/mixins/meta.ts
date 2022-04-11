@@ -8,17 +8,17 @@ export default Vue.extend({
       script: [
         {
           innerHTML: JSON.stringify(
-            `{
+            {
               '@context': 'http://schema.org',
               '@type': 'Person',
-              'name': 'Yuichi Ishiyama',
-              'url': '${siteURL + currentURL}',
-              'mainEntityOfPage': {
+              name: 'Yuichi Ishiyama',
+              url: `${siteURL + currentURL}`,
+              mainEntityOfPage: {
                 '@type': 'WebPage',
-                '@id': '${siteURL}/'
+                '@id': `${siteURL}/`,
               },
-              'description': '${this.meta.description}'
-            }`,
+              description: `${this.meta.description}`,
+            },
             null,
             2,
           ),
