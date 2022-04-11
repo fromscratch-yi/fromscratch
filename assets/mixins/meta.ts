@@ -2,22 +2,26 @@ import Vue from 'vue';
 const siteURL = process.env.BASE_URL;
 export default Vue.extend({
   head() {
-    const currentURL = this.$route.fullPath;
+    const currentURL: string = this.$route.fullPath;
     return {
       __dangerouslyDisableSanitizers: ['script'],
       script: [
         {
-          innerHTML: `{
-            '@context': 'http://schema.org',
-            '@type': 'Person',
-            'name': 'Yuichi Ishiyama',
-            'url': '${siteURL + currentURL}',
-            'mainEntityOfPage': {
-              '@type': 'WebPage',
-              '@id': '${siteURL}/'
-            },
-            'description': '${this.meta.description}'
-          }`,
+          innerHTML: JSON.stringify(
+            `{
+              '@context': 'http://schema.org',
+              '@type': 'Person',
+              'name': 'Yuichi Ishiyama',
+              'url': '${siteURL + currentURL}',
+              'mainEntityOfPage': {
+                '@type': 'WebPage',
+                '@id': '${siteURL}/'
+              },
+              'description': '${this.meta.description}'
+            }`,
+            null,
+            2,
+          ),
           type: 'application/ld+json',
         },
       ],

@@ -32,21 +32,25 @@ export default {
     ],
     script: [
       {
-        innerHTML: `{
-        '@context': 'http://schema.org',
-        '@type': 'Organization',
-        'url': '${siteURL}/',
-        'logo': '${siteURL}/icon.png',
-        'name': '${siteName}',
-        'founder': {
-          '@type': 'Person',
-          'name': 'Yuichi Ishiyama',
-          'url': '${siteURL}/',
-          'image': '${siteURL}/profile.jpg',
-          'alternateName': '石山 雄一',
-          'sameAs': '${process.env.TWITTER_URL}'
-        }
-      }`,
+        innerHTML: JSON.stringify(
+          `{
+            '@context': 'http://schema.org',
+            '@type': 'Organization',
+            'url': '${siteURL}/',
+            'logo': '${siteURL}/icon.png',
+            'name': '${siteName}',
+            'founder': {
+              '@type': 'Person',
+              'name': 'Yuichi Ishiyama',
+              'url': '${siteURL}/',
+              'image': '${siteURL}/profile.jpg',
+              'alternateName': '石山 雄一',
+              'sameAs': '${process.env.TWITTER_URL}'
+            }
+          }`,
+          null,
+          2,
+        ),
         type: 'application/ld+json',
       },
     ],

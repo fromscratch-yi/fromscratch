@@ -65,34 +65,38 @@ export default Vue.extend({
       __dangerouslyDisableSanitizers: ['script'],
       script: [
         {
-          innerHTML: `{
-          '@context': 'http://schema.org',
-          '@type': 'Article',
-          'name': '${article.title}',
-          'headline': '${article.title}',
-          'author': {
-            '@type': 'Person',
-            'name': 'Yuichi Ishiyama',
-            'url': '${this.localePath('about')}'
-          },
-          'image': {
-            '@type': 'ImageObject',
-            'url': 'https:${article.headerImage.url}'
-          },
-          'description': '${article.description}',
-          'url': '${this.$route.path}',
-          'mainEntityOfPage': '${siteURL + this.$route.path}',
-          'publisher': {
-            '@type': 'Organization',
-            'name': 'FromScratch',
-            'logo': {
-              '@type': 'ImageObject',
-              'url': '${siteURL}/icon.png'
-            }
-          },
-          'datePublished': '${article.createdAt}',
-          'dateModified': '${article.updatedAt}'
-        }`,
+          innerHTML: JSON.stringify(
+            `{
+              '@context': 'http://schema.org',
+              '@type': 'Article',
+              'name': '${article.title}',
+              'headline': '${article.title}',
+              'author': {
+                '@type': 'Person',
+                'name': 'Yuichi Ishiyama',
+                'url': '${this.localePath('about')}'
+              },
+              'image': {
+                '@type': 'ImageObject',
+                'url': 'https:${article.headerImage.url}'
+              },
+              'description': '${article.description}',
+              'url': '${this.$route.path}',
+              'mainEntityOfPage': '${siteURL + this.$route.path}',
+              'publisher': {
+                '@type': 'Organization',
+                'name': 'FromScratch',
+                'logo': {
+                  '@type': 'ImageObject',
+                  'url': '${siteURL}/icon.png'
+                }
+              },
+              'datePublished': '${article.createdAt}',
+              'dateModified': '${article.updatedAt}'
+            }`,
+            null,
+            2,
+          ),
           type: 'application/ld+json',
         },
       ],
