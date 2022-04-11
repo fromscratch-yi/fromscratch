@@ -113,7 +113,7 @@ export default Vue.extend({
 
       a {
         font-weight: bold;
-        color: $sub-color;
+        color: #067206;
 
         &[aria-current='page'] {
           color: #777;
