@@ -47,10 +47,10 @@ export default Vue.extend({
   name: 'SnsList',
   data() {
     return {
-      twitterURL: process.env.TWITTER_URL,
-      githubURL: process.env.GITHUB_URL,
-      pintarestURL: process.env.PINTAREST_URL,
-      email: process.env.EMAIL,
+      twitterURL: 'https://twitter.com/ishiyamayuichi',
+      githubURL: 'https://github.com/yufrom',
+      pintarestURL: 'https://www.pinterest.jp/yu123daa',
+      email: 'fromscratch.yi@gmail.com',
     };
   },
 });
