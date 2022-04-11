@@ -21,7 +21,10 @@ export default {
       { rel: 'apple-touch-icon', href: '/apple_icon.png' },
       // { rel: 'preconnect dns-prefetch', href: '//www.google.com' },
       { rel: 'preconnect dns-prefetch', href: '//www.google-analytics.com' },
-      // { rel: 'preconnect dns-prefetch', href: '//www.googletagservices.com' },
+      {
+        rel: 'preconnect dns-prefetch',
+        href: '//tpc.googlesyndication.comtpc.googlesyndication.com',
+      },
       { rel: 'preconnect dns-prefetch', href: '//pagead2.googlesyndication.com' },
       // { rel: 'preconnect dns-prefetch', href: '//googleads.g.doubleclick.net' },
       // { rel: 'preconnect dns-prefetch', href: '//fonts.gstatic.com' },
