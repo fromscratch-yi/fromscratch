@@ -539,4 +539,8 @@ export default Vue.extend({
     }
   }
 }
+
+body.is-open {
+  overflow: auto;
+}
 </style>
