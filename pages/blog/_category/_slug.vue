@@ -101,7 +101,7 @@ export default Vue.extend({
           type: 'application/ld+json',
         },
       ],
-      title: `${article.title} | FromScratch`,
+      title: article.title,
       meta: [
         { hid: 'description', name: 'description', content: article.description },
         { hid: 'og:type', property: 'og:type', content: 'article' },
