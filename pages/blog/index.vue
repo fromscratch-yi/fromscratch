@@ -114,9 +114,12 @@ export default Vue.extend({
           padding: 5px 20px 5px 45px;
           padding-top: 10px;
           padding-bottom: 10px;
-          font-size: 20px;
+          font-size: 17px;
           border: none;
           transition: color 0.4s ease;
+          @include tablet {
+            font-size: 20px;
+          }
 
           &:hover {
             color: $sub-color;
