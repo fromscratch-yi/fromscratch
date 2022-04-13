@@ -108,6 +108,7 @@ export default Vue.extend({
         margin: 0 0 20px;
         font-size: 14px;
         line-height: 1.7;
+        text-align: center;
       }
 
       .sns-list {
