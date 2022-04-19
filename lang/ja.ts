@@ -452,6 +452,17 @@ export default {
           imgCount: 2,
         },
         {
+          prefix: 'kyo-dpi',
+          title: '筐.dpi',
+          subTitle: 'クリエイティブ制作会社',
+          overview:
+            'マーケティングにおけるクリエイティブ制作を専門に行う、筐.dpi様のコーポレートサイトを作成しました。',
+          kind: 'Website',
+          skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
+          link: 'https://kyo-dpi.co.jp/',
+          imgCount: 2,
+        },
+        {
           prefix: 'unaman',
           title: '江戸焼うなぎ専門店 鰻萬',
           subTitle: '飲食店ホームページ',

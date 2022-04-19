@@ -442,18 +442,29 @@ export default {
         },
         {
           prefix: 'eryu',
-          title: 'Medical Corporation Eru Clinic',
+          title: 'Medical Corporation Eryu Clinic',
           subTitle: 'Clinic Website',
           overview:
-            'Website for medical corporation Eru Clinic was created.<br />I did everything from design to development and implementation, created an original template in Wordpress, and implemented features such as an announcement blog and the ability to manage clinic dates and times.',
+            'Website for medical corporation Eryu Clinic was created.<br />I did everything from design to development and implementation, created an original template in Wordpress, and implemented features such as an announcement blog and the ability to manage clinic dates and times.',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD', 'Photoshop'],
           link: 'https://eryu-clinic.main.jp/',
           imgCount: 2,
         },
         {
+          prefix: 'kyo-dpi',
+          title: 'Production Company Kyo-dpi',
+          subTitle: 'Corporate Website',
+          overview:
+            'I created a corporate website for kyo-dpi, a company specializing in creative production for marketing.',
+          kind: 'Website',
+          skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
+          link: 'https://kyo-dpi.co.jp/',
+          imgCount: 2,
+        },
+        {
           prefix: 'unaman',
-          title: 'Eel Specialty Restaurant Eel Man',
+          title: 'Eel Specialty Restaurant Unaman',
           subTitle: 'Restaurant Website',
           overview:
             'I did everything from planning to development and implementation of a website for an eel specialty store. The shopping site uses a SaaS called BASE. Incidentally, this is my first sideline project.',
