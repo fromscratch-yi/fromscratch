@@ -248,6 +248,7 @@ export default Vue.extend({
   }
 }
 </style>
+
 <style lang="scss">
 #article-wrap .article-contents-wrap .head-info .skill-tags {
   justify-content: center;
@@ -383,6 +384,19 @@ export default Vue.extend({
     }
   }
 
+  .youtube {
+    width: 100%;
+    max-width: 750px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    text-align: center;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .center {
     text-align: center;
   }
@@ -424,6 +438,18 @@ export default Vue.extend({
 
       &.v-center {
         vertical-align: center;
+      }
+    }
+
+    &.all-td-center {
+      /* stylelint-disable-next-line no-descending-specificity */
+      td {
+        text-align: center;
+        vertical-align: middle;
+
+        &.vertical-top {
+          vertical-align: top;
+        }
       }
     }
   }
@@ -496,6 +522,47 @@ export default Vue.extend({
       padding: 5px 0;
       line-height: 2;
       list-style: disc;
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    /* stylelint-disable-next-line no-descending-specificity */
+    &.no-list-style {
+      padding: 0;
+      /* stylelint-disable-next-line no-descending-specificity */
+      li {
+        list-style: none;
+      }
+    }
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    &.li-border-bottom {
+      /* stylelint-disable-next-line no-descending-specificity */
+      li {
+        margin-bottom: 10px;
+        border-bottom: 1px dashed #d1d1d1;
+        /* stylelint-disable-next-line no-descending-specificity */
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+
+    &.attention-list {
+      /* stylelint-disable-next-line no-descending-specificity */
+      li {
+        font-size: 13px;
+        color: #666;
+      }
+    }
+
+    &.flex-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
     }
   }
 
@@ -512,6 +579,7 @@ export default Vue.extend({
       line-height: 1.9;
       list-style: none;
 
+      /* stylelint-disable-next-line no-descending-specificity */
       &:last-child {
         margin: 0;
       }
@@ -529,6 +597,20 @@ export default Vue.extend({
     }
   }
 
+  .block-link {
+    display: block;
+    text-align: center;
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    img {
+      display: inline-block;
+    }
+  }
+
+  .link-label {
+    margin-bottom: 10px;
+  }
+
   .slide-tbl-wrap {
     z-index: 1;
     overflow-x: auto;
@@ -536,7 +618,7 @@ export default Vue.extend({
     -webkit-overflow-scrolling: touch;
 
     .table {
-      width: auto;
+      width: 100%;
       min-width: 665px;
       max-width: 100%;
       table-layout: fixed;
