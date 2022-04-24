@@ -541,6 +541,7 @@ export default Vue.extend({
     &.li-border-bottom {
       /* stylelint-disable-next-line no-descending-specificity */
       li {
+        padding-bottom: 30px;
         margin-bottom: 10px;
         border-bottom: 1px dashed #d1d1d1;
         /* stylelint-disable-next-line no-descending-specificity */
