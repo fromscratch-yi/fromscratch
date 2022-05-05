@@ -30,6 +30,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Article, Categories, getEntry } from '@/libs/contentful';
+import Prism from '~/plugins/prism';
 const adSenseID = process.env.GOOGLE_ADSENSE_ID;
 const adSlot = process.env.GOOGLE_ADSENSE_SLOT_ID;
 export default Vue.extend({
@@ -117,6 +118,7 @@ export default Vue.extend({
     };
   },
   mounted() {
+    Prism.highlightAll();
     // パンくず設定
     this.$nuxt.$emit('breadcrumbs', [
       {
@@ -338,6 +340,11 @@ export default Vue.extend({
           top: 35px;
         }
       }
+    }
+
+    h4 {
+      font-weight: bold;
+      color: #555;
     }
 
     p {
