@@ -7,7 +7,7 @@
       <div class="head-info">
         <p class="date">{{ article.publishedAt }}</p>
         <h1 class="main-ttl">{{ article.title }}</h1>
-        <skill-tags :tags="article.tags" />
+        <skill-tags :tags="article.tags" :with-link="true" />
       </div>
       <div class="article-body" v-html="$md.render(article.body)"></div>
       <sns-share-buttons :title="article.title" />

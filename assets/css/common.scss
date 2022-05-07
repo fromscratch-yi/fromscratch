@@ -119,6 +119,48 @@ html {
       }
     }
   }
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    color: inherit;
+    font: inherit;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border-radius: 0;
+    text-align: inherit;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.4);
+    /* 3*/
+  }
+  input[type='date'],
+  input[type='datetime-local'],
+  input[type='text'],
+  input[type='url'],
+  input[type='email'],
+  input[type='password'],
+  input[type='tel'],
+  textarea {
+    font-size: 14px;
+    padding: 10px 10px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
 }
 // body {
 //   .layout-leave-active,

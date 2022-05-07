@@ -11,6 +11,22 @@
         </p>
       </div>
       <div class="menu-wrap" :class="{ 'is-open': isMenuOpen }">
+        <div class="searc-icon" @click="toggleSearchForm">
+          <img
+            v-if="!isSearchFormOpen"
+            src="~/assets/images/icon/ico_search.png"
+            alt="search icon"
+            width="30"
+            height="30"
+          />
+          <img
+            v-else
+            src="~/assets/images/icon/ico_search_off.png"
+            alt="search icon"
+            width="30"
+            height="30"
+          />
+        </div>
         <div class="menu-icon" @click="toggleMenu"><span></span><span></span><span></span></div>
         <div class="menu-contents">
           <logo-img :size="35" />
@@ -19,6 +35,7 @@
         </div>
       </div>
     </div>
+    <search-form v-show="isSearchFormOpen" class="search-form-wrap" />
   </header>
 </template>
 
@@ -35,9 +52,11 @@ export default Vue.extend({
   },
   data(): {
     isMenuOpen: boolean;
+    isSearchFormOpen: boolean;
   } {
     return {
       isMenuOpen: false,
+      isSearchFormOpen: false,
     };
   },
   watch: {
@@ -54,6 +73,9 @@ export default Vue.extend({
       } else {
         el.classList.remove('is-open');
       }
+    },
+    toggleSearchForm(): void {
+      this.isSearchFormOpen = !this.isSearchFormOpen;
     },
   },
 });
@@ -120,6 +142,14 @@ export default Vue.extend({
     }
 
     .menu-wrap {
+      display: flex;
+      align-items: center;
+
+      .searc-icon {
+        margin-right: 5px;
+        cursor: pointer;
+      }
+
       .menu-icon {
         position: relative;
         z-index: 10;
@@ -136,7 +166,7 @@ export default Vue.extend({
           position: absolute;
           right: 0;
           display: block;
-          width: 42px;
+          width: 35px;
           height: 2px;
           background: $sub-color;
           transition: 0.3s ease-in-out;
@@ -147,12 +177,12 @@ export default Vue.extend({
 
           &:nth-child(2) {
             top: 20px;
-            width: 32px;
+            width: 28px;
           }
 
           &:nth-child(3) {
             top: 30px;
-            width: 22px;
+            width: 20px;
           }
         }
       }
@@ -229,6 +259,15 @@ export default Vue.extend({
           transform: translateX(0);
         }
       }
+    }
+  }
+
+  .search-form-wrap {
+    margin: 5px 0 0;
+    border-top: 1px solid #e4e4e4;
+    box-shadow: 0 10px 10px -5px #b5b5b533;
+    @include tablet {
+      box-shadow: none;
     }
   }
 }

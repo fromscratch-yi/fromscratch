@@ -69,6 +69,23 @@ interface Entries {
   items: Item[];
 }
 
+interface TagSys {
+  id: string;
+}
+interface TagItem {
+  name: string;
+  sys: TagSys;
+}
+interface TagData {
+  sys: {
+    type: string;
+  };
+  total: number;
+  skip: number;
+  limit: number;
+  items: TagItem[];
+}
+
 export interface CardItem {
   publishedAt: string;
   updatedAt: string;
@@ -174,6 +191,23 @@ export function getEntriesByCategoryRequest(category: Categories, locale: string
   return client.getEntries(query);
 }
 
+export function getEntriesByTagIdRequest(
+  category: Categories,
+  tagId: string,
+  locale: string,
+  limit: number,
+) {
+  const query: any = {
+    content_type: category,
+    locale,
+    // 'fields.title[exists]': true,
+    order: '-fields.publishedAt',
+    'metadata.tags.sys.id[all]': tagId,
+  };
+  query.limit = limit > 0 ? limit : 1000;
+  return client.getEntries(query);
+}
+
 export function getEntry(category: Categories, locale: string, slug: string): Article {
   const query = {
     content_type: category,
@@ -207,4 +241,34 @@ export function getEntriesByCategory(
     .catch(() => {
       return [];
     });
+}
+
+export function getEntriesByTagId(
+  category: Categories,
+  tagId: string,
+  locale: string,
+  limit: number = 3,
+): CardItem[] {
+  return getEntriesByTagIdRequest(category, tagId, locale, limit)
+    .then((entries: Entries) => {
+      const data = formatEntriesItemAsCard(entries.items);
+      return data;
+    })
+    .catch(() => {
+      return [];
+    });
+}
+
+export async function getTags(): Promise<string[]> {
+  const tags = await client
+    .getTags({ limit: 30 })
+    .then((response: TagData) => {
+      return response.items.map((item: TagItem) => {
+        return item.sys.id;
+      });
+    })
+    .catch(() => {
+      return [];
+    });
+  return tags;
 }

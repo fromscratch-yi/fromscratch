@@ -1,4 +1,10 @@
 export default {
+  tagSearch: {
+    title: 'の検索結果',
+    description:
+      'の検索結果です。その他にもプログラミング関連の技術ブログから、業務効率やモチベーションアップにつながるツールやガジェット関連などの配信をしております。',
+    searchTitle: 'タグ検索',
+  },
   category: {
     programming: {
       title: 'プログラミング記事 | FromScratch Blog - 石山 雄一 (Yuichi Ishiyama) のブログ',

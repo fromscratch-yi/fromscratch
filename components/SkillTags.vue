@@ -1,5 +1,12 @@
 <template>
-  <ul class="skill-tags">
+  <ul v-if="withLink" class="skill-tags">
+    <li v-for="(val, idx) in tags" :key="idx">
+      <nuxt-link :to="localePath({ name: 'blog-tag-search', params: { search: val } })">
+        {{ val }}
+      </nuxt-link>
+    </li>
+  </ul>
+  <ul v-else class="skill-tags">
     <li v-for="(val, idx) in tags" :key="idx">{{ val }}</li>
   </ul>
 </template>
@@ -13,6 +20,11 @@ export default Vue.extend({
     tags: {
       type: Array,
       required: true,
+    },
+    withLink: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
 });
@@ -32,6 +44,11 @@ export default Vue.extend({
 
     &::before {
       content: '#';
+    }
+
+    a[aria-current='page'] {
+      font-weight: bold;
+      color: $sub-color;
     }
   }
 }

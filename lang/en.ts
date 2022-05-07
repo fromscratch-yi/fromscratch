@@ -1,4 +1,10 @@
 export default {
+  tagSearch: {
+    title: 'Result',
+    description:
+      'Result. In Addition, I am a web engineer working in Osaka, Japan. I am posting a programming-related technical blog as well as tools and gadgets that help improve work efficiency and motivation.',
+    searchTitle: 'Tag Search',
+  },
   category: {
     programming: {
       title: "Programming Articles | FromScratch Blog - Yuichi Ishiyama's Blog",
