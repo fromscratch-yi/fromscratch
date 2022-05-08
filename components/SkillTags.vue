@@ -48,7 +48,7 @@ export default Vue.extend({
 
     &.link-wrap {
       margin: 0 10px 10px 0;
-      border-bottom: 2px solid #979797;
+      border-bottom: 2px solid #b6b6b6;
       box-shadow: 0 1px 3px #5656564d;
     }
 
