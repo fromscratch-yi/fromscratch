@@ -1,11 +1,15 @@
 <template>
   <div id="search-form">
-    <form class="keyword-search-form" method="GET" action="">
-      <input type="text" name="keyword" placeholder="keyword" />
-    </form>
+    <p class="ttl">{{ $t('keywordSearch.title') }}</p>
+    <keyword-search-form />
     <div class="tag-search-wrap">
       <p class="ttl">{{ $t('tagSearch.searchTitle') }}</p>
       <skill-tags :tags="tags" :with-link="true" />
+      <p class="arrow-link-wrap">
+        <nuxt-link class="arrow-link" :to="localePath({ name: 'blog-tag-search' })">{{
+          $t('tagSearch.listTitle')
+        }}</nuxt-link>
+      </p>
     </div>
   </div>
 </template>
@@ -38,17 +42,41 @@ export default Vue.extend({
 
   .keyword-search-form {
     display: flex;
-    display: none;
     align-items: center;
     margin: 0 0 13px;
   }
 
-  .tag-search-wrap {
-    .ttl {
-      margin: 0 0 10px;
-      font-size: 14px;
+  .ttl {
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #666;
+  }
+
+  .arrow-link-wrap {
+    font-weight: bold;
+    color: #666;
+    text-align: right;
+
+    .arrow-link {
+      position: relative;
+      padding: 0 12px 0 0;
+      font-size: 13px;
       font-weight: bold;
-      color: #555;
+      color: #666;
+      text-align: right;
+
+      &::after {
+        position: absolute;
+        top: calc(50% - 5px);
+        right: 0;
+        width: 10px;
+        height: 10px;
+        content: '';
+        border-top: 2px solid #888;
+        border-right: 2px solid #888;
+        transform: rotate(45deg);
+      }
     }
   }
 }

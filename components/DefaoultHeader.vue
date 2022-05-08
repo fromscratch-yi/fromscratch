@@ -62,6 +62,7 @@ export default Vue.extend({
   watch: {
     $route(): void {
       this.isMenuOpen = false;
+      this.isSearchFormOpen = false;
     },
   },
   methods: {
@@ -266,9 +267,6 @@ export default Vue.extend({
     margin: 5px 0 0;
     border-top: 1px solid #e4e4e4;
     box-shadow: 0 10px 10px -5px #b5b5b533;
-    @include tablet {
-      box-shadow: none;
-    }
   }
 }
 </style>

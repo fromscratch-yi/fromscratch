@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it';
 interface MetaData {
   title: string;
   description: string;
+  bodyClass: string;
 }
 declare module 'vue/types/vue' {
   // Vueインスタンス(this)の型追加

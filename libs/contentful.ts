@@ -259,9 +259,36 @@ export function getEntriesByTagId(
     });
 }
 
-export async function getTags(): Promise<string[]> {
+export function getEntriesByKeyword(
+  category: Categories,
+  keyword: string,
+  locale: string,
+): CardItem[] {
+  return getEntriesByKeywordRequest(category, keyword, locale)
+    .then((entries: Entries) => {
+      const data = formatEntriesItemAsCard(entries.items);
+      return data;
+    })
+    .catch(() => {
+      return [];
+    });
+}
+
+export function getEntriesByKeywordRequest(category: Categories, keyword: string, locale: string) {
+  const query: any = {
+    content_type: category,
+    locale,
+    // 'fields.title[exists]': true,
+    order: '-fields.publishedAt',
+    query: keyword,
+  };
+  return client.getEntries(query);
+}
+
+export async function getTags(limit: number = 15): Promise<string[]> {
+  const query = limit > 0 ? { limit } : {};
   const tags = await client
-    .getTags({ limit: 30 })
+    .getTags(query)
     .then((response: TagData) => {
       return response.items.map((item: TagItem) => {
         return item.sys.id;

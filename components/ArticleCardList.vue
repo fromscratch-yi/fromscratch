@@ -3,19 +3,19 @@
     <p v-if="articles.length == 0" class="no-article">{{ $t('blog.noArticles') }}</p>
     <ul v-else class="article-list">
       <li v-for="(article, index) in articles" :key="index" class="article-data">
-        <nuxt-link
-          :to="
-            localePath({
-              name: 'blog-category-slug',
-              params: {
-                category: article.category,
-                slug: article.slug,
-              },
-            })
-          "
-          class="slug-link"
-        >
-          <figure class="thumbnail">
+        <div class="card-inner">
+          <nuxt-link
+            :to="
+              localePath({
+                name: 'blog-category-slug',
+                params: {
+                  category: article.category,
+                  slug: article.slug,
+                },
+              })
+            "
+            class="thumbnail"
+          >
             <img
               :src="article.thumbnail.url"
               :alt="article.title"
@@ -23,16 +23,26 @@
               :height="article.thumbnail.height"
               loading="lazy"
             />
-          </figure>
+          </nuxt-link>
           <div class="info-wrap">
             <p class="date">{{ article.publishedAt }}</p>
-            <div class="ttl-wrap">
+            <nuxt-link
+              :to="
+                localePath({
+                  name: 'blog-category-slug',
+                  params: {
+                    category: article.category,
+                    slug: article.slug,
+                  },
+                })
+              "
+              class="ttl-wrap"
+            >
               <p class="ttl">{{ article.title }}</p>
-            </div>
-
-            <skill-tags :tags="article.tags" />
+            </nuxt-link>
+            <skill-tags :tags="article.tags" :with-link="true" />
           </div>
-        </nuxt-link>
+        </div>
       </li>
     </ul>
   </div>
@@ -78,7 +88,7 @@ export default Vue.extend({
         }
       }
 
-      .slug-link {
+      .card-inner {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -135,6 +145,7 @@ export default Vue.extend({
           }
 
           .ttl-wrap {
+            display: block;
             width: 100%;
             margin: 5px 0 10px;
             overflow: hidden;

@@ -1,9 +1,15 @@
 export default {
+  keywordSearch: {
+    title: 'Keyword Search',
+    description:
+      'Keyword Search. In Addition, I am a web engineer working in Osaka, Japan. I am posting a programming-related technical blog as well as tools and gadgets that help improve work efficiency and motivation.',
+  },
   tagSearch: {
     title: 'Result',
     description:
       'Result. In Addition, I am a web engineer working in Osaka, Japan. I am posting a programming-related technical blog as well as tools and gadgets that help improve work efficiency and motivation.',
     searchTitle: 'Tag Search',
+    listTitle: 'Tag List',
   },
   category: {
     programming: {

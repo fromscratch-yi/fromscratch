@@ -51,7 +51,7 @@ export default Vue.extend({
         },
       ],
       bodyAttrs: {
-        class: 'base',
+        class: this.meta.bodyClass ? this.meta.bodyClass : 'base',
       },
     };
   },

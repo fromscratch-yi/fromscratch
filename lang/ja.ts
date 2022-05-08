@@ -1,9 +1,15 @@
 export default {
+  keywordSearch: {
+    title: 'キーワード検索',
+    description:
+      'キーワード検索です。その他にもプログラミング関連の技術ブログから、業務効率やモチベーションアップにつながるツールやガジェット関連などの配信をしております。',
+  },
   tagSearch: {
     title: 'の検索結果',
     description:
       'の検索結果です。その他にもプログラミング関連の技術ブログから、業務効率やモチベーションアップにつながるツールやガジェット関連などの配信をしております。',
     searchTitle: 'タグ検索',
+    listTitle: 'タグ一覧',
   },
   category: {
     programming: {
