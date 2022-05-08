@@ -94,6 +94,7 @@ export default Vue.extend({
         path: this.localePath({ name: 'blog-search' }),
       },
     ]);
+    this.searchWithKeyword();
     if (document.querySelector('#ads_script') === null) {
       const scriptElement = document.createElement('script');
       scriptElement.setAttribute('id', 'ads_script');
