@@ -53,6 +53,25 @@ export default {
         ),
         type: 'application/ld+json',
       },
+      {
+        innerHTML: JSON.stringify(
+          {
+            '@context': 'http://schema.org',
+            '@type': 'WebSite',
+            url: `${siteURL}/`,
+            potentialAction: [
+              {
+                '@type': 'SearchAction',
+                target: `${siteURL}/blog/search?keyword={keyword}`,
+                'query-input': 'required name=keyword',
+              },
+            ],
+          },
+          null,
+          2,
+        ),
+        type: 'application/ld+json',
+      },
     ],
   },
 
