@@ -38,7 +38,6 @@ export default Vue.extend({
   max-width: 1300px;
   padding: 10px 0;
   margin: 0 auto;
-  background: #fff;
 
   .keyword-search-form {
     display: flex;
