@@ -2,7 +2,7 @@
   <client-only>
     <article id="keyword-search">
       <default-page-title :title="$t('keywordSearch.title')" />
-      <div class="keyword-search-form">
+      <form class="keyword-search-form" method="GET" :action="localePath({ name: 'blog-search' })">
         <input
           v-model="keyword"
           type="search"
@@ -11,7 +11,7 @@
           @keyup.enter="searchWithKeyword"
           @change="searchWithKeyword"
         />
-      </div>
+      </form>
       <div class="tag-search-wrap">
         <p class="ttl">{{ $t('tagSearch.listTitle') }}</p>
         <skill-tags class="tags-list" :tags="tags" :with-link="true" />
