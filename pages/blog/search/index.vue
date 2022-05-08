@@ -1,27 +1,34 @@
 <template>
-  <article id="keyword-search">
-    <default-page-title :title="$t('keywordSearch.title')" />
-    <div class="keyword-search-form">
-      <input
-        v-model="keyword"
-        type="text"
-        name="keyword"
-        :placeholder="$t('keywordSearch.title')"
-        @keyup.enter="searchWithKeyword"
-        @change="searchWithKeyword"
-      />
-    </div>
-    <div class="tag-search-wrap">
-      <p class="ttl">{{ $t('tagSearch.listTitle') }}</p>
-      <skill-tags class="tags-list" :tags="tags" :with-link="true" />
-    </div>
+  <client-only>
+    <article id="keyword-search">
+      <default-page-title :title="$t('keywordSearch.title')" />
+      <div class="keyword-search-form">
+        <input
+          v-model="keyword"
+          type="text"
+          name="keyword"
+          :placeholder="$t('keywordSearch.title')"
+          @keyup.enter="searchWithKeyword"
+          @change="searchWithKeyword"
+        />
+      </div>
+      <div class="tag-search-wrap">
+        <p class="ttl">{{ $t('tagSearch.listTitle') }}</p>
+        <skill-tags class="tags-list" :tags="tags" :with-link="true" />
+      </div>
 
-    <article-card-list v-if="keyword" :articles="categoryArticles" />
-    <div class="ad-wrap">
-      <adsense ad-layout="in-article" :ad-slot="adSlotID" ad-format="fluid" ad-responsive="false" />
-    </div>
-    <loading v-if="loading" />
-  </article>
+      <article-card-list v-if="keyword" :articles="categoryArticles" />
+      <div class="ad-wrap">
+        <adsense
+          ad-layout="in-article"
+          :ad-slot="adSlotID"
+          ad-format="fluid"
+          ad-responsive="false"
+        />
+      </div>
+      <loading v-if="loading" />
+    </article>
+  </client-only>
 </template>
 
 <script lang="ts">
@@ -37,6 +44,7 @@ export default Vue.extend({
   layout: 'blog',
   async asyncData({ app, query }) {
     const keyword = query.keyword as string;
+    console.log('asyncData: ', keyword);
     let categoryArticles: CardItem[] = [] as CardItem[];
     if (keyword) {
       for (const category of [...Object.values(Categories)]) {
