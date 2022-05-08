@@ -88,7 +88,7 @@ export default Vue.extend({
   top: 0;
   z-index: 2;
   padding: 5px 15px;
-  background: #ffffffc8;
+  background: #ffffffed;
 
   @include tablet {
     position: static;

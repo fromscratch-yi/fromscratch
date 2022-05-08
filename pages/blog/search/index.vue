@@ -12,12 +12,14 @@
           @change="searchWithKeyword"
         />
       </form>
+
+      <article-card-list v-if="keyword" :articles="categoryArticles" />
+
       <div class="tag-search-wrap">
         <p class="ttl">{{ $t('tagSearch.listTitle') }}</p>
         <skill-tags class="tags-list" :tags="tags" :with-link="true" />
       </div>
 
-      <article-card-list v-if="keyword" :articles="categoryArticles" />
       <div class="ad-wrap">
         <adsense
           ad-layout="in-article"
@@ -44,7 +46,6 @@ export default Vue.extend({
   layout: 'blog',
   async asyncData({ app, query }) {
     const keyword = query.keyword as string;
-    console.log('asyncData: ', keyword);
     let categoryArticles: CardItem[] = [] as CardItem[];
     if (keyword) {
       for (const category of [...Object.values(Categories)]) {
@@ -160,11 +161,12 @@ export default Vue.extend({
 
   .keyword-search-form {
     padding: 0 15px;
+    margin-bottom: 30px;
   }
 
   .tag-search-wrap {
     padding: 0 15px;
-    margin: 30px auto 20px;
+    margin: 10px auto 20px;
 
     .ttl {
       position: relative;

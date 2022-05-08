@@ -1,6 +1,6 @@
 <template>
   <ul v-if="withLink" class="skill-tags">
-    <li v-for="(val, idx) in tags" :key="idx">
+    <li v-for="(val, idx) in tags" :key="idx" class="link-wrap">
       <nuxt-link :to="localePath({ name: 'blog-tag-search', params: { search: val } })">
         {{ val }}
       </nuxt-link>
@@ -44,6 +44,12 @@ export default Vue.extend({
 
     &::before {
       content: '#';
+    }
+
+    &.link-wrap {
+      margin: 0 10px 10px 0;
+      border-bottom: 2px solid #979797;
+      box-shadow: 0 1px 3px #5656564d;
     }
 
     a[aria-current='page'] {
