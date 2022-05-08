@@ -8,6 +8,7 @@
         name="keyword"
         :placeholder="$t('keywordSearch.title')"
         @keyup.enter="searchWithKeyword"
+        @change="searchWithKeyword"
       />
     </div>
     <div class="tag-search-wrap">
