@@ -1,9 +1,9 @@
 <template>
   <ul v-if="withLink" class="skill-tags">
     <li v-for="(val, idx) in tags" :key="idx" class="link-wrap">
-      <nuxt-link :to="localePath({ name: 'blog-tag-search', params: { search: val } })">
-        {{ val }}
-      </nuxt-link>
+      <nuxt-link :to="localePath({ name: 'blog-tag-search', params: { search: val } })">{{
+        val
+      }}</nuxt-link>
     </li>
   </ul>
   <ul v-else class="skill-tags">
