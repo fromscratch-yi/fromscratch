@@ -2,7 +2,12 @@
   <client-only>
     <article id="keyword-search">
       <default-page-title :title="$t('keywordSearch.title')" />
-      <form class="keyword-search-form" method="GET" :action="localePath({ name: 'blog-search' })">
+      <form
+        class="keyword-search-form"
+        method="GET"
+        :action="localePath({ name: 'blog-search' })"
+        @submit="onSubmit"
+      >
         <input
           v-model="keyword"
           type="search"
@@ -111,6 +116,10 @@ export default Vue.extend({
     }
   },
   methods: {
+    onSubmit(event: { preventDefault: () => void }) {
+      event.preventDefault();
+      this.searchWithKeyword();
+    },
     async searchWithKeyword() {
       this.loading = true;
       let categoryArticles: CardItem[] = [] as CardItem[];
