@@ -5,7 +5,7 @@
       <div class="keyword-search-form">
         <input
           v-model="keyword"
-          type="text"
+          type="search"
           name="keyword"
           :placeholder="$t('keywordSearch.title')"
           @keyup.enter="searchWithKeyword"
