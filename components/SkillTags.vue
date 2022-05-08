@@ -32,6 +32,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .skill-tags {
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
 
