@@ -9,6 +9,7 @@
         @submit="onSubmit"
       >
         <input
+          id="keyword-input"
           v-model="keyword"
           type="search"
           name="keyword"
@@ -118,6 +119,10 @@ export default Vue.extend({
   methods: {
     onSubmit(event: { preventDefault: () => void }) {
       event.preventDefault();
+      const input = document.querySelector('#keyword-input') as HTMLElement;
+      if (input) {
+        input.blur();
+      }
       this.searchWithKeyword();
     },
     async searchWithKeyword() {
