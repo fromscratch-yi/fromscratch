@@ -141,6 +141,14 @@ export default {
       orientation: 'portrait',
       scope: '/',
       start_url: '/',
+      icons: [
+        {
+          src: '/icon.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable',
+        },
+      ],
     },
     icon: {
       purpose: 'any',
