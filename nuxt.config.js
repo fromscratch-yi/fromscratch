@@ -126,8 +126,47 @@ export default {
   loading: { color: '#3B8070' },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta: {
+      mobileApp: true,
+      mobileAppIOS: true,
+      appleStatusBarStyle: 'black',
+    },
     manifest: {
       lang: 'ja',
+      name: siteName,
+      short_name: siteName,
+      description: `${siteName} | Yuichi Ishiyama's Portfolio & Blog site.`,
+      theme_color: '#3B8070',
+      background_color: '#2b2a2a',
+      orientation: 'portrait',
+      scope: '/',
+      start_url: '/',
+    },
+    icon: {
+      purpose: 'any',
+    },
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: '^https://polyfill.io/.*',
+          handler: 'cacheFirst',
+        },
+        {
+          urlPattern: `${siteURL}.*`,
+          handler: 'staleWhileRevalidate',
+          strategyOptions: {
+            cacheName: 'site-cache',
+          },
+          strategyPlugins: [
+            {
+              use: 'Expiration',
+              config: {
+                maxAgeSeconds: 24 * 60 * 60 * 30,
+              },
+            },
+          ],
+        },
+      ],
     },
     // meta: {
     //   title: `${siteName} | Yuichi Ishiyama's Portfolio ane Blog site.`,

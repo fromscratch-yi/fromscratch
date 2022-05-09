@@ -11,12 +11,22 @@
     </section>
 
     <section class="side-sec category-wrap">
+      <p class="sec-ttl search">Search</p>
+      <div class="search-form">
+        <keyword-search-form />
+        <p class="arrow-link-wrap">
+          <nuxt-link class="arrow-link" :to="localePath({ name: 'blog-tag-search' })">{{
+            $t('tagSearch.listTitle')
+          }}</nuxt-link>
+        </p>
+      </div>
       <p class="sec-ttl category">Categories</p>
       <ul class="category-link-list">
         <li v-for="(value, key) in $t('category')" :key="key" class="category-wrap">
           <blog-category-link :type="key" :name="value.name" :explain="value.explain" />
         </li>
       </ul>
+
       <div v-if="windowSize > 1100" class="ad-wrap">
         <adsense
           ad-layout="in-article"
@@ -78,6 +88,10 @@ export default Vue.extend({
       &.category {
         background-image: url('~/assets/css/images/ico-category.png');
       }
+
+      &.search {
+        background-image: url('~/assets/css/images/ico-search.png');
+      }
     }
 
     .contents-inner {
@@ -131,6 +145,42 @@ export default Vue.extend({
         &:last-child {
           a.category-link {
             border-bottom: none;
+          }
+        }
+      }
+
+      .search-form {
+        padding: 15px 15px 10px;
+        margin-bottom: 22px;
+        background: #fff;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        .arrow-link-wrap {
+          margin: 10px 5px 0;
+          font-weight: bold;
+          color: #666;
+          text-align: right;
+
+          .arrow-link {
+            position: relative;
+            padding: 0 12px 0 0;
+            font-size: 13px;
+            font-weight: bold;
+            color: #666;
+            text-align: right;
+
+            &::after {
+              position: absolute;
+              top: calc(50% - 5px);
+              right: 0;
+              width: 10px;
+              height: 10px;
+              content: '';
+              border-top: 2px solid #888;
+              border-right: 2px solid #888;
+              transform: rotate(45deg);
+            }
           }
         }
       }
