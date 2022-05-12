@@ -1,6 +1,5 @@
 const siteURL = process.env.BASE_URL;
 const siteName = 'FromScratch';
-const analyticsID = process.env.GOOGLE_ANALYTICS_ID;
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -89,7 +88,6 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     'nuxt-compress',
-    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -100,6 +98,7 @@ export default {
     'nuxt-i18n',
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
+    '@nuxtjs/gtm',
     [
       'nuxt-compress',
       {
@@ -311,12 +310,7 @@ export default {
     //   return routeList;
     // },
   },
-  googleAnalytics: {
-    id: analyticsID,
-  },
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: analyticsID,
-    },
+  gtm: {
+    id: 'GTM-KRBSBPQ'
   },
 };

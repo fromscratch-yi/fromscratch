@@ -53,9 +53,17 @@ export default Vue.extend({
       box-shadow: 0 1px 3px #5656564d;
     }
 
-    a[aria-current='page'] {
-      font-weight: bold;
-      color: $sub-color;
+    a {
+      &[aria-current='page'] {
+        font-weight: bold;
+        color: $sub-color;
+      }
+
+      transition: 0.4s;
+
+      &:hover {
+        color: $sub-color;
+      }
     }
   }
 }

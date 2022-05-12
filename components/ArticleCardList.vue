@@ -113,7 +113,14 @@ export default Vue.extend({
             width: auto;
             max-height: 170px;
             object-fit: cover;
+            transition: 1s all;
+
+            &:hover {
+              transition: 1s all;
+              transform: scale(1.2, 1.2);
+            }
           }
+
           @include tablet {
             display: block;
             width: 100%;
@@ -152,8 +159,13 @@ export default Vue.extend({
             font-weight: bold;
             color: #666;
             background-color: #fff;
+            transition: 0.4s;
             @include tablet {
               margin: 7px 0 15px;
+            }
+
+            &:hover {
+              color: $sub-color;
             }
 
             .ttl {
