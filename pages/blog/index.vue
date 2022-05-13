@@ -87,14 +87,16 @@ export default Vue.extend({
   }
 
   .category-article-list {
-    padding: 0 15px;
-
     .category-article-wrap {
       margin: 40px auto 0;
 
       .category-ttl {
         position: relative;
-        margin: 40px 0 25px;
+        margin: 40px 15px 25px;
+        @include tablet {
+          margin: 40px auto 25px;
+        }
+
         font-size: 23px;
         font-weight: bold;
         line-height: 1.6;
