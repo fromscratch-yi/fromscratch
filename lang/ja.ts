@@ -475,6 +475,17 @@ export default {
           imgCount: 2,
         },
         {
+          prefix: 'pp',
+          title: '株式会社P&Pコンサルティング',
+          subTitle: 'コンサルティング会社',
+          overview:
+            'インフルエンサーマーケティングを中心としたコンサルティング会社「株式会社P&Pコンサルティング」のコーポレートサイトを作成しました。',
+          kind: 'Website',
+          skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
+          link: 'https://pp-consulting.jp/',
+          imgCount: 1,
+        },
+        {
           prefix: 'unaman',
           title: '江戸焼うなぎ専門店 鰻萬',
           subTitle: '飲食店ホームページ',

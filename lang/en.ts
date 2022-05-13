@@ -475,6 +475,17 @@ export default {
           imgCount: 2,
         },
         {
+          prefix: 'pp',
+          title: 'P&P Consulting Inc.',
+          subTitle: 'Corporate Website',
+          overview:
+            'I created a corporate website for P&P Consulting, Inc. a consulting firm focused on influencer marketing.',
+          kind: 'Website',
+          skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
+          link: 'https://pp-consulting.jp/',
+          imgCount: 1,
+        },
+        {
           prefix: 'unaman',
           title: 'Eel Specialty Restaurant Unaman',
           subTitle: 'Restaurant Website',
