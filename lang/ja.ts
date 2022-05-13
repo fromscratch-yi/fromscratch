@@ -507,6 +507,16 @@ export default {
           link: 'http://relation2012.com/',
           imgCount: 2,
         },
+        {
+          prefix: 'hato',
+          title: 'はと君GPS',
+          subTitle: 'ランディングページ',
+          overview: '「はと君GPS」のランディングページのデザイン＆コーディングを行いました。',
+          kind: 'LP',
+          skillSet: ['HTML/CSS/JS', 'SCSS', 'jQuery'],
+          link: 'https://hatokun.net/',
+          imgCount: 1,
+        },
       ],
       card: [
         {

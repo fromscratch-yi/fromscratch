@@ -507,6 +507,16 @@ export default {
           link: 'http://relation2012.com/',
           imgCount: 2,
         },
+        {
+          prefix: 'hato',
+          title: 'HatoKun GPS',
+          subTitle: 'LandingPage',
+          overview: 'I designed and coded the landing page for HatoKun GPS.',
+          kind: 'LP',
+          skillSet: ['HTML/CSS/JS', 'SCSS', 'jQuery'],
+          link: 'https://hatokun.net/',
+          imgCount: 1,
+        },
       ],
       card: [
         {
