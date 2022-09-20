@@ -89,7 +89,7 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     'nuxt-compress',
-    '@nuxtjs/google-analytics',
+    // '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -312,14 +312,14 @@ export default {
     //   return routeList;
     // },
   },
-  googleAnalytics: {
-    id: analyticsID,
-  },
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: analyticsID,
-    },
-  },
+  // googleAnalytics: {
+  //   id: analyticsID,
+  // },
+  // publicRuntimeConfig: {
+  //   googleAnalytics: {
+  //     id: analyticsID,
+  //   },
+  // },
   gtm: {
     id: 'GTM-KRBSBPQ',
   },
