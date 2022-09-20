@@ -12,9 +12,8 @@
           target="_blank"
           rel="noopener"
           :title="`Share with ${key}`"
-          v-html="svg[key]"
-          >{{ key }}</a
-        >
+          ><figure v-html="svg[key]"></figure
+        ></a>
       </li>
     </ul>
   </div>

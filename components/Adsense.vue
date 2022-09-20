@@ -61,7 +61,7 @@ export default Vue.extend({
         try {
           ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
         } catch (error) {
-          console.error(error);
+          console.error(error); // eslint-disable-line no-console
         }
       });
     },
