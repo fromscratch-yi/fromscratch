@@ -23,7 +23,6 @@ jobs:
       - run:
           name: Setting ENV
           command: |
-            export NODE_OPTIONS=--openssl-legacy-provider
             echo "BASE_URL=$BASE_URL" > .env
             echo "EMAIL=$EMAIL" > .env
             echo "TWITTER_URL=$TWITTER_URL" > .env
@@ -39,7 +38,7 @@ jobs:
 
       - run:
           name: Build
-          command: yarn generate
+          command: export NODE_OPTIONS=--openssl-legacy-provider && yarn generate
 
       - run:
           name: Deploy to Firebase Hosting
