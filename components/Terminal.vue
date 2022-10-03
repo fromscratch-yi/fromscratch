@@ -58,7 +58,6 @@ export default Vue.extend({
       background: #f9625d;
       border-radius: 50%;
       transform: translateY(-50%);
-      transform: translateY(-50%);
 
       &:nth-child(2) {
         left: 22px;

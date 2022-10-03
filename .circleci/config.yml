@@ -3,7 +3,7 @@ version: 2
 jobs:
   main:
     docker:
-      - image: cimg/node:16.14.2
+      - image: cimg/node:18.9.1
     steps:
       - checkout
 

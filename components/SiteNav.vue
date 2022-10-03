@@ -67,7 +67,6 @@ export default Vue.extend({
             content: '';
             background-color: $sub-color;
             transform: translateX(-50%);
-            transform: translateX(-50%);
           }
         }
 
