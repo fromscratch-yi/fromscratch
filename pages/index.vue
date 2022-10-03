@@ -4,7 +4,7 @@
       <!-- top-left -->
       <div class="typer-wrap flex-center" :class="{ active: isActive }">
         <h1 class="main-ttl">
-          <span class="noice-txt" data-text="Welcome">Welcome</span>
+          <span class="noice-txt">Welcome</span>
           <span class="middle-txt">FromScratch</span>
           <span class="small-txt">Yuichi Ishiyama's<br />Portfolio Site</span>
         </h1>
@@ -211,7 +211,7 @@ export default Vue.extend({
             clip: rect(0, 900px, 0, 0);
             color: $sub-color;
             text-shadow: -1px 0 red;
-            content: attr(data-text);
+            content: 'Welcome';
             background: $main-color;
             animation: noice-text 2s infinite linear alternate-reverse;
           }
@@ -224,7 +224,7 @@ export default Vue.extend({
             clip: rect(0, 900px, 0, 0);
             color: $sub-color;
             text-shadow: 1px 0 blue;
-            content: attr(data-text);
+            content: 'Welcome';
             background: $main-color;
             animation: noice-text-bg 3s infinite linear alternate-reverse;
           }
