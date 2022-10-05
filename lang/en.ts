@@ -335,7 +335,7 @@ export default {
             'Firestore',
             'Hosting',
           ],
-          link: 'https://wastim-yufroms.web.app/about',
+          link: null,
           imgCount: 6,
         },
         {
