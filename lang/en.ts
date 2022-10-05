@@ -84,8 +84,15 @@ export default {
     detail: 'Show Detail',
     careerList: [
       {
+        from: '2022/6',
+        to: '2022/8',
+        title: 'Apparel company website and ordering system',
+        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Figma'],
+        kind: 'sub',
+      },
+      {
         from: '2022/2',
-        to: null,
+        to: '2022/9',
         title: 'Educational video app',
         skills: ['Swift', 'Objective-c', 'Open eDX'],
         kind: 'main',

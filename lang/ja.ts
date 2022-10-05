@@ -84,8 +84,15 @@ export default {
     detail: '詳しく見る',
     careerList: [
       {
+        from: '2022/6',
+        to: '2022/8',
+        title: 'アパレル企業HP・受注システム',
+        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Figma'],
+        kind: 'sub',
+      },
+      {
         from: '2022/2',
-        to: null,
+        to: '2022/9',
         title: '教育動画アプリ',
         skills: ['Swift', 'Objective-c', 'Open eDX'],
         kind: 'main',
