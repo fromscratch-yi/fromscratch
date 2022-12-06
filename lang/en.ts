@@ -460,6 +460,27 @@ export default {
           imgCount: 3,
         },
         {
+          prefix: 'y2leather',
+          title: "Y'2 LEATHER",
+          subTitle: 'General leather manufacturer',
+          overview:
+            "We developed the website for Y'2 LEATHER, a general leather manufacturer, from the requirement definition to the design and development phases all by ourselves as a contractor.<br>We also built a reservation function linked to Google Calendar, product management, a blog, and an order system with dealers.",
+          kind: 'Website',
+          skillSet: [
+            'PHP',
+            'Laravel',
+            'HTML/CSS/JS',
+            'jQuery',
+            'Blade',
+            'Docker',
+            'MySQL',
+            'XD',
+            'Photoshop',
+          ],
+          link: 'https://y-2leather.com',
+          imgCount: 1,
+        },
+        {
           prefix: 'eryu',
           title: 'Medical Corporation Eryu Clinic',
           subTitle: 'Clinic Website',

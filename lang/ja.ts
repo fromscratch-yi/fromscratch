@@ -460,6 +460,27 @@ export default {
           imgCount: 3,
         },
         {
+          prefix: 'y2leather',
+          title: "Y'2 LEATHER",
+          subTitle: '総合レザーメーカー',
+          overview:
+            "総合レザーメーカーの「Y'2 LEATHER」様のホームページを要件定義からデザインおよび開発フェーズを全て一人で請負にて開発しました。<br>Googleカレンダーと連携した予約機能および、商品管理、ブログ、ディーラー様との受注システムも構築しております。",
+          kind: 'Webサイト',
+          skillSet: [
+            'PHP',
+            'Laravel',
+            'HTML/CSS/JS',
+            'jQuery',
+            'Blade',
+            'Docker',
+            'MySQL',
+            'XD',
+            'Photoshop',
+          ],
+          link: 'https://y-2leather.com',
+          imgCount: 1,
+        },
+        {
           prefix: 'eryu',
           title: '医療法人 エリュウ医院',
           subTitle: '耳鼻科ホームページ',
