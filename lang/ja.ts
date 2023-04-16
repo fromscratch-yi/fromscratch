@@ -506,7 +506,7 @@ export default {
             'マーケティングにおけるクリエイティブ制作を専門に行う、筐.dpi様のコーポレートサイトを作成しました。',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
-          link: 'https://kyo-dpi.co.jp/',
+          link: null,
           imgCount: 2,
         },
         {
@@ -517,7 +517,7 @@ export default {
             'インフルエンサーマーケティングを中心としたコンサルティング会社「株式会社P&Pコンサルティング」のコーポレートサイトを作成しました。',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
-          link: 'https://pp-consulting.jp/',
+          link: null,
           imgCount: 1,
         },
         {
@@ -539,7 +539,7 @@ export default {
             '株式会社relationのWebサイトを作成しました。<br>企画から開発、実装まですべてを行い、新着情報用の独自CMSも実装しました。',
           kind: 'Webサイト',
           skillSet: ['HTML/CSS/JS', 'PHP', 'jQuery', 'Bootstrap'],
-          link: 'http://relation2012.com/',
+          link: null,
           imgCount: 2,
         },
         {

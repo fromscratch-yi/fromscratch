@@ -513,7 +513,7 @@ export default {
             'I created a corporate website for kyo-dpi, a company specializing in creative production for marketing.',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
-          link: 'https://kyo-dpi.co.jp/',
+          link: null,
           imgCount: 2,
         },
         {
@@ -524,7 +524,7 @@ export default {
             'I created a corporate website for P&P Consulting, Inc. a consulting firm focused on influencer marketing.',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
-          link: 'https://pp-consulting.jp/',
+          link: null,
           imgCount: 1,
         },
         {
@@ -546,7 +546,7 @@ export default {
             'Created the website for relation, Inc.<br>I did everything from planning to development and implementation, and also implemented our own CMS for new information.',
           kind: 'Website',
           skillSet: ['HTML/CSS/JS', 'PHP', 'jQuery', 'Bootstrap'],
-          link: 'http://relation2012.com/',
+          link: null,
           imgCount: 2,
         },
         {
