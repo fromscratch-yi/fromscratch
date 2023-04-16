@@ -84,6 +84,20 @@ export default {
     detail: 'Show Detail',
     careerList: [
       {
+        from: '2022/12',
+        to: '2023/6',
+        title: 'Credit Card Apps',
+        skills: ['SwiftUI', 'Swift', 'XCode', 'OpenAPI', 'Swagger', 'XD'],
+        kind: 'main',
+      },
+      {
+        from: '2022/3',
+        to: '2022/11',
+        title: 'Real estate portal site and Parking management site',
+        skills: ['Java', 'SpringBoot', 'HTML', 'CSS', 'Javascript', 'XD'],
+        kind: 'main',
+      },
+      {
         from: '2022/6',
         to: '2022/8',
         title: 'Apparel company website and ordering system',

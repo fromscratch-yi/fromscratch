@@ -84,11 +84,18 @@ export default {
     detail: '詳しく見る',
     careerList: [
       {
-        from: '2022/6',
-        to: '2022/8',
-        title: 'アパレル企業HP・受注システム',
-        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Figma'],
-        kind: 'sub',
+        from: '2022/12',
+        to: '2023/6',
+        title: 'クレジットカードアプリ',
+        skills: ['SwiftUI', 'Swift', 'XCode', 'OpenAPI', 'Swagger', 'XD'],
+        kind: 'main',
+      },
+      {
+        from: '2022/3',
+        to: '2022/11',
+        title: '不動産ポータルサイト・駐車場管理サイト',
+        skills: ['Java', 'SpringBoot', 'HTML', 'CSS', 'Javascript', 'XD'],
+        kind: 'main',
       },
       {
         from: '2022/2',
