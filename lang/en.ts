@@ -84,6 +84,20 @@ export default {
     detail: 'Show Detail',
     careerList: [
       {
+        from: '2022/12',
+        to: '2023/6',
+        title: 'Credit Card Apps',
+        skills: ['SwiftUI', 'Swift', 'XCode', 'OpenAPI', 'Swagger', 'XD'],
+        kind: 'main',
+      },
+      {
+        from: '2022/3',
+        to: '2022/11',
+        title: 'Real estate portal site and Parking management site',
+        skills: ['Java', 'SpringBoot', 'HTML', 'CSS', 'Javascript', 'XD'],
+        kind: 'main',
+      },
+      {
         from: '2022/6',
         to: '2022/8',
         title: 'Apparel company website and ordering system',
@@ -499,7 +513,7 @@ export default {
             'I created a corporate website for kyo-dpi, a company specializing in creative production for marketing.',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
-          link: 'https://kyo-dpi.co.jp/',
+          link: null,
           imgCount: 2,
         },
         {
@@ -510,7 +524,7 @@ export default {
             'I created a corporate website for P&P Consulting, Inc. a consulting firm focused on influencer marketing.',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
-          link: 'https://pp-consulting.jp/',
+          link: null,
           imgCount: 1,
         },
         {
@@ -532,7 +546,7 @@ export default {
             'Created the website for relation, Inc.<br>I did everything from planning to development and implementation, and also implemented our own CMS for new information.',
           kind: 'Website',
           skillSet: ['HTML/CSS/JS', 'PHP', 'jQuery', 'Bootstrap'],
-          link: 'http://relation2012.com/',
+          link: null,
           imgCount: 2,
         },
         {

@@ -84,11 +84,18 @@ export default {
     detail: '詳しく見る',
     careerList: [
       {
-        from: '2022/6',
-        to: '2022/8',
-        title: 'アパレル企業HP・受注システム',
-        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Figma'],
-        kind: 'sub',
+        from: '2022/12',
+        to: '2023/6',
+        title: 'クレジットカードアプリ',
+        skills: ['SwiftUI', 'Swift', 'XCode', 'OpenAPI', 'Swagger', 'XD'],
+        kind: 'main',
+      },
+      {
+        from: '2022/3',
+        to: '2022/11',
+        title: '不動産ポータルサイト・駐車場管理サイト',
+        skills: ['Java', 'SpringBoot', 'HTML', 'CSS', 'Javascript', 'XD'],
+        kind: 'main',
       },
       {
         from: '2022/2',
@@ -499,7 +506,7 @@ export default {
             'マーケティングにおけるクリエイティブ制作を専門に行う、筐.dpi様のコーポレートサイトを作成しました。',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
-          link: 'https://kyo-dpi.co.jp/',
+          link: null,
           imgCount: 2,
         },
         {
@@ -510,7 +517,7 @@ export default {
             'インフルエンサーマーケティングを中心としたコンサルティング会社「株式会社P&Pコンサルティング」のコーポレートサイトを作成しました。',
           kind: 'Website',
           skillSet: ['PHP', 'Wordpress', 'HTML/CSS/JS', 'jQuery', 'XD'],
-          link: 'https://pp-consulting.jp/',
+          link: null,
           imgCount: 1,
         },
         {
@@ -532,7 +539,7 @@ export default {
             '株式会社relationのWebサイトを作成しました。<br>企画から開発、実装まですべてを行い、新着情報用の独自CMSも実装しました。',
           kind: 'Webサイト',
           skillSet: ['HTML/CSS/JS', 'PHP', 'jQuery', 'Bootstrap'],
-          link: 'http://relation2012.com/',
+          link: null,
           imgCount: 2,
         },
         {

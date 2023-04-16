@@ -116,7 +116,7 @@ export default Vue.extend({
         color: #067206;
 
         &[aria-current='page'] {
-          color: #777;
+          color: #5e5e5e;
         }
       }
 
