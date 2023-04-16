@@ -94,7 +94,7 @@ export default {
         from: '2022/3',
         to: '2022/11',
         title: 'Real estate portal site and Parking management site',
-        skills: ['Java', 'SpringBoot', 'HTML', 'CSS', 'Javascript', 'XD'],
+        skills: ['XD', 'AWS', 'HTML', 'CSS', 'Javascript'],
         kind: 'main',
       },
       {

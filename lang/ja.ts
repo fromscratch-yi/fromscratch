@@ -91,11 +91,18 @@ export default {
         kind: 'main',
       },
       {
-        from: '2022/3',
+        from: '2022/2',
         to: '2022/11',
-        title: '不動産ポータルサイト・駐車場管理サイト',
-        skills: ['Java', 'SpringBoot', 'HTML', 'CSS', 'Javascript', 'XD'],
+        title: '不動産ポータルサイト・駐車場管理サイトの設計・モック作成',
+        skills: ['XD', 'AWS', 'HTML', 'CSS', 'Javascript'],
         kind: 'main',
+      },
+      {
+        from: '2022/6',
+        to: '2022/8',
+        title: 'アパレル企業HP・受注システム',
+        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Figma'],
+        kind: 'sub',
       },
       {
         from: '2022/2',
