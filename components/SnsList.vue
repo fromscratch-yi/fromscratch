@@ -3,6 +3,16 @@
     <p class="ttl">Contact &amp; Follow</p>
     <ul class="contact-list">
       <li class="contact-item">
+        <a class="sns-link" :href="threadsURL" target="_blank" rel="noopener">
+          <img
+            loading="lazy"
+            src="~assets/images/sns/threads.png"
+            alt="threads"
+            width="40"
+            height="40"
+        /></a>
+      </li>
+      <li class="contact-item">
         <a class="sns-link" :href="twitterURL" target="_blank" rel="noopener">
           <img
             loading="lazy"
@@ -23,16 +33,6 @@
         /></a>
       </li>
       <li class="contact-item">
-        <a class="sns-link" :href="pintarestURL" target="_blank" rel="noopener">
-          <img
-            loading="lazy"
-            src="~assets/images/sns/pinterest.png"
-            alt="Pinterest"
-            width="40"
-            height="40"
-        /></a>
-      </li>
-      <li class="contact-item">
         <a class="sns-link" :href="`mailto:${email}?subject=Contact from Portfolio`">
           <img loading="lazy" src="~assets/images/sns/mail.png" alt="Mail" width="40" height="40"
         /></a>
@@ -47,9 +47,9 @@ export default Vue.extend({
   name: 'SnsList',
   data() {
     return {
-      twitterURL: 'https://twitter.com/ishiyamayuichi',
-      githubURL: 'https://github.com/yufrom',
-      pintarestURL: 'https://www.pinterest.jp/yu123daa',
+      twitterURL: 'https://twitter.com/fromscratch_yi',
+      githubURL: 'https://github.com/fromscratch-yi',
+      threadsURL: 'https://www.threads.net/@fromscratch_yi',
       email: 'fromscratch.yi@gmail.com',
     };
   },

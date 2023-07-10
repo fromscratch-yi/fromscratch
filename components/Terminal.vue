@@ -72,7 +72,7 @@ export default Vue.extend({
   }
 
   .type-txt {
-    height: 90px;
+    height: auto;
     padding: 10px;
     overflow: hidden;
     font-size: 14px;

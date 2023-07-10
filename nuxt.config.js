@@ -10,7 +10,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
-      { hid: 'twitter:site', property: 'twitter:site', content: '@ishiyamayuichi' },
+      { hid: 'twitter:site', property: 'twitter:site', content: '@fromscratch_yi' },
       { hid: 'og:site_name', property: 'og:site_name', content: siteName },
       { 'http-equiv': 'x-dns-prefetch-control', content: 'on' },
       { name: 'format-detection', content: 'telephone=no' },
