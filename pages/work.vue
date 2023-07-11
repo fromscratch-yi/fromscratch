@@ -300,6 +300,10 @@ export default Vue.extend({
                 }
               }
 
+              .ex-link {
+                display: block;
+              }
+
               .kind {
                 position: absolute;
                 top: 0;
