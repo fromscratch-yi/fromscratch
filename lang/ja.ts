@@ -84,8 +84,15 @@ export default {
     detail: '詳しく見る',
     careerList: [
       {
-        from: '2022/12',
+        from: '2022/3',
         to: '2023/6',
+        title: '求人プラットフォーム',
+        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Python'],
+        kind: 'sub',
+      },
+      {
+        from: '2022/12',
+        to: '2023/8',
         title: 'クレジットカードアプリ',
         skills: ['SwiftUI', 'Swift', 'XCode', 'OpenAPI', 'Swagger', 'XD'],
         kind: 'main',
@@ -351,6 +358,28 @@ export default {
           ],
           link: null,
           imgCount: 6,
+        },
+        {
+          prefix: 'medicare-partner',
+          title: 'medicare-partner「メディケアパートナー」',
+          subTitle: '医療・福祉・保育の求人プラットフォーム',
+          overview:
+            '医療・福祉・保育の求人プラットフォーム。medicare-partner「メディケアパートナー」<br />要件定義、設計から、インフラ周り、サイトのデザイン、フロント周りの実装・コーディング、サーバサイドの実装、DB設計など、フルスクラッチで開発しました。<br />チャット、求人応募フロー、マッチングなど、機能満載のサービスになっています。',
+          kind: 'Webアプリ',
+          skillSet: [
+            'PHP',
+            'Laravel',
+            'Python',
+            'HTML/CSS/JS',
+            'jQuery',
+            'Blade',
+            'Docker',
+            'MySQL',
+            'XD',
+            'Photoshop',
+          ],
+          link: 'https://medicare-partner.jp',
+          imgCount: 1,
         },
         {
           prefix: 'care-base',

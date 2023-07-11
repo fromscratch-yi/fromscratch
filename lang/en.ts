@@ -84,8 +84,15 @@ export default {
     detail: 'Show Detail',
     careerList: [
       {
-        from: '2022/12',
+        from: '2022/3',
         to: '2023/6',
+        title: 'Job Platform',
+        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Python'],
+        kind: 'sub',
+      },
+      {
+        from: '2022/12',
+        to: '2023/8',
         title: 'Credit Card Apps',
         skills: ['SwiftUI', 'Swift', 'XCode', 'OpenAPI', 'Swagger', 'XD'],
         kind: 'main',
@@ -351,6 +358,28 @@ export default {
           ],
           link: null,
           imgCount: 6,
+        },
+        {
+          prefix: 'medicare-partner',
+          title: 'medicare-partner「メディケアパートナー」',
+          subTitle: 'Job platform for medical, welfare and childcare',
+          overview:
+            'Job platform for medical, welfare and childcare. medicare-partner "Medicare Partner".<br />I developed the site from full scratch, from requirement definition and design, around infrastructure, design of the site, implementation and coding of the front area, server side implementation, and DB design.<br />The service is full of features such as chat, job application flow, and matching.',
+          kind: 'Web App',
+          skillSet: [
+            'PHP',
+            'Laravel',
+            'Python',
+            'HTML/CSS/JS',
+            'jQuery',
+            'Blade',
+            'Docker',
+            'MySQL',
+            'XD',
+            'Photoshop',
+          ],
+          link: 'https://medicare-partner.jp',
+          imgCount: 1,
         },
         {
           prefix: 'care-base',
