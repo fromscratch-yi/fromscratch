@@ -4,7 +4,7 @@
       <!-- top-left -->
       <div class="typer-wrap flex-center" :class="{ active: isActive }">
         <h1 class="main-ttl">
-          <span class="noice-txt">Welcome</span>
+          <span class="noise-txt">Welcome</span>
           <span class="middle-txt">FromScratch</span>
           <span class="small-txt">Yuichi Ishiyama's<br />Portfolio Site</span>
         </h1>
@@ -197,7 +197,7 @@ export default Vue.extend({
           display: block;
         }
 
-        .noice-txt {
+        .noise-txt {
           position: relative;
           @include tablet {
             font-size: 70px;
@@ -213,7 +213,7 @@ export default Vue.extend({
             text-shadow: -1px 0 red;
             content: 'Welcome';
             background: $main-color;
-            animation: noice-text 2s infinite linear alternate-reverse;
+            animation: noise-text 2s infinite linear alternate-reverse;
           }
 
           &::before {
@@ -226,7 +226,7 @@ export default Vue.extend({
             text-shadow: 1px 0 blue;
             content: 'Welcome';
             background: $main-color;
-            animation: noice-text-bg 3s infinite linear alternate-reverse;
+            animation: noise-text-bg 3s infinite linear alternate-reverse;
           }
         }
 

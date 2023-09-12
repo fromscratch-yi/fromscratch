@@ -58,9 +58,9 @@
       </ul>
     </section>
 
-    <section class="carrer-wrap">
-      <h3 class="sec-ttl">Carrer</h3>
-      <table class="carrer-tbl">
+    <section class="carrier-wrap">
+      <h3 class="sec-ttl">Carrier</h3>
+      <table class="carrier-tbl">
         <thead>
           <tr>
             <th v-for="(val, idx) in careerTblHead" :key="idx">{{ val }}</th>
@@ -101,7 +101,7 @@ type SkillNameComment = {
   name: string;
   comment: string;
 };
-type SikillInner = {
+type SkillInner = {
   main: string[];
   tags: string[];
 };
@@ -110,9 +110,9 @@ type SkillInfo = {
   [key in SkillType]: SkillNameComment;
 };
 type Skills = {
-  [key in SkillType]: SikillInner;
+  [key in SkillType]: SkillInner;
 };
-type CarrerInfo = {
+type CarrierInfo = {
   from: string;
   to: string;
   title: string;
@@ -182,7 +182,7 @@ export default Vue.extend({
             'Cloud Functions',
             'Bigquery',
             'Nginx',
-            'Appache',
+            'Apache',
           ],
         },
         other: {
@@ -194,7 +194,7 @@ export default Vue.extend({
             'Photoshop',
             'GoogleAnalytics',
             'GoogleTagManager',
-            'CicleCI',
+            'CircleCI',
             'Contentful',
             'XCode',
             'Slack',
@@ -217,8 +217,8 @@ export default Vue.extend({
     skillsInfo(): SkillInfo {
       return this.$t('about.skills') as unknown as SkillInfo;
     },
-    careerList(): CarrerInfo[] {
-      return this.$t('about.careerList') as unknown as CarrerInfo[];
+    careerList(): CarrierInfo[] {
+      return this.$t('about.careerList') as unknown as CarrierInfo[];
     },
   },
   methods: {
@@ -427,7 +427,7 @@ export default Vue.extend({
     }
   }
 
-  .carrer-wrap {
+  .carrier-wrap {
     max-width: 1000px;
     padding: 0 10px;
     margin: 0 auto 40px;
@@ -435,7 +435,7 @@ export default Vue.extend({
       padding: 0 20px;
     }
 
-    .carrer-tbl {
+    .carrier-tbl {
       margin: 40px auto 0;
 
       thead {
