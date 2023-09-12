@@ -287,7 +287,7 @@ export default {
           'OSGI',
           'AWS',
           'HAProxy',
-          'Pacemaker+Crosync',
+          'Pacemaker+Corosync',
           'RabbitMQ',
           'ShellScript',
         ],
