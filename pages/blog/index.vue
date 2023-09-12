@@ -9,7 +9,9 @@
         <h2 class="category-ttl">
           <blog-category-link :type="key" :name="$t(`category.${key}.name`)" />
         </h2>
-        <article-card-list :articles="articles" />
+        <div class="inner">
+          <article-card-list :articles="articles" />
+        </div>
       </li>
     </ul>
     <div class="ad-wrap">
@@ -128,6 +130,10 @@ export default Vue.extend({
             background-color: #fff;
           }
         }
+      }
+
+      .inner {
+        padding: 0 10px;
       }
     }
   }

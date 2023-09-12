@@ -35,10 +35,10 @@ export default Vue.extend({
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
+  gap: 7px 10px;
 
   li {
     padding: 3px 5px;
-    margin: 0 7px 7px 0;
     font-size: 12px;
     background-color: #ebebeb;
     border-radius: 5px;
@@ -48,7 +48,6 @@ export default Vue.extend({
     }
 
     &.link-wrap {
-      margin: 0 10px 10px 0;
       border-bottom: 2px solid #b6b6b6;
       box-shadow: 0 1px 3px #5656564d;
     }

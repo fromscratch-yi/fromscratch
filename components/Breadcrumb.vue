@@ -62,9 +62,6 @@ export default Vue.extend({
         itemListElement: items,
       };
     },
-    // isCurrentPage() {
-    //   console.log(breadcrumb.path);
-    // },
   },
 });
 </script>

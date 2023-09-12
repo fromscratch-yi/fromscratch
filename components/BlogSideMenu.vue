@@ -67,6 +67,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 #blog-side-menu {
+  max-width: 100%;
+
   .side-sec {
     margin-bottom: 20px;
     filter: drop-shadow(3px 3px 7px #0000001a);

@@ -144,7 +144,7 @@ export function formatEntriesItemAsCard(items: Item[]): CardItem[] {
   }
   return items.map((item) => {
     const fieldData: ItemFields = item.fields;
-    const thumbnail: File = fieldData.thumbnail.fields.file;
+    const thumbnail: File = fieldData.headerImage.fields.file;
     const thumbnailImageSize = thumbnail.details.image;
     return {
       category: item.sys.contentType.sys.id,
@@ -152,8 +152,8 @@ export function formatEntriesItemAsCard(items: Item[]): CardItem[] {
       title: fieldData.title,
       thumbnail: {
         url: thumbnail.url,
-        width: thumbnailImageSize?.width,
-        height: thumbnailImageSize?.height,
+        width: thumbnailImageSize?.width ? thumbnailImageSize?.width / 2 : 0,
+        height: thumbnailImageSize?.height ? thumbnailImageSize?.height / 2 : 0,
       },
       publishedAt: fieldData.publishedAt,
       updatedAt: item.sys.updatedAt,

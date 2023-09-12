@@ -64,6 +64,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .article-card-wrap {
   padding: 0 10px;
+  @include sp {
+    padding: 0 10px;
+  }
 
   .no-article {
     font-size: 14px;
@@ -98,6 +101,10 @@ export default Vue.extend({
           display: block;
           min-height: 100%;
         }
+        @include sp {
+          display: block;
+          min-height: 100%;
+        }
 
         .thumbnail {
           display: flex;
@@ -111,13 +118,30 @@ export default Vue.extend({
 
           img {
             width: auto;
-            max-height: 170px;
-            object-fit: cover;
+            @include sp {
+              max-height: 100%;
+            }
+
+            object-fit: contain;
             transition: 1s all;
 
             &:hover {
               transition: 1s all;
               transform: scale(1.2, 1.2);
+            }
+          }
+          @include sp {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: auto;
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 0;
+
+            img {
+              width: 100%;
+              height: auto;
+              object-fit: initial;
             }
           }
 
@@ -139,11 +163,16 @@ export default Vue.extend({
 
         .info-wrap {
           width: 70%;
-          padding: 10px 15px 5px;
+          padding: 15px;
           font-size: 13px;
           @include tablet {
             width: 100%;
-            padding: 15px 15px 10px;
+            padding: 15px;
+            font-size: 14px;
+          }
+          @include sp {
+            width: 100%;
+            padding: 15px;
             font-size: 14px;
           }
 
@@ -170,28 +199,9 @@ export default Vue.extend({
 
             .ttl {
               position: relative;
-              height: calc(13px * 1.5 * 2);
               margin: 0;
-              font-size: 13;
+              font-size: 13px;
               line-height: 1.5;
-
-              &::before,
-              &::after {
-                position: absolute;
-                background-color: #fff;
-              }
-
-              &::before {
-                top: calc(13px * 1.5 * (2 - 1));
-                right: 0;
-                content: '...';
-              }
-
-              &::after {
-                width: 100%;
-                height: 100%;
-                content: '';
-              }
             }
           }
         }
