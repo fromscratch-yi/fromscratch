@@ -22,7 +22,7 @@
       <client-only>
         <ul ref="tabsList" class="tab-data-list">
           <li
-            v-for="(works, key, index) in $t('work.works')"
+            v-for="(works, key, index) in worksList"
             :key="key"
             ref="tabItems"
             class="tab-wrap"
@@ -91,6 +91,21 @@ if (process.browser) {
   Carousel = require('vue-carousel').Carousel;
   Slide = require('vue-carousel').Slide;
 }
+type WrokInfo = {
+  prefix: string;
+  title: string;
+  subTitle: string;
+  overview: string;
+  kind: string;
+  skillSet: string[];
+  link: string | undefined | null;
+  imgCount: number;
+};
+type Works = {
+  service: WrokInfo[];
+  web: WrokInfo[];
+  card: WrokInfo[];
+};
 export default Vue.extend({
   name: 'WorkPage',
   components: {
@@ -116,6 +131,11 @@ export default Vue.extend({
         description: this.$t('work.description'),
       },
     };
+  },
+  computed: {
+    worksList(): Works {
+      return this.$t('work.works') as unknown as Works;
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.checkIsTabZindexone, { passive: true });

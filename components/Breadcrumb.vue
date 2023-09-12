@@ -16,13 +16,17 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropType } from 'vue';
 const siteURL = process.env.BASE_URL;
+type BreadCrumb = {
+  name: string;
+  path?: string;
+};
 export default Vue.extend({
   name: 'BreadcrumbList',
   props: {
     breadcrumbs: {
-      type: Array,
+      type: Array as PropType<BreadCrumb[]>,
       required: true,
     },
   },

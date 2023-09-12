@@ -20,12 +20,12 @@
     <section class="skill-wrap">
       <h3 class="sec-ttl">Skills &amp; Tools</h3>
       <ul class="skill-list">
-        <li v-for="(val, key) in $t('about.skills')" :key="key" class="skill-group">
+        <li v-for="(val, key) in skillsInfo" :key="key" class="skill-group">
           <h4 class="skill-ttl">{{ val.name }}</h4>
           <div class="skill-img-wrap" @click="openModal(key)">
             <img
               :src="require(`~/assets/images/icon/ico_${key}.png`)"
-              :alt="val"
+              :alt="val.name"
               width="280"
               height="280"
               loading="lazy"
@@ -63,11 +63,11 @@
       <table class="carrer-tbl">
         <thead>
           <tr>
-            <th v-for="(val, idx) in $t('about.careerTblHead')" :key="idx">{{ val }}</th>
+            <th v-for="(val, idx) in careerTblHead" :key="idx">{{ val }}</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(data, idx) in $t('about.careerList')" :key="idx">
+          <tr v-for="(data, idx) in careerList" :key="idx">
             <td class="term">
               <span class="from">{{ data.from }}</span>
               <span class="term-icon">~</span>
@@ -96,13 +96,36 @@
 <script lang="ts">
 import Vue from 'vue';
 import Meta from '~/assets/mixins/meta';
+
+type SkillNameComment = {
+  name: string;
+  comment: string;
+};
+type SikillInner = {
+  main: string[];
+  tags: string[];
+};
+type SkillType = 'frontend' | 'backend' | 'server' | 'other';
+type SkillInfo = {
+  [key in SkillType]: SkillNameComment;
+};
+type Skills = {
+  [key in SkillType]: SikillInner;
+};
+type CarrerInfo = {
+  from: string;
+  to: string;
+  title: string;
+  skills: string[];
+  kind: string;
+};
 export default Vue.extend({
   name: 'AboutPage',
   mixins: [Meta],
   layout: 'default',
   data(): {
     modalOpenKey: String;
-    skills: object;
+    skills: Skills;
     text: String;
     meta: object;
   } {
@@ -186,6 +209,17 @@ export default Vue.extend({
         description: this.$t('about.description'),
       },
     };
+  },
+  computed: {
+    careerTblHead(): string[] {
+      return this.$t('about.careerTblHead') as unknown as string[];
+    },
+    skillsInfo(): SkillInfo {
+      return this.$t('about.skills') as unknown as SkillInfo;
+    },
+    careerList(): CarrerInfo[] {
+      return this.$t('about.careerList') as unknown as CarrerInfo[];
+    },
   },
   methods: {
     closeModal(): void {

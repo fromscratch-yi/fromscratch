@@ -84,6 +84,13 @@ export default {
     detail: '詳しく見る',
     careerList: [
       {
+        from: '2023/3',
+        to: '2023/6',
+        title: '社員管理システム(iOS版)',
+        skills: ['SwiftUI', 'Swift', 'XCode', 'Firebase', 'XD'],
+        kind: 'sub',
+      },
+      {
         from: '2022/3',
         to: '2023/6',
         title: '求人プラットフォーム',

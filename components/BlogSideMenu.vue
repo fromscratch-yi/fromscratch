@@ -22,7 +22,7 @@
       </div>
       <p class="sec-ttl category">Categories</p>
       <ul class="category-link-list">
-        <li v-for="(value, key) in $t('category')" :key="key" class="category-wrap">
+        <li v-for="(value, key) in categories" :key="key" class="category-wrap">
           <blog-category-link :type="key" :name="value.name" :explain="value.explain" />
         </li>
       </ul>
@@ -41,6 +41,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { BlogCategory } from '@/libs/contentful';
 const adSlot = process.env.GOOGLE_ADSENSE_SIDE_SLOT_ID;
 export default Vue.extend({
   name: 'BlogSideMenu',
@@ -52,6 +53,11 @@ export default Vue.extend({
       adSlotID: String(adSlot),
       windowSize: 0,
     };
+  },
+  computed: {
+    categories(): BlogCategory {
+      return this.$t('category') as BlogCategory;
+    },
   },
   mounted() {
     this.windowSize = (window as Window).innerWidth;

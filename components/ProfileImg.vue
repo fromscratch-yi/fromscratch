@@ -5,7 +5,7 @@
       loading="lazy"
       class="is-rounded"
       src="~assets/images/profile.jpg"
-      :alt="$t('about.name')"
+      :alt="aboutName"
       width="200"
       height="200"
     />
@@ -17,6 +17,11 @@ import Vue from 'vue';
 
 export default Vue.extend({
   name: 'ProfileImg',
+  computed: {
+    aboutName(): string {
+      return (this.$t('about.name') as string).replace(/<([^>]+)>/g, '');
+    },
+  },
 });
 </script>
 

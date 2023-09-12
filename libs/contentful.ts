@@ -124,6 +124,16 @@ export enum Categories {
   gadget = 'gadget',
   other = 'other',
 }
+type BlogCategoryItem = {
+  title: string;
+  description: string;
+  name: string;
+  explain: string;
+};
+export type BlogCategory = {
+  [key in Categories]: BlogCategoryItem;
+};
+
 export function entriesItemFilter(item: { fields: any }): boolean {
   const data = item.fields;
   return data.headerImage && data.thumbnail && data.title && data.description && data.body;

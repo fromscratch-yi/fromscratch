@@ -84,6 +84,13 @@ export default {
     detail: 'Show Detail',
     careerList: [
       {
+        from: '2023/3',
+        to: '2023/6',
+        title: 'Employee Management System (iOS version)',
+        skills: ['SwiftUI', 'Swift', 'XCode', 'Firebase', 'XD'],
+        kind: 'sub',
+      },
+      {
         from: '2022/3',
         to: '2023/6',
         title: 'Job Platform',

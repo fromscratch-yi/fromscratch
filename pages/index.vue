@@ -49,7 +49,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Meta from '~/assets/mixins/meta';
-let VueTyper = null;
+let VueTyper: any = null;
 if (process.browser) {
   VueTyper = require('vue-typer').VueTyper;
 }

@@ -1,7 +1,7 @@
 <template>
   <client-only>
     <article id="keyword-search">
-      <default-page-title :title="$t('keywordSearch.title')" />
+      <default-page-title :title="title" />
       <form
         class="keyword-search-form"
         method="GET"
@@ -13,7 +13,7 @@
           v-model="keyword"
           type="search"
           name="keyword"
-          :placeholder="$t('keywordSearch.title')"
+          :placeholder="title"
           @keyup.enter="searchWithKeyword"
           @change="searchWithKeyword"
         />
@@ -84,6 +84,11 @@ export default Vue.extend({
       categoryArticles,
       loading: false,
     };
+  },
+  computed: {
+    title(): string {
+      return this.$t('keywordSearch.title') as string;
+    },
   },
   mounted() {
     // パンくず設定

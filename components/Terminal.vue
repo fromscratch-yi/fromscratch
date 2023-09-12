@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-let VueTyper = null;
+let VueTyper: any = null;
 if (process.browser) {
   VueTyper = require('vue-typer').VueTyper;
 }

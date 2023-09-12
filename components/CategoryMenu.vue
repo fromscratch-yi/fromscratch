@@ -1,7 +1,7 @@
 <template>
   <nav id="blog-category-menu">
     <ul class="menu-list">
-      <li v-for="(value, key) in $t('category')" :key="key" class="category-wrap">
+      <li v-for="(value, key) in categories" :key="key" class="category-wrap">
         <blog-category-link :type="key" :name="value.name" :is-no-arrow="true" :is-white="true" />
       </li>
     </ul>
@@ -10,9 +10,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-
+import { BlogCategory } from '@/libs/contentful';
 export default Vue.extend({
   name: 'CategoryMenu',
+  computed: {
+    categories(): BlogCategory {
+      return this.$t('category') as BlogCategory;
+    },
+  },
 });
 </script>
 <style lang="scss" scoped>

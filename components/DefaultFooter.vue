@@ -42,7 +42,7 @@
           <h2 class="category">Categories</h2>
           <nav class="blog-category-nav">
             <ul>
-              <li v-for="(value, key) in $t('category')" :key="key" class="category-wrap">
+              <li v-for="(value, key) in categories" :key="key" class="category-wrap">
                 <blog-category-link :type="key" :name="value.name" :explain="value.explain" />
               </li>
             </ul>
@@ -56,8 +56,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { BlogCategory } from '@/libs/contentful';
 export default Vue.extend({
   name: 'DefaultFooter',
+  computed: {
+    categories(): BlogCategory {
+      return this.$t('category') as BlogCategory;
+    },
+  },
 });
 </script>
 
