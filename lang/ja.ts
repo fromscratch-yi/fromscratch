@@ -84,6 +84,13 @@ export default {
     detail: '詳しく見る',
     careerList: [
       {
+        from: '2023/9',
+        to: '2023/12',
+        title: '施設検索ポータルサイト',
+        skills: ['React.js', 'Next.js', 'Contentful', 'Firebase', 'XD'],
+        kind: 'sub',
+      },
+      {
         from: '2023/3',
         to: '2023/6',
         title: '社員管理システム(iOS版)',
@@ -344,6 +351,29 @@ export default {
     },
     works: {
       service: [
+        {
+          prefix: 'tattoo-ja',
+          title: 'Tattoo Japan',
+          subTitle: 'タトゥースタジオ・タトゥー・刺青がOKな施設の検索サイト',
+          overview:
+            '「日本におけるタトゥーの偏見を無くしたい！」<br />そんな想いで、タトゥースタジオ・タトゥー・刺青がOKな施設の検索サイト「Tattoo Japan」をリリースしました。<br />要件決めからデザイン、実装まですべて一人で行いました！<br/>今後もメンテナンスおよび機能追加を行っていきたいと考えています。',
+          kind: 'Webアプリ',
+          skillSet: [
+            'HTML/CSS/JS',
+            'PWA',
+            'React.js',
+            'Next.js',
+            'Scss',
+            'Firebase',
+            'Authentication',
+            'Firestore',
+            'Vircel',
+            'Contentful',
+            'SSR',
+          ],
+          link: 'https://tattoo-ja.com',
+          imgCount: 1,
+        },
         {
           prefix: 'wastim',
           title: 'WasTim',

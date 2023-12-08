@@ -84,6 +84,13 @@ export default {
     detail: 'Show Detail',
     careerList: [
       {
+        from: '2023/9',
+        to: '2023/12',
+        title: 'Facility Search Portal Site',
+        skills: ['React.js', 'Next.js', 'Contentful', 'Firebase', 'XD'],
+        kind: 'sub',
+      },
+      {
         from: '2023/3',
         to: '2023/6',
         title: 'Employee Management System (iOS version)',
@@ -344,6 +351,29 @@ export default {
     },
     works: {
       service: [
+        {
+          prefix: 'tattoo-ja',
+          title: 'Tattoo Japan',
+          subTitle: 'Search for facilities & tattoo studios where tattoos are welcome!',
+          overview:
+            '"We want to eliminate prejudice against tattoos in Japan!"<br />With this in mind, we released "Tattoo Japan", a search site for tattoo studios and facilities where tattoos and tattooing are allowed.<br />I did everything by myself, from the requirement setting to the design and implementation!<br />We will continue to maintain and add new features to the site.',
+          kind: 'Web App',
+          skillSet: [
+            'HTML/CSS/JS',
+            'PWA',
+            'React.js',
+            'Next.js',
+            'Scss',
+            'Firebase',
+            'Authentication',
+            'Firestore',
+            'Contentful',
+            'Vircel',
+            'SSR',
+          ],
+          link: 'https://tattoo-ja.com/en',
+          imgCount: 1,
+        },
         {
           prefix: 'wastim',
           title: 'WasTim',

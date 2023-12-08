@@ -321,7 +321,8 @@ export default Vue.extend({
               }
 
               .ex-link {
-                display: block;
+                display: inline-block;
+                border-color: $sub-color;
               }
 
               .kind {
