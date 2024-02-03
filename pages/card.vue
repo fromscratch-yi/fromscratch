@@ -214,6 +214,10 @@ export default Vue.extend({
           &.twitter {
             background-image: url('~/assets/css/images/x.png');
           }
+
+          &.tel {
+            background-image: url('~/assets/css/images/tel.png');
+          }
         }
       }
     }
