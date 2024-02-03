@@ -41,36 +41,32 @@
         </li>
         <li>
           <div class="info">
-            <a class="line" href="https://line.me/ti/p/AYhq9GuItA" target="_blank">@sumiresasori</a>
+            <a class="line" href="https://line.me/ti/p/AYhq9GuItA">@sumiresasori</a>
           </div>
         </li>
         <li>
           <div class="info">
-            <a class="twitter" href="https://twitter.com/fromscratch_yi" target="_blank"
-              >@fromscratch_yi</a
-            >
+            <a class="twitter" href="https://twitter.com/fromscratch_yi">@fromscratch_yi</a>
           </div>
         </li>
         <li>
           <div class="info">
-            <a class="service" href="https://tattoo-ja.com/" target="_blank">Tattoo Japan</a>
+            <a class="service" href="https://tattoo-ja.com/">Tattoo Japan</a>
           </div>
         </li>
         <li>
           <div class="info">
-            <a class="instagram" href="https://www.instagram.com/tattoo__japan" target="_blank"
-              >@tattoo__japan</a
-            >
+            <a class="instagram" href="https://www.instagram.com/tattoo__japan">@tattoo__japan</a>
           </div>
         </li>
         <li>
           <div class="info">
-            <a class="hp" href="https://fromscratch-y.work/about/" target="_blank">経歴</a>
+            <a class="hp" href="https://fromscratch-y.work/about/">経歴</a>
           </div>
         </li>
         <li>
           <div class="info">
-            <a class="hp" href="https://fromscratch-y.work/work/" target="_blank">作品</a>
+            <a class="hp" href="https://fromscratch-y.work/work/">作品</a>
           </div>
         </li>
       </ul>
