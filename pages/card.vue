@@ -9,9 +9,7 @@
           <p class="name">石山 雄一</p>
           <p class="name-en">Yuichi Ishiyama</p>
         </div>
-        <div class="logo">
-          <logo-img :size="40" />
-        </div>
+        <div class="logo"></div>
       </div>
       <div class="information">
         <dl>
@@ -28,6 +26,7 @@
       </div>
     </div>
     <div class="link-wrap">
+      <h2>プライベート情報</h2>
       <ul>
         <li>
           <div class="info">
@@ -41,32 +40,46 @@
         </li>
         <li>
           <div class="info">
-            <a class="line" href="https://line.me/ti/p/AYhq9GuItA">@sumiresasori</a>
+            <a class="line" href="https://line.me/ti/p/AYhq9GuItA">LINE</a>
+          </div>
+        </li>
+      </ul>
+      <h2>運営サービス【Tattoo Japan】</h2>
+      <ul>
+        <li>
+          <div class="info">
+            <a class="service" href="https://tattoo-ja.com/" target="_blank">Tattoo Japan</a>
           </div>
         </li>
         <li>
           <div class="info">
-            <a class="twitter" href="https://twitter.com/fromscratch_yi">@fromscratch_yi</a>
+            <a class="instagram" href="https://www.instagram.com/tattoo__japan" target="_blank"
+              >@tattoo__japan</a
+            >
           </div>
         </li>
         <li>
           <div class="info">
-            <a class="service" href="https://tattoo-ja.com/">Tattoo Japan</a>
+            <a class="twitter" href="https://twitter.com/tattoo__japan" target="_blank"
+              >@tattoo__japan</a
+            >
+          </div>
+        </li>
+      </ul>
+      <h2>エンジニア情報</h2>
+      <ul>
+        <li>
+          <div class="info">
+            <a class="hp" href="https://fromscratch-y.work/" target="_blank"
+              >ポートフォリオ（経歴・作品）</a
+            >
           </div>
         </li>
         <li>
           <div class="info">
-            <a class="instagram" href="https://www.instagram.com/tattoo__japan">@tattoo__japan</a>
-          </div>
-        </li>
-        <li>
-          <div class="info">
-            <a class="hp" href="https://fromscratch-y.work/about/">経歴</a>
-          </div>
-        </li>
-        <li>
-          <div class="info">
-            <a class="hp" href="https://fromscratch-y.work/work/">作品</a>
+            <a class="twitter" href="https://twitter.com/fromscratch_yi" target="_blank"
+              >@fromscratch_yi</a
+            >
           </div>
         </li>
       </ul>
@@ -87,10 +100,19 @@ export default Vue.extend({
   } {
     return {
       meta: {
-        title: this.$t('about.title'),
-        description: this.$t('about.description'),
+        title: 'プライベート名刺',
+        description: 'プライベート名刺',
       },
     };
+  },
+  head: {
+    meta: [
+      {
+        hid: 'robots',
+        name: 'robots',
+        content: 'noindex, nofollow',
+      },
+    ],
   },
   computed: {},
   methods: {},
@@ -101,16 +123,31 @@ export default Vue.extend({
 #card {
   width: 100%;
   max-width: 500px;
-  min-height: 100vh;
   padding: 20px 16px;
   margin: 0 auto;
   background-color: #fff;
+  @include tablet {
+    height: calc(100vh - 60px);
+    padding: 40px 30px;
+    margin: 30px auto;
+    overflow-y: scroll;
+    border-radius: 20px;
+  }
 
   h1 {
     margin: 0 0 10px;
     font-size: 22px;
     font-weight: bold;
     color: #7c7c7c;
+  }
+
+  h2 {
+    padding: 0 5px 5px;
+    margin: 30px auto 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #7c7c7c;
+    border-bottom: 2px solid #44a045;
   }
 
   .business-card {
@@ -130,19 +167,24 @@ export default Vue.extend({
         }
 
         .name {
-          font-size: 28px;
+          font-size: 25px;
           color: #474747;
           letter-spacing: 8px;
         }
 
         .name-en {
-          font-size: 18px;
+          font-size: 14px;
           letter-spacing: 5px;
         }
       }
 
       .logo {
-        display: flex;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url('~/assets/css/images/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
       }
     }
 
