@@ -84,6 +84,27 @@ export default {
     detail: '詳しく見る',
     careerList: [
       {
+        from: '2024/9',
+        to: '2024/11',
+        title: '施設検索ポータルサイトリニューアル',
+        skills: ['React.js', 'Next.js', 'Contentful', 'Supabase', 'Figma'],
+        kind: 'sub',
+      },
+      {
+        from: '2024/3',
+        to: '2024/9',
+        title: 'ジム機器管理サイト',
+        skills: ['Vue.js', 'AWS', 'GraphQL'],
+        kind: 'main',
+      },
+      {
+        from: '2023/9',
+        to: '2023/12',
+        title: '車両部品適用確認サイト',
+        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Figma'],
+        kind: 'main',
+      },
+      {
         from: '2023/9',
         to: '2023/12',
         title: '施設検索ポータルサイト',

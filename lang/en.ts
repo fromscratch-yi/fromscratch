@@ -84,6 +84,27 @@ export default {
     detail: 'Show Detail',
     careerList: [
       {
+        from: '2024/9',
+        to: '2024/11',
+        title: 'Facility Search Portal Site Renewal',
+        skills: ['React.js', 'Next.js', 'Contentful', 'Supabase', 'Figma'],
+        kind: 'sub',
+      },
+      {
+        from: '2024/3',
+        to: '2024/9',
+        title: 'Gym Machine Management Site',
+        skills: ['Vue.js', 'AWS', 'GraphQL'],
+        kind: 'main',
+      },
+      {
+        from: '2023/9',
+        to: '2023/12',
+        title: 'Vehicle Parts Application Confirmation Site',
+        skills: ['PHP', 'Laravel', 'MySQL', 'HTML', 'CSS', 'jQuery', 'Figma'],
+        kind: 'main',
+      },
+      {
         from: '2023/9',
         to: '2023/12',
         title: 'Facility Search Portal Site',
