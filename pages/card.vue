@@ -204,10 +204,10 @@ END:VCARD`;
     box-shadow: 0 2px 4px #0000001a;
     transition: all 0.3s ease;
 
-    &:disabled {
-      cursor: not-allowed;
-      background-color: #ccc;
-    }
+    // &:disabled {
+    //   cursor: not-allowed;
+    //   background-color: #ccc;
+    // }
   }
 
   .contact-icon {
