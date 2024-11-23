@@ -31,7 +31,7 @@
         連絡先に追加
       </button> -->
       <button v-if="!isContactApiSupported" class="download-vcard-btn" @click="downloadVCard">
-        連絡先に追加
+        連絡先を保存
       </button>
     </div>
     <div class="link-wrap">
@@ -165,7 +165,7 @@ BDAY:1993-01-23
 ORG:Fromscratch
 NOTE:ソフトウェア開発（Webサイト、Webサービス、スマホアプリ etc...）、名刺作成、サーバ構築、SEOコンサル
 TEL;CELL:090-37235648
-URL;WORK:https://fromscratch-y.work/
+URL;WORK:https://fromscratch-y.work/card
 URL;HOME:https://tattoo-ja.com/
 PHOTO;TYPE=JPEG;ENCODING=BASE64:iVBORw0KGgoAAAANSUhEUgAAAJgAAACYCAYAAAAYw
  iAhAAAAAXNSR0IArs4c6QAAEDVJREFUeF7tnQ9sVdUdx39FoC10IGiAmTmgVJ3GDWaVLQWnEb
