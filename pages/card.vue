@@ -27,8 +27,8 @@
     </div>
     <!-- 連絡先追加ボタンを追加 -->
     <div class="contact-actions">
-      <button v-if="isContactApiSupported" class="add-contact-btn" @click="addToContacts">
-        連絡先に追加
+      <button v-if="isContactApiSupported" class="add-contact-btn" @click="downloadVCard">
+        連絡先データをダウンロード
       </button>
       <button v-else class="download-vcard-btn" @click="downloadVCard">連絡先を保存</button>
     </div>
@@ -130,30 +130,6 @@ export default Vue.extend({
     ],
   },
   methods: {
-    async addToContacts(): Promise<void> {
-      if (!this.isContactApiSupported || !navigator.contacts) {
-        this.downloadVCard();
-        return;
-      }
-
-      try {
-        const contact: ContactProperty = {
-          name: ['石山 雄一'],
-          tel: ['09037235648'],
-          email: ['fromscratch.yi@gmail.com'],
-        };
-
-        await navigator.contacts.select(['name', 'email', 'tel']);
-        await navigator.contacts.add(contact);
-
-        alert('連絡先を追加しました！');
-      } catch (error) {
-        console.error('連絡先の追加中にエラーが発生しました:', error);
-        alert('連絡先の追加に失敗しました。vCardをダウンロードして追加することもできます。');
-        this.downloadVCard();
-      }
-    },
-
     downloadVCard(): void {
       const vcard = `BEGIN:VCARD
 VERSION:3.0
