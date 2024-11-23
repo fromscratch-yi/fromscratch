@@ -1,5 +1,6 @@
 /* stylelint-disable-next-line scss/at-import-no-partial-leading-underscore */
 @import '_keyframes';
+
 html {
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
@@ -7,9 +8,11 @@ html {
   color: #333;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+
   &::-webkit-scrollbar {
     display: none;
   }
+
   body,
   button,
   input,
@@ -20,6 +23,7 @@ html {
       'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 0.7px;
   }
+
   img {
     max-width: 100%;
     height: auto;
@@ -29,6 +33,7 @@ html {
     position: relative;
     padding: 0 20px 5px 5px;
     border-bottom: 1px solid #d1d1d1;
+
     &::after {
       content: '';
       position: absolute;
@@ -48,18 +53,22 @@ html {
   .page-leave-to {
     opacity: 0;
   }
+
   .page-enter-active,
   .page-leave-active {
     transition: opacity 0.4s;
   }
+
   .layout-enter,
   .layout-leave-active {
     opacity: 0;
   }
+
   .layout-enter-active,
   .layout-leave-active {
     transition: opacity 0.4s;
   }
+
   .attention {
     color: #666;
     font-size: 12px;
@@ -67,9 +76,11 @@ html {
     padding: 0 5px;
     line-height: 1.6;
   }
+
   a[aria-current='page'] {
     pointer-events: none;
   }
+
   .page-explain {
     max-width: 850px;
     padding: 0 15px;
@@ -77,6 +88,7 @@ html {
     font-size: 14px;
     text-align: center;
     line-height: 1.7;
+
     @include tablet {
       margin: 50px auto 60px;
       font-size: 15px;
@@ -93,32 +105,38 @@ html {
       display: block;
       // background-color: #d9d9d9;
       width: 100%;
+
       iframe {
         width: 100%;
       }
     }
   }
+
   body {
     &.is-open {
       overflow: hidden;
       height: 100vh;
+
       @include tablet {
         overflow: auto;
         height: auto;
       }
     }
+
     .bottom-page-link-wrap {
       max-width: 1300px;
       display: flex;
       padding: 0 15px;
       justify-content: space-between;
       margin: 40px auto;
+
       @include tablet {
         margin: 60px auto 40px;
         padding: 0 20px;
       }
     }
   }
+
   button,
   input,
   optgroup,
@@ -139,6 +157,7 @@ html {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.4);
     /* 3*/
   }
+
   input[type='date'],
   input[type='datetime-local'],
   input[type='text'],
@@ -155,14 +174,21 @@ html {
     width: 100%;
     text-align: left;
   }
+
   .fade-enter-active,
   .fade-leave-active {
     transition: opacity 0.5s;
   }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+  .fade-enter,
+  .fade-leave-to
+
+  /* .fade-leave-active below version 2.1.8 */
+    {
     opacity: 0;
   }
 }
+
 // body {
 //   .layout-leave-active,
 //   .page-leave-active {

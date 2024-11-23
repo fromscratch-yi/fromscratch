@@ -25,6 +25,15 @@
         </dl>
       </div>
     </div>
+    <!-- 連絡先追加ボタンを追加 -->
+    <div class="contact-actions">
+      <button :disabled="!isContactApiSupported" class="add-contact-btn" @click="addToContacts">
+        連絡先に追加
+      </button>
+      <button v-if="!isContactApiSupported" class="download-vcard-btn" @click="downloadVCard">
+        vCardをダウンロード
+      </button>
+    </div>
     <div class="link-wrap">
       <h2>プライベート情報</h2>
       <ul>
@@ -91,18 +100,26 @@
 import Vue from 'vue';
 import Meta from '~/assets/mixins/meta';
 
+interface ComponentData {
+  meta: {
+    title: string;
+    description: string;
+  };
+  isContactApiSupported: boolean;
+}
+
 export default Vue.extend({
   name: 'CardPage',
   mixins: [Meta],
   layout: 'headerless',
-  data(): {
-    meta: object;
-  } {
+  data(): ComponentData {
     return {
       meta: {
         title: 'プライベート名刺',
         description: 'プライベート名刺',
       },
+      isContactApiSupported:
+        process.client && 'contacts' in navigator && 'ContactsManager' in window,
     };
   },
   head: {
@@ -114,12 +131,92 @@ export default Vue.extend({
       },
     ],
   },
-  computed: {},
-  methods: {},
+  methods: {
+    async addToContacts(): Promise<void> {
+      if (!this.isContactApiSupported || !navigator.contacts) {
+        this.downloadVCard();
+        return;
+      }
+
+      try {
+        const contact: ContactProperty = {
+          name: ['石山 雄一'],
+          tel: ['09037235648'],
+          email: ['fromscratch.yi@gmail.com'],
+        };
+
+        await navigator.contacts.select(['name', 'email', 'tel']);
+        await navigator.contacts.add(contact);
+
+        alert('連絡先を追加しました！');
+      } catch (error) {
+        console.error('連絡先の追加中にエラーが発生しました:', error);
+        alert('連絡先の追加に失敗しました。vCardをダウンロードして追加することもできます。');
+        this.downloadVCard();
+      }
+    },
+
+    downloadVCard(): void {
+      const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:石山 雄一
+N:石山;雄一;;;
+TEL:090-3723-5648
+EMAIL:fromscratch.yi@gmail.com
+TITLE:Software Engineer
+END:VCARD`;
+
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', '石山雄一.vcf');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    },
+  },
 });
 </script>
 
 <style lang="scss">
+.contact-actions {
+  margin: 20px auto;
+  text-align: center;
+
+  .download-vcard-btn {
+    background-color: #666;
+  }
+
+  .add-contact-btn,
+  .download-vcard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    margin: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #44a045;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #0000001a;
+    transition: all 0.3s ease;
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #ccc;
+    }
+  }
+
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+}
+
 #card {
   width: 100%;
   max-width: 500px;
