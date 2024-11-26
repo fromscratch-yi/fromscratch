@@ -133,11 +133,11 @@ export default Vue.extend({
     downloadVCard(): void {
       const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:石山 雄一
-N:石山;雄一;;;
+FN;CHARSET=UTF-8:石山 雄一
+N;CHARSET=UTF-8:石山;雄一;;;
 BDAY:1993-01-23
 ORG:Fromscratch
-NOTE:ソフトウェア開発（Webサイト、Webサービス、スマホアプリ etc...）、名刺作成、サーバ構築、SEOコンサル
+NOTE;CHARSET=UTF-8:ソフトウェア開発（Webサイト、Webサービス、スマホアプリ etc...）、名刺作成、サーバ構築、SEOコンサル
 TEL;CELL:090-37235648
 URL;WORK:https://fromscratch-y.work/card
 URL;HOME:https://tattoo-ja.com/
@@ -221,7 +221,8 @@ PHOTO;TYPE=JPEG;ENCODING=BASE64:iVBORw0KGgoAAAANSUhEUgAAAJgAAACYCAYAAAAYw
  GChysvG/wcPeAMLpKoKUAAAAABJRU5ErkJggg==
 END:VCARD`;
 
-      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
