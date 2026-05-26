@@ -12,7 +12,6 @@ dist
 
 # Custom
 /.vscode
-*.code-workspace
 *~
 .DS_Store
 ._.DS_Store
